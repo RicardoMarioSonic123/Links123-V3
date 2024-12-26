@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<head>
+  <title>Classroom</title>
+   <link rel="icon" type="image/png" href="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-classroom-icon.png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1a2023;
+      text-align: center;
+    }
+    h1 {
+     margin-top: 180px;
+      font-weight: 700;
+     font-size: 50px;
+    font-family: Tahoma, sans-serif;
+    color: white;
+    }
+    
+    h2 {
+      margin-top: 70px;
+      font-weight: 700;
+     font-size: 30px;
+    font-family: Tahoma, sans-serif;
+    color: white;
+    }
+    
+     #Update {
+    margin-top: -60px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Tahoma, sans-serif;
+    color: white;
+    }
+    
+    button {
+            margin-top: 60px;
+            padding: 9px 25px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: outset #444;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        button:active {
+            background-color: #004494;
+            transform: translateY(0);
+        }
+    #randomPhrase {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Tahoma, sans-serif;
+    color: white;
+    }
+    .hidden {
+      display: none;
+    }
+
+
+
+
+  </style>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var phrases = [
+    "Chapter 6 es muy dificil",
+    "HTML.cafe is now blocked",
+    "-0",
+    "ERROR CODE: S3KN2IL1",
+    "HTML Edition",
+    "Mr. Marmur forever",
+    "Donde estan mis monedas?",
+    "No panic key!",
+    "-0+0-0(-0)+dinero=?",
+    "DINEROOOOOOOOOOOOOOOOOOOOOO!",                                                                     
+    "Quiero dinero",
+    "你為什麼翻譯它?",
+    "Muy dificil",
+        "NOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+    "STOP WATCHING ME!",
+    "You can’t escape me",
+    "💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵",
+        "Dame dinero",
+        "Gay Mosquito",
+        "No.",
+    "Do you actually read this?",
+    "If you get this message, you are negro",
+    "Shut up, GoGuardian!",
+    "What",
+    "NoGuardian!",
+    ":D",
+    "D:",
+    "I am not a robot",
+    "Each update takes me 17 hours!",
+    "Links123 V3!",
+    "No Alex!",
+    "It’s just a little message. Nothing to see here… or is there?",
+    "That's nothing Skibidi!",
+    "There are no good games on the unblocked pages",
+    "What is the least played game?",
+    "You will never see me speak English!",
+    "Why is it called Links123?",
+    "Meme of the day!",
+    "Why not?",
+    "99% bug free!",
+    "Dame mi dinero y mi respeto",
+    "Harder Daddy 🤤🤤🤤🤤🤤🤤",
+    "East is up",
+    "Todo tu culpa",
+        "Otro dia",
+        "100 hours of Shreksophone",
+    "Dame mi dinero",
+    "Yes, I use Google Translate", 
+    "No puntos extras",
+    "+0",
+        "No more HTML.cafe!",
+    "Working on the page is exhausting",
+    "I see you",
+    "Have a great time!",
+    "GoGuardian can't block my page",
+        "WE LOVE YOU Mr. Marmur",
+    "Your third favorite teacher, Mr. Marmur",
+    "Do not share!",
+        "!!!WARNING SOMEONE IS BEHIND YOU!!!",
+    "Mario Cake 63",
+        "It's time to touch Angelo",
+        "Created by Mr. Marmur",
+        "Donde esta Mr. Marmur?",
+    "The games and apps don't belong to me",
+    "I'M SORRY BRAWL STARS I NEED TO WORK ON LINKS123",
+    "STOP!",
+        "Donde esta mi dinero?",
+        "No DINERO for you!",
+        "No dinero. Just monedas made out of chicken",
+    "Tell me where Mr. Marmur is to win -10000000 Dinero",
+        "New update every 10 months!",
+        "Quiero monedas de Luigi",
+    "Eres negro",
+    "Dinero de Zimbawe 100 trillion dollars = 40 us cents",
+    "GYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT",
+    "maliciouslaugh.mp3",
+    "If you get this message, you are lucky",
+    "Firma este papel y tu culo será mío",
+    "UwU",
+    "I recommend you turn off the internet so they can't see you on GoGuardian",
+    "Nyah~",
+    "Welcome back!",
+    "Donde esta the meme of the day?",
+    "Tu dinero es de telemundo",
+    "There is no better day than today!",
+    "Credit to all the creators of the games",
+    "There are more games than apps",
+    "New apps every 10 months",
+    "The page collects games found on other pages",
+    "I don't make money with this page",
+    "More than 200 games!",
+    "We've been making games for a year now!",
+    "Muchos Juegos!",
+    "Porque la pagina no esta en español?",
+    "New games every weeks",
+    "HTML.cafe died because someone shared the games",
+    "The initial name of the page was Stars123",
+    "One's job!",
+    "No more about blank!",
+    "The page is dark, You are dark",
+    "Getting better every day!",
+    "Reminder: Eres Negro",
+    "Links123 V2 died by GoGuardian",
+    "Rule 34 is now unblocked!",
+    "Twitter is now unblocked!",
+    "Now emulators are in apps",
+    "Apps used to be called Pages",
+    "I hope the page lasts until the end of the school year",
+    "Player one, get ready!",
+    "You win!",
+    "Can't divide by negative zero!",
+    "Can't divide by zero!",
+    "How to get a negative zero on a calculator?",
+    "Well done",
+    "Let's go!",
+    "Game, not over!",
+    "SYS 64738",
+    "0 ads!",
+    "-0 ads!",
+    "Links123, Managed by Mr. Marmur",
+    "Now in HTML!",
+    "Not on Google Docs!",
+    "hjdgsbfhshbfhhesj",
+    "Bienvenido a Enlaces123",
+    "Links123 V1 no longer exists",
+    "Links123 V2 is blocked",
+    "No tengo dinero",
+    "I have no money",
+    "This copy of Links123 V3 is genuine.",
+    "Fun fact: Your chromebook is likely being monitored 24/7",
+    "You found the secret message",
+    "I know where you live",
+    "AGE RATING -0",
+    "0w0",
+    "ñ",
+    "...",
+    "Your text here!",
+    "Thank you for using Links123!",
+    "Free time!",
+    "GET OUT!",
+    "There is no free time!",
+    "Fun fact: Your Chromebook is probably being watched by your teacher right now!",
+      ];
+
+
+
+
+      var randomIndex = Math.floor(Math.random() * phrases.length);
+      var randomPhrase = phrases[randomIndex];
+
+
+
+
+      var phraseElement = document.getElementById("randomPhrase");
+      phraseElement.textContent = randomPhrase;
+    });
+  </script>
+</head>
+<body>
+  <h1>Welcome to Links123</h1>
+    <div id="randomPhrase"></div>
+  <button id="launchGames" class="button">Games</button>
+  <button id="launchApps" class="button">Apps</button>
+    <h2>Version 3.0.0<h2>
+<div id="Update">A new interface, new games and emulators are now in the apps. I will bring improvements soon</div>
+
+
+
+
+
+
+
+<script>
+  document.getElementById("launchBrowser").addEventListener("click", function() {
+    var htmlSection = document.getElementById("htmlCodeSection");
+    // Toggle visibility of the HTML section
+    htmlSection.classList.toggle("hidden");
+  });
+</script>
+  <script>
+  
+    document.getElementById("launchGames").onclick = function() {
+      document.body.innerHTML = "";
+      setTimeout(function() {
+        var games = [
+      { name: "Pixel", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://googleusercontent.b-cdn.net/pixel-shooter/ps.xml&container=ig" },
+      { name: "Retro Ball", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://274079163-174037128449362058.preview.editmysite.com/uploads/b/139890129-899796311729593176/files/rtbl.xml&container=ig" },
+      { name: "Sonic 4", url: "https://wamwoowam.co.uk/sonic4/" },
+      { name: "Minecraft 1.8 ", url: "https://html.cafe/xb1d0df98" },
+      { name: "Minecraft 1.9", url: "https://html.cafe/x56360a59" },
+      { name: "Sonic Robo Blast 2", url: "https://vinmannie.github.io/srb2web/" },
+      { name: "Super Mario 64", url: "https://html.cafe/xe25ca14a" },
+      { name: "Eggy Car", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://googleusercontent.b-cdn.net/eggy-car/ec.xml&container=ig" },
+      { name: "Roblox", url: "https://dashboard-cq4z.onrender.com/?ng_ifp_partner=skool" },
+      { name: "Edge Surf", url: "https://obsidianig.com/games/edgesurf/" },
+      { name: "Drift Hunters", url: "https://obsidianig.com/games/drifthunters/" },
+      { name: "Happy Wheels", url: "https://obsidianig.com/games/happywheels/" },
+      { name: "Aquapark Slides", url: "https://obsidianig.com/games/aquaparkslides/" },
+      { name: "Super Mario Flash 2", url: "https://obsidianig.com/games/supermarioflash2/" },
+      { name: "Connect 4", url: "https://obsidianig.com/games/connect4/"},
+      { name: "Snowball.io", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/gertdoro/SQLite4Unity3d@8516fc0bd1d2be662ca484f5dc506268b24763ef/Example/Assets/snowball.xml&container=ig" },
+      { name: "Paper.io", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@b8b8a03997f38305098c2f2f5fe14907463cd23b/build/ppo2/ppo2.xml&container=ig" },
+      { name: "Pizza Tower", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://184025835-163385710482638103.preview.editmysite.com/uploads/b/139890129-716705991685705292/files/pztr.xml&container=ig" },
+      { name: "Subway Surfers", url: "https://dddavit.github.io/subway/" },
+      { name: "Slope", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/WebStarterkit@ebc61d8a952e7630c8c5ca3410335bf5d5f04711/src/sp.xml&container=ig" },
+      { name: "Slope 2", url: "https://roblox-unblock.github.io/r7/slope-2-multiplayer/" },
+      { name: "Slope 3", url: "https://roblox-unblock.github.io/r/slope-3/" },
+      { name: "Cookie Clicker", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@e7d53b913d54429e5e118ca9541fb0f8f1f66bdc/dist/cc.xml&container=ig" },
+      { name: "Drive Mad", url: "https://ubg365.github.io/drive-mad/play.html" },
+      { name: "Drift Boss", url: "https://roblox-unblock.github.io/r/drift-boss" }, 
+      { name: "BitLife", url: "https://ubg365.github.io/bitlife-life-simulator/play.html" },
+      { name: "Final Earth 2", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://529473016-184630684593625815.preview.editmysite.com/uploads/b/139890129-811652923688457694/files/tfe2.xml&container=ig" },
+      { name: "Tiny Fishing", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://72682389-756457502729861133.preview.editmysite.com/uploads/b/11886820-896015480911618794/files/tf.xml&container=ig" },
+      { name: "Hover Racer Drive", url: "https://ubg365.github.io/hover-racer-drive/" },
+      { name: "Monkey Mart", url: "https://ubg365.github.io/monkey-mart/play.html" },
+      { name: "Drift Boss", url: "https://ubg365.github.io/drift-boss/" },
+      { name: "Madalin Stunt Cars 2", url: "https://ubg100.github.io/games/Madalin/index.html" },
+      { name: "Breaking the bank", url: "https://mountain658.github.io/zbreakingthebank.html" },
+      { name: "Escaping the prison", url: "https://mountain658.github.io/zescapetheprison.html" },
+      { name: "Stealing the diamond", url: "https://mountain658.github.io/zstealingthediamond.html" },
+      { name: "Infiltrating the airship", url: "https://sz-games.github.io/games/Flash.html?game=/games/henry-airship/infiltratingtheairshipgame.swf" },
+      { name: "Fleeing the complex", url: "https://sz-games.github.io/games/Flash.html?game=https://sz-games.github.io/Games6/Henry%20Stickmin%20-%20Fleeing%20the%20Complex.swf?raw=true" },
+      { name: "OvO", url: "https://75jfh73gd9hla64g-opensocial.googleusercontent.com/gadgets/ifr?url=https://googleusercontent.b-cdn.net/ovo/ovo.xml&container=ig" },
+      { name: "Run 3", url: "https://lekug.github.io/tn6pS9dCf37xAhkJv/" },
+      { name: "Bloxorz", url: "https://ad-freegames.github.io/flash/game/bloxorz.html" },
+      { name: "Drift Hunters", url: "https://htmlxm.github.io/h/drift-hunters/" },
+      { name: "Moto X3M", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@99563e3bf6eb25323e3bd5af20dcd9a261b97991/build/m3m/m3m.xml&container=ig" },
+      { name: "Time Shooter 2", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/element@1dd0b99d2004b84795f2745a5eb3468deb1c38a4/ts2.xml&container=ig" }, 
+      { name: "Time Shooter 3", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/version@0d8fb9c7430567ed0900902593eee6ba2ba8d297/ts3.xml&container=ig" },
+      { name: "Sonic 3 AIR", url: "https://vinmannie.github.io/sonic3air/sonic3air_web.html" },
+      { name: "Project Laser", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/godotpack@e8b5ffe6cbb8acafd0a9678b760e115e5ff92efe/side/bs-pl/bspl.xml&container=ig" }, 
+      { name: "Sonic Mania Plus", url: "https://vinmannie.github.io/SonicManiaWeb/RSDKv5.html" },
+      { name: "Super Smash Flash 2", url: "https://www-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/f107b843-3661-4036-9397-2b0c6414a369%2Fssf2v0.8.xml&container=ig" },
+      { name: "FNAF", url: "https://ubg77.github.io/fix/fnaf1/" },
+      { name: "RedBall V1", url: "https://rb44a.github.io/RedBall_V1/" },
+      { name: "Tomb of the mask", url: "https://mountain658.github.io/g/tombofthemask/index.html" },
+      { name: "RedBall V2", url: "https://rb44a.github.io/RedBall_V2/" },
+      { name: "RedBall V3", url: "https://rb44a.github.io/RedBall_V3/" },
+      { name: "Sonic Worlds Next", url: "https://grubbyplaya.github.io/Sonic-Worlds-Next-WASM/Sonic%20Worlds%20Next.html" },
+      { name: "Duck Life", url: "https://roblox-unblock.github.io/r/duck-life/" },
+      { name: "Super Mario Bros", url: "https://playmario.github.io/HTML5_Client/" },
+      { name: "Unfair Undyne", url: "https://doodle-pile.gitlab.io/unfair-undyne/v0.99/" },
+      { name: "Super Mario 63", url:"https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Fsuper-mario-63.xml&container=ig" },
+      { name: "Cat Mario", url: "https://www.jezng.com/open-syobon-action.js/" },
+      { name: "Cut the Rope", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://638401824-140825937501728463.preview.editmysite.com/uploads/b/139890129-351488130894771558/files/ctr.xml&container=ig" },
+      { name: "Plants vs Zombies", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Fplants-vs-zombies.xml&container=ig" },
+      { name: "Backrooms", url: "https://adfree3kh0.github.io/projects/backrooms/index.html" },
+      { name: "Trollface Quest", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Ftrollface-quest.xml&container=ig" },
+      { name: "Among Us", url: "https://adfree3kh0.github.io/projects/among-us/index.html" }, 
+      { name: "Trollface Quest 3", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Ftrollface-quest-3.xml&container=ig" },
+      { name: "Nyan Cat: Lost in Space", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Fnyan_cat_lost_in_space.xml&container=ig" },
+      { name: "Cave Story", url: "https://vinmannie.github.io/CaveStory/" },
+      { name: "Cookie Clicker", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@e7d53b913d54429e5e118ca9541fb0f8f1f66bdc/dist/cc.xml&container=ig" },
+      { name: "Super Mario Bros S", url: "https://superpi2.github.io/SuperMarioBrosS-v0.2.0/" },
+      { name: "Pac Man", url: "https://masonicgit.github.io/pacman/" },
+      { name: "Pac Man Google", url: "https://macek.github.io/google_pacman/?tab=readme-ov-file" },
+      { name: "Basket Random", url: "https://html.cafe/xa4301809" },
+      { name: "2048", url: "https://roblox-unblock.github.io/r/2048/" },
+      { name: "Monkey Mart", url: "https://html.cafe/x33bca0fb" },
+      { name: "Running T-Rex", url: "https://html.cafe/x90ef8e33" },  
+      { name: "Sonic 1", url: "https://vinmannie.github.io/Sonic-1-WASM/" },
+      { name: "Scrap Metal 3", url: "https://adfree3kh0.github.io/projects/scrapmetal/index.html" },  
+      { name: "Sonic CD", url: "https://tws2401.github.io/Sonic-CD-WASM/" },
+      { name: "Sonic 2", url: "https://snesfx.github.io/Sonic2Emscripten/" },
+      { name: "Sonic 2 Community's cut", url: "https://web.archive.org/web/20221012163725/https://s2cx.jojudge.com/play/" },
+      { name: "Baldi's Basics", url: "https://snesfx.github.io/baldi-html5/" },
+      { name: "Kindergarten", url: "https://snesfx.github.io/Kindergarten-Web/"},
+      { name: "Geometry Dash Lite", url: "https://fallguys.onl/geometry-dash-lite" },
+      { name: "FNAF 2", url: "https://obsidianig.com/games/fnaf2/fnaf2" },
+      { name: "FNAF 3", url: "https://obsidianig.com/games/fnaf3/fnaf3" },
+      { name: "FNAF 4", url: "https://obsidianig.com/games/fnaf4/fnaf4" },
+      { name: "Windows 96", url: "https://windows96.net/" },
+      { name: "Bad Time Simulator", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@d94624d12066e1ce30e89c48a687868a26d5c1eb/build/bts-sans/bts.xml&container=ig" },
+      { name: "Temple Run 2", url: "https://roblox-unblock.github.io/r8/temple-run-2/" },
+      { name: "Brain Test", url: "https://roblox-unblock.github.io/r2/brain-test-tricky-puzzles/" },
+      { name: "Curve Ball 3D", url: "https://roblox-unblock.github.io/r/curve-ball-3d/" },
+      { name: "Stack", url: "https://roblox-unblock.github.io/r2/stack" },
+      { name: "Clicker", url: "https://elucidation.github.io/ClickerJs/" },
+      { name: "Minesweeper", url: "https://roblox-unblock.github.io/r7/minesweeper/" },
+      { name: "Archery World Tour", url: "https://roblox-unblock.github.io/r/archery-world-tour/" },
+      { name: "Crossy Road", url: "https://roblox-unblock.github.io/r/crossy-road/" },
+      { name: "Gameing", url: "https://windows96.net/system/apps/gameing/" },
+      { name: "New Super Mario Bros. On Scratch", url: "https://scratch.mit.edu/projects/874249193/embed" },
+      { name: "Doodle Jump", url: "https://roblox-unblock.github.io/r7/doodle-jump/" },
+      { name: "Flash Tetris", url: "https://roblox-unblock.github.io/r7/tetris-flash/" },
+      { name: "Moto X3M 2", url: "https://roblox-unblock.github.io/r8/moto-x3m-2/" },
+      { name: "Bad Ice Cream", url: "https://roblox-unblock.github.io/r88/bad-ice-cream/" },
+      { name: "Cat Trap", url: "https://roblox-unblock.github.io/r8/cat-trap/" },
+      { name: "Google Feud", url: "https://roblox-unblock.github.io/r7/google-feud/" },
+      { name: "Fireboy And Water Girl", url: "https://roblox-unblock.github.io/r88/fireboy-and-water-girl/" },
+      { name: "Bad Ice Cream 2", url: "https://roblox-unblock.github.io/r88/bad-ice-cream-2/" }, 
+      { name: "Bad Ice Cream 3", url: "https://roblox-unblock.github.io/r88/bad-ice-cream-3/" },
+      { name: "Tunnel Rush", url: "https://ubg44.github.io/TunnelRush/" },
+      { name: "Doodle Champion Island", url: "https://roblox-unblock.github.io/r7/doodle-champion-island/" },
+      { name: "2048 Multitasking", url: "https://roblox-unblock.github.io/r7/2048-multitask/" },
+      { name: "Elastic Man", url: "https://roblox-unblock.github.io/r7/elastic-man/" },
+      { name: "Hextris", url: "https://roblox-unblock.github.io/r7/hextris/" },
+      { name: "8 Ball Pool", url: "https://roblox-unblock.github.io/r8/8-ball-pool/" },
+      { name: "Getting Over It", url: "https://roblox-unblock.github.io/r88/getting-over-it/" },
+      { name: "Bubble Shooter", url: "https://roblox-unblock.github.io/r2/bubble-shooter/" },
+      { name: "Jelly Truck", url: "https://roblox-unblock.github.io/r/jelly-truck/" },
+      { name: "Cluster Rush", url: "https://roblox-unblock.github.io/r8/cluster-rush/" },
+      { name: "Sketchbook 0.4", url: "https://roblox-unblock.github.io/r8/sketchbook-04/" },
+      { name: "Stupid Zombies", url: "https://roblox-unblock.github.io/r3/stupid-zombies/" },
+      { name: "The Impossible Quiz", url: "https://roblox-unblock.github.io/r8/the-impossible-quiz/" },
+      { name: "Stickman Hook", url: "https://roblox-unblock.github.io/r/stickman-hook/" },
+      { name: "Stickman Bridge Constructor", url: "https://roblox-unblock.github.io/r6/stickman-bridge-constructor/" },
+      { name: "Death Run 3D", url: "https://roblox-unblock.github.io/r7/death-run-3d/" },
+      { name: "Orbital Survival", url: "https://roblox-unblock.github.io/r8/orbital-survival/" },
+      { name: "Candy Jump", url: "https://roblox-unblock.github.io/r/candy-jump/" },
+      { name: "VVVVVV", url: "https://vinmannie.github.io/vvgame/" },
+      { name: "The World's Hardest Game", url: "https://vinmannie.github.io/WorldsHardestGame/" },
+      { name: "Top Speed Racing 3d", url: "https://roblox-unblock.github.io/r/top-speed-racing-3d/" },
+      { name: "Deepest Sword", url: "https://roblox-unblock.github.io/r8/deepest-sword/" },
+      { name: "FNF", url: "https://roblox-unblock.github.io/r88/friday-night-funkin/" },
+      { name: "Jetpack Joyride", url: "https://roblox-unblock.github.io/r7/jetpack-joyride/" },
+      { name: "Hover Racing", url: "https://roblox-unblock.github.io/r/hover-racer/" },
+      { name: "Tag", url: "https://roblox-unblock.github.io/r3/tag/" },
+      { name: "A Dance Of Fire And Ice", url: "https://roblox-unblock.github.io/r8/a-dance-of-fire-and-ice/" },
+      { name: "Basket Bros", url: "https://roblox-unblock.github.io/r7/basket-bros/" },
+      { name: "Soccer Random", url: "https://roblox-unblock.github.io/r8/soccer-random/" },
+      { name: "Maze: Path Of Light", url: "https://roblox-unblock.github.io/r5/maze-path-of-light/" },
+      { name: "House Of Hazards", url: "https://roblox-unblock.github.io/r/house-of-hazards/" },
+      { name: "Penalty Kick Online", url: "https://roblox-unblock.github.io/r/penalty-kick-online/" },
+      { name: "Stickman Golf", url: "https://roblox-unblock.github.io/r8/stickman-golf/" },
+      { name: "Boxing Random", url: "https://roblox-unblock.github.io/r77/boxing-random/" },
+      { name: "Dreadhead Parkour", url: "https://roblox-unblock.github.io/r7/dreadhead-parkour/" },
+      { name: "Traffic Mania", url: "https://roblox-unblock.github.io/r3/traffic-mania/" },
+      { name: "Drive Mad", url: "https://roblox-unblock.github.io/r77/drive-mad/" },
+      { name: "N-Gon", url: "https://roblox-unblock.github.io/r8/n-gon" },
+      { name: "Chicken Merge", url: "https://roblox-unblock.github.io/r4/chicken-merge/" },
+      { name: "We Become what we Behold", url: "https://gnhustgames.github.io/wbwwb/" },
+      { name: "Chrome Dino", url: "https://htmlxm.github.io/h7/dinosaur-game/" },
+      
+      
+
+
+    
+
+
+
+
+      
+
+
+
+
+        ];
+        var container = document.createElement("div");
+        container.setAttribute("id", "gamesContainer");
+        document.body.appendChild(container);
+
+
+
+
+        var lowestButtonPosition = 0; // Initialize with 0
+
+
+
+
+        games.forEach(function(game) {
+            var button = document.createElement("button");
+            button.textContent = game.name;
+            button.className = "button";
+            button.onclick = function() {
+                // Hide all buttons
+                document.querySelectorAll('.button').forEach(function(element) {
+                    element.style.display = "none";
+                });
+
+
+
+
+                document.getElementById("gamesContainer").innerHTML = '<object id="' + game.name.replace(/ /g, "") + 'Frame" type="text/html" data="' + game.url + '" style="width: 100%; height: 100vh;"></object>';
+            };
+            container.appendChild(button);
+
+
+
+
+
+
+        });
+
+
+
+
+       
+
+
+
+
+    }, 1000);
+};
+
+
+
+
+document.getElementById("launchApps").onclick = function() {
+    document.body.innerHTML = "";
+    setTimeout(function() {
+        var apps = [
+            { name: "Now.gg", url: "https://web.archive.org/web/20241112154118/now.gg" },
+            { name: "Youtube", url: "https://piped.video" },
+            { name: "HTML.Cafe Gallery", url: "https://html.cafe/gallery" },
+            { name: "DeepAI", url: "https://deepai.org/" },
+            { name: "HTML Website Extractor", url: "https://codebeautify.org/source-code-viewer" },
+            { name: "HTML.Cafe", url: "https://html.cafe/" },
+            { name: "Internet Archive", url: "https://archive.org/" },
+            { name: "Ruffle Player", url: "https://ruffle.rs/demo/" },
+            { name: "WebRetro", url: "https://binbashbanana.github.io/webretro/" },
+            { name: "AI Images", url: "https://nuelink.com/tools/ai-image-generator" },
+            { name: "Global Image URL Generator", url: "https://html.cafe/x2a36ad24"},
+            { name: "Virtual Machine", url: "https://copy.sh/v86/" },
+            { name: "Screen Recorder", url: "https://html.cafe/xf7a71dd8" },
+            { name: "EmulatorJS", url: "https://demo.emulatorjs.org/" },
+
+        ];
+
+
+
+
+        var container = document.createElement("div");
+        container.setAttribute("id", "appsContainer");
+        document.body.appendChild(container);
+
+
+
+
+        apps.forEach(function(app) {
+            var button = document.createElement("button");
+            button.textContent = app.name;
+            button.className = "button";
+            button.onclick = function() {
+                if (app.url) {
+                    document.body.innerHTML = '';
+                    var messageText = document.createElement("p");
+                    messageText.textContent = app.message;
+                    messageText.style.color = "#fff";
+                    messageText.style.marginTop = "20px";
+                    document.body.appendChild(messageText);
+                    document.body.innerHTML = '<object id="appsFrame" type="text/html" data="' + app.url + '" style="width: 100%; height: 100vh;"></object>';
+                } else if (app.action) {
+                    app.action();
+                }
+            };
+            container.appendChild(button);
+        });
+    }, 1000);
+};
+  </script>
+</body>
+</html>
+</body>
+</html>

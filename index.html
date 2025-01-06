@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<head>
   <title>Home</title>
    <link rel="icon" type="image/png" href="https://ssl.gstatic.com/classroom/favicon.png">
   <style>
@@ -9,6 +8,7 @@
       background-color: #1a2023;
       text-align: center;
     }
+    
     h1 {
      margin-top: 180px;
       font-weight: 700;
@@ -40,9 +40,24 @@
     color: white;
     }
     
-    button {
+    .button {
+            margin-top: 20px;
+            margin-left: 7px;
+            margin-right: 7px;
+            padding: 9px 25px;
+            font-size: 18px;
+            font-weight: 552;
+            font-family: Tahoma, sans-serif;
+            background-color: #007bff;
+            color: #fff;
+            border: 0 outset #444;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+    
+        .button-m {
             margin-top: 60px;
-            margin-bottom: -10000000000000000000000000000000%;
             margin-left: 5px;
             margin-right: 5px;
             padding: 9px 25px;
@@ -56,14 +71,17 @@
             cursor: pointer;
             transition: background-color 0.3s, transform 0.2s;
         }
+    
         button:hover {
             background-color: #0056b3;
             transform: translateY(-2px);
         }
+    
         button:active {
             background-color: #004494;
             transform: translateY(0);
         }
+    
     #randomPhrase {
     margin-top: -1px;
     position: absolute;
@@ -99,7 +117,7 @@
     "你為什麼翻譯它?",
     "Muy dificil",
         "NOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
-    "STOP WATCHING ME!",
+    "STOP WATCHING ME",
     "You can’t escape me",
     "💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵💵",
         "Dame dinero",
@@ -109,9 +127,9 @@
     "If you get this message, you are negro",
     "Shut up!",
     "What",
-    "Using stolen code but done my way!",
+    "Using stolen code!",
     ":D",
-    "D:",
+    ":v",
     "I am not a robot",
     "Each update takes me 17 hours!",
     "Links123 V3!",
@@ -155,7 +173,7 @@
         "No DINERO for you!",
         "No dinero. Just monedas made out of chicken",
     "Tell me where Mr. Marmur is to win -10000000 Dinero",
-        "New update every day!",
+        "For educational uses",
         "Quiero monedas de Luigi",
     "Eres negro",
     "Dinero de Zimbawe 100 trillion dollars = 40 us cents",
@@ -180,10 +198,10 @@
     "Muchos Juegos!",
     "Porque la pagina no esta en español?",
     "New games every weeks",
-    "HTML.cafe died because someone shared the games",
+    "HTML.cafe died",
     "The initial name of the page was Stars123",
     "One's job!",
-    "No more about blank!",
+    "No more about:blank!",
     "The page is dark, You are dark",
     "Getting better every day!",
     "Reminder: Eres Negro",
@@ -207,7 +225,7 @@
     "Links123, Managed by Mr. Marmur",
     "Now in HTML!",
     "Not on Google Docs!",
-    "hjdgsbfhshbfhhesj",
+    "bzxcvbnmtywuioqfsghdnffhhesj!",
     "Bienvenido a Enlaces123",
     "Links123 V1 no longer exists",
     "Links123 V2 is blocked",
@@ -218,8 +236,8 @@
     "You found the secret message",
     "I know where you live",
     "AGE RATING -0",
-    "0w0",
-    "ñ",
+    "No more Links123 Portal!",
+    "Ñ",
     "...",
     "Your text here!",
     "Thank you for using Links123!",
@@ -227,6 +245,20 @@
     "GET OUT!",
     "There is no free time!",
     "Fun fact: Your Chromebook is probably being watched by your teacher right now!",
+    "Have a nice day!",
+    "It looks a lot like Art Class, doesn't it?",
+    "Not in HTML.cafe",
+    "500 lines of code!",
+    "Maybe.",
+    "Probably.",
+    "1 year working on the page",
+    "EMBESTIDA CARAJO!",
+    "relaxingmusicplaying.mp3",
+    "The only thing left of Links123 V1 is in Lo mejor del Chavo del 8",
+    "Nos van a odiar los de GoGuardian",
+    "I play this games before!",
+    "Never in HTML.cafe",
+    "Noob vs Pro vs Hacker",
       ];
 
 
@@ -242,14 +274,13 @@
       phraseElement.textContent = randomPhrase;
     });
   </script>
-</head>
-<body>
-  <h1>Welcome to <span>Links123</span> </h1>
+
+  <h1>Welcome to <span>Links123</span></h1>
     <div id="randomPhrase"></div>
-  <button id="launchGames" class="button">Games</button>
-  <button id="launchApps" class="button">Apps</button>
-    <h2>Version 3.0.1<h2>
-<div id="update">5 games and changes were added to the page.</div>
+  <button id="launchGames" class="button-m">Games</button>
+  <button id="launchApps" class="button-m">Apps</button>
+    <h2>Version 3.0.2<h2>
+<div id="update">5 new games, Some non-working apps have been changed and changes to the page</div>
 
 
 
@@ -280,7 +311,6 @@
       { name: "Pizza Tower", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://184025835-163385710482638103.preview.editmysite.com/uploads/b/139890129-716705991685705292/files/pztr.xml&container=ig" },
       { name: "Subway Surfers", url: "https://dddavit.github.io/subway/" },
       { name: "Slope", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/WebStarterkit@ebc61d8a952e7630c8c5ca3410335bf5d5f04711/src/sp.xml&container=ig" },
-      { name: "Slope 2", url: "https://roblox-unblock.github.io/r7/slope-2-multiplayer/" },
       { name: "Slope 3", url: "https://roblox-unblock.github.io/r/slope-3/" },
       { name: "Cookie Clicker", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@e7d53b913d54429e5e118ca9541fb0f8f1f66bdc/dist/cc.xml&container=ig" },
       { name: "Drive Mad", url: "https://ubg365.github.io/drive-mad/play.html" },
@@ -412,6 +442,14 @@
       { name: "Bottle Flip 3D", url: "https://stenunblocked.github.io/bottle-flip-3d/bottleflip3d.html" },
       { name: "Gun Spin", url: "https://stenunblocked.github.io/gun-spin/index.html" },
       { name: "Neon Pong", url: "https://stenunblocked.github.io/neon-pong/index.html" },
+      { name: "Fury Wars", url: "https://unblocked-games-atschool.github.io/g22/class-378/" },
+      { name: "Stacktris", url: "https://unblocked-games-atschool.github.io/g2/class-417/" },
+      { name: "Ping Pong Chaos", url: "https://unblocked-games-atschool.github.io/g74/class-249/" },
+      { name: "City Car Driving", url: "https://unblocked-games-atschool.github.io/g9/class-582/" },
+      { name: "Super-Speeder", url: "https://unblocked-games-atschool.github.io/g7/class-82/" },
+    
+    
+
       
       
 
@@ -471,7 +509,7 @@
 
 
 
-    }, 1000);
+    }, 300);
 };
 
 
@@ -482,7 +520,7 @@ document.getElementById("launchApps").onclick = function() {
     setTimeout(function() {
         var apps = [
             { name: "Now.gg", url: "https://web.archive.org/web/20241112154118/now.gg" },
-            { name: "Youtube", url: "https://piped.video" },
+            { name: "Art Class", url: "https://artclass.site/" },
             { name: "HTML.Cafe Gallery", url: "https://html.cafe/gallery" },
             { name: "DeepAI", url: "https://deepai.org/" },
             { name: "HTML Website Extractor", url: "https://codebeautify.org/source-code-viewer" },
@@ -493,8 +531,10 @@ document.getElementById("launchApps").onclick = function() {
             { name: "AI Images", url: "https://nuelink.com/tools/ai-image-generator" },
             { name: "Global Image URL Generator", url: "https://html.cafe/x2a36ad24"},
             { name: "Virtual Machine", url: "https://copy.sh/v86/" },
-            { name: "Screen Recorder", url: "https://html.cafe/xf7a71dd8" },
-            { name: "EmulatorJS", url: "https://demo.emulatorjs.org/" },
+            { name: "ChattyWebsite", url: "https://chattyice234.github.io/british-cw/" },
+            { name: "Lo mejor del Chavo del 8", url: "https://html.cafe/x733d2e3d" },
+            
+
 
         ];
 
@@ -527,10 +567,6 @@ document.getElementById("launchApps").onclick = function() {
             };
             container.appendChild(button);
         });
-    }, 1000);
+    }, 300);
 };
   </script>
-</body>
-</html>
-</body>
-</html>

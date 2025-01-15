@@ -29,6 +29,23 @@
     color: white;
     }
     
+    h3 {
+    font-weight: 700;
+    font-size: 80px;
+    font-family: Tahoma, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    }
+    
+    h4 {
+    margin-top: 300px;
+    font-weight: 700;
+    font-size: 50px;
+    font-family: Tahoma, sans-serif;
+    color: white;
+    }
+    
      #update {
     margin-top: -60px;
     position: absolute;
@@ -57,7 +74,7 @@
         }
     
         .button-m {
-            margin-top: 60px;
+            margin-top: 39px;
             margin-left: 5px;
             margin-right: 5px;
             padding: 9px 25px;
@@ -84,16 +101,10 @@
     
     #randomPhrase {
     margin-top: -1px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     font-weight: bold;
     font-size: 18px;
     font-family: Tahoma, sans-serif;
     color: white;
-    }
-    .hidden {
-      display: none;
     }
 
 
@@ -182,7 +193,7 @@
     "If you get this message, you are lucky",
     "Firma este papel y tu culo será mío",
     "UwU",
-    "I recommend you turn off the internet so they can't see you on GoGuardian",
+    "AAAAAaaAAaaaAAAAAAAaaaaaaaAAAA",
     "Nyah~",
     "Welcome back!",
     "Donde esta the meme of the day?",
@@ -244,7 +255,7 @@
     "Free time!",
     "GET OUT!",
     "0 virus!",
-    "Fun fact: Your Chromebook is probably being watched by your teacher right now!",
+    "supermegaultraestrellasworld2",
     "Have a nice day!",
     "It looks a lot like Art Class, doesn't it?",
     "Not in HTML.cafe",
@@ -264,11 +275,31 @@
     "Also try ChattyWebsite!",
     "100% real no fake",
     "Links123V3.exe",
-    "Give me dinero 🥺🥺🥺🥺🥺🥺🥺🥺🥺🥺",
+    "Give me my dinero 🥺🥺🥺🥺🥺🥺🥺🥺🥺🥺",
     "Enter the password",
     "If the page is called Links123, where are the links?",
     "-0 virus!",
     "Never give up when you think it's all over",
+    "One more day",
+    "Your potential is infinite, dare to explore it",
+    "Exploration and discovery lead us to new things",
+    "Defiant Statement: You will not defeat Links123!!",
+    "I Love Choco Cake",
+    "With Yum Foods and In Cool Kitchen",
+    "Maybe we will develop a chip to have on computers and give to people to buy… maybe if we get funded.",
+    "We are like Team Xecuter, in a way, but for schools, and we do not go against the law, but we do go against the school, soooooo. ",
+    "https://drive.google.com/file/d/1-P4ON_r3IJ_Oju-rkub1h1MlkR_TbXPj/view The Defender",
+    "Talk about low budget games! No fun or hacks? I like piracy better!",
+    "Hello, if you are an administrator and you are truly reading this, I can give a wager, and I can be bribed, but not with money",
+    "You know what they say…if you don’t get it the first time, try and try again!!!",
+    "Okay look, we got this because when we finish everything, what are we supposed to do, stare at a wall or a window, hmmm?",
+    "3/21/25, we unveil the secrets of our new project.",
+    "V4 when???",
+    "BMW M3 GTR",
+    "Go watch Arcane season 2",
+    "Go watch Ranma ½",
+    "Go watch the dog man movie when it’s out.",
+    "Watch Cyberpunk: Edgerunners",
       ];
 
 
@@ -284,26 +315,23 @@
       phraseElement.textContent = randomPhrase;
     });
   </script>
-
+     
   <h1>Welcome to <span>Links123</span></h1>
     <div id="randomPhrase"></div>
   <button id="launchGames" class="button-m">Games</button>
   <button id="launchApps" class="button-m">Apps</button>
-    <h2>Version 3.0.4<h2>
-<div id="update">5 new games, 3 new apps. Apps that weren't working were changed</div>
-
-
-
-
+    <h2>Version 3.0.5<h2>
+<div id="update">20 games, changes to the page, some useless apps were removed,</div>
+      
   <script>
-  
     document.getElementById("launchGames").onclick = function() {
-      document.body.innerHTML = "";
+      document.body.innerHTML = "<h4>Loading...<h4>";
       setTimeout(function() {
+    document.body.innerHTML = "<h3>Games</h3>";
         var games = [
       { name: "Pixel", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://googleusercontent.b-cdn.net/pixel-shooter/ps.xml&container=ig" },
       { name: "Retro Ball", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://274079163-174037128449362058.preview.editmysite.com/uploads/b/139890129-899796311729593176/files/rtbl.xml&container=ig" },
-      { name: "Sonic 4", url: "https://wamwoowam.co.uk/sonic4/" },
+      { name: "Sonic 4: Episode 1", url: "https://wamwoowam.co.uk/sonic4/" },
       { name: "Minecraft 1.8 ", url: "https://html.cafe/xb1d0df98" },
       { name: "Moto X3M 3", url: "https://stenunblocked.github.io/moto-frame/other/moto-x3m-3/" },
       { name: "Sonic Robo Blast 2", url: "https://vinmannie.github.io/srb2web/" },
@@ -363,7 +391,7 @@
       { name: "Plants vs Zombies", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Fplants-vs-zombies.xml&container=ig" },
       { name: "Backrooms", url: "https://adfree3kh0.github.io/projects/backrooms/index.html" },
       { name: "Trollface Quest", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Ftrollface-quest.xml&container=ig" },
-      { name: "Among Us", url: "https://adfree3kh0.github.io/projects/among-us/index.html" }, 
+      { name: "Among Us Single Player", url: "https://adfree3kh0.github.io/projects/among-us/index.html" }, 
       { name: "Trollface Quest 3", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Ftrollface-quest-3.xml&container=ig" },
       { name: "Nyan Cat: Lost in Space", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Fnyan_cat_lost_in_space.xml&container=ig" },
       { name: "Cave Story", url: "https://vinmannie.github.io/CaveStory/" },
@@ -467,7 +495,26 @@
       { name: "Half-Life 1", url: "https://x8bitrain.github.io/webXash/" },
       { name: "GoBattle2", url: "https://roblox-unblock.github.io/r3/superbattle-2/" },
       { name: "Electron Dash", url: "https://roblox-unblock.github.io/r7/electron-dash/" },
-
+      { name: "Baldi Basics Field Trip Remake", url: "https://othermgwebsite.github.io/b92261bf-dae7-4055-bd8a-8eb6d069a6fc/content/v6p9d9t4.ssl.hwcdn.net/html/4965007/WebGL/index.html" },
+      { name: "Sonic Revert", url: "https://othermgwebsite.github.io/1f5d0d15-8012-46b8-b8d3-48766f2981a0/content/unblockedgamesboo.com/webgl/sonic-revert/index.html" },
+      { name: "Boundland", url: "https://othermgwebsite.github.io/7c4dc35b-2f3b-4ffd-ac78-0757829d65e0/content/0000100.com/cdn1/boundland/index.html" },
+      { name: "Boxel Rebound", url: "https://othermgwebsite.github.io/56dbf46b-4300-4a73-9900-9d62b9440fdf/content/trinculo54.github.io/Boxel-rebound-hope/Older/index.html" },
+      { name: "CraftMine", url: "https://othermgwebsite.github.io/newgames/craftmine/index.html" },
+      { name: "Death Soul", url: "https://othermgwebsite.github.io/452e5670-7684-4daa-bdce-eef69b0fc66a/content/app-99908.games.s3.yandex.net/99908/ib1vwzwxwdk9r9nlm6f8pfaeui8bnqxv/index.html" },
+      { name: "Dont Fall.io", url: "https://othermgwebsite.github.io/cffd6473-61f8-49c2-a88f-7a6a61699ca1/content/www.julgames.com/games/2021/unity/dont-fall-io/index.html" },
+      { name: "DragBox", url: "https://othermgwebsite.github.io/f635aa64-1653-491c-a95f-b2b2f2067494/content/19221.cache.armorgames.com/files/games/drag-box-19221/index.html" },
+      { name: "EraseBox", url: "https://othermgwebsite.github.io/ed7ba711-4d04-47d0-bd70-ce28d0aa6e11/content/19256.cache.armorgames.com/files/games/erase-box-19256/index.html" },
+      { name: "Mari0", url: "https://othermgwebsite.github.io/ca2cd940-b69b-43fc-b330-9b25b98be6f4/content/static.playunblocked.com/2021/12/mari0/index.html" },
+      { name: "Slice of Sasha", url: "https://othermgwebsite.github.io/8e9ed6cf-1ffa-46e9-8dbd-6fd8858d2f1f/content/v6p9d9t4.ssl.hwcdn.net/html/4413918/index.html" },
+      { name: "Running Round", url: "https://othermgwebsite.github.io/4f835b64-2d5a-412e-8ed1-38615fad15ad/content/funkypotato.com/gamez/running-round/index.html" },
+      { name: "Scrambled Eggs", url: "https://othermgwebsite.github.io/1f5e006d-bb92-4509-990b-fae33b4ce5c5/content/v6p9d9t4.ssl.hwcdn.net/html/2727946/SE_HTML/index.html" },
+      { name: "Shards", url: "https://othermgwebsite.github.io/479a586a-65af-4914-9416-0a12a5755f24/content/app-96863.games.s3.yandex.net/96863/nlrz4jbpuqrfdnfxtnjszxj9b42d8sor/index.html" },
+      { name: "Senya and Oscar 2", url: "https://othermgwebsite.github.io/b958cc1c-fc13-4b75-ae67-b08dce1c28c7/content/19140.cache.armorgames.com/files/games/senya-and-oscar-2-19140/index.html" },
+      { name: "Space is Key", url: "https://othermgwebsite.github.io/8a7c95a0-e604-43c3-b584-b001b1611922/content/files.numuki.com/games/platform/space-is-key/index.html" },
+      { name: "Arcade Wizard", url: "https://othermgwebsite.github.io/959c99de-9707-4068-8b84-85448e4771b9/content/18995.cache.armorgames.com/files/games/arcade-wizard-18995/index.html" },
+      { name: "Mirror Wizard", url: "https://othermgwebsite.github.io/d2d66925-5237-4d99-bac0-fe634ce8d567/content/19323.cache.armorgames.com/files/games/mirror-wizard-19323/index.html" },
+      { name: "Helios", url: "https://othermgwebsite.github.io/7916a10d-763b-489b-953d-fae4e96d5c95/content/19104.cache.armorgames.com/files/games/helios-19104/index.html" },
+      { name: "Bob The Robber 2", url: "https://othermgwebsite.github.io/d91fd738-f4db-4509-8863-f9c424a61ae2/content/raw.githack.com/3kh0/3kh0-assets/main/bobtherobber2/index.html" },
 
       
       
@@ -483,15 +530,13 @@
 
 
 
-        ];
+         ];
         var container = document.createElement("div");
         container.setAttribute("id", "gamesContainer");
         document.body.appendChild(container);
 
 
 
-
-        var lowestButtonPosition = 0; // Initialize with 0
 
 
 
@@ -501,55 +546,36 @@
             button.textContent = game.name;
             button.className = "button";
             button.onclick = function() {
-                // Hide all buttons
-                document.querySelectorAll('.button').forEach(function(element) {
-                    element.style.display = "none";
-                });
-
-
-
-
-                document.getElementById("gamesContainer").innerHTML = '<object id="' + game.name.replace(/ /g, "") + 'Frame" type="text/html" data="' + game.url + '" style="width: 100%; height: 100vh;"></object>';
+                if (game.url) {
+                    document.body.innerHTML = '';
+                    var messageText = document.createElement("p");
+                    messageText.textContent = game.message;
+                    messageText.style.color = "#fff";
+                    messageText.style.marginTop = "20px";
+                    document.body.appendChild(messageText);
+                    document.body.innerHTML = '<object id="gameFrame" type="text/html" data="' + game.url + '" style="width: 100%; height: 100vh; background-color: #fff;"></object>';
+                } else if (game.action) {
+                    app.action();
+                }
             };
             container.appendChild(button);
-
-
-
-
-
-
         });
-
-
-
-
-       
-
-
-
-
-    }, 300);
+    }, 500);
 };
 
 
 
 
+
 document.getElementById("launchApps").onclick = function() {
-    document.body.innerHTML = "";
+    document.body.innerHTML = "<h4>Loading...<h4>";
     setTimeout(function() {
+    document.body.innerHTML = "<h3>Apps</h3>";
         var apps = [
-            { name: "HTML Editor", url: "https://spacenerd24.github.io/Online-HTML-Viewer/" },
-            { name: "Screen Recorder", url: "https://html.cafe/xf7a71dd8" },
             { name: "HTML.Cafe Gallery", url: "https://html.cafe/gallery" },
-            { name: "DeepAI", url: "https://deepai.org/" },
-            { name: "HTML Website Extractor", url: "https://codebeautify.org/source-code-viewer" },
             { name: "HTML.Cafe", url: "https://html.cafe/" },
-            { name: "Internet Archive", url: "https://archive.org/" },
             { name: "Ruffle Player", url: "https://ruffle.rs/demo/" },
             { name: "WebRetro", url: "https://binbashbanana.github.io/webretro/" },
-            { name: "AI Images", url: "https://nuelink.com/tools/ai-image-generator" },
-            { name: "Global Image URL Generator", url: "https://html.cafe/x2a36ad24"},
-            { name: "Virtual Machine", url: "https://copy.sh/v86/" },
             { name: "ChattyWebsite", url: "https://chattyice234.github.io/british-cw/" },
             { name: "Lo mejor del Chavo del 8", url: "https://html.cafe/x733d2e3d" },
             { name: "Appetize.io Android Phone", url: "https://appetize.io/embed/xc1w6f1krd589zhp22a0mgftyw?autoplay=false&debug=true&device=pixel4&embed=true&launchUrl=exp%3A%2F%2Fexp.host%2F%40snack%2Fsdk.46.0.0-ghV0%21Qgb8N&scale=65&screenOnly=false&xDocMsg=true&xdocMsg=true&params=%7B&osVersion=11.0&deviceColor=black" },
@@ -579,13 +605,13 @@ document.getElementById("launchApps").onclick = function() {
                     messageText.style.color = "#fff";
                     messageText.style.marginTop = "20px";
                     document.body.appendChild(messageText);
-                    document.body.innerHTML = '<object id="appsFrame" type="text/html" data="' + app.url + '" style="width: 100%; height: 100vh;"></object>';
+                    document.body.innerHTML = '<object id="appsFrame" type="text/html" data="' + app.url + '" style="width: 100%; height: 100vh; background-color: #fff;"></object>';
                 } else if (app.action) {
                     app.action();
                 }
             };
             container.appendChild(button);
         });
-    }, 300);
+    }, 500);
 };
   </script>

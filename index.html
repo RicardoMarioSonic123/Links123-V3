@@ -10,9 +10,9 @@
     }
     
     h1 {
-     margin-top: 180px;
-      font-weight: 700;
-     font-size: 50px;
+    margin-top: 250px;
+    font-weight: 700;
+    font-size: 50px;
     font-family: Tahoma, sans-serif;
     color: white;
     }
@@ -22,9 +22,9 @@
     }
     
     h2 {
-      margin-top: 70px;
-      font-weight: 700;
-     font-size: 30px;
+    margin-top: -20px;
+    font-weight: 700;
+    font-size: 30px;
     font-family: Tahoma, sans-serif;
     color: white;
     }
@@ -46,8 +46,8 @@
     color: white;
     }
     
-     #update {
-    margin-top: -60px;
+    h5 {
+    margin-top: -2px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -89,13 +89,52 @@
             transition: background-color 0.3s, transform 0.2s;
         }
     
-        button:hover {
+    .button-j {
+    bottom: 0%; 
+    left: 0%;
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    z-index: 2; 
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 44.5%;
+    background:none; 
+    border:none;
+    font-size: 20px;
+    font-weight: 552;
+    font-family: Tahoma, sans-serif;
+    color: #fff;
+    transition: color 0.3s, transform 0.2s;
+        }
+    
+        .button:hover {
             background-color: #0056b3;
             transform: translateY(-2px);
         }
     
-        button:active {
+        .button:active {
             background-color: #004494;
+            transform: translateY(0);
+        }
+    
+       .button-m:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+    
+        .button-m:active {
+            background-color: #004494;
+            transform: translateY(0);
+        }
+    
+       .button-j:hover {
+            color: #007bff;
+            transform: translateY(-2px);
+        }
+    
+        .button-j:active {
+            color: #004494;
             transform: translateY(0);
         }
     
@@ -300,6 +339,9 @@
     "Go watch Ranma ½",
     "Go watch the dog man movie when it’s out.",
     "Watch Cyberpunk: Edgerunners",
+    "Mañana",
+    "Links123 64 Edition",
+    "If I take a while to upload an update on my page it's because I'm doing things, you know?",
       ];
 
 
@@ -318,13 +360,12 @@
      
   <h1>Welcome to <span>Links123</span></h1>
     <div id="randomPhrase"></div>
-  <button id="launchGames" class="button-m">Games</button>
-  <button id="launchApps" class="button-m">Apps</button>
-    <h2>Version 3.0.5<h2>
-<div id="update">20 games, changes to the page, some useless apps were removed,</div>
+  <button id="Games" class="button-m">Games</button>
+  <button id="Apps" class="button-m">Apps</button>
+ <button id="Version" class="button-j">Version 3.0.6</button>
       
   <script>
-    document.getElementById("launchGames").onclick = function() {
+    document.getElementById("Games").onclick = function() {
       document.body.innerHTML = "<h4>Loading...<h4>";
       setTimeout(function() {
     document.body.innerHTML = "<h3>Games</h3>";
@@ -397,8 +438,8 @@
       { name: "Cave Story", url: "https://vinmannie.github.io/CaveStory/" },
       { name: "Cookie Clicker", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@e7d53b913d54429e5e118ca9541fb0f8f1f66bdc/dist/cc.xml&container=ig" },
       { name: "Super Mario Bros S", url: "https://superpi2.github.io/SuperMarioBrosS-v0.2.0/" },
-      { name: "Pac Man", url: "https://masonicgit.github.io/pacman/" },
-      { name: "Pac Man Google", url: "https://macek.github.io/google_pacman/?tab=readme-ov-file" },
+      { name: "PacMan", url: "https://masonicgit.github.io/pacman/" },
+      { name: "PacMan Google", url: "https://macek.github.io/google_pacman/?tab=readme-ov-file" },
       { name: "Basket Random", url: "https://html.cafe/xa4301809" },
       { name: "2048", url: "https://roblox-unblock.github.io/r/2048/" },
       { name: "Monkey Mart", url: "https://html.cafe/x33bca0fb" },
@@ -515,7 +556,21 @@
       { name: "Mirror Wizard", url: "https://othermgwebsite.github.io/d2d66925-5237-4d99-bac0-fe634ce8d567/content/19323.cache.armorgames.com/files/games/mirror-wizard-19323/index.html" },
       { name: "Helios", url: "https://othermgwebsite.github.io/7916a10d-763b-489b-953d-fae4e96d5c95/content/19104.cache.armorgames.com/files/games/helios-19104/index.html" },
       { name: "Bob The Robber 2", url: "https://othermgwebsite.github.io/d91fd738-f4db-4509-8863-f9c424a61ae2/content/raw.githack.com/3kh0/3kh0-assets/main/bobtherobber2/index.html" },
-
+      { name: "Blocky Snakes", url: "https://mathgames66.github.io/games/html5/blockysnakes/" },
+      { name: "Cave war", url: "https://mathgames66.github.io/games/html5/cavewar/" },
+      { name: "Maptroid", url: "https://mathgames66.github.io/games/html5/maptroid/" },
+      { name: "OvO 2", url: "https://mathgames66.github.io/games/html5/ovo2/" },
+      { name: "PacMan 3D", url: "https://mathgames66.github.io/games/html5/pacman3d/" },
+      { name: "PacMan FPS", url: "https://mathgames66.github.io/games/html5/pacmanfps/" },
+      { name: "P.E. Noire", url: "https://mathgames66.github.io/games/html5/plactions/" },
+      { name: "Protektor", url: "https://mathgames66.github.io/games/html5/protektor/" },
+      { name: "Skyblock", url: "https://mathgames66.github.io/games/html5/skyblock/" },
+      { name: "Zrist", url: "https://mathgames66.github.io/games/html5/zrist/" },
+      { name: "WorldsWithinWorlds", url: "https://mathgames66.github.io/games/html5/worldswithinworlds/" },
+      { name: "Exiled Zombies", url: "https://mathgames66.github.io/games/html5/exiled_zombies/" },
+      { name: "Roots", url: "https://mathgames66.github.io/games/html5/roots/" },
+      { name: "2020 Game", url: "https://mathgames66.github.io/games/html5/2020game/" },
+      { name: "Rocking Sky Trip", url: "https://mathgames66.github.io/games/html5/rockingskytrip/" },
       
       
 
@@ -567,7 +622,7 @@
 
 
 
-document.getElementById("launchApps").onclick = function() {
+document.getElementById("Apps").onclick = function() {
     document.body.innerHTML = "<h4>Loading...<h4>";
     setTimeout(function() {
     document.body.innerHTML = "<h3>Apps</h3>";
@@ -576,7 +631,7 @@ document.getElementById("launchApps").onclick = function() {
             { name: "HTML.Cafe", url: "https://html.cafe/" },
             { name: "Ruffle Player", url: "https://ruffle.rs/demo/" },
             { name: "WebRetro", url: "https://binbashbanana.github.io/webretro/" },
-            { name: "ChattyWebsite", url: "https://chattyice234.github.io/british-cw/" },
+            { name: "ChattyWebsite Reuploaded", url: "https://html.cafe/xc4a4bca1" },
             { name: "Lo mejor del Chavo del 8", url: "https://html.cafe/x733d2e3d" },
             { name: "Appetize.io Android Phone", url: "https://appetize.io/embed/xc1w6f1krd589zhp22a0mgftyw?autoplay=false&debug=true&device=pixel4&embed=true&launchUrl=exp%3A%2F%2Fexp.host%2F%40snack%2Fsdk.46.0.0-ghV0%21Qgb8N&scale=65&screenOnly=false&xDocMsg=true&xdocMsg=true&params=%7B&osVersion=11.0&deviceColor=black" },
 
@@ -614,4 +669,9 @@ document.getElementById("launchApps").onclick = function() {
         });
     }, 500);
 };
+    
+     document.getElementById("Version").onclick = function() {
+      document.body.innerHTML = "<h4>Loading...<h4>";
+      setTimeout(function() {
+    document.body.innerHTML = "<h1>Version <span>3.0.6</span></h1> <h5>Now if you want to see what's new in each update click on Version 3.X.X, 15 new games<h5>";},500)}
   </script>

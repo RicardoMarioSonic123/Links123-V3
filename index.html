@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
    <link rel="icon" type="image/png" href="https://ssl.gstatic.com/classroom/favicon.png">
   <style>
@@ -10,8 +13,6 @@
     }
     
     h1 {
-    margin-top: 250px;
-    font-weight: 700;
     font-size: 50px;
     font-family: Tahoma, sans-serif;
     color: white;
@@ -22,15 +23,14 @@
     }
     
     h2 {
-    margin-top: -20px;
-    font-weight: 700;
-    font-size: 30px;
+    margin-top: 24px;
+    font-size: 20px;
     font-family: Tahoma, sans-serif;
     color: white;
+    height: 32vh;
     }
     
     h3 {
-    font-weight: 700;
     font-size: 80px;
     font-family: Tahoma, sans-serif;
     color: white;
@@ -39,22 +39,26 @@
     }
     
     h4 {
-    margin-top: 300px;
-    font-weight: 700;
+    bottom: 0%; 
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    text-align: center;
     font-size: 50px;
     font-family: Tahoma, sans-serif;
     color: white;
     }
     
-    h5 {
-    margin-top: -2px;
+    
+    h6 {
+    bottom: 0%; 
+    left: 0%;
+    width: 100%;
+    height: 0px;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: bold;
     font-size: 20px;
     font-family: Tahoma, sans-serif;
-    color: white;
+    color: #fff;
     }
     
     .button {
@@ -89,24 +93,7 @@
             transition: background-color 0.3s, transform 0.2s;
         }
     
-    .button-j {
-    bottom: 0%; 
-    left: 0%;
-    width: 150px;
-    height: 40px;
-    position: absolute;
-    z-index: 2; 
-    display: inline-block;
-    margin-top: 10px;
-    margin-left: 44.5%;
-    background:none; 
-    border:none;
-    font-size: 20px;
-    font-weight: 552;
-    font-family: Tahoma, sans-serif;
-    color: #fff;
-    transition: color 0.3s, transform 0.2s;
-        }
+
     
         .button:hover {
             background-color: #0056b3;
@@ -128,15 +115,6 @@
             transform: translateY(0);
         }
     
-       .button-j:hover {
-            color: #007bff;
-            transform: translateY(-2px);
-        }
-    
-        .button-j:active {
-            color: #004494;
-            transform: translateY(0);
-        }
     
     #randomPhrase {
     margin-top: -1px;
@@ -177,7 +155,7 @@
     "If you get this message, you are negro",
     "Shut up!",
     "What",
-    "Using stolen code!",
+    "Using stolen code from Chattyice!",
     ":D",
     ":v",
     "I am not a robot",
@@ -311,7 +289,7 @@
     "Noob vs Pro vs Hacker",
     "Mega Collection!",
     "Dinero.net",
-    "Also try ChattyWebsite!",
+    "Also try Barney's Website!",
     "100% real no fake",
     "Links123V3.exe",
     "Give me my dinero 🥺🥺🥺🥺🥺🥺🥺🥺🥺🥺",
@@ -341,7 +319,18 @@
     "Watch Cyberpunk: Edgerunners",
     "Mañana",
     "Links123 64 Edition",
-    "If I take a while to upload an update on my page it's because I'm doing things, you know?",
+    "1 + 0 = 5",
+    "Comienza el fornai",
+    "Oh oh oh oh oh",
+    "Intento ganar cada partida pero esto no es casualidad",
+    "Recojo una escopeta táctica o una smg proligera",
+    "e e e e e e e e e e e e e e e e e e e e e",
+    "Have fun?",
+    "Chattyice no sabe español",
+    "Que tan fuerte es Steve de minecraft?",
+    "Es confuso verdad?",
+    "Para entender la historia de Five Nights at Freddy's hay que olvidarse que estos son juegos",
+    "Shadow el Jeshejojo",
       ];
 
 
@@ -358,11 +347,12 @@
     });
   </script>
      
-  <h1>Welcome to <span>Links123</span></h1>
+     <h2><span>Update Log:</span> 10 New Games and 4 New Apps</h2>
+     <h1>Welcome to <span>Links123</span></h1>
     <div id="randomPhrase"></div>
   <button id="Games" class="button-m">Games</button>
   <button id="Apps" class="button-m">Apps</button>
- <button id="Version" class="button-j">Version 3.0.6</button>
+ <h6>Version 3.0.7</h6>
       
   <script>
     document.getElementById("Games").onclick = function() {
@@ -571,20 +561,18 @@
       { name: "Roots", url: "https://mathgames66.github.io/games/html5/roots/" },
       { name: "2020 Game", url: "https://mathgames66.github.io/games/html5/2020game/" },
       { name: "Rocking Sky Trip", url: "https://mathgames66.github.io/games/html5/rockingskytrip/" },
+      { name: "FNAF World", url: "https://irv77.github.io/hd_fnaf/w/" },
+      { name: "FNAF UCN", url: "https://irv77.github.io/hd_fnaf/ucn/" },
+      { name: "FNAF Pizzeria Simulator", url: "https://irv77.github.io/hd_fnaf/ps/" },
+      { name: "Geometry Dash Lite", url: "https://gaming-escape.github.io/public/assets/games/geometry-dash/" },
+      { name: "Funny Shooter 2", url: "https://gaming-escape.github.io/public/assets/games/funny-shooter-2/" },
+      { name: "ChoppyOrc", url: "https://gaming-escape.github.io/public/assets/games/choppy-orc/" },
+      { name: "Poly Track", url: "https://gaming-escape.github.io/public/assets/games/poly-track/" },
+      { name: "Slow Roads", url: "https://gaming-escape.github.io/public/assets/games/slow-roads/" },
+      { name: "Under the Red Sky Parkour", url: "https://gaming-escape.github.io/public/assets/games/under-the-red-sky/" },
+      { name: "Animal Arena", url: "https://gaming-escape.github.io/public/assets/games/animal-arena/" },
       
       
-
-
-    
-
-
-
-
-      
-
-
-
-
          ];
         var container = document.createElement("div");
         container.setAttribute("id", "gamesContainer");
@@ -631,11 +619,15 @@ document.getElementById("Apps").onclick = function() {
             { name: "HTML.Cafe", url: "https://html.cafe/" },
             { name: "Ruffle Player", url: "https://ruffle.rs/demo/" },
             { name: "WebRetro", url: "https://binbashbanana.github.io/webretro/" },
-            { name: "ChattyWebsite Reuploaded", url: "https://html.cafe/xc4a4bca1" },
+            { name: "Barney's Website", url: "https://html.cafe/x715d6947" },
             { name: "Lo mejor del Chavo del 8", url: "https://html.cafe/x733d2e3d" },
             { name: "Appetize.io Android Phone", url: "https://appetize.io/embed/xc1w6f1krd589zhp22a0mgftyw?autoplay=false&debug=true&device=pixel4&embed=true&launchUrl=exp%3A%2F%2Fexp.host%2F%40snack%2Fsdk.46.0.0-ghV0%21Qgb8N&scale=65&screenOnly=false&xDocMsg=true&xdocMsg=true&params=%7B&osVersion=11.0&deviceColor=black" },
-
-
+            { name: "Tools/Exploits", url: "https://html.cafe/x7c581b64" },
+            { name: "Chatroom", url: "https://html.cafe/xc79bd761" },
+            { name: "Extension Deleter", url: "https://html.cafe/xfcef538d" },
+            { name: "Dingus Pr0xy", url: "https://html.cafe/x40ceaed5" },
+             
+    
         ];
 
 
@@ -670,8 +662,4 @@ document.getElementById("Apps").onclick = function() {
     }, 500);
 };
     
-     document.getElementById("Version").onclick = function() {
-      document.body.innerHTML = "<h4>Loading...<h4>";
-      setTimeout(function() {
-    document.body.innerHTML = "<h1>Version <span>3.0.6</span></h1> <h5>Now if you want to see what's new in each update click on Version 3.X.X, 15 new games<h5>";},500)}
   </script>

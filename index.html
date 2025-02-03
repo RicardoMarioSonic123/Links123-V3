@@ -6,10 +6,15 @@
    <link rel="icon" type="image/png" href="https://ssl.gstatic.com/classroom/favicon.png">
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background-color: #1a2023;
-      text-align: center;
+            font-family: sans-serif;
+            background-color: #1a2023;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
     }
     
     h1 {
@@ -23,11 +28,13 @@
     }
     
     h2 {
-    margin-top: 24px;
+    top: 0%; 
+    left: 0%;
+    width: 100%;
+    position: absolute;
     font-size: 20px;
     font-family: Tahoma, sans-serif;
-    color: white;
-    height: 32vh;
+    color: #fff;
     }
     
     h3 {
@@ -35,13 +42,12 @@
     font-family: Tahoma, sans-serif;
     color: white;
     margin: 0;
-    padding: 0;
     }
     
     h4 {
+    height: 50%;
     bottom: 0%; 
     width: 100%;
-    height: 50%;
     position: absolute;
     text-align: center;
     font-size: 50px;
@@ -115,6 +121,9 @@
             transform: translateY(0);
         }
     
+    .container {
+            text-align: center;
+        }
     
     #randomPhrase {
     margin-top: -1px;
@@ -155,7 +164,7 @@
     "If you get this message, you are negro",
     "Shut up!",
     "What",
-    "Using stolen code from Chattyice!",
+    "Using stolen code from ChattyWebsite!",
     ":D",
     ":v",
     "I am not a robot",
@@ -276,10 +285,9 @@
     "Have a nice day!",
     "It looks a lot like Art Class, doesn't it?",
     "Not in HTML.cafe",
-    "500 lines of code!",
+    "700 lines of code!",
     "Maybe.",
     "Probably.",
-    "1 year working on the page",
     "EMBESTIDA CARAJO!",
     "relaxingmusicplaying.mp3",
     "The only thing left of Links123 V1 is in Lo mejor del Chavo del 8",
@@ -319,18 +327,22 @@
     "Watch Cyberpunk: Edgerunners",
     "Mañana",
     "Links123 64 Edition",
-    "1 + 0 = 5",
-    "Comienza el fornai",
-    "Oh oh oh oh oh",
-    "Intento ganar cada partida pero esto no es casualidad",
-    "Recojo una escopeta táctica o una smg proligera",
-    "e e e e e e e e e e e e e e e e e e e e e",
+    "1+0=5",
+    "Comienza el fornai oh oh oh oh oh Intento ganar cada partida pero esto no es casualidad oh oh oh oh oh Recojo una escopeta táctica o una smg proligera oh oh oh oh oh",
+    "Why are you looking at me?",
     "Have fun?",
     "Chattyice no sabe español",
     "Que tan fuerte es Steve de minecraft?",
-    "Es confuso verdad?",
-    "Para entender la historia de Five Nights at Freddy's hay que olvidarse que estos son juegos",
+    "Para entender la historia de Five Nights at Freddy's...",
     "Shadow el Jeshejojo",
+    "Monk ass hoe",
+    "Meme Pene",
+    "Alex gayward",
+    "Mosquito Chino",
+    "Hue hue hue",
+    "LA MIGRA 🗣🗣",
+    "Pito chino",
+    "Don't forget to do your work!",
       ];
 
 
@@ -347,12 +359,13 @@
     });
   </script>
      
-     <h2><span>Update Log:</span> 10 New Games and 4 New Apps</h2>
+     <h2><span>Update Log:</span> Version 3.1.0 is here!</h2>
+     <div class="container">
      <h1>Welcome to <span>Links123</span></h1>
     <div id="randomPhrase"></div>
   <button id="Games" class="button-m">Games</button>
   <button id="Apps" class="button-m">Apps</button>
- <h6>Version 3.0.7</h6>
+ <h6>Version 3.1.0</h6>
       
   <script>
     document.getElementById("Games").onclick = function() {
@@ -571,6 +584,18 @@
       { name: "Slow Roads", url: "https://gaming-escape.github.io/public/assets/games/slow-roads/" },
       { name: "Under the Red Sky Parkour", url: "https://gaming-escape.github.io/public/assets/games/under-the-red-sky/" },
       { name: "Animal Arena", url: "https://gaming-escape.github.io/public/assets/games/animal-arena/" },
+      { name: "Ducklings", url: "https://gaming-escape.github.io/public/assets/games/ducklings-io/" },
+      { name: "Blumgi Racers", url: "https://gaming-escape.github.io/public/assets/games/blumgi-racers/" },
+      { name: "Blumgi Soccer", url: "https://gaming-escape.github.io/public/assets/games/blumgi-soccer/" },
+      { name: "Blumgi Dragon", url: "https://gaming-escape.github.io/public/assets/games/blumgi-dragon/" },
+      { name: "Blumgi Bloom", url: "https://gaming-escape.github.io/public/assets/games/blumgi-bloom/" },
+      { name: "Blumgi Ball", url: "https://gaming-escape.github.io/public/assets/games/blumgi-ball/" },
+      { name: "Blumgi Castle", url: "https://gaming-escape.github.io/public/assets/games/blumgi-castle/" },
+      { name: "Blumgi Rocket", url: "https://gaming-escape.github.io/public/assets/games/blumgi-rocket/" },
+      { name: "Blumgi Slime", url: "https://gaming-escape.github.io/public/assets/games/blumgi-slime/" },
+      { name: "Swingo", url: "https://gaming-escape.github.io/public/assets/games/swingo/" },
+      { name: "Zombie Rush", url: "https://gaming-escape.github.io/public/assets/games/zombie-rush/" },
+      
       
       
          ];
@@ -626,7 +651,9 @@ document.getElementById("Apps").onclick = function() {
             { name: "Chatroom", url: "https://html.cafe/xc79bd761" },
             { name: "Extension Deleter", url: "https://html.cafe/xfcef538d" },
             { name: "Dingus Pr0xy", url: "https://html.cafe/x40ceaed5" },
-             
+            { name: "Blobwifi", url: "https://blobby-boi.github.io/Blobwifi/" },
+            { name: "Browsers", url: "https://html.cafe/x6c8433a0" },
+    
     
         ];
 

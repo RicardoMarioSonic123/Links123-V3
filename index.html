@@ -40,14 +40,6 @@
     color: #fff;
     }
     
-    h3 {
-    font-size: 80px;
-    font-family: Tahoma, sans-serif;
-    color: white;
-    margin: 0;
-    margin-bottom: 10px;
-    }
-    
     h4 {
     margin: 0;
     position: absolute;
@@ -82,7 +74,7 @@
     text-align: center;
     background-color: #111111;
     color: #fff
-    }
+    }    
     
     .button {
             margin-top: 20px;
@@ -101,7 +93,6 @@
          }
     
         .button-m {
-            margin-top: 39px;
             margin-left: 5px;
             margin-right: 5px;
             padding: 9px 25px;
@@ -201,6 +192,7 @@
         }
     
          #randomPhrase {
+         margin-bottom: 43px;
          font-weight: bold;
          font-size: 18px;
          font-family: Tahoma, sans-serif;
@@ -380,7 +372,7 @@
     "Never give up when you think it's all over",
     "One more day",
     "Your potential is infinite, dare to explore it",
-    "Exploration and discovery lead us to new things",
+    "Exploration and discovery lead us to new things.",
     "Defiant Statement: You will not defeat Links123!!",
     "I Love Choco Cake",
     "With Yum Foods and In Cool Kitchen",
@@ -446,7 +438,7 @@
     "I am baldi you're in my school",
     "Fnaf is homo",
     "Tu mama",
-    "pipipipipipipi",
+    "Pi pi pi pi pi",
     "Wow! More Games! And a Search Bar? Such Intuition!",
     "They say we can’t have nice things, but here we are",
     "The more beef the better sound gay, but you all wanna sleep together; ok.",
@@ -454,8 +446,8 @@
     "Now porting to iOS for Monroe iPads!",
     "Now Porting as a Windows OS .iso!",
     "Now Porting to Linux!",
-    "Ported onto a Nintendo Switch!What did we do wrong, set the school free?Running on AA Batteries!",
-    "What did we do wrong, set the school free?Running on AA Batteries!",
+    "Ported onto a Nintendo Switch!What did we do wrong, set the school free?",
+    "What did we do wrong, set the school free?",
     "Running on AA Batteries!",
     "Go Watch Invincible Season 3 on Amazon Prime!",
     "The amount of games we have is MASSIVE",
@@ -506,6 +498,51 @@
     "Nothing its here",
     "Homeless",
     "Live and Learn",
+    "Why always when I'm going to put new splash texts, I can't even get 10 new ones out of my head?",
+    "Yo era seguidor de La grasa en el grupo horneaban unos momos una tarde, sin avisar, me dieron ban ¡todo por fantasmón!",
+    "Mortal Kumbia",
+    "The first game I put on the first version of Links123 was New Super Mario Bros. - Mario Vs Luigi. Why is it here? It can't be because the chromebook has a managed Wi-Fi network.",
+    "If you get caught, don't blame me, it's not my fault that you decided to wear this during class.",
+    "Anything new? probably soon",
+    "n**** n**** n****",
+    "Ruins",
+    "Another Medium",
+    "It's Raining Somewhere Else",
+    "Snowdin Town",
+    "Waterfall",
+    "Reunited",
+    "His Theme",
+    "Temmie Village",
+    "sans.",
+    "Bonetrousle",
+    "Spear of Justice",
+    "Spider Dance",
+    "CORE",
+    "Finale",
+    "ASGORE",
+    "Hopes and Dreams",
+    "SAVE the World",
+    "Battle Against a True Hero",
+    "Megalovania",
+    "Stronger Monsters",
+    "Snowdy",
+    "Once Upon A Time",
+    "¿No tienes nada MEJOR que hacer?",
+    "Don't you have anything BETTER to do?",
+    "Also try ChattyWebsite!",
+    "If I had to change the name of the page, I would put...",
+    "Why do some updates come out quickly and others don't?",
+    "Easter eggs?",
+    "Download on the App Store",
+    "Get it on Google Play",
+    "Get in from Microsoft",
+    "Available at Amazon Appstore",
+    "Who's playing?",
+    "Is this Links 123 V3 or a modified version of Chatty Website?",
+    "What do you think is missing from my site?",
+    "This is better than making links to HTML.cafe",
+    "I am recognized by Links123, but without Links123 I would be nothing",
+    "The page almost became a Google Site!",
     "Welcome to Links123, the perfect site that collects games and apps from other sites, Links123 has the best games and apps to keep you entertained at school or home! So relax and enjoy the collection of games and apps created by others.",
       ];
 
@@ -543,24 +580,24 @@ function search_button() {
      <h2><span>Update Log:</span> 20 new games!</h2>
      <button id="aboutBlank" class="button-ab">about:blank</button>
      <button id="tabCloak" class="button-tc">Tab Cloak</button>
+     <h6>Version 3.1.6</h6>
      <div id="container">
      <h1>Welcome to <span>Links123</span></h1>
      <div id="randomPhrase">Welcome back!</div>
      <div id="container2">
      <button id="games" class="button-m">Games</button>
      <button id="apps" class="button-m">Apps</button>
-     <h6>Version 3.1.5</h6>
       
   <script>
     document.getElementById("games").onclick = function() {
       document.body.innerHTML = "<h4>Loading...<h4>";
       setTimeout(function() {
-    document.body.innerHTML = "<h3>Games</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Games'>";
+    document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Tahoma, sans-serif; color: white; margin: 0;'>Games</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Games'>";
         var games = [
       { name: "Pixel", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://googleusercontent.b-cdn.net/pixel-shooter/ps.xml&container=ig" },
       { name: "Retro Ball", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://274079163-174037128449362058.preview.editmysite.com/uploads/b/139890129-899796311729593176/files/rtbl.xml&container=ig" },
       { name: "Sonic 4: Episode 1", url: "https://wamwoowam.co.uk/sonic4/" },
-      { name: "Minecraft 1.8", url: "https://html.cafe/xb1d0df98" },
+      { name: "EaglercraftX 1.8", url: "https://html.cafe/x2bb30cec" },
       { name: "Moto X3M 3", url: "https://stenunblocked.github.io/moto-frame/other/moto-x3m-3/" },
       { name: "Sonic Robo Blast 2", url: "https://vinmannie.github.io/srb2web/" },
       { name: "Super Mario 64", url: "https://html.cafe/xe25ca14a" },
@@ -585,8 +622,8 @@ function search_button() {
       { name: "Final Earth 2", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://529473016-184630684593625815.preview.editmysite.com/uploads/b/139890129-811652923688457694/files/tfe2.xml&container=ig" },
       { name: "Tiny Fishing", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://72682389-756457502729861133.preview.editmysite.com/uploads/b/11886820-896015480911618794/files/tf.xml&container=ig" },
       { name: "Hover Racer Drive", url: "https://ubg365.github.io/hover-racer-drive/" },
-      { name: "Monkey Mart", url: "https://ubg365.github.io/monkey-mart/play.html" },
-      { name: "Drift Boss", url: "https://ubg365.github.io/drift-boss/" },
+      { name: "Fancy Pants Adventures: World 2", url: "https://obsidianig.com/games/fancypantsadventure2/" },
+      { name: "Fancy Pants Adventure: World 3", url: "https://obsidianig.com/games/fancypantsadventure3/" },
       { name: "Madalin Stunt Cars 2", url: "https://ubg100.github.io/games/Madalin/index.html" },
       { name: "Breaking the bank", url: "https://mountain658.github.io/zbreakingthebank.html" },
       { name: "Escaping the prison", url: "https://mountain658.github.io/zescapetheprison.html" },
@@ -596,7 +633,7 @@ function search_button() {
       { name: "OvO", url: "https://75jfh73gd9hla64g-opensocial.googleusercontent.com/gadgets/ifr?url=https://googleusercontent.b-cdn.net/ovo/ovo.xml&container=ig" },
       { name: "Run 3", url: "https://lekug.github.io/tn6pS9dCf37xAhkJv/" },
       { name: "Bloxorz", url: "https://ad-freegames.github.io/flash/game/bloxorz.html" },
-      { name: "Drift Hunters", url: "https://htmlxm.github.io/h/drift-hunters/" },
+      { name: "Papa's Taco Mia", url: "https://obsidianig.com/games/papastacomia/" },
       { name: "Moto X3M", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@99563e3bf6eb25323e3bd5af20dcd9a261b97991/build/m3m/m3m.xml&container=ig" },
       { name: "Time Shooter 2", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/element@1dd0b99d2004b84795f2745a5eb3468deb1c38a4/ts2.xml&container=ig" }, 
       { name: "Time Shooter 3", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/version@0d8fb9c7430567ed0900902593eee6ba2ba8d297/ts3.xml&container=ig" },
@@ -709,7 +746,7 @@ function search_button() {
       { name: "Gun Spin", url: "https://stenunblocked.github.io/gun-spin/index.html" },
       { name: "Neon Pong", url: "https://stenunblocked.github.io/neon-pong/index.html" },
       { name: "Happy Room", url: "https://roblox-unblock.github.io/r7/happy-room/" },
-      { name: "Dogeminer", url: "https://roblox-unblock.github.io/r7/doge-miner/" },
+      { name: "Doge Miner", url: "https://roblox-unblock.github.io/r7/doge-miner/" },
       { name: "The little Giant", url: "https://roblox-unblock.github.io/r/the-little-giant/" },
       { name: "Grindcraft", url: "https://roblox-unblock.github.io/r4/grindcraft/" },
       { name: "Mob City", url: "https://roblox-unblock.github.io/r/mob-city/" },
@@ -877,7 +914,27 @@ function search_button() {
       { name: "Achievement Unlocked 3", url: "https://obsidianig.com/games/achievementunlocked3/" },
       { name: "Big Red Button", url: "https://obsidianig.com/games/bigredbutton/" },
       { name: "Unfair Mario", url: "https://obsidianig.com/games/unfairmario/" },
-    
+      { name: "Bubble Tanks 2", url: "https://obsidianig.com/games/bubbletanks2/" },
+      { name: "Skibidi Toilet Attack", url: "https://obsidianig.com/games/skibiditoiletattack/" },
+      { name: "Doodle Defender", url: "https://obsidianig.com/games/doodledefender/" },
+      { name: "Chibi Knight", url: "https://obsidianig.com/games/chibiknight/" },
+      { name: "Space Invaders", url: "https://obsidianig.com/games/spaceinvaders/" },
+      { name: "Mario Combat", url: "https://obsidianig.com/games/mariocombat/" },
+      { name: "Line Rider", url: "https://obsidianig.com/games/linerider/" },
+      { name: "Battle Ships", url: "https://obsidianig.com/games/battleships/" },
+      { name: "This Is the Only Level", url: "https://obsidianig.com/games/thisistheonlylevel/" },
+      { name: "Defend the Tank", url: "https://obsidianig.com/games/defendthetank/" },
+      { name: "The World's Hardest Game 2", url: "https://obsidianig.com/games/worldshardestgame2/" },
+      { name: "The World's Hardest Game 3", url: "https://obsidianig.com/games/worldshardestgame3/" },
+      { name: "There Is No Game", url: "https://obsidianig.com/games/thereisnogame/" },
+      { name: "Vex 2", url: "https://obsidianig.com/games/vex2/" },
+      { name: "Vex", url: "https://obsidianig.com/games/vex/" },
+      { name: "Solitaire", url: "https://obsidianig.com/games/solitaire/" },
+      { name: "Theme Hotel", url: "https://obsidianig.com/games/themehotel/" },
+      { name: "Townscaper", url: "https://obsidianig.com/games/townscaper/" },
+      { name: "The Binding of Issac the Demo", url: "https://obsidianig.com/games/thebindingofisaac/" },
+      { name: "Fancy Pants Adventures: World 1", url: "https://obsidianig.com/games/fancypantsadventure/" },
+      
          ];
         var container = document.createElement("div");
         container.setAttribute("id", "gamesContainer");
@@ -917,7 +974,7 @@ function search_button() {
 document.getElementById("apps").onclick = function() {
     document.body.innerHTML = "<h4>Loading...<h4>";
     setTimeout(function() {
-    document.body.innerHTML = "<h3>Apps</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Apps'>";
+    document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 20px;'>Apps</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Apps'>";
         var apps = [
             { name: "HTML.Cafe Gallery", url: "https://html.cafe/gallery" },
             { name: "Ruffle Player", url: "https://ruffle.rs/demo/" },
@@ -973,7 +1030,7 @@ win.document.open();
 win.document.write(document.documentElement.outerHTML);
 win.document.title = "about:blank";
 win.document.close();
-window.parent.window.location.replace('https://classroom.google.com/h')
+window.parent.window.location.replace('https://classroom.google.com/')
 };
     
 document.getElementById("tabCloak").onclick = function() {

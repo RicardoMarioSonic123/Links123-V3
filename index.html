@@ -1,1213 +1,1546 @@
 <!DOCTYPE html>
-<!-- Credits to Chattyice for the ChattyWebsite code I used to create my website. -->
+<!-- Credits to @Chattyice234 on github for the ChattyWebsite code that I used as a template to make mine! -->
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Welcome to Links123, the perfect site that collects games and apps from other sites, Links123 has the best games and apps to keep you entertained at school or home! So relax and enjoy the collection of games and apps created by others.">
-  <meta name="keywords" content="Unblocked Games and Apps">
-  <title>Links123</title>
-  <link rel="icon" type="image/png" href="https://i.ibb.co/n8NkW22k/L.png">
-  <style>
-    body {
-    font-family: sans-serif;
-    background-color: #1a2023;
-    margin: 0;
-    text-align: center;
-    }
-    
-    ::-webkit-scrollbar {
-    width: 0px;
-    overflow: hidden;
-    }
-    
-    span {
-    color: #335fff;
-    }
-    
-    h1 {
-    font-size: 50px;
-    font-family: Tahoma, sans-serif;
-    color: white;
-    }
-    
-    h2 {
-    top: 0%; 
-    width: 100%;
-    position: absolute;
-    font-size: 20px;
-    font-family: Tahoma, sans-serif;
-    color: #fff;
-    }
-    
-    h4 {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 50px;
-    font-family: Tahoma, sans-serif;
-    color: white;
-    }
-        
-    h6 {
-    bottom: 0%; 
-    left: 0%;
-    width: 100%;
-    height: 0px;
-    position: absolute;
-    font-size: 20px;
-    font-family: Tahoma, sans-serif;
-    color: #fff;
-    }
-    
-    #searchBar{
-    font-family: Tahoma, sans-serif;
-    font-size: 15px;
-	padding: 15px;
-    width: 50%;
-	border-radius: 6px;
-    border: 0;
-    font-weight: 552;
-    text-align: center;
-    background-color: #111111;
-    color: #fff
-    }    
-    
-    .button {
-    margin-top: 20px;
-    margin-left: 7px;
-    margin-right: 7px;
-    padding: 9px 25px;
-    font-size: 18px;
-    font-weight: 552;
-    font-family: Tahoma, sans-serif;
-    background-color: #335fff;
-    color: #fff;
-    border: 0 outset #444;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    }
-    
-    .button-m {
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 9px 25px;
-    font-size: 18px;
-    font-weight: 552;
-    font-family: Tahoma, sans-serif;
-    background-color: #335fff;
-    color: #fff;
-    border: 0 outset #444;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    }
-    
-    #button-s{
-    bottom: 0%; 
-    text-decoration: underline;
-    right: 0%;
-    width: 150px;
-    height: 70px;
-    position: absolute;
-    font-size: 18px;
-    font-weight: 552;
-    font-family: Tahoma, sans-serif;
-    border: none;
-    border-radius: 10px;
-    color: #fff;
-    background: transparent; 
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, transform 0.2s;
-    }
-    
-    .button-si {
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 18px;
-    font-weight: 552;
-    font-family: Tahoma, sans-serif;
-    background-color: #335fff;
-    color: #fff;
-    border: 0 outset #444;
-    border-radius: 6px;
-    cursor: pointer;
-    height: 100%;
-    width: 45%;
-    transition: background-color 0.3s, transform 0.2s;
-    }
-    
-    .button-g {
-    bottom: 0%; 
-    text-decoration: underline;
-    left: 0%;
-    width: 150px;
-    height: 70px;
-    position: absolute;
-    font-size: 18px;
-    font-weight: 552;
-    font-family: Tahoma, sans-serif;
-    border: none;
-    border-radius: 10px;
-    color: #fff;
-    background: transparent; 
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, transform 0.2s;
-    }
-    
-    .button:hover {
-    background-color: #284ccc;
-    }
-    
-    .button:active {
-    background-color: #1e3999;
-    }
-    
-    .button-m:hover {
-    background-color: #284ccc;
-    }
-    
-    .button-m:active {
-    background-color: #1e3999;
-    }
-    
-    #button-s:hover {
-    background-color: #335fff;
-    color: #1a2023;
-    }
-    
-    #button-s:active {
-    background-color: #284ccc;
-    }
-    
-    .button-si:hover {
-    background-color: #284ccc;
-    }
-    
-    .button-si:active {
-    background-color: #1e3999;
-    }
-    
-    .button-g:hover {
-    background-color: #335fff;
-    color: #1a2023;
-    }
-    
-    .button-g:active {
-    background-color: #284ccc;
-    }
-    
-    #container-m {
-    position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    }
-    
-    #container-s {
-    position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-    background-color: #111111;
-    height: 50%;
-    width: 50%;
-    border-radius: 10px;
-    }
-    
-    #randomPhrase {
-    margin-bottom: 43px;
-    font-weight: bold;
-    font-size: 18px;
-    font-family: Tahoma, sans-serif;
-    color: white;
-    }
-
-    .hide{
-    display: none;
-    }
-    
-  </style> 
+  <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Welcome to Links123, the perfect site that collects games and apps from other sites, Links123 has the best games and apps to keep you entertained at school or home! So relax and enjoy the collection of games and apps created by others.">
+     <meta name="keywords" content="Unblocked Games and Apps">
+     <title>Links123</title>
+     <link rel="icon" type="image/png" href="https://i.ibb.co/n8NkW22k/L.png">
+   <style>
+     body {
+     font-family: sans-serif;
+     background-color: #1a2023;
+     margin: 0;
+     text-align: center;
+     color: #fff;
+     }
      
-     <h2><span>Update Log:</span> 20 new games, 3 new apps, GitHub and Settings button added</h2>
-     <h6>Version 3.1.9</h6>
-     <button class="button-g" onclick="location.href='https://github.com/RicardoMarioSonic123/Links123-V3'">GitHub</button>
-     <div id="container-m">
+     .hide {
+     display: none;
+     }
+    
+     ::-webkit-scrollbar {
+     width: 0px;
+     overflow: hidden;
+     }
+     
+     span {
+     color: #335fff;
+     }
+    
+     h1 {
+     font-size: 50px;
+     font-family: Tahoma, sans-serif;
+     cursor: default;
+     }
+     
+     h2 {
+     font-size: 20px;
+     font-family: Tahoma, sans-serif;
+     cursor: default;
+     }
+    
+     h4 {
+     margin: 0;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     font-size: 50px;
+     font-family: Tahoma, sans-serif;
+     cursor: wait;
+     }
+        
+     h6 {
+     bottom: 0%; 
+     left: 0%;
+     width: 100%;
+     height: 0px;
+     position: absolute;
+     font-size: 20px;
+     font-family: Tahoma, sans-serif;
+     cursor: default;
+     }
+    
+     #searchBar {
+     font-family: Tahoma, sans-serif;
+     font-size: 15px;
+	 padding: 15px;
+     width: 50%;
+	 border-radius: 6px;
+     border: 0;
+     font-weight: 552;
+     text-align: center;
+     background-color: #111111;
+     color: #fff;
+     }    
+    
+     #settings {
+     overflow: auto;
+     position: absolute;
+	 left: 50%;
+	 top: 50%;
+	 transform: translate(-50%, -50%);
+     background-color: #111111;
+     height: 70%;
+     width: 70%;
+     border-radius: 10px;
+     }
+     
+     #blur-settings {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(2px);
+     z-index: 1000;
+     justify-content: center;
+     align-items: center;
+     }
+     
+     .settings-i {
+     margin-right: 5px;
+     font-family: Tahoma, sans-serif;
+     font-size: 15px;
+	 width: 60%;
+     height: 40px;
+	 border-radius: 6px;
+     border: 0;
+     font-weight: 552;
+     text-align: center;
+     background-color: #1a2023;
+     color: #fff;
+     }
+     
+     #updatelog {
+     overflow: auto;
+     position: absolute;
+	 left: 50%;
+	 top: 50%;
+	 transform: translate(-50%, -50%);
+     background-color: #111111;
+     height: 70%;
+     width: 50%;
+     border-radius: 10px;
+     }
+     
+     #blur-updatelog {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(2px);
+     z-index: 1000;
+     justify-content: center;
+     align-items: center;
+     }
+    
+     .button {
+     margin-top: 20px;
+     margin-left: 7px;
+     margin-right: 7px;
+     padding: 9px 25px;
+     font-size: 18px;
+     font-weight: 552;
+     font-family: Tahoma, sans-serif;
+     background-color: #335fff;
+     color: #fff;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+     transition: background-color 0.3s, transform 0.2s;
+     }
+    
+     .button:hover {
+     background-color: #284ccc;
+     }
+    
+     .button:active {
+     background-color: #1e3999;
+     }
+     
+     #button-ul {
+     position: absolute;
+     top: 0%;
+     left: 50%;
+     transform: translate(-50%, 50%);
+     font-size: 20px;
+     font-weight: 552;
+     font-family: Tahoma, sans-serif;
+     border: none;
+     border-radius: 10px;
+     color: #335fff;
+     background: transparent; 
+     cursor: pointer;
+     transition: background-color 0.3s, color 0.3s, transform 0.2s;
+     }
+     
+     #button-ul:hover {
+     background-color: #335fff;
+     color: #1a2023;
+     }
+    
+     #button-ul:active {
+     background-color: #284ccc;
+     }
+     
+     .button-h {
+     margin-left: 5px;
+     margin-right: 5px;
+     padding: 9px 25px;
+     font-size: 18px;
+     font-weight: 552;
+     font-family: Tahoma, sans-serif;
+     background-color: #335fff;
+     color: #fff;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+     transition: background-color 0.3s, transform 0.2s;
+     }
+     
+     .button-h:hover {
+     background-color: #284ccc;
+     }
+    
+     .button-h:active {
+     background-color: #1e3999;
+     }
+     
+     .button-c {
+     position: absolute;
+     top: 0%;
+     right: 0%;
+     padding: 9px 25px;
+     font-size: 18px;
+     font-weight: 552;
+     font-family: Tahoma, sans-serif;
+     background-color: #335fff;
+     color: #fff;
+     border: none;
+     border-radius: 10px;
+     cursor: pointer;
+     transition: background-color 0.3s, transform 0.2s;
+     }
+     
+     .button-c:hover {
+     background-color: #284ccc;
+     }
+    
+     .button-c:active {
+     background-color: #1e3999;
+     }
+     
+     #button-s {
+     bottom: 0%; 
+     text-decoration: underline 2px;
+     right: 0%;
+     width: 150px;
+     height: 70px;
+     position: absolute;
+     font-size: 18px;
+     font-weight: 552;
+     font-family: Tahoma, sans-serif;
+     border: none;
+     border-radius: 10px;
+     color: #fff;
+     background: transparent; 
+     cursor: pointer;
+     transition: background-color 0.3s, color 0.3s, transform 0.2s;
+     }
+    
+     #button-s:hover {
+     background-color: #335fff;
+     color: #1a2023;
+     }
+    
+     #button-s:active {
+     background-color: #284ccc;
+     }
+     
+     .button-st {
+     margin-left: 5px;
+     margin-right: 5px;
+     font-size: 15px;
+     font-weight: 552;
+     font-family: Tahoma, sans-serif;
+     background-color: #335fff;
+     color: #fff;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+     width: 37.5%;
+     height: 40px;
+     margin-top: 20px;
+     transition: background-color 0.3s, transform 0.2s;
+     }
+     
+     .button-st:hover {
+     background-color: #284ccc;
+     }
+    
+     .button-st:active {
+     background-color: #1e3999;
+     }
+    
+     .button-si {
+     margin-left: 5px;
+     margin-right: 5px;
+     font-size: 15px;
+     font-weight: 552;
+     font-family: Tahoma, sans-serif;
+     background-color: #335fff;
+     color: #fff;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+     width: 15%;
+     height: 40px;
+     margin-top: 20px;
+     transition: background-color 0.3s, transform 0.2s;
+     }
+     
+     .button-si:hover {
+     background-color: #284ccc;
+     }
+    
+     .button-si:active {
+     background-color: #1e3999;
+     }
+     
+     #button-g {
+     bottom: 0%; 
+     text-decoration: underline 2px;
+     left: 0%;
+     width: 150px;
+     height: 70px;
+     position: absolute;
+     font-size: 18px;
+     font-weight: 552;
+     font-family: Tahoma, sans-serif;
+     border: none;
+     border-radius: 10px;
+     color: #fff;
+     background: transparent; 
+     cursor: pointer;
+     transition: background-color 0.3s, color 0.3s, transform 0.2s;
+     }
+    
+     #button-g:hover {
+     background-color: #335fff;
+     color: #1a2023;
+     }
+    
+     #button-g:active {
+     background-color: #284ccc;
+     }
+    
+     .favicon {
+     padding: 0px 0px;
+     margin: 5px;
+     border: none;
+     cursor: pointer;
+     display: inline-flex;
+     align-items: center;
+     background-color: #000; 
+     border-radius: 10px;
+     outline: none;
+     }
+    
+     .favicon img {
+     width: 30px;
+     height: 30px;
+     outline: none;
+     background-color: #fff;
+     padding: 7px 8px;
+     border-radius: 10px;  
+     transition: background-color 0.3s, transform 0.2s;
+     }
+    
+     .favicon img:hover {
+     background-color: #cccccc;
+     }
+    
+     .favicon img:active {
+     background-color: #999999;
+     }
+    
+     #home {
+     position: absolute;
+	 left: 50%;
+	 top: 50%;
+	 transform: translate(-50%, -50%);
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     }
+    
+     .loading {
+     position: absolute;
+	 left: 50%;
+	 top: 50%;
+	 transform: translate(-50%, -50%);
+     background: transparent;
+     height: 100%;
+     width: 100%;
+     cursor: wait;
+     }
+    
+     #randomPhrase {
+     margin-bottom: 43px;
+     font-weight: bold;
+     font-size: 18px;
+     font-family: Tahoma, sans-serif;
+     cursor: pointer;
+     transition: color 0.3s, transform 0.2s;
+     }
+     
+     #randomPhrase:hover {
+     color: #335fff;
+     }
+    
+     #randomPhrase:active {
+     color: #284ccc;
+     }
+     
+     .header {
+     border-bottom: 5px solid #fff;
+     padding-bottom: 20px;
+     }
+   </style> 
+     
+     <!-- Main Menu -->
+     <body>
+     <button id="button-ul" onclick="openUpdateLog()" title="Click here to view the update log">▶Click here to view the update log◀</button>
+     <h6>Version 3.2.0</h6>
+     <button id="button-g" onclick="location.href='https://github.com/RicardoMarioSonic123/Links123-V3'" title="Visit Github Repository">GitHub</button>
+     <button id="button-s" onclick="openSettings()" title="Open Settings">Settings</button>
+     <div id="home">
      <h1>Welcome to <span>Links123</span></h1>
      <div id="randomPhrase">Welcome back!</div>
-     <button id="games" class="button-m">Games</button>
-     <button id="apps" class="button-m">Apps</button>
-     </div>
-     <div id="cloakingSettings">
-     <button id="button-s" onclick="closeLeftMenu();">Settings</button>
-     <div id="menu" class= "hide">
-     <div id="container-s">
-     <button id="aboutBlank" class="button-si">about:blank</button>
-     <button id="tabCloak" class="button-si">Tab Cloak</button>
-     </div>
+     <button id="games" class="button-h">Games</button>
+     <button id="apps" class="button-h">Apps</button>
      </div>
       
-  <script>
-    document.getElementById("games").onclick = function() {
-    document.body.innerHTML = "<h4>Loading...<h4>";
-    setTimeout(function() {
-    document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;'>Games</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Games'>";
-        var games = [
-      { name: "Pixel", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://googleusercontent.b-cdn.net/pixel-shooter/ps.xml&container=ig" },
-      { name: "Retro Ball", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://274079163-174037128449362058.preview.editmysite.com/uploads/b/139890129-899796311729593176/files/rtbl.xml&container=ig" },
-      { name: "Sonic 4: Episode 1", url: "https://wamwoowam.co.uk/sonic4/" },
-      { name: "EaglercraftX 1.8", url: "https://html.cafe/x2bb30cec" },
-      { name: "Moto X3M 3", url: "https://stenunblocked.github.io/moto-frame/other/moto-x3m-3/" },
-      { name: "Sonic Robo Blast 2", url: "https://vinmannie.github.io/srb2web/" },
-      { name: "Super Mario 64", url: "https://html.cafe/xe25ca14a" },
-      { name: "Eggy Car", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://googleusercontent.b-cdn.net/eggy-car/ec.xml&container=ig" },
-      { name: "Burnout Extreme Drift 2", url: "https://gaming-escape.github.io/public/assets/games/burnout-extreme-drift-2/index.html" },
-      { name: "Edge Surf", url: "https://obsidianig.com/games/edgesurf/" },
-      { name: "Drift Hunters", url: "https://obsidianig.com/games/drifthunters/" },
-      { name: "Happy Wheels", url: "https://obsidianig.com/games/happywheels/" },
-      { name: "Aquapark Slides", url: "https://obsidianig.com/games/aquaparkslides/" },
-      { name: "Super Mario Flash 2", url: "https://obsidianig.com/games/supermarioflash2/" },
-      { name: "Connect 4", url: "https://obsidianig.com/games/connect4/"},
-      { name: "Snowball.io", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/gertdoro/SQLite4Unity3d@8516fc0bd1d2be662ca484f5dc506268b24763ef/Example/Assets/snowball.xml&container=ig" },
-      { name: "Paper.io", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@b8b8a03997f38305098c2f2f5fe14907463cd23b/build/ppo2/ppo2.xml&container=ig" },
-      { name: "Pizza Tower", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://184025835-163385710482638103.preview.editmysite.com/uploads/b/139890129-716705991685705292/files/pztr.xml&container=ig" },
-      { name: "Subway Surfers", url: "https://dddavit.github.io/subway/" },
-      { name: "Slope", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/WebStarterkit@ebc61d8a952e7630c8c5ca3410335bf5d5f04711/src/sp.xml&container=ig" },
-      { name: "Slope 3", url: "https://roblox-unblock.github.io/r/slope-3/" },
-      { name: "Cookie Clicker", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@e7d53b913d54429e5e118ca9541fb0f8f1f66bdc/dist/cc.xml&container=ig" },
-      { name: "Drive Mad", url: "https://ubg365.github.io/drive-mad/play.html" },
-      { name: "Drift Boss", url: "https://roblox-unblock.github.io/r/drift-boss" }, 
-      { name: "BitLife", url: "https://ubg365.github.io/bitlife-life-simulator/play.html" },
-      { name: "Final Earth 2", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://529473016-184630684593625815.preview.editmysite.com/uploads/b/139890129-811652923688457694/files/tfe2.xml&container=ig" },
-      { name: "Tiny Fishing", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://72682389-756457502729861133.preview.editmysite.com/uploads/b/11886820-896015480911618794/files/tf.xml&container=ig" },
-      { name: "Hover Racer Drive", url: "https://ubg365.github.io/hover-racer-drive/" },
-      { name: "Fancy Pants Adventures: World 2", url: "https://obsidianig.com/games/fancypantsadventure2/" },
-      { name: "Fancy Pants Adventure: World 3", url: "https://obsidianig.com/games/fancypantsadventure3/" },
-      { name: "Madalin Stunt Cars 2", url: "https://ubg100.github.io/games/Madalin/index.html" },
-      { name: "Breaking the bank", url: "https://mountain658.github.io/zbreakingthebank.html" },
-      { name: "Escaping the prison", url: "https://mountain658.github.io/zescapetheprison.html" },
-      { name: "Stealing the diamond", url: "https://mountain658.github.io/zstealingthediamond.html" },
-      { name: "Infiltrating the airship", url: "https://sz-games.github.io/games/Flash.html?game=/games/henry-airship/infiltratingtheairshipgame.swf" },
-      { name: "Fleeing the complex", url: "https://sz-games.github.io/games/Flash.html?game=https://sz-games.github.io/Games6/Henry%20Stickmin%20-%20Fleeing%20the%20Complex.swf?raw=true" },
-      { name: "OvO", url: "https://75jfh73gd9hla64g-opensocial.googleusercontent.com/gadgets/ifr?url=https://googleusercontent.b-cdn.net/ovo/ovo.xml&container=ig" },
-      { name: "Run 3", url: "https://lekug.github.io/tn6pS9dCf37xAhkJv/" },
-      { name: "Bloxorz", url: "https://ad-freegames.github.io/flash/game/bloxorz.html" },
-      { name: "Papa's Taco Mia", url: "https://obsidianig.com/games/papastacomia/" },
-      { name: "Moto X3M", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@99563e3bf6eb25323e3bd5af20dcd9a261b97991/build/m3m/m3m.xml&container=ig" },
-      { name: "Time Shooter 2", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/element@1dd0b99d2004b84795f2745a5eb3468deb1c38a4/ts2.xml&container=ig" }, 
-      { name: "Time Shooter 3", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/version@0d8fb9c7430567ed0900902593eee6ba2ba8d297/ts3.xml&container=ig" },
-      { name: "Sonic 3 AIR", url: "https://vinmannie.github.io/sonic3air/sonic3air_web.html" },
-      { name: "Project Laser", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/godotpack@e8b5ffe6cbb8acafd0a9678b760e115e5ff92efe/side/bs-pl/bspl.xml&container=ig" }, 
-      { name: "Sonic Mania Plus", url: "https://vinmannie.github.io/SonicManiaWeb/RSDKv5.html" },
-      { name: "Super Smash Flash 2", url: "https://www-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/f107b843-3661-4036-9397-2b0c6414a369%2Fssf2v0.8.xml&container=ig" },
-      { name: "FNAF", url: "https://ubg77.github.io/fix/fnaf1/" },
-      { name: "RedBall V1", url: "https://rb44a.github.io/RedBall_V1/" },
-      { name: "Tomb of the mask", url: "https://mountain658.github.io/g/tombofthemask/index.html" },
-      { name: "RedBall V2", url: "https://rb44a.github.io/RedBall_V2/" },
-      { name: "RedBall V3", url: "https://rb44a.github.io/RedBall_V3/" },
-      { name: "Sonic Worlds Next", url: "https://grubbyplaya.github.io/Sonic-Worlds-Next-WASM/Sonic%20Worlds%20Next.html" },
-      { name: "Duck Life", url: "https://roblox-unblock.github.io/r/duck-life/" },
-      { name: "Super Mario Bros", url: "https://playmario.github.io/HTML5_Client/" },
-      { name: "Unfair Undyne", url: "https://doodle-pile.gitlab.io/unfair-undyne/v0.99/" },
-      { name: "Super Mario 63", url:"https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Fsuper-mario-63.xml&container=ig" },
-      { name: "Cat Mario", url: "https://www.jezng.com/open-syobon-action.js/" },
-      { name: "Cut the Rope", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://638401824-140825937501728463.preview.editmysite.com/uploads/b/139890129-351488130894771558/files/ctr.xml&container=ig" },
-      { name: "Plants vs Zombies", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Fplants-vs-zombies.xml&container=ig" },
-      { name: "Backrooms", url: "https://adfree3kh0.github.io/projects/backrooms/index.html" },
-      { name: "Trollface Quest", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Ftrollface-quest.xml&container=ig" },
-      { name: "Among Us Single Player", url: "https://adfree3kh0.github.io/projects/among-us/index.html" }, 
-      { name: "Trollface Quest 3", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Ftrollface-quest-3.xml&container=ig" },
-      { name: "Nyan Cat: Lost in Space", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Fnyan_cat_lost_in_space.xml&container=ig" },
-      { name: "Cave Story", url: "https://vinmannie.github.io/CaveStory/" },
-      { name: "Cookie Clicker", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@e7d53b913d54429e5e118ca9541fb0f8f1f66bdc/dist/cc.xml&container=ig" },
-      { name: "Super Mario Bros S", url: "https://superpi2.github.io/SuperMarioBrosS-v0.2.0/" },
-      { name: "PacMan", url: "https://masonicgit.github.io/pacman/" },
-      { name: "PacMan Google", url: "https://macek.github.io/google_pacman/?tab=readme-ov-file" },
-      { name: "Basket Random", url: "https://html.cafe/xa4301809" },
-      { name: "2048", url: "https://roblox-unblock.github.io/r/2048/" },
-      { name: "Monkey Mart", url: "https://html.cafe/x33bca0fb" },
-      { name: "Running T-Rex", url: "https://html.cafe/x90ef8e33" },  
-      { name: "Sonic 1", url: "https://vinmannie.github.io/Sonic-1-WASM/" },
-      { name: "Scrap Metal 3", url: "https://adfree3kh0.github.io/projects/scrapmetal/index.html" },  
-      { name: "Sonic CD", url: "https://tws2401.github.io/Sonic-CD-WASM/" },
-      { name: "Sonic 2", url: "https://snesfx.github.io/Sonic2Emscripten/" },
-      { name: "Tanuki Sunset", url: "https://roblox-unblock.github.io/r8/tanuki-sunset/" },
-      { name: "Baldi's Basics", url: "https://snesfx.github.io/baldi-html5/" },
-      { name: "Kindergarten", url: "https://snesfx.github.io/Kindergarten-Web/"},
-      { name: "Idle Breakout", url: "https://roblox-unblock.github.io/r7/idle-breakout/" },
-      { name: "FNAF 2", url: "https://obsidianig.com/games/fnaf2/fnaf2" },
-      { name: "FNAF 3", url: "https://obsidianig.com/games/fnaf3/fnaf3" },
-      { name: "FNAF 4", url: "https://obsidianig.com/games/fnaf4/fnaf4" },
-      { name: "Windows 96", url: "https://windows96.net/" },
-      { name: "Bad Time Simulator", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/JSEngine@d94624d12066e1ce30e89c48a687868a26d5c1eb/build/bts-sans/bts.xml&container=ig" },
-      { name: "Temple Run 2", url: "https://roblox-unblock.github.io/r8/temple-run-2/" },
-      { name: "Brain Test", url: "https://roblox-unblock.github.io/r2/brain-test-tricky-puzzles/" },
-      { name: "Curve Ball 3D", url: "https://roblox-unblock.github.io/r/curve-ball-3d/" },
-      { name: "Stack", url: "https://roblox-unblock.github.io/r2/stack" },
-      { name: "Clicker", url: "https://elucidation.github.io/ClickerJs/" },
-      { name: "Minesweeper", url: "https://roblox-unblock.github.io/r7/minesweeper/" },
-      { name: "Archery World Tour", url: "https://roblox-unblock.github.io/r/archery-world-tour/" },
-      { name: "Crossy Road", url: "https://roblox-unblock.github.io/r/crossy-road/" },
-      { name: "Gameing", url: "https://windows96.net/system/apps/gameing/" },
-      { name: "New Super Mario Bros. On Scratch 3", url: "https://scratch.mit.edu/projects/874249193/embed" },
-      { name: "Doodle Jump", url: "https://roblox-unblock.github.io/r7/doodle-jump/" },
-      { name: "Flash Tetris", url: "https://roblox-unblock.github.io/r7/tetris-flash/" },
-      { name: "Moto X3M 2", url: "https://roblox-unblock.github.io/r8/moto-x3m-2/" },
-      { name: "Bad Ice Cream", url: "https://roblox-unblock.github.io/r88/bad-ice-cream/" },
-      { name: "Cat Trap", url: "https://roblox-unblock.github.io/r8/cat-trap/" },
-      { name: "Google Feud", url: "https://roblox-unblock.github.io/r7/google-feud/" },
-      { name: "Fireboy And Water Girl", url: "https://roblox-unblock.github.io/r88/fireboy-and-water-girl/" },
-      { name: "Bad Ice Cream 2", url: "https://roblox-unblock.github.io/r88/bad-ice-cream-2/" }, 
-      { name: "Bad Ice Cream 3", url: "https://roblox-unblock.github.io/r88/bad-ice-cream-3/" },
-      { name: "Tunnel Rush", url: "https://ubg44.github.io/TunnelRush/" },
-      { name: "Doodle Champion Island", url: "https://roblox-unblock.github.io/r7/doodle-champion-island/" },
-      { name: "2048 Multitasking", url: "https://roblox-unblock.github.io/r7/2048-multitask/" },
-      { name: "Elastic Man", url: "https://roblox-unblock.github.io/r7/elastic-man/" },
-      { name: "Hextris", url: "https://roblox-unblock.github.io/r7/hextris/" },
-      { name: "8 Ball Pool", url: "https://roblox-unblock.github.io/r8/8-ball-pool/" },
-      { name: "Getting Over It", url: "https://roblox-unblock.github.io/r88/getting-over-it/" },
-      { name: "Bubble Shooter", url: "https://roblox-unblock.github.io/r2/bubble-shooter/" },
-      { name: "Jelly Truck", url: "https://roblox-unblock.github.io/r/jelly-truck/" },
-      { name: "Cluster Rush", url: "https://roblox-unblock.github.io/r8/cluster-rush/" },
-      { name: "Sketchbook 0.4", url: "https://roblox-unblock.github.io/r8/sketchbook-04/" },
-      { name: "Stupid Zombies", url: "https://roblox-unblock.github.io/r3/stupid-zombies/" },
-      { name: "The Impossible Quiz", url: "https://roblox-unblock.github.io/r8/the-impossible-quiz/" },
-      { name: "Stickman Hook", url: "https://roblox-unblock.github.io/r/stickman-hook/" },
-      { name: "Stickman Bridge Constructor", url: "https://roblox-unblock.github.io/r6/stickman-bridge-constructor/" },
-      { name: "Death Run 3D", url: "https://roblox-unblock.github.io/r7/death-run-3d/" },
-      { name: "Orbital Survival", url: "https://roblox-unblock.github.io/r8/orbital-survival/" },
-      { name: "Candy Jump", url: "https://roblox-unblock.github.io/r/candy-jump/" },
-      { name: "VVVVVV", url: "https://vinmannie.github.io/vvgame/" },
-      { name: "The World's Hardest Game", url: "https://vinmannie.github.io/WorldsHardestGame/" },
-      { name: "Top Speed Racing 3D", url: "https://roblox-unblock.github.io/r/top-speed-racing-3d/" },
-      { name: "Deepest Sword", url: "https://roblox-unblock.github.io/r8/deepest-sword/" },
-      { name: "FNF", url: "https://roblox-unblock.github.io/r88/friday-night-funkin/" },
-      { name: "Jetpack Joyride", url: "https://roblox-unblock.github.io/r7/jetpack-joyride/" },
-      { name: "Hover Racing", url: "https://roblox-unblock.github.io/r/hover-racer/" },
-      { name: "Tag", url: "https://roblox-unblock.github.io/r3/tag/" },
-      { name: "A Dance of Fire And Ice", url: "https://roblox-unblock.github.io/r8/a-dance-of-fire-and-ice/" },
-      { name: "Basket Bros", url: "https://roblox-unblock.github.io/r7/basket-bros/" },
-      { name: "Soccer Random", url: "https://roblox-unblock.github.io/r8/soccer-random/" },
-      { name: "Maze: Path of Light", url: "https://roblox-unblock.github.io/r5/maze-path-of-light/" },
-      { name: "House of Hazards", url: "https://roblox-unblock.github.io/r/house-of-hazards/" },
-      { name: "Penalty Kick Online", url: "https://roblox-unblock.github.io/r/penalty-kick-online/" },
-      { name: "Stickman Golf", url: "https://roblox-unblock.github.io/r8/stickman-golf/" },
-      { name: "Boxing Random", url: "https://roblox-unblock.github.io/r77/boxing-random/" },
-      { name: "Dreadhead Parkour", url: "https://roblox-unblock.github.io/r7/dreadhead-parkour/" },
-      { name: "Traffic Mania", url: "https://roblox-unblock.github.io/r3/traffic-mania/" },
-      { name: "Drive Mad", url: "https://roblox-unblock.github.io/r77/drive-mad/" },
-      { name: "N-Gon", url: "https://roblox-unblock.github.io/r8/n-gon" },
-      { name: "Chicken Merge", url: "https://roblox-unblock.github.io/r4/chicken-merge/" },
-      { name: "We Become what we Behold", url: "https://gnhustgames.github.io/wbwwb/" },
-      { name: "Chrome Dino", url: "https://htmlxm.github.io/h7/dinosaur-game/" },
-      { name: "1v1.LOL", url: "https://stenunblocked.github.io/1v1-lol/index.html" },
-      { name: "Bottle Flip 3D", url: "https://stenunblocked.github.io/bottle-flip-3d/bottleflip3d.html" },
-      { name: "Gun Spin", url: "https://stenunblocked.github.io/gun-spin/index.html" },
-      { name: "Neon Pong", url: "https://stenunblocked.github.io/neon-pong/index.html" },
-      { name: "Happy Room", url: "https://roblox-unblock.github.io/r7/happy-room/" },
-      { name: "Doge Miner", url: "https://roblox-unblock.github.io/r7/doge-miner/" },
-      { name: "The little Giant", url: "https://roblox-unblock.github.io/r/the-little-giant/" },
-      { name: "Grindcraft", url: "https://roblox-unblock.github.io/r4/grindcraft/" },
-      { name: "Mob City", url: "https://roblox-unblock.github.io/r/mob-city/" },
-      { name: "StickFighter", url: "https://roblox-unblock.github.io/r6/stick-fighter/" },
-      { name: "B-CUBED", url: "https://roblox-unblock.github.io/r/b-cubed/" },
-      { name: "Crazy Cars", url: "https://roblox-unblock.github.io/r4/crazy-cars/" },
-      { name: "Adventure Drivers", url: "https://roblox-unblock.github.io/r7/adventure-drivers/" },
-      { name: "Awesome Tanks", url: "https://roblox-unblock.github.io/r/awesome-tanks-2/" },
-      { name: "Guess The Number Game", url: "https://html.cafe/x63aefeaa" },
-      { name: "Obby Robby Only Up", url: "https://html.cafe/x3d7ef5a3" },
-      { name: "Half-Life 1", url: "https://x8bitrain.github.io/webXash/" },
-      { name: "GoBattle2", url: "https://roblox-unblock.github.io/r3/superbattle-2/" },
-      { name: "Electron Dash", url: "https://roblox-unblock.github.io/r7/electron-dash/" },
-      { name: "Baldi Basics Field Trip Remake", url: "https://othermgwebsite.github.io/b92261bf-dae7-4055-bd8a-8eb6d069a6fc/content/v6p9d9t4.ssl.hwcdn.net/html/4965007/WebGL/index.html" },
-      { name: "Sonic Revert", url: "https://othermgwebsite.github.io/1f5d0d15-8012-46b8-b8d3-48766f2981a0/content/unblockedgamesboo.com/webgl/sonic-revert/index.html" },
-      { name: "Boundland", url: "https://othermgwebsite.github.io/7c4dc35b-2f3b-4ffd-ac78-0757829d65e0/content/0000100.com/cdn1/boundland/index.html" },
-      { name: "Boxel Rebound", url: "https://othermgwebsite.github.io/56dbf46b-4300-4a73-9900-9d62b9440fdf/content/trinculo54.github.io/Boxel-rebound-hope/Older/index.html" },
-      { name: "CraftMine", url: "https://othermgwebsite.github.io/newgames/craftmine/index.html" },
-      { name: "Death Soul", url: "https://othermgwebsite.github.io/452e5670-7684-4daa-bdce-eef69b0fc66a/content/app-99908.games.s3.yandex.net/99908/ib1vwzwxwdk9r9nlm6f8pfaeui8bnqxv/index.html" },
-      { name: "Dont Fall.io", url: "https://othermgwebsite.github.io/cffd6473-61f8-49c2-a88f-7a6a61699ca1/content/www.julgames.com/games/2021/unity/dont-fall-io/index.html" },
-      { name: "DragBox", url: "https://othermgwebsite.github.io/f635aa64-1653-491c-a95f-b2b2f2067494/content/19221.cache.armorgames.com/files/games/drag-box-19221/index.html" },
-      { name: "EraseBox", url: "https://othermgwebsite.github.io/ed7ba711-4d04-47d0-bd70-ce28d0aa6e11/content/19256.cache.armorgames.com/files/games/erase-box-19256/index.html" },
-      { name: "Mari0", url: "https://othermgwebsite.github.io/ca2cd940-b69b-43fc-b330-9b25b98be6f4/content/static.playunblocked.com/2021/12/mari0/index.html" },
-      { name: "Slice of Sasha", url: "https://othermgwebsite.github.io/8e9ed6cf-1ffa-46e9-8dbd-6fd8858d2f1f/content/v6p9d9t4.ssl.hwcdn.net/html/4413918/index.html" },
-      { name: "Running Round", url: "https://othermgwebsite.github.io/4f835b64-2d5a-412e-8ed1-38615fad15ad/content/funkypotato.com/gamez/running-round/index.html" },
-      { name: "Scrambled Eggs", url: "https://othermgwebsite.github.io/1f5e006d-bb92-4509-990b-fae33b4ce5c5/content/v6p9d9t4.ssl.hwcdn.net/html/2727946/SE_HTML/index.html" },
-      { name: "Shards", url: "https://othermgwebsite.github.io/479a586a-65af-4914-9416-0a12a5755f24/content/app-96863.games.s3.yandex.net/96863/nlrz4jbpuqrfdnfxtnjszxj9b42d8sor/index.html" },
-      { name: "Senya and Oscar 2", url: "https://othermgwebsite.github.io/b958cc1c-fc13-4b75-ae67-b08dce1c28c7/content/19140.cache.armorgames.com/files/games/senya-and-oscar-2-19140/index.html" },
-      { name: "Space is Key", url: "https://othermgwebsite.github.io/8a7c95a0-e604-43c3-b584-b001b1611922/content/files.numuki.com/games/platform/space-is-key/index.html" },
-      { name: "Arcade Wizard", url: "https://othermgwebsite.github.io/959c99de-9707-4068-8b84-85448e4771b9/content/18995.cache.armorgames.com/files/games/arcade-wizard-18995/index.html" },
-      { name: "Mirror Wizard", url: "https://othermgwebsite.github.io/d2d66925-5237-4d99-bac0-fe634ce8d567/content/19323.cache.armorgames.com/files/games/mirror-wizard-19323/index.html" },
-      { name: "Helios", url: "https://othermgwebsite.github.io/7916a10d-763b-489b-953d-fae4e96d5c95/content/19104.cache.armorgames.com/files/games/helios-19104/index.html" },
-      { name: "Bob The Robber 2", url: "https://othermgwebsite.github.io/d91fd738-f4db-4509-8863-f9c424a61ae2/content/raw.githack.com/3kh0/3kh0-assets/main/bobtherobber2/index.html" },
-      { name: "Blocky Snakes", url: "https://mathgames66.github.io/games/html5/blockysnakes/" },
-      { name: "Cave war", url: "https://mathgames66.github.io/games/html5/cavewar/" },
-      { name: "Maptroid", url: "https://mathgames66.github.io/games/html5/maptroid/" },
-      { name: "OvO 2", url: "https://mathgames66.github.io/games/html5/ovo2/" },
-      { name: "PacMan 3D", url: "https://mathgames66.github.io/games/html5/pacman3d/" },
-      { name: "PacMan FPS", url: "https://mathgames66.github.io/games/html5/pacmanfps/" },
-      { name: "P.E. Noire", url: "https://mathgames66.github.io/games/html5/plactions/" },
-      { name: "Protektor", url: "https://mathgames66.github.io/games/html5/protektor/" },
-      { name: "Skyblock", url: "https://mathgames66.github.io/games/html5/skyblock/" },
-      { name: "Zrist", url: "https://mathgames66.github.io/games/html5/zrist/" },
-      { name: "WorldsWithinWorlds", url: "https://mathgames66.github.io/games/html5/worldswithinworlds/" },
-      { name: "Exiled Zombies", url: "https://mathgames66.github.io/games/html5/exiled_zombies/" },
-      { name: "Roots", url: "https://mathgames66.github.io/games/html5/roots/" },
-      { name: "2020 Game", url: "https://mathgames66.github.io/games/html5/2020game/" },
-      { name: "Rocking Sky Trip", url: "https://mathgames66.github.io/games/html5/rockingskytrip/" },
-      { name: "FNAF World", url: "https://irv77.github.io/hd_fnaf/w/" },
-      { name: "FNAF UCN", url: "https://irv77.github.io/hd_fnaf/ucn/" },
-      { name: "Animals Volleyball", url: "https://gaming-escape.github.io/public/assets/games/animals-volleyball/index.html" },
-      { name: "Geometry Dash Lite", url: "https://gaming-escape.github.io/public/assets/games/geometry-dash/" },
-      { name: "Funny Shooter 2", url: "https://gaming-escape.github.io/public/assets/games/funny-shooter-2/" },
-      { name: "ChoppyOrc", url: "https://gaming-escape.github.io/public/assets/games/choppy-orc/" },
-      { name: "Poly Track", url: "https://gaming-escape.github.io/public/assets/games/poly-track/" },
-      { name: "Slow Roads", url: "https://gaming-escape.github.io/public/assets/games/slow-roads/" },
-      { name: "Under the Red Sky Parkour", url: "https://gaming-escape.github.io/public/assets/games/under-the-red-sky/" },
-      { name: "Animal Arena", url: "https://gaming-escape.github.io/public/assets/games/animal-arena/" },
-      { name: "Ducklings", url: "https://gaming-escape.github.io/public/assets/games/ducklings-io/" },
-      { name: "Blumgi Racers", url: "https://gaming-escape.github.io/public/assets/games/blumgi-racers/" },
-      { name: "Blumgi Soccer", url: "https://gaming-escape.github.io/public/assets/games/blumgi-soccer/" },
-      { name: "Blumgi Dragon", url: "https://gaming-escape.github.io/public/assets/games/blumgi-dragon/" },
-      { name: "Blumgi Bloom", url: "https://gaming-escape.github.io/public/assets/games/blumgi-bloom/" },
-      { name: "Blumgi Ball", url: "https://gaming-escape.github.io/public/assets/games/blumgi-ball/" },
-      { name: "Blumgi Castle", url: "https://gaming-escape.github.io/public/assets/games/blumgi-castle/" },
-      { name: "Blumgi Rocket", url: "https://gaming-escape.github.io/public/assets/games/blumgi-rocket/" },
-      { name: "Blumgi Slime", url: "https://gaming-escape.github.io/public/assets/games/blumgi-slime/" },
-      { name: "Swingo", url: "https://gaming-escape.github.io/public/assets/games/swingo/" },
-      { name: "Zombie Rush", url: "https://gaming-escape.github.io/public/assets/games/zombie-rush/" },
-      { name: "Jump Only", url: "https://gaming-escape.github.io/public/assets/games/jump-only/index.html" },
-      { name: "GoBattle", url: "https://gaming-escape.github.io/public/assets/games/gobattle/index.html" },
-      { name: "Dadish 3D", url: "https://gaming-escape.github.io/public/assets/games/dadish-3d/index.html" },
-      { name: "Dadish", url: "https://gaming-escape.github.io/public/assets/games/dadish/index.html" },
-      { name: "Dadish 2", url: "https://gaming-escape.github.io/public/assets/games/dadish-2/index.html" },
-      { name: "Dadish 3", url: "https://gaming-escape.github.io/public/assets/games/dadish-3/index.html" },
-      { name: "Tag 2", url: "https://gaming-escape.github.io/public/assets/games/tag-2/index.html" },
-      { name: "Shadow Trick", url: "https://gaming-escape.github.io/public/assets/games/shadow-trick/index.html" },
-      { name: "Zooplop", url: "https://gaming-escape.github.io/public/assets/games/zooplop/index.html" },
-      { name: "Physibox", url: "https://gaming-escape.github.io/public/assets/games/physibox/index.html" },
-      { name: "Water Polo Ragdoll", url: "https://gaming-escape.github.io/public/assets/games/water-polo-ragdoll/index.html" },
-      { name: "Level Devil", url: "https://gaming-escape.github.io/public/assets/games/level-devil/index.html" },
-      { name: "ArmedForces io", url: "https://gaming-escape.github.io/public/assets/games/armed-forces-io/index.html" },
-      { name: "KS 2 Teams", url: "https://gaming-escape.github.io/public/assets/games/ks-2-teams/index.html" },
-      { name: "Super Tunnel Rush", url: "https://gaming-escape.github.io/public/assets/games/super-tunnel-rush/index.html" },
-      { name: "Uncycle Legend", url: "https://gaming-escape.github.io/public/assets/games/unicycle-legend/index.html" },
-      { name: "Uncycle Hero", url: "https://gaming-escape.github.io/public/assets/games/unicycle-hero/index.html" },
-      { name: "Goober World", url: "https://gaming-escape.github.io/public/assets/games/goober-world/index.html" },
-      { name: "Bobble", url: "https://gaming-escape.github.io/public/assets/games/bobble/index.html" },
-      { name: "Slope 2", url: "https://roblox-unblock.github.io/r7/slope-2-multiplayer/" },
-      { name: "Duck Life 2", url: "https://roblox-unblock.github.io/r/duck-life-2-world-champion/" },
-      { name: "New Super Mario Bros. On Scratch 2", url: "https://scratch.mit.edu/projects/874249193/embed" },
-      { name: "New Super Mario Bros. On Scratch", url: "https://scratch.mit.edu/projects/595568456/embed" },
-      { name: "Golfinity", url: "https://roblox-unblock.github.io/r4/golfinity/" },
-      { name: "Merge The Numbers", url: "https://gaming-escape.github.io/public/assets/games/merge-the-numbers/index.html" },
-      { name: "Watermelon Game", url: "https://gaming-escape.github.io/public/assets/games/watermelon-game/index.html" },
-      { name: "Race Survival Arena King", url: "https://gaming-escape.github.io/public/assets/games/race-survival-arena-king/index.html" },
-      { name: "Push Your Luck", url: "https://gaming-escape.github.io/public/assets/games/push-your-luck/index.html" },
-      { name: "Gobble", url: "https://gaming-escape.github.io/public/assets/games/gobble/index.html" },
-      { name: "Monster Tracks", url: "https://gaming-escape.github.io/public/assets/games/monster-tracks/index.html" },
-      { name: "Recoil", url: "https://gaming-escape.github.io/public/assets/games/recoil/index.html" },
-      { name: "Bank Robbery", url: "https://gaming-escape.github.io/public/assets/games/bank-robbery/index.html" },
-      { name: "Bank Robbery 2", url: "https://gaming-escape.github.io/public/assets/games/bank-robbery-2/index.html" },
-      { name: "Bank Robbery 3", url: "https://gaming-escape.github.io/public/assets/games/bank-robbery-3/index.html" },
-      { name: "Gladihoppers", url: "https://gaming-escape.github.io/public/assets/games/gladihoppers/index.html" },
-      { name: "Vex X3M", url: "https://gaming-escape.github.io/public/assets/games/vex-x3m/index.html" },
-      { name: "Table Tennis World Tour", url: "https://gaming-escape.github.io/public/assets/games/table-tennis-world-tour/index.html" },
-      { name: "Economical", url: "https://gaming-escape.github.io/public/assets/games/economical/index.html" },
-      { name: "Vex 3", url: "https://gaming-escape.github.io/public/assets/games/vex-3/index.html" },
-      { name: "Vex 4", url: "https://gaming-escape.github.io/public/assets/games/vex-4/index.html" },
-      { name: "Vex 5", url: "https://gaming-escape.github.io/public/assets/games/vex-5/index.html" },
-      { name: "Vex 6", url: "https://gaming-escape.github.io/public/assets/games/vex-6/index.html" },
-      { name: "Vex 7", url: "https://gaming-escape.github.io/public/assets/games/vex-7/index.html" },
-      { name: "Vex 8", url: "https://gaming-escape.github.io/public/assets/games/vex-8/index.html" },
-      { name: "OvO Dimensions", url: "https://gaming-escape.github.io/public/assets/games/ovo-dimensions/index.html" },
-      { name: "Economical 2", url: "https://gaming-escape.github.io/public/assets/games/economical-2/index.html" },
-      { name: "Day of Meat: Radiation", url: "https://gaming-escape.github.io/public/assets/games/day-of-meat-radiation/index.html" },
-      { name: "Retro Highway", url: "https://gaming-escape.github.io/public/assets/games/retro-highway/index.html" },
-      { name: "Yokai Dungeon", url: "https://gaming-escape.github.io/public/assets/games/yokai-dungeon/index.html" },
-      { name: "Flip Bros", url: "https://gaming-escape.github.io/public/assets/games/flip-bros/index.html" },
-      { name: "Space Major Miner", url: "https://gaming-escape.github.io/public/assets/games/space-major-miner/index.html" },
-      { name: "Poor Eddie", url: "https://gaming-escape.github.io/public/assets/games/poor-eddie/index.html" },
-      { name: "Stickman Bike", url: "https://gaming-escape.github.io/public/assets/games/stickman-bike/index.html" },
-      { name: "Snow Rider 3D", url: "https://gaming-escape.github.io/public/assets/games/snow-rider-3d/index.html" },
-      { name: "Cow Bay", url: "https://gaming-escape.github.io/public/assets/games/cow-bay/index.html" },
-      { name: "Soccer: Skills World Cup", url: "https://gaming-escape.github.io/public/assets/games/soccer-skills-world-cup/index.html" },
-      { name: "Soccer Skills Euro Cup", url: "https://gaming-escape.github.io/public/assets/games/soccer-skills-euro-cup/index.html" },
-      { name: "Soccer Skills Champions League", url: "https://gaming-escape.github.io/public/assets/games/soccer-skills-champions-league/index.html" },
-      { name: "Sonic Robo Blast 2 Kart", url: "https://skyleite.github.io/Kart-Public-WASM/" },
-      { name: "Open Sonic JS", url: "https://clarkeadg.github.io/opensonic-js/" },
-      { name: "Motobug Engine", url: "https://coderman64.github.io/motobug-engine/" },
-      { name: "Space Thing", url: "https://gaming-escape.github.io/public/assets/games/space-thing/index.html" },
-      { name: "Turbo Moto Racer", url: "https://gaming-escape.github.io/public/assets/games/turbo-moto-racer/index.html" },
-      { name: "Candy Crush", url: "https://gaming-escape.github.io/public/assets/games/candy-crush/index.html" },
-      { name: "Master Chess", url: "https://gaming-escape.github.io/public/assets/games/master-chess/index.html" },
-      { name: "Master Checkers", url: "https://gaming-escape.github.io/public/assets/games/master-checkers/index.html" },
-      { name: "Core Ball", url: "https://gaming-escape.github.io/public/assets/games/core-ball/index.html" },
-      { name: "Doodle Baseball", url: "https://gaming-escape.github.io/public/assets/games/google-baseball/index.html" },
-      { name: "Volley Random", url: "https://gaming-escape.github.io/public/assets/games/volley-random/index.html" },
-      { name: "Idle Mining Empire", url: "https://gaming-escape.github.io/public/assets/games/idle-mining-empire/index.html" },
-      { name: "Idle Startup Tycoon", url: "https://gaming-escape.github.io/public/assets/games/idle-startup-tycoon/index.html" },
-      { name: "Idle Farming Business", url: "https://gaming-escape.github.io/public/assets/games/idle-farming-business/index.html" },
-      { name: "Idle Gang", url: "https://gaming-escape.github.io/public/assets/games/idle-gang/index.html" },
-      { name: "Idle Light City", url: "https://gaming-escape.github.io/public/assets/games/idle-light-city/index.html" },
-      { name: "Iron Snout", url: "https://gaming-escape.github.io/public/assets/games/iron-snout/index.html" },
-      { name: "Dune", url: "https://gaming-escape.github.io/public/assets/games/dune/index.html" },
-      { name: "Rooftop Snipers", url: "https://gaming-escape.github.io/public/assets/games/rooftop-snipers/index.html" },
-      { name: "Rooftop Snipers 2", url: "https://gaming-escape.github.io/public/assets/games/rooftop-snipers-2/index.html" },
-      { name: "Choose Your Weapon", url: "https://obsidianig.com/games/chooseyourweapon/" },
-      { name: "Choose Your Weapon 2", url: "https://obsidianig.com/games/chooseyourweapon2/" },
-      { name: "Choose Your Weapon 3", url: "https://obsidianig.com/games/chooseyourweapon3/" },
-      { name: "Offline Paradise", url: "https://obsidianig.com/games/offlineparadise/" },
-      { name: "Wordle", url: "https://obsidianig.com/games/wordle/" },
-      { name: "Bad Piggies", url: "https://obsidianig.com/games/badpiggies/" },
-      { name: "Skibidi Toilet 1v100", url: "https://obsidianig.com/games/skibidi1v100/" },
-      { name: "Stickman Boost", url: "https://obsidianig.com/games/stickmanboost/" },
-      { name: "Cell Machine", url: "https://obsidianig.com/games/cellmachine/" },
-      { name: "Portal 2", url: "https://obsidianig.com/games/portal2/" },
-      { name: "Electric Man 2", url: "https://obsidianig.com/games/electricman2/" },
-      { name: "Skywire", url: "https://obsidianig.com/games/skywire/" },
-      { name: "Skywire 2", url: "https://obsidianig.com/games/skywire2/" },
-      { name: "Factory Balls", url: "https://obsidianig.com/games/factoryballs/" },
-      { name: "Adventure Capitalist", url: "https://obsidianig.com/games/adventurecapitalist/" },
-      { name: "Achievement Unlocked", url: "https://obsidianig.com/games/achievementunlocked/" },
-      { name: "Achievement Unlocked 2", url: "https://obsidianig.com/games/achievementunlocked2/" },
-      { name: "Achievement Unlocked 3", url: "https://obsidianig.com/games/achievementunlocked3/" },
-      { name: "Big Red Button", url: "https://obsidianig.com/games/bigredbutton/" },
-      { name: "Unfair Mario", url: "https://obsidianig.com/games/unfairmario/" },
-      { name: "Bubble Tanks 2", url: "https://obsidianig.com/games/bubbletanks2/" },
-      { name: "Skibidi Toilet Attack", url: "https://obsidianig.com/games/skibiditoiletattack/" },
-      { name: "Doodle Defender", url: "https://obsidianig.com/games/doodledefender/" },
-      { name: "Chibi Knight", url: "https://obsidianig.com/games/chibiknight/" },
-      { name: "Space Invaders", url: "https://obsidianig.com/games/spaceinvaders/" },
-      { name: "Mario Combat", url: "https://obsidianig.com/games/mariocombat/" },
-      { name: "Line Rider", url: "https://obsidianig.com/games/linerider/" },
-      { name: "Battle Ships", url: "https://obsidianig.com/games/battleships/" },
-      { name: "This Is the Only Level", url: "https://obsidianig.com/games/thisistheonlylevel/" },
-      { name: "Defend the Tank", url: "https://obsidianig.com/games/defendthetank/" },
-      { name: "The World's Hardest Game 2", url: "https://obsidianig.com/games/worldshardestgame2/" },
-      { name: "The World's Hardest Game 3", url: "https://obsidianig.com/games/worldshardestgame3/" },
-      { name: "There Is No Game", url: "https://obsidianig.com/games/thereisnogame/" },
-      { name: "Vex 2", url: "https://obsidianig.com/games/vex2/" },
-      { name: "Vex", url: "https://obsidianig.com/games/vex/" },
-      { name: "Solitaire", url: "https://obsidianig.com/games/solitaire/" },
-      { name: "Theme Hotel", url: "https://obsidianig.com/games/themehotel/" },
-      { name: "Townscaper", url: "https://obsidianig.com/games/townscaper/" },
-      { name: "The Binding of Issac the Demo", url: "https://obsidianig.com/games/thebindingofisaac/" },
-      { name: "Fancy Pants Adventures: World 1", url: "https://obsidianig.com/games/fancypantsadventure/" },
-      { name: "Papa's Pastaria", url: "https://obsidianig.com/games/papaspastaria/" },
-      { name: "Papa's Bakeria", url: "https://obsidianig.com/games/papasbakeria/" },
-      { name: "Papa's Cupcakeria", url: "https://obsidianig.com/games/papascupcakeria/" },
-      { name: "Papa's Cheeseria", url: "https://obsidianig.com/games/papascheeseria/" },
-      { name: "Papa's Donuteria", url: "https://obsidianig.com/games/papasdonuteria/" },
-      { name: "Papa's Wingeria", url: "https://obsidianig.com/games/papaswingeria/" },
-      { name: "Papa's Sushiria", url: "https://obsidianig.com/games/papassushiria/" },
-      { name: "Papa's Scooperia", url: "https://obsidianig.com/games/papasscooperia/" },
-      { name: "Papa's Freezeria", url: "https://obsidianig.com/games/papasfreezeria/" },
-      { name: "Papa's Pancakeria", url: "https://obsidianig.com/games/papaspancakeria/" },
-      { name: "Papa's Hot Doggeria", url: "https://obsidianig.com/games/papashotdoggeria/" },
-      { name: "Papa's Burgeria", url: "https://obsidianig.com/games/papasburgeria/" },
-      { name: "Papa's Pizzaria", url: "https://obsidianig.com/games/papaspizzaria/" },
-      { name: "Gun Mayhem 2", url: "https://obsidianig.com/games/gunmayhem2/gunmayhem2" },
-      { name: "Gun Mayhem", url: "https://obsidianig.com/games/gunmayhem/gunmayhem" },
-      { name: "Wolfenstein 3D", url: "https://obsidianig.com/games/wolfenstein3d/wolfenstein3d/" },
-      { name: "DOOM", url: "https://diekmann.github.io/wasm-fizzbuzz/doom/" },
-      { name: "Bloons TD", url: "https://obsidianig.com/games/bloonstd/bloonstd" },
-      { name: "Bloons TD 2", url: "https://obsidianig.com/games/btd2/" },
-      { name: "Bloons TD 3", url: "https://obsidianig.com/games/btd3/" },
-      { name: "Bloons TD 4", url: "https://obsidianig.com/games/btd4/" },
-      { name: "Learn to fly", url: "https://obsidianig.com/games/learntofly/learntofly" },
-      { name: "Learn to fly 2", url: "https://obsidianig.com/games/learntofly2/learntofly2" },
-      { name: "Learn to fly 3", url: "https://obsidianig.com/games/learntofly3/learntofly3" },
-      { name: "Portal Flash", url: "https://obsidianig.com/games/portalflash/portalflash" },
-      { name: "Run 3 Plus", url: "https://obsidianig.com/games/run3plus/" },
-      { name: "Run 2", url: "https://obsidianig.com/games/run2/" },
-      { name: "Run", url: "https://obsidianig.com/games/run/" },
-      { name: "Super Smash Flash", url: "https://obsidianig.com/games/supersmashflash/supersmashflash" },
-      { name: "The Impossible Quiz 2", url: "https://obsidianig.com/games/theimpossiblequiz2/theimpossiblequiz2" },
-      { name: "Tetris", url: "https://obsidianig.com/games/tetris/" },
-      { name: "Raft Wars", url: "https://obsidianig.com/games/raftwars/raftwars" },
-      { name: "Raft Wars 2", url: "https://obsidianig.com/games/raftwars2/raftwars2" },
-      { name: "Riddle School", url: "https://obsidianig.com/games/riddleschool/riddleschool" },
-      { name: "Riddle School 2", url: "https://obsidianig.com/games/riddleschool2/riddleschool2" },
-      { name: "Riddle School 3", url: "https://obsidianig.com/games/riddleschool3/riddleschool3" },
-      { name: "Riddle School 4", url: "https://obsidianig.com/games/riddleschool4/riddleschool4" },
-      { name: "Riddle School 5", url: "https://obsidianig.com/games/riddleschool5/riddleschool5" },
-      { name: "Riddle Transfer", url: "https://obsidianig.com/games/riddleschooltransfer/riddleschooltransfer" },
-      { name: "Riddle Transfer 2", url: "https://obsidianig.com/games/riddleschooltransfer2/riddleschooltransfer2" },
-      { name: "Duck Life 3 Evolution", url: "https://obsidianig.com/games/ducklife3/ducklife3" },
-      { name: "Duck Life 4", url: "https://obsidianig.com/games/ducklife4/ducklife4" },
-      { name: "Duck Life 5", url: "https://obsidianig.com/games/ducklife5/" },
-      { name: "Pico's School", url: "https://obsidianig.com/games/picosschool/picosschool" },
-      { name: "Diggy", url: "https://obsidianig.com/games/diggy/diggy" },
-      { name: "Alien Hominid", url: "https://obsidianig.com/games/alienhominid/alienhominid" },
-      { name: "Tightrope Theatre", url: "https://gaming-escape.github.io/public/assets/games/tightrope-theatre/" },
-      { name: "Double Panda", url: "https://gaming-escape.github.io/public/assets/games/double-panda/" },
-      { name: "JackSmith", url: "https://gaming-escape.github.io/public/assets/games/jacksmith/" },
-      { name: "Block Blast", url: "https://reunbozdo.github.io/" },
-      { name: "Super Mario Crossover", url: "https://grudjoxhotyybbwshfivugg4-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/f107b843-3661-4036-9397-2b0c6414a369%2Fsuper-mario-crossover.xml&container=ig" },
-      { name: "Mario Remix Boss Edition", url: "https://viipzbnadhvngdehlsgymhds-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/8c491f21-7353-4f1f-b2a0-9544824c4d28%2Fmario-remix-boss-edition.xml&container=ig" },
-      { name: "Mario Party 4", url: "https://ccirgbuuhqvcmfqaolfpcgpw-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/f107b843-3661-4036-9397-2b0c6414a369%2Fmarioparty4.xml&container=ig" },
-      { name: "Super Mario Sunshine 64", url: "https://xcqo9veqbdouo0yoh5swvahk-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/f107b843-3661-4036-9397-2b0c6414a369%2Fsuper-mario-sunshine-64.xml&container=ig" },
-      { name: "Super Mario Flash 3", url: "https://g96iQlYIfetlbQeEnxOhMx1k-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Fsuper-mario-flash-3.xml&container=ig" },
-      { name: "Ultimate Flash Sonic", url: "https://szCDqRAuPDHpqhVwXoK7AVkL-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/1ee20621-61bc-4ec8-a8ec-5e839c2e6edc%2Fultimate-flash-sonic.xml&container=ig" },
-      { name: "Bob The Robber", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/f107b843-3661-4036-9397-2b0c6414a369%2Fbob-the-robber.xml&container=ig" },
-      { name: "Bob The Robber 5", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/gahaden/BTR5@23cd8bbc75561b010dae47b9d491bf01b0978624/btr5.xml&container=ig" },
-      { name: "Fireboy And Water Girl 2", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/godotpack@d32e9e4a86906c370853af8c5d3276a7606b4d9a/side/faw2/faw2.xml&container=ig" },
-      { name: "Fireboy And Water Girl 3", url: "https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/godotpack@a0ddbbb0c03372e2dd4672521de0ec105d6d6085/side/faw3/faw3.xml&container=ig" },
-      
-         ];
-        var container = document.createElement("div");
-        container.setAttribute("id", "gamesContainer");
-        document.body.appendChild(container);
-        games.forEach(function(game) {
-            var button = document.createElement("button");
-            button.textContent = game.name;
-            button.className = "button";
-            button.onclick = function() {
-                if (game.url) {
-                    document.body.innerHTML = '<object id="gameFrame" type="text/html" data="' + game.url + '" style="width: 100%; height: 100vh;"></object>';
-                    window.addEventListener("beforeunload", (event) => {
-            if (true) {
-                event.preventDefault();
-                event.returnValue = "";
-                return "";
+     <!-- Changelogs --> 
+     <div id="blur-updatelog" class= "hide">
+     <div id="updatelog" class= "hide">
+     <button class="button-c" onclick="closeUpdateLog()" title="Close Update log">Close</button>
+     <div class="header">
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; color: #335fff; margin-bottom: 0px;">Update 3.2.0</h3>
+     </div>
+     <h2>20 new games, some games that wouldn't load have been replaced, more features have been added to the settings and the interface has been improved, a Changelog has been created to record the changes made with each new update, you can now generate a new random message by clicking on the message and an image can appear in the messages.</h2>
+     </div>
+     </div>  
+       
+     <!-- Settings -->
+     <div id="blur-settings" class= "hide">
+     <div id="settings" class= "hide">
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px;">Settings</h3>
+     <button class="button-c" onclick="closeSettings()" title="Close Settings">Close</button>
+     <button class="button-st" id="aboutBlank" title="Open in about:blank">about:blank</button>
+     <button class="button-st" onclick="download()" title="Download Links123 Offline">Offline</button>
+     <br>
+     <input type="text" id="tabName" placeholder="Enter new tab name" class="settings-i">
+     <button class="button-si" onclick="changeTabName()" title="Save changes">Save</button>
+     <br>
+     <input type="text" id="tabIcon" placeholder="Enter new tab icon" class="settings-i">     
+     <button class="button-si" onclick="changeTabIcon()" title="Save changes">Save</button>
+     <br>
+     <br>
+     <button id="Links123" class="favicon"><img src="https://i.ibb.co/n8NkW22k/L.png" alt="Links123" title="Links123"></button>
+     <button id="Google" class="favicon"><img src="https://www.google.com/favicon.ico" alt="Google" title="Google"></button>
+     <button id="Google Drive" class="favicon"><img src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png" alt="Google Drive" title="Google Drive"></button>
+     <button id="Google Classroom" class="favicon"><img src="https://ssl.gstatic.com/classroom/favicon.png" alt="Google Classroom" title="Google Classroom"></button>
+     <button id="Gmail" class="favicon"><img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail" title="Gmail"></button>
+     </div>
+     </div>
+     </body>
+       
+   <script>
+     // Games Section
+     document.getElementById("games").onclick = function() {
+     document.body.innerHTML = '<div class="loading"> <h4>Loading...<h4>';
+     setTimeout(function() {
+     document.body.innerHTML = '<h3 style="cursor: default; font-size: 80px; font-family: Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;">Games</h3> <input id="searchBar" onkeyup="search_button()" type="text" name="search" placeholder="Search Games">';
+     var games = [
+     { name: "Subway Surfers Monaco", url: "https://roblox-unblock.github.io/r8/subway-surfers-monaco/" },
+     { name: "Retro Ball", url: "https://gaming-escape.github.io/public/assets/games/retro-bowl/" },
+     { name: "Sonic 4: Episode 1", url: "https://wamwoowam.co.uk/sonic4/" },
+     { name: "EaglercraftX 1.8", url: "https://html.cafe/x2bb30cec" },
+     { name: "Flappy Bird", url: "https://roblox-unblock.github.io/r8/flappy-bird-origin/" },
+     { name: "Sonic Robo Blast 2", url: "https://vinmannie.github.io/srb2web/" },
+     { name: "Super Mario 64", url: "https://html.cafe/xe25ca14a" },
+     { name: "Eggy Car", url: "https://roblox-unblock.github.io/r/eggy-car/" },
+     { name: "Burnout Extreme Drift 2", url: "https://gaming-escape.github.io/public/assets/games/burnout-extreme-drift-2/index.html" },
+     { name: "Edge Surf", url: "https://obsidianig.com/games/edgesurf/" },
+     { name: "Drift Hunters", url: "https://obsidianig.com/games/drifthunters/" },
+     { name: "Happy Wheels", url: "https://obsidianig.com/games/happywheels/" },
+     { name: "Aquapark Slides", url: "https://obsidianig.com/games/aquaparkslides/" },
+     { name: "Super Mario Flash 2", url: "https://obsidianig.com/games/supermarioflash2/" },
+     { name: "Connect 4", url: "https://obsidianig.com/games/connect4/"},
+     { name: "Trimps", url: "https://mountain658.github.io/g/Trimps/index.html" },
+     { name: "Paper.io 2", url: "https://mountain658.github.io" },
+     { name: "Noob Drive", url: "https://roblox-unblock.github.io/r5/noob-drive/" },
+     { name: "Subway Surfers Saint Petersbrug", url: "https://dddavit.github.io/subway/" },
+     { name: "Slope", url: "https://roblox-unblock.github.io/r/slope/" },
+     { name: "Slope 3", url: "https://roblox-unblock.github.io/r/slope-3/" },
+     { name: "Cookie Clicker", url: "https://cookieclickerfree.github.io/" },
+     { name: "Drive Mad", url: "https://ubg365.github.io/drive-mad/play.html" },
+     { name: "Drift Boss", url: "https://roblox-unblock.github.io/r/drift-boss" }, 
+     { name: "BitLife", url: "https://ubg365.github.io/bitlife-life-simulator/play.html" },
+     { name: "Sonic 2 Community's Cut", url: "https://burnedpopcorn.github.io/Sonic2-Community-Cut-WebPort/" },
+     { name: "Tiny Fishing", url: "https://roblox-unblock.github.io/r/tiny-fishing/" },
+     { name: "Hover Racer Drive", url: "https://ubg365.github.io/hover-racer-drive/" },
+     { name: "Fancy Pants Adventures: World 2", url: "https://obsidianig.com/games/fancypantsadventure2/" },
+     { name: "Fancy Pants Adventure: World 3", url: "https://obsidianig.com/games/fancypantsadventure3/" },
+     { name: "Madalin Stunt Cars 2", url: "https://ubg100.github.io/games/Madalin/index.html" },
+     { name: "Breaking the bank", url: "https://mountain658.github.io/zbreakingthebank.html" },
+     { name: "Escaping the prison", url: "https://mountain658.github.io/zescapetheprison.html" },
+     { name: "Stealing the diamond", url: "https://mountain658.github.io/zstealingthediamond.html" },
+     { name: "Infiltrating the airship", url: "https://sz-games.github.io/games/Flash.html?game=/games/henry-airship/infiltratingtheairshipgame.swf" },
+     { name: "Fleeing the complex", url: "https://sz-games.github.io/games/Flash.html?game=https://sz-games.github.io/Games6/Henry%20Stickmin%20-%20Fleeing%20the%20Complex.swf?raw=true" },
+     { name: "OvO", url: "https://gaming-escape.github.io/public/assets/games/ovo/" },
+     { name: "Run 3", url: "https://lekug.github.io/tn6pS9dCf37xAhkJv/" },
+     { name: "Bloxorz", url: "https://ad-freegames.github.io/flash/game/bloxorz.html" },
+     { name: "Papa's Taco Mia", url: "https://obsidianig.com/games/papastacomia/" },
+     { name: "Moto X3M", url: "https://gaming-escape.github.io/public/assets/games/moto-x3m/" },
+     { name: "Time Shooter 2", url: "https://gaming-escape.github.io/public/assets/games/time-shooter-2/" }, 
+     { name: "Time Shooter 3", url: "https://gaming-escape.github.io/public/assets/games/time-shooter-3/" },
+     { name: "Sonic 3 AIR", url: "https://vinmannie.github.io/sonic3air/sonic3air_web.html" },
+     { name: "Project Laser", url: "https://monkeygg2.github.io/games/brawl-stars-project-laser/" }, 
+     { name: "Sonic Mania Plus", url: "https://vinmannie.github.io/SonicManiaWeb/RSDKv5.html" },
+     { name: "Cut the Rope Holiday Gift", url: "https://roblox-unblock.github.io/r88/cut-the-rope-holiday/" },
+     { name: "FNAF", url: "https://ubg77.github.io/fix/fnaf1/" },
+     { name: "RedBall V1", url: "https://rb44a.github.io/RedBall_V1/" },
+     { name: "Tomb of the mask", url: "https://mountain658.github.io/g/tombofthemask/index.html" },
+     { name: "RedBall V2", url: "https://rb44a.github.io/RedBall_V2/" },
+     { name: "RedBall V3", url: "https://rb44a.github.io/RedBall_V3/" },
+     { name: "Sonic Worlds Next", url: "https://grubbyplaya.github.io/Sonic-Worlds-Next-WASM/Sonic%20Worlds%20Next.html" },
+     { name: "Duck Life", url: "https://roblox-unblock.github.io/r/duck-life/" },
+     { name: "Super Mario Bros", url: "https://playmario.github.io/HTML5_Client/" },
+     { name: "Unfair Undyne", url: "https://doodle-pile.gitlab.io/unfair-undyne/v0.99/" },
+     { name: "FNAF All Stars", url:"https://www.autistici.org/burnedprojects/fnaf_allstars/" },
+     { name: "Cat Mario", url: "https://www.jezng.com/open-syobon-action.js/" },
+     { name: "Cut the Rope", url: "https://roblox-unblock.github.io/r88/cut-the-rope/" },
+     { name: "Cut the Rope Time Travel", url: "https://roblox-unblock.github.io/r88/cut-the-rope-time-travel/" },
+     { name: "Backrooms", url: "https://adfree3kh0.github.io/projects/backrooms/index.html" },
+     { name: "Subway Surfers New York", url: "https://roblox-unblock.github.io/r8/subway-surfers-newyork/" },
+     { name: "Among Us Single Player", url: "https://adfree3kh0.github.io/projects/among-us/index.html" }, 
+     { name: "Subway Surfers Beijing", url: "https://roblox-unblock.github.io/r8/subway-surfers-beijing/" },
+     { name: "Subway Surfers San Francisco", url: "https://roblox-unblock.github.io/r8/subway-surfers-san-francisco/" },
+     { name: "Cave Story", url: "https://vinmannie.github.io/CaveStory/" },
+     { name: "Moto X3M Pool Party", url: "https://gaming-escape.github.io/public/assets/games/motox3m-pool/" },
+     { name: "Super Mario Bros S", url: "https://superpi2.github.io/SuperMarioBrosS-v0.2.0/" },
+     { name: "PacMan", url: "https://masonicgit.github.io/pacman/" },
+     { name: "PacMan Google", url: "https://macek.github.io/google_pacman/?tab=readme-ov-file" },
+     { name: "Basket Random", url: "https://html.cafe/xa4301809" },
+     { name: "2048", url: "https://roblox-unblock.github.io/r/2048/" },
+     { name: "Monkey Mart", url: "https://html.cafe/x33bca0fb" },
+     { name: "Running T-Rex", url: "https://html.cafe/x90ef8e33" },  
+     { name: "Sonic 1", url: "https://vinmannie.github.io/Sonic-1-WASM/" },
+     { name: "Scrap Metal 3", url: "https://adfree3kh0.github.io/projects/scrapmetal/index.html" },  
+     { name: "Sonic CD", url: "https://tws2401.github.io/Sonic-CD-WASM/" },
+     { name: "Sonic 2", url: "https://snesfx.github.io/Sonic2Emscripten/" },
+     { name: "Tanuki Sunset", url: "https://roblox-unblock.github.io/r8/tanuki-sunset/" },
+     { name: "Baldi's Basics", url: "https://snesfx.github.io/baldi-html5/" },
+     { name: "Kindergarten", url: "https://snesfx.github.io/Kindergarten-Web/"},
+     { name: "Idle Breakout", url: "https://roblox-unblock.github.io/r7/idle-breakout/" },
+     { name: "FNAF 2", url: "https://obsidianig.com/games/fnaf2/fnaf2" },
+     { name: "FNAF 3", url: "https://obsidianig.com/games/fnaf3/fnaf3" },
+     { name: "FNAF 4", url: "https://obsidianig.com/games/fnaf4/fnaf4" },
+     { name: "Windows 96", url: "https://windows96.net/" },
+     { name: "Bad Time Simulator", url: "https://jcw87.github.io/c2-sans-fight/" },
+     { name: "Temple Run 2", url: "https://roblox-unblock.github.io/r8/temple-run-2/" },
+     { name: "Brain Test", url: "https://roblox-unblock.github.io/r2/brain-test-tricky-puzzles/" },
+     { name: "Curve Ball 3D", url: "https://roblox-unblock.github.io/r/curve-ball-3d/" },
+     { name: "Stack", url: "https://roblox-unblock.github.io/r2/stack" },
+     { name: "Clicker", url: "https://elucidation.github.io/ClickerJs/" },
+     { name: "Minesweeper", url: "https://roblox-unblock.github.io/r7/minesweeper/" },
+     { name: "Archery World Tour", url: "https://roblox-unblock.github.io/r/archery-world-tour/" },
+     { name: "Crossy Road", url: "https://roblox-unblock.github.io/r/crossy-road/" },
+     { name: "Gameing", url: "https://windows96.net/system/apps/gameing/" },
+     { name: "New Super Mario Bros. On Scratch 3", url: "https://scratch.mit.edu/projects/874249193/embed" },
+     { name: "Doodle Jump", url: "https://roblox-unblock.github.io/r7/doodle-jump/" },
+     { name: "Flash Tetris", url: "https://roblox-unblock.github.io/r7/tetris-flash/" },
+     { name: "Moto X3M 2", url: "https://roblox-unblock.github.io/r8/moto-x3m-2/" },
+     { name: "Bad Ice Cream", url: "https://roblox-unblock.github.io/r88/bad-ice-cream/" },
+     { name: "Cat Trap", url: "https://roblox-unblock.github.io/r8/cat-trap/" },
+     { name: "Google Feud", url: "https://roblox-unblock.github.io/r7/google-feud/" },
+     { name: "Fireboy And Water Girl", url: "https://roblox-unblock.github.io/r88/fireboy-and-water-girl/" },
+     { name: "Bad Ice Cream 2", url: "https://roblox-unblock.github.io/r88/bad-ice-cream-2/" }, 
+     { name: "Bad Ice Cream 3", url: "https://roblox-unblock.github.io/r88/bad-ice-cream-3/" },
+     { name: "Tunnel Rush", url: "https://ubg44.github.io/TunnelRush/" },
+     { name: "Doodle Champion Island", url: "https://roblox-unblock.github.io/r7/doodle-champion-island/" },
+     { name: "2048 Multitasking", url: "https://roblox-unblock.github.io/r7/2048-multitask/" },
+     { name: "Elastic Man", url: "https://roblox-unblock.github.io/r7/elastic-man/" },
+     { name: "Hextris", url: "https://roblox-unblock.github.io/r7/hextris/" },
+     { name: "8 Ball Pool", url: "https://roblox-unblock.github.io/r8/8-ball-pool/" },
+     { name: "Getting Over It (Scratch)", url: "https://roblox-unblock.github.io/r88/getting-over-it/" },
+     { name: "Bubble Shooter", url: "https://roblox-unblock.github.io/r2/bubble-shooter/" },
+     { name: "Jelly Truck", url: "https://roblox-unblock.github.io/r/jelly-truck/" },
+     { name: "Cluster Rush", url: "https://roblox-unblock.github.io/r8/cluster-rush/" },
+     { name: "Sketchbook 0.4", url: "https://roblox-unblock.github.io/r8/sketchbook-04/" },
+     { name: "Stupid Zombies", url: "https://roblox-unblock.github.io/r3/stupid-zombies/" },
+     { name: "The Impossible Quiz", url: "https://roblox-unblock.github.io/r8/the-impossible-quiz/" },
+     { name: "Stickman Hook", url: "https://roblox-unblock.github.io/r/stickman-hook/" },
+     { name: "Stickman Bridge Constructor", url: "https://roblox-unblock.github.io/r6/stickman-bridge-constructor/" },
+     { name: "Death Run 3D", url: "https://roblox-unblock.github.io/r7/death-run-3d/" },
+     { name: "Orbital Survival", url: "https://roblox-unblock.github.io/r8/orbital-survival/" },
+     { name: "Candy Jump", url: "https://roblox-unblock.github.io/r/candy-jump/" },
+     { name: "VVVVVV", url: "https://vinmannie.github.io/vvgame/" },
+     { name: "The World's Hardest Game", url: "https://vinmannie.github.io/WorldsHardestGame/" },
+     { name: "Top Speed Racing 3D", url: "https://roblox-unblock.github.io/r/top-speed-racing-3d/" },
+     { name: "Deepest Sword", url: "https://roblox-unblock.github.io/r8/deepest-sword/" },
+     { name: "FNF", url: "https://roblox-unblock.github.io/r88/friday-night-funkin/" },
+     { name: "Jetpack Joyride", url: "https://roblox-unblock.github.io/r7/jetpack-joyride/" },
+     { name: "Hover Racing", url: "https://roblox-unblock.github.io/r/hover-racer/" },
+     { name: "Tag", url: "https://roblox-unblock.github.io/r3/tag/" },
+     { name: "A Dance of Fire And Ice", url: "https://roblox-unblock.github.io/r8/a-dance-of-fire-and-ice/" },
+     { name: "Basket Bros", url: "https://roblox-unblock.github.io/r7/basket-bros/" },
+     { name: "Soccer Random", url: "https://roblox-unblock.github.io/r8/soccer-random/" },
+     { name: "Maze: Path of Light", url: "https://roblox-unblock.github.io/r5/maze-path-of-light/" },
+     { name: "House of Hazards", url: "https://roblox-unblock.github.io/r/house-of-hazards/" },
+     { name: "Penalty Kick Online", url: "https://roblox-unblock.github.io/r/penalty-kick-online/" },
+     { name: "Stickman Golf", url: "https://roblox-unblock.github.io/r8/stickman-golf/" },
+     { name: "Boxing Random", url: "https://roblox-unblock.github.io/r77/boxing-random/" },
+     { name: "Dreadhead Parkour", url: "https://roblox-unblock.github.io/r7/dreadhead-parkour/" },
+     { name: "Traffic Mania", url: "https://roblox-unblock.github.io/r3/traffic-mania/" },
+     { name: "Drive Mad", url: "https://roblox-unblock.github.io/r77/drive-mad/" },
+     { name: "N-Gon", url: "https://roblox-unblock.github.io/r8/n-gon" },
+     { name: "Chicken Merge", url: "https://roblox-unblock.github.io/r4/chicken-merge/" },
+     { name: "We Become what we Behold", url: "https://gnhustgames.github.io/wbwwb/" },
+     { name: "Chrome Dino", url: "https://htmlxm.github.io/h7/dinosaur-game/" },
+     { name: "1v1.LOL", url: "https://stenunblocked.github.io/1v1-lol/index.html" },
+     { name: "Bottle Flip 3D", url: "https://stenunblocked.github.io/bottle-flip-3d/bottleflip3d.html" },
+     { name: "Gun Spin", url: "https://stenunblocked.github.io/gun-spin/index.html" },
+     { name: "Neon Pong", url: "https://stenunblocked.github.io/neon-pong/index.html" },
+     { name: "Happy Room", url: "https://roblox-unblock.github.io/r7/happy-room/" },
+     { name: "Doge Miner", url: "https://roblox-unblock.github.io/r7/doge-miner/" },
+     { name: "The little Giant", url: "https://roblox-unblock.github.io/r/the-little-giant/" },
+     { name: "Grindcraft", url: "https://roblox-unblock.github.io/r4/grindcraft/" },
+     { name: "Mob City", url: "https://roblox-unblock.github.io/r/mob-city/" },
+     { name: "StickFighter", url: "https://roblox-unblock.github.io/r6/stick-fighter/" },
+     { name: "B-CUBED", url: "https://roblox-unblock.github.io/r/b-cubed/" },
+     { name: "Crazy Cars", url: "https://roblox-unblock.github.io/r4/crazy-cars/" },
+     { name: "Adventure Drivers", url: "https://roblox-unblock.github.io/r7/adventure-drivers/" },
+     { name: "Awesome Tanks 2", url: "https://roblox-unblock.github.io/r/awesome-tanks-2/" },
+     { name: "Guess The Number Game", url: "https://html.cafe/x63aefeaa" },
+     { name: "Obby Robby Only Up", url: "https://html.cafe/x3d7ef5a3" },
+     { name: "Half-Life 1", url: "https://x8bitrain.github.io/webXash/" },
+     { name: "GoBattle2", url: "https://roblox-unblock.github.io/r3/superbattle-2/" },
+     { name: "Electron Dash", url: "https://roblox-unblock.github.io/r7/electron-dash/" },
+     { name: "Baldi Basics Field Trip Remake", url: "https://othermgwebsite.github.io/b92261bf-dae7-4055-bd8a-8eb6d069a6fc/content/v6p9d9t4.ssl.hwcdn.net/html/4965007/WebGL/index.html" },
+     { name: "Sonic Revert", url: "https://othermgwebsite.github.io/1f5d0d15-8012-46b8-b8d3-48766f2981a0/content/unblockedgamesboo.com/webgl/sonic-revert/index.html" },
+     { name: "Boundland", url: "https://othermgwebsite.github.io/7c4dc35b-2f3b-4ffd-ac78-0757829d65e0/content/0000100.com/cdn1/boundland/index.html" },
+     { name: "Boxel Rebound", url: "https://othermgwebsite.github.io/56dbf46b-4300-4a73-9900-9d62b9440fdf/content/trinculo54.github.io/Boxel-rebound-hope/Older/index.html" },
+     { name: "CraftMine", url: "https://othermgwebsite.github.io/newgames/craftmine/index.html" },
+     { name: "Death Soul", url: "https://othermgwebsite.github.io/452e5670-7684-4daa-bdce-eef69b0fc66a/content/app-99908.games.s3.yandex.net/99908/ib1vwzwxwdk9r9nlm6f8pfaeui8bnqxv/index.html" },
+     { name: "Dont Fall.io", url: "https://othermgwebsite.github.io/cffd6473-61f8-49c2-a88f-7a6a61699ca1/content/www.julgames.com/games/2021/unity/dont-fall-io/index.html" },
+     { name: "DragBox", url: "https://othermgwebsite.github.io/f635aa64-1653-491c-a95f-b2b2f2067494/content/19221.cache.armorgames.com/files/games/drag-box-19221/index.html" },
+     { name: "EraseBox", url: "https://othermgwebsite.github.io/ed7ba711-4d04-47d0-bd70-ce28d0aa6e11/content/19256.cache.armorgames.com/files/games/erase-box-19256/index.html" },
+     { name: "Mari0", url: "https://othermgwebsite.github.io/ca2cd940-b69b-43fc-b330-9b25b98be6f4/content/static.playunblocked.com/2021/12/mari0/index.html" },
+     { name: "Slice of Sasha", url: "https://othermgwebsite.github.io/8e9ed6cf-1ffa-46e9-8dbd-6fd8858d2f1f/content/v6p9d9t4.ssl.hwcdn.net/html/4413918/index.html" },
+     { name: "Running Round", url: "https://othermgwebsite.github.io/4f835b64-2d5a-412e-8ed1-38615fad15ad/content/funkypotato.com/gamez/running-round/index.html" },
+     { name: "Scrambled Eggs", url: "https://othermgwebsite.github.io/1f5e006d-bb92-4509-990b-fae33b4ce5c5/content/v6p9d9t4.ssl.hwcdn.net/html/2727946/SE_HTML/index.html" },
+     { name: "Shards", url: "https://othermgwebsite.github.io/479a586a-65af-4914-9416-0a12a5755f24/content/app-96863.games.s3.yandex.net/96863/nlrz4jbpuqrfdnfxtnjszxj9b42d8sor/index.html" },
+     { name: "Senya and Oscar 2", url: "https://othermgwebsite.github.io/b958cc1c-fc13-4b75-ae67-b08dce1c28c7/content/19140.cache.armorgames.com/files/games/senya-and-oscar-2-19140/index.html" },
+     { name: "Space is Key", url: "https://othermgwebsite.github.io/8a7c95a0-e604-43c3-b584-b001b1611922/content/files.numuki.com/games/platform/space-is-key/index.html" },
+     { name: "Arcade Wizard", url: "https://othermgwebsite.github.io/959c99de-9707-4068-8b84-85448e4771b9/content/18995.cache.armorgames.com/files/games/arcade-wizard-18995/index.html" },
+     { name: "Mirror Wizard", url: "https://othermgwebsite.github.io/d2d66925-5237-4d99-bac0-fe634ce8d567/content/19323.cache.armorgames.com/files/games/mirror-wizard-19323/index.html" },
+     { name: "Helios", url: "https://othermgwebsite.github.io/7916a10d-763b-489b-953d-fae4e96d5c95/content/19104.cache.armorgames.com/files/games/helios-19104/index.html" },
+     { name: "Bob The Robber 2", url: "https://othermgwebsite.github.io/d91fd738-f4db-4509-8863-f9c424a61ae2/content/raw.githack.com/3kh0/3kh0-assets/main/bobtherobber2/index.html" },
+     { name: "Blocky Snakes", url: "https://mathgames66.github.io/games/html5/blockysnakes/" },
+     { name: "Cave war", url: "https://mathgames66.github.io/games/html5/cavewar/" },
+     { name: "Maptroid", url: "https://mathgames66.github.io/games/html5/maptroid/" },
+     { name: "OvO 2", url: "https://mathgames66.github.io/games/html5/ovo2/" },
+     { name: "PacMan 3D", url: "https://mathgames66.github.io/games/html5/pacman3d/" },
+     { name: "PacMan FPS", url: "https://mathgames66.github.io/games/html5/pacmanfps/" },
+     { name: "P.E. Noire", url: "https://mathgames66.github.io/games/html5/plactions/" },
+     { name: "Protektor", url: "https://mathgames66.github.io/games/html5/protektor/" },
+     { name: "Skyblock", url: "https://mathgames66.github.io/games/html5/skyblock/" },
+     { name: "Zrist", url: "https://mathgames66.github.io/games/html5/zrist/" },
+     { name: "WorldsWithinWorlds", url: "https://mathgames66.github.io/games/html5/worldswithinworlds/" },
+     { name: "Exiled Zombies", url: "https://mathgames66.github.io/games/html5/exiled_zombies/" },
+     { name: "Roots", url: "https://mathgames66.github.io/games/html5/roots/" },
+     { name: "2020 Game", url: "https://mathgames66.github.io/games/html5/2020game/" },
+     { name: "Rocking Sky Trip", url: "https://mathgames66.github.io/games/html5/rockingskytrip/" },
+     { name: "FNAF World", url: "https://irv77.github.io/hd_fnaf/w/" },
+     { name: "FNAF UCN", url: "https://irv77.github.io/hd_fnaf/ucn/" },
+     { name: "Animals Volleyball", url: "https://gaming-escape.github.io/public/assets/games/animals-volleyball/index.html" },
+     { name: "Geometry Dash Lite", url: "https://gaming-escape.github.io/public/assets/games/geometry-dash/" },
+     { name: "Funny Shooter 2", url: "https://gaming-escape.github.io/public/assets/games/funny-shooter-2/" },
+     { name: "ChoppyOrc", url: "https://gaming-escape.github.io/public/assets/games/choppy-orc/" },
+     { name: "Poly Track", url: "https://gaming-escape.github.io/public/assets/games/poly-track/" },
+     { name: "Slow Roads", url: "https://gaming-escape.github.io/public/assets/games/slow-roads/" },
+     { name: "Under the Red Sky Parkour", url: "https://gaming-escape.github.io/public/assets/games/under-the-red-sky/" },
+     { name: "Animal Arena", url: "https://gaming-escape.github.io/public/assets/games/animal-arena/" },
+     { name: "Ducklings", url: "https://gaming-escape.github.io/public/assets/games/ducklings-io/" },
+     { name: "Blumgi Racers", url: "https://gaming-escape.github.io/public/assets/games/blumgi-racers/" },
+     { name: "Blumgi Soccer", url: "https://gaming-escape.github.io/public/assets/games/blumgi-soccer/" },
+     { name: "Blumgi Dragon", url: "https://gaming-escape.github.io/public/assets/games/blumgi-dragon/" },
+     { name: "Blumgi Bloom", url: "https://gaming-escape.github.io/public/assets/games/blumgi-bloom/" },
+     { name: "Blumgi Ball", url: "https://gaming-escape.github.io/public/assets/games/blumgi-ball/" },
+     { name: "Blumgi Castle", url: "https://gaming-escape.github.io/public/assets/games/blumgi-castle/" },
+     { name: "Blumgi Rocket", url: "https://gaming-escape.github.io/public/assets/games/blumgi-rocket/" },
+     { name: "Blumgi Slime", url: "https://gaming-escape.github.io/public/assets/games/blumgi-slime/" },
+     { name: "Swingo", url: "https://gaming-escape.github.io/public/assets/games/swingo/" },
+     { name: "Zombie Rush", url: "https://gaming-escape.github.io/public/assets/games/zombie-rush/" },
+     { name: "Jump Only", url: "https://gaming-escape.github.io/public/assets/games/jump-only/index.html" },
+     { name: "GoBattle", url: "https://gaming-escape.github.io/public/assets/games/gobattle/index.html" },
+     { name: "Dadish 3D", url: "https://gaming-escape.github.io/public/assets/games/dadish-3d/index.html" },
+     { name: "Dadish", url: "https://gaming-escape.github.io/public/assets/games/dadish/index.html" },
+     { name: "Dadish 2", url: "https://gaming-escape.github.io/public/assets/games/dadish-2/index.html" },
+     { name: "Dadish 3", url: "https://gaming-escape.github.io/public/assets/games/dadish-3/index.html" },
+     { name: "Tag 2", url: "https://gaming-escape.github.io/public/assets/games/tag-2/index.html" },
+     { name: "Shadow Trick", url: "https://gaming-escape.github.io/public/assets/games/shadow-trick/index.html" },
+     { name: "Zooplop", url: "https://gaming-escape.github.io/public/assets/games/zooplop/index.html" },
+     { name: "Physibox", url: "https://gaming-escape.github.io/public/assets/games/physibox/index.html" },
+     { name: "Water Polo Ragdoll", url: "https://gaming-escape.github.io/public/assets/games/water-polo-ragdoll/index.html" },
+     { name: "Level Devil", url: "https://gaming-escape.github.io/public/assets/games/level-devil/index.html" },
+     { name: "ArmedForces io", url: "https://gaming-escape.github.io/public/assets/games/armed-forces-io/index.html" },
+     { name: "KS 2 Teams", url: "https://gaming-escape.github.io/public/assets/games/ks-2-teams/index.html" },
+     { name: "Super Tunnel Rush", url: "https://gaming-escape.github.io/public/assets/games/super-tunnel-rush/index.html" },
+     { name: "Uncycle Legend", url: "https://gaming-escape.github.io/public/assets/games/unicycle-legend/index.html" },
+     { name: "Uncycle Hero", url: "https://gaming-escape.github.io/public/assets/games/unicycle-hero/index.html" },
+     { name: "Goober World", url: "https://gaming-escape.github.io/public/assets/games/goober-world/index.html" },
+     { name: "Bobble", url: "https://gaming-escape.github.io/public/assets/games/bobble/index.html" },
+     { name: "Slope 2", url: "https://roblox-unblock.github.io/r7/slope-2-multiplayer/" },
+     { name: "Duck Life 2", url: "https://roblox-unblock.github.io/r/duck-life-2-world-champion/" },
+     { name: "New Super Mario Bros. On Scratch 2", url: "https://scratch.mit.edu/projects/874249193/embed" },
+     { name: "New Super Mario Bros. On Scratch", url: "https://scratch.mit.edu/projects/595568456/embed" },
+     { name: "Golfinity", url: "https://roblox-unblock.github.io/r4/golfinity/" },
+     { name: "Merge The Numbers", url: "https://gaming-escape.github.io/public/assets/games/merge-the-numbers/index.html" },
+     { name: "Watermelon Game", url: "https://gaming-escape.github.io/public/assets/games/watermelon-game/index.html" },
+     { name: "Race Survival Arena King", url: "https://gaming-escape.github.io/public/assets/games/race-survival-arena-king/index.html" },
+     { name: "Push Your Luck", url: "https://gaming-escape.github.io/public/assets/games/push-your-luck/index.html" },
+     { name: "Gobble", url: "https://gaming-escape.github.io/public/assets/games/gobble/index.html" },
+     { name: "Monster Tracks", url: "https://gaming-escape.github.io/public/assets/games/monster-tracks/index.html" },
+     { name: "Recoil", url: "https://gaming-escape.github.io/public/assets/games/recoil/index.html" },
+     { name: "Bank Robbery", url: "https://gaming-escape.github.io/public/assets/games/bank-robbery/index.html" },
+     { name: "Bank Robbery 2", url: "https://gaming-escape.github.io/public/assets/games/bank-robbery-2/index.html" },
+     { name: "Bank Robbery 3", url: "https://gaming-escape.github.io/public/assets/games/bank-robbery-3/index.html" },
+     { name: "Gladihoppers", url: "https://gaming-escape.github.io/public/assets/games/gladihoppers/index.html" },
+     { name: "Vex X3M", url: "https://gaming-escape.github.io/public/assets/games/vex-x3m/index.html" },
+     { name: "Table Tennis World Tour", url: "https://gaming-escape.github.io/public/assets/games/table-tennis-world-tour/index.html" },
+     { name: "Economical", url: "https://gaming-escape.github.io/public/assets/games/economical/index.html" },
+     { name: "Vex 3", url: "https://gaming-escape.github.io/public/assets/games/vex-3/index.html" },
+     { name: "Vex 4", url: "https://gaming-escape.github.io/public/assets/games/vex-4/index.html" },
+     { name: "Vex 5", url: "https://gaming-escape.github.io/public/assets/games/vex-5/index.html" },
+     { name: "Vex 6", url: "https://gaming-escape.github.io/public/assets/games/vex-6/index.html" },
+     { name: "Vex 7", url: "https://gaming-escape.github.io/public/assets/games/vex-7/index.html" },
+     { name: "Vex 8", url: "https://gaming-escape.github.io/public/assets/games/vex-8/index.html" },
+     { name: "OvO Dimensions", url: "https://gaming-escape.github.io/public/assets/games/ovo-dimensions/index.html" },
+     { name: "Economical 2", url: "https://gaming-escape.github.io/public/assets/games/economical-2/index.html" },
+     { name: "Day of Meat: Radiation", url: "https://gaming-escape.github.io/public/assets/games/day-of-meat-radiation/index.html" },
+     { name: "Retro Highway", url: "https://gaming-escape.github.io/public/assets/games/retro-highway/index.html" },
+     { name: "Yokai Dungeon", url: "https://gaming-escape.github.io/public/assets/games/yokai-dungeon/index.html" },
+     { name: "Flip Bros", url: "https://gaming-escape.github.io/public/assets/games/flip-bros/index.html" },
+     { name: "Space Major Miner", url: "https://gaming-escape.github.io/public/assets/games/space-major-miner/index.html" },
+     { name: "Poor Eddie", url: "https://gaming-escape.github.io/public/assets/games/poor-eddie/index.html" },
+     { name: "Stickman Bike", url: "https://gaming-escape.github.io/public/assets/games/stickman-bike/index.html" },
+     { name: "Snow Rider 3D", url: "https://gaming-escape.github.io/public/assets/games/snow-rider-3d/index.html" },
+     { name: "Cow Bay", url: "https://gaming-escape.github.io/public/assets/games/cow-bay/index.html" },
+     { name: "Soccer: Skills World Cup", url: "https://gaming-escape.github.io/public/assets/games/soccer-skills-world-cup/index.html" },
+     { name: "Soccer Skills Euro Cup", url: "https://gaming-escape.github.io/public/assets/games/soccer-skills-euro-cup/index.html" },
+     { name: "Soccer Skills Champions League", url: "https://gaming-escape.github.io/public/assets/games/soccer-skills-champions-league/index.html" },
+     { name: "Sonic Robo Blast 2 Kart", url: "https://skyleite.github.io/Kart-Public-WASM/" },
+     { name: "Open Sonic JS", url: "https://clarkeadg.github.io/opensonic-js/" },
+     { name: "Motobug Engine", url: "https://coderman64.github.io/motobug-engine/" },
+     { name: "Space Thing", url: "https://gaming-escape.github.io/public/assets/games/space-thing/index.html" },
+     { name: "Turbo Moto Racer", url: "https://gaming-escape.github.io/public/assets/games/turbo-moto-racer/index.html" },
+     { name: "Candy Crush", url: "https://gaming-escape.github.io/public/assets/games/candy-crush/index.html" },
+     { name: "Master Chess", url: "https://gaming-escape.github.io/public/assets/games/master-chess/index.html" },
+     { name: "Master Checkers", url: "https://gaming-escape.github.io/public/assets/games/master-checkers/index.html" },
+     { name: "Core Ball", url: "https://gaming-escape.github.io/public/assets/games/core-ball/index.html" },
+     { name: "Doodle Baseball", url: "https://gaming-escape.github.io/public/assets/games/google-baseball/index.html" },
+     { name: "Volley Random", url: "https://gaming-escape.github.io/public/assets/games/volley-random/index.html" },
+     { name: "Idle Mining Empire", url: "https://gaming-escape.github.io/public/assets/games/idle-mining-empire/index.html" },
+     { name: "Idle Startup Tycoon", url: "https://gaming-escape.github.io/public/assets/games/idle-startup-tycoon/index.html" },
+     { name: "Idle Farming Business", url: "https://gaming-escape.github.io/public/assets/games/idle-farming-business/index.html" },
+     { name: "Idle Gang", url: "https://gaming-escape.github.io/public/assets/games/idle-gang/index.html" },
+     { name: "Idle Light City", url: "https://gaming-escape.github.io/public/assets/games/idle-light-city/index.html" },
+     { name: "Iron Snout", url: "https://gaming-escape.github.io/public/assets/games/iron-snout/index.html" },
+     { name: "Dune", url: "https://gaming-escape.github.io/public/assets/games/dune/index.html" },
+     { name: "Rooftop Snipers", url: "https://gaming-escape.github.io/public/assets/games/rooftop-snipers/index.html" },
+     { name: "Rooftop Snipers 2", url: "https://gaming-escape.github.io/public/assets/games/rooftop-snipers-2/index.html" },
+     { name: "Choose Your Weapon", url: "https://obsidianig.com/games/chooseyourweapon/" },
+     { name: "Choose Your Weapon 2", url: "https://obsidianig.com/games/chooseyourweapon2/" },
+     { name: "Choose Your Weapon 3", url: "https://obsidianig.com/games/chooseyourweapon3/" },
+     { name: "Offline Paradise", url: "https://obsidianig.com/games/offlineparadise/" },
+     { name: "Wordle", url: "https://obsidianig.com/games/wordle/" },
+     { name: "Bad Piggies", url: "https://obsidianig.com/games/badpiggies/" },
+     { name: "Skibidi Toilet 1v100", url: "https://obsidianig.com/games/skibidi1v100/" },
+     { name: "Stickman Boost", url: "https://obsidianig.com/games/stickmanboost/" },
+     { name: "Cell Machine", url: "https://obsidianig.com/games/cellmachine/" },
+     { name: "Portal 2", url: "https://obsidianig.com/games/portal2/" },
+     { name: "Electric Man 2", url: "https://obsidianig.com/games/electricman2/" },
+     { name: "Skywire", url: "https://obsidianig.com/games/skywire/" },
+     { name: "Skywire 2", url: "https://obsidianig.com/games/skywire2/" },
+     { name: "Factory Balls", url: "https://obsidianig.com/games/factoryballs/" },
+     { name: "Adventure Capitalist", url: "https://obsidianig.com/games/adventurecapitalist/" },
+     { name: "Achievement Unlocked", url: "https://obsidianig.com/games/achievementunlocked/" },
+     { name: "Achievement Unlocked 2", url: "https://obsidianig.com/games/achievementunlocked2/" },
+     { name: "Achievement Unlocked 3", url: "https://obsidianig.com/games/achievementunlocked3/" },
+     { name: "Big Red Button", url: "https://obsidianig.com/games/bigredbutton/" },
+     { name: "Unfair Mario", url: "https://obsidianig.com/games/unfairmario/" },
+     { name: "Bubble Tanks 2", url: "https://obsidianig.com/games/bubbletanks2/" },
+     { name: "Skibidi Toilet Attack", url: "https://obsidianig.com/games/skibiditoiletattack/" },
+     { name: "Doodle Defender", url: "https://obsidianig.com/games/doodledefender/" },
+     { name: "Chibi Knight", url: "https://obsidianig.com/games/chibiknight/" },
+     { name: "Space Invaders", url: "https://obsidianig.com/games/spaceinvaders/" },
+     { name: "Mario Combat", url: "https://obsidianig.com/games/mariocombat/" },
+     { name: "Line Rider", url: "https://obsidianig.com/games/linerider/" },
+     { name: "Battle Ships", url: "https://obsidianig.com/games/battleships/" },
+     { name: "This Is the Only Level", url: "https://obsidianig.com/games/thisistheonlylevel/" },
+     { name: "Defend the Tank", url: "https://obsidianig.com/games/defendthetank/" },
+     { name: "The World's Hardest Game 2", url: "https://obsidianig.com/games/worldshardestgame2/" },
+     { name: "The World's Hardest Game 3", url: "https://obsidianig.com/games/worldshardestgame3/" },
+     { name: "There Is No Game", url: "https://obsidianig.com/games/thereisnogame/" },
+     { name: "Vex 2", url: "https://obsidianig.com/games/vex2/" },
+     { name: "Vex", url: "https://obsidianig.com/games/vex/" },
+     { name: "Solitaire", url: "https://obsidianig.com/games/solitaire/" },
+     { name: "Theme Hotel", url: "https://obsidianig.com/games/themehotel/" },
+     { name: "Townscaper", url: "https://obsidianig.com/games/townscaper/" },
+     { name: "The Binding of Issac the Demo", url: "https://obsidianig.com/games/thebindingofisaac/" },
+     { name: "Fancy Pants Adventures: World 1", url: "https://obsidianig.com/games/fancypantsadventure/" },
+     { name: "Papa's Pastaria", url: "https://obsidianig.com/games/papaspastaria/" },
+     { name: "Papa's Bakeria", url: "https://obsidianig.com/games/papasbakeria/" },
+     { name: "Papa's Cupcakeria", url: "https://obsidianig.com/games/papascupcakeria/" },
+     { name: "Papa's Cheeseria", url: "https://obsidianig.com/games/papascheeseria/" },
+     { name: "Papa's Donuteria", url: "https://obsidianig.com/games/papasdonuteria/" },
+     { name: "Papa's Wingeria", url: "https://obsidianig.com/games/papaswingeria/" },
+     { name: "Papa's Sushiria", url: "https://obsidianig.com/games/papassushiria/" },
+     { name: "Papa's Scooperia", url: "https://obsidianig.com/games/papasscooperia/" },
+     { name: "Papa's Freezeria", url: "https://obsidianig.com/games/papasfreezeria/" },
+     { name: "Papa's Pancakeria", url: "https://obsidianig.com/games/papaspancakeria/" },
+     { name: "Papa's Hot Doggeria", url: "https://obsidianig.com/games/papashotdoggeria/" },
+     { name: "Papa's Burgeria", url: "https://obsidianig.com/games/papasburgeria/" },
+     { name: "Papa's Pizzaria", url: "https://obsidianig.com/games/papaspizzaria/" },
+     { name: "Gun Mayhem 2", url: "https://obsidianig.com/games/gunmayhem2/gunmayhem2" },
+     { name: "Gun Mayhem", url: "https://obsidianig.com/games/gunmayhem/gunmayhem" },
+     { name: "Wolfenstein 3D", url: "https://obsidianig.com/games/wolfenstein3d/wolfenstein3d/" },
+     { name: "DOOM", url: "https://diekmann.github.io/wasm-fizzbuzz/doom/" },
+     { name: "Bloons TD", url: "https://obsidianig.com/games/bloonstd/bloonstd" },
+     { name: "Bloons TD 2", url: "https://obsidianig.com/games/btd2/" },
+     { name: "Bloons TD 3", url: "https://obsidianig.com/games/btd3/" },
+     { name: "Bloons TD 4", url: "https://obsidianig.com/games/btd4/" },
+     { name: "Learn to fly", url: "https://obsidianig.com/games/learntofly/learntofly" },
+     { name: "Learn to fly 2", url: "https://obsidianig.com/games/learntofly2/learntofly2" },
+     { name: "Learn to fly 3", url: "https://obsidianig.com/games/learntofly3/learntofly3" },
+     { name: "Portal Flash", url: "https://obsidianig.com/games/portalflash/portalflash" },
+     { name: "Run 3 Plus", url: "https://obsidianig.com/games/run3plus/" },
+     { name: "Run 2", url: "https://obsidianig.com/games/run2/" },
+     { name: "Run", url: "https://obsidianig.com/games/run/" },
+     { name: "Super Smash Flash", url: "https://obsidianig.com/games/supersmashflash/supersmashflash" },
+     { name: "The Impossible Quiz 2", url: "https://obsidianig.com/games/theimpossiblequiz2/theimpossiblequiz2" },
+     { name: "Tetris", url: "https://obsidianig.com/games/tetris/" },
+     { name: "Raft Wars", url: "https://obsidianig.com/games/raftwars/raftwars" },
+     { name: "Raft Wars 2", url: "https://obsidianig.com/games/raftwars2/raftwars2" },
+     { name: "Riddle School", url: "https://obsidianig.com/games/riddleschool/riddleschool" },
+     { name: "Riddle School 2", url: "https://obsidianig.com/games/riddleschool2/riddleschool2" },
+     { name: "Riddle School 3", url: "https://obsidianig.com/games/riddleschool3/riddleschool3" },
+     { name: "Riddle School 4", url: "https://obsidianig.com/games/riddleschool4/riddleschool4" },
+     { name: "Riddle School 5", url: "https://obsidianig.com/games/riddleschool5/riddleschool5" },
+     { name: "Riddle Transfer", url: "https://obsidianig.com/games/riddleschooltransfer/riddleschooltransfer" },
+     { name: "Riddle Transfer 2", url: "https://obsidianig.com/games/riddleschooltransfer2/riddleschooltransfer2" },
+     { name: "Duck Life 3 Evolution", url: "https://obsidianig.com/games/ducklife3/ducklife3" },
+     { name: "Duck Life 4", url: "https://obsidianig.com/games/ducklife4/ducklife4" },
+     { name: "Duck Life 5", url: "https://obsidianig.com/games/ducklife5/" },
+     { name: "Pico's School", url: "https://obsidianig.com/games/picosschool/picosschool" },
+     { name: "Diggy", url: "https://obsidianig.com/games/diggy/diggy" },
+     { name: "Alien Hominid", url: "https://obsidianig.com/games/alienhominid/alienhominid" },
+     { name: "Tightrope Theatre", url: "https://gaming-escape.github.io/public/assets/games/tightrope-theatre/" },
+     { name: "Double Panda", url: "https://gaming-escape.github.io/public/assets/games/double-panda/" },
+     { name: "JackSmith", url: "https://gaming-escape.github.io/public/assets/games/jacksmith/" },
+     { name: "Block Blast", url: "https://reunbozdo.github.io/" },
+     { name: "Super Mario Crossover", url: "https://html.cafe/xa043fef3" },
+     { name: "Moto X3M Spooky Land", url: "https://gaming-escape.github.io/public/assets/games/motox3m-spooky/" },
+     { name: "Mario Party 4", url: "https://html.cafe/xcbf1b6b0" },
+     { name: "Super Mario Sunshine 64", url: "https://html.cafe/x2f1a2658" },
+     { name: "Super Mario Flash 3", url: "https://html.cafe/x196d0ac6" },
+     { name: "Ultimate Flash Sonic", url: "https://html.cafe/xdc34c380" },
+     { name: "Bob The Robber", url: "https://html.cafe/x8350d8c5" },
+     { name: "Super Mario 63", url: "https://html.cafe/xf23368c1" },
+     { name: "Moto X3M Winter", url: "https://gaming-escape.github.io/public/assets/games/motox3m-winter/" },
+     { name: "Tower of Destiny", url: "https://roblox-unblock.github.io/r/tower-of-destiny/" },
+     { name: "Crazy Tunnerl 3D", url: "https://roblox-unblock.github.io/r4/crazy-tunnel-3d/" },
+     { name: "Athletics Hero", url: "https://roblox-unblock.github.io/r2/athletics-hero/" },
+     { name: "Color Tunnel 2", url: "https://roblox-unblock.github.io/r/color-tunnel-2/" },
+     { name: "Super Santa Kicker", url: "https://roblox-unblock.github.io/r8/super-santa-kicker/" },
+     { name: "Age of War", url: "https://roblox-unblock.github.io/r8/age-of-war/" },
+     { name: "Parking Fury", url: "https://roblox-unblock.github.io/r/parking-fury/" },
+     { name: "10 Minutes Till Dawn", url: "https://roblox-unblock.github.io/r7/10-minutes-till-dawn/" },
+     { name: "Draw the Hill", url: "https://roblox-unblock.github.io/r7/draw-the-hill/" },
+     { name: "Big Tall Small", url: "https://roblox-unblock.github.io/r8/big-tall-small/" },
+     { name: "Leader Strike", url: "https://roblox-unblock.github.io/r7/leader-strike/" },
+     { name: "Kighway Rider Extreme", url: "https://roblox-unblock.github.io/r7/highway-rider-extreme/" },
+     { name: "Bronze Age", url: "https://roblox-unblock.github.io/r/pre-civilization-bronze-age/" },
+     { name: "Coffee Shop", url: "https://roblox-unblock.github.io/r/coffee-shop/" },
+     { name: "Bob The Robber 4", url: "https://roblox-unblock.github.io/r7/bob-the-robber-4/" },
+     { name: "Awesome Tanks", url: "https://roblox-unblock.github.io/r/awesome-tanks/" },
+     { name: "Parking Fury 2", url: "https://roblox-unblock.github.io/r/parking-fury-2/" },
+     { name: "Stickman Ragdoll Crash Fun", url: "https://roblox-unblock.github.io/r/stickman-ragdoll-crash-fun/" },
+     { name: "Parkour Block 3D", url: "https://roblox-unblock.github.io/r/parkour-block-3d/" },
+     { name: "Pop It Master", url: "https://roblox-unblock.github.io/r6/pop-it-master/" },
+     { name: "Wizard Mike", url: "https://roblox-unblock.github.io/r3/wizard-mike/" },
+     
+     ];
+     var container = document.createElement("div");
+     container.setAttribute("id", "gamesContainer");
+     document.body.appendChild(container);
+     games.forEach(function(game) {
+     var button = document.createElement("button");
+     button.textContent = game.name;
+     button.className = "button";
+     button.onclick = function() {
+     if (game.url) {
+     document.body.innerHTML = "<object id='gameFrame' type='text/html' data='" + game.url + "' style='width: 100%; height: 100vh;'></object>";
+     window.addEventListener("beforeunload", (event) => {
+     if (true) {
+     event.preventDefault();
+     event.returnValue = "";
+     return "";
             }
         });  
                 }
             };
-            container.appendChild(button);
+     container.appendChild(button);
         });
-    }, 700);
-};
+       }, 700);
+      };
 
-    document.getElementById("apps").onclick = function() {
-    document.body.innerHTML = "<h4>Loading...<h4>";
-    setTimeout(function() {
-    document.body.innerHTML = "<h3 style='font-size: 80px; font-family: Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 20px;'>Apps</h3> <input id='searchBar' onkeyup='search_button()' type='text' name='search' placeholder='Search Apps'>";
-        var apps = [
-            { name: "HTML.Cafe Gallery", url: "https://html.cafe/gallery" },
-            { name: "Ruffle Player", url: "https://ruffle.rs/demo/" },
-            { name: "WebRetro", url: "https://binbashbanana.github.io/webretro/" },
-            { name: "Barney's Website", url: "https://html.cafe/x715d6947" },
-            { name: "Lo mejor del Chavo del 8", url: "https://html.cafe/x733d2e3d" },
-            { name: "Appetize.io Android Phone", url: "https://appetize.io/embed/xc1w6f1krd589zhp22a0mgftyw?autoplay=false&debug=true&device=pixel4&embed=true&launchUrl=exp%3A%2F%2Fexp.host%2F%40snack%2Fsdk.46.0.0-ghV0%21Qgb8N&scale=65&screenOnly=false&xDocMsg=true&xdocMsg=true&params=%7B&osVersion=11.0&deviceColor=black" },
-            { name: "Chatroom", url: "https://html.cafe/xc79bd761" },
-            { name: "Extension Deleter", url: "https://html.cafe/xfcef538d" },
-            { name: "Dingus Proxy", url: "https://html.cafe/x40ceaed5" },
-            { name: "Blobwifi", url: "https://blobby-boi.github.io/Blobwifi/" },
-            { name: "ByeBlocker", url: "https://html.cafe/xfc1df5f4" },
-            { name: "Interstellar", url: "https://study.republik.ec/" },
-            { name: "List of Exploits", url: "https://cocalc.com/github/3kh0/ext-remover/blob/main/README.md" },
-            { name: "History Flooder", url: "https://spritzerland.github.io/chbook/" },
-            { name: "Rubber", url: "https://chattyice234.github.io/Rubber/" },
-            { name: "ExtPrint3r", url: "https://extprint3r.github.io/" },
-            { name: "EmulatorJS", url: "https://obsidianig.com/EmulatorJS-main/" },
+     // Apps Section
+     document.getElementById("apps").onclick = function() {
+     document.body.innerHTML = '<div class="loading"> <h4>Loading...<h4>';
+     setTimeout(function() {
+     document.body.innerHTML = '<h3 style="font-size: 80px; font-family: Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 15px;">Apps</h3> <input id="searchBar" onkeyup="search_button()" type="text" name="search" placeholder="Search Apps">';
+     var apps = [
+     { name: "HTML.Cafe Gallery", url: "https://html.cafe/gallery" },
+     { name: "Ruffle Player", url: "https://ruffle.rs/demo/" },
+     { name: "WebRetro", url: "https://binbashbanana.github.io/webretro/" },
+     { name: "Barney's Website", url: "https://html.cafe/x715d6947" },
+     { name: "Lo mejor del Chavo del 8", url: "https://html.cafe/x733d2e3d" },
+     { name: "Appetize.io Android Phone", url: "https://appetize.io/embed/xc1w6f1krd589zhp22a0mgftyw?autoplay=false&debug=true&device=pixel4&embed=true&launchUrl=exp%3A%2F%2Fexp.host%2F%40snack%2Fsdk.46.0.0-ghV0%21Qgb8N&scale=65&screenOnly=false&xDocMsg=true&xdocMsg=true&params=%7B&osVersion=11.0&deviceColor=black" },
+     { name: "Chatroom", url: "https://html.cafe/xc79bd761" },
+     { name: "Extension Deleter", url: "https://html.cafe/xfcef538d" },
+     { name: "Dingus Proxy", url: "https://html.cafe/x40ceaed5" },
+     { name: "Blobwifi", url: "https://blobby-boi.github.io/Blobwifi/" },
+     { name: "ByeBlocker", url: "https://html.cafe/xfc1df5f4" },
+     { name: "Interstellar", url: "https://study.republik.ec/" },
+     { name: "List of Exploits", url: "https://cocalc.com/github/3kh0/ext-remover/blob/main/README.md" },
+     { name: "History Flooder", url: "https://spritzerland.github.io/chbook/" },
+     { name: "Rubber", url: "https://chattyice234.github.io/Rubber/" },
+     { name: "ExtPrint3r", url: "https://extprint3r.github.io/" },
+     { name: "EmulatorJS", url: "https://obsidianig.com/EmulatorJS-main/" },
     
-        ];
-        var container = document.createElement("div");
-        container.setAttribute("id", "appsContainer");
-        document.body.appendChild(container);
-        apps.forEach(function(app) {
-            var button = document.createElement("button");
-            button.textContent = app.name;
-            button.className = "button";
-            button.onclick = function() {
-                if (app.url) {
-                    document.body.innerHTML = '<object id="appsFrame" type="text/html" data="' + app.url + '" style="width: 100%; height: 100vh;"></object>';
-                    window.addEventListener("beforeunload", (event) => {
-            if (true) {
-                event.preventDefault();
-                event.returnValue = "";
-                return "";
+     ];
+     var container = document.createElement("div");
+     container.setAttribute("id", "appsContainer");
+     document.body.appendChild(container);
+     apps.forEach(function(app) {
+     var button = document.createElement("button");
+     button.textContent = app.name;
+     button.className = "button";
+     button.onclick = function() {
+     if (app.url) {
+     document.body.innerHTML = "<object id='appsFrame' type='text/html' data='" + app.url + "' style='width: 100%; height: 100vh;'></object>";
+     window.addEventListener("beforeunload", (event) => {
+     if (true) {
+     event.preventDefault();
+     event.returnValue = "";
+     return "";
             }
         });  
                 } 
             };
-            container.appendChild(button);
+     container.appendChild(button);
         });
-    }, 700);
-};
-    
-    document.getElementById("aboutBlank").onclick = function() {
-    var win = window.open('');
-    win.document.open();
-    win.document.write(document.documentElement.outerHTML);
-    win.document.title = "about:blank";
-    win.document.close();
-    window.parent.window.location.replace('https://classroom.google.com/')
-    };
-    
-    document.getElementById("tabCloak").onclick = function() {
-    document.title = "Home";
-    document.querySelector('link[rel="icon"]').href = "https://ssl.gstatic.com/classroom/favicon.png";
-};
-  
-    document.addEventListener("DOMContentLoaded", function() {
-    var phrases = [
-    "Welcome to Links123, the perfect site that collects games and apps from other sites, Links123 has the best games and apps to keep you entertained at school or home! So relax and enjoy the collection of games and apps created by others.",
-    "zzz",
-    "-0",
-    "ERROR CODE: S3KN2IL1",
-    "GYAAAAAAAAAAAAAT",
-    "Are you sure you're ready for what's next?",
-    "Donde estan mis monedas?",
-    "Everything is connected in ways you don’t expect.",
-    "-0+0-0(-0)+dinero=?",
-    "DINEROOOOOOOOO!",                                                                     
-    "Quiero dinero",
-    "我不是中國人！",
-    "Muy dificil",
-    "NOOOOOOOOOOOOOO",
-    "STOP WATCHING ME",
-    "You can’t escape me",
-    "💵💵💵",
-    "Dame dinero",
-    "Gay Mosquito",
-    "No.",
-    "Do you actually read this?",
-    "Tab cloak!",
-    "Shut up!",
-    "What?",
-    "about:blank!",
-    "Games!",
-    ":v",
-    "I am not a robot",
-    "Each update takes me 17 hours!",
-    "Links123 V3!",
-    "Have you read all the splash texts?",
-    "It’s just a little message. Nothing to see here… or is there?",
-    "That's nothing Skibidi!",
-    "mmmmmmmmmmmmmmmmmmmmmmmmmmmm",
-    "What is the least played game?",
-    "You will never see me speak English!",
-    "Why is it called Links123?",
-    "Meme of the day!",
-    "Why not?",
-    "99% bug free!",
-    "Dame mi dinero y mi respeto",
-    "Harder Daddy 🤤🤤🤤🤤🤤🤤",
-    "East is up",
-    "Todo tu culpa",
-    "Otro dia",
-    "100 hours of Shreksophone",
-    "Dame mi dinero",
-    "Yes, I use Google Translate", 
-    "No puntos extras",
-    "+0",
-    "Probablemente",
-    "Have you discovered everything? Probably not.",
-    "I see you",
-    "Have a great day!",
-    "Mind: Okay, we need to come up with an original name for the page. Don't just put 123 in the name we're thinking of for the links page. We can put- Me: Links123, I like that name. Mind: Kill yourself.",
-    "This is only the beginning, isn’t it?",
-    "It always seems impossible until it's done.",
-    "!!!WARNING SOMEONE IS BEHIND YOU!!!",
-    "Mario Cake 63!",
-    "Apps!",
-    "Te vendo dinero",
-    "Fun fact: While I was looking for game sites since no one wanted to give me one, in the search bar I put games html and found Amaze-Games and that's where I found HTML.cafe",
-    "Mikulo",
-    "I'M SORRY BRAWL STARS I NEED TO WORK ON LINKS123",
-    "STOP!",
-    "Donde esta mi dinero?",
-    "No DINERO for you!",
-    "No dinero. Just monedas made out of chicken",
-    "Well...",
-    "For educational uses",
-    "Quiero monedas de Luigi",
-    "Eres negro",
-    "Dinero de Zimbawe 100 trillion dollars = 40 us cents",
-    ":3",
-    "maliciouslaugh.mp3",
-    "If you get this message, you are lucky",
-    "Firma este papel y tu culo será para mi",
-    "UwU",
-    "Yo me la paso pensando en chamba",
-    "Nyah~",
-    "Loading...",
-    "Donde esta the meme of the day?",
-    "Tu dinero es de telemundo",
-    "There is no better day than today!",
-    "Don't be afraid to fail, be afraid not to try",
-    "There are more games than apps",
-    "New apps every 10 months",
-    "Ocho",
-    "Hoy les voy a contar la historia de un jugador que jugaba pvp y siempre fue el peor",
-    "More than 300 games!",
-    "Where are you now?",
-    "Our last year!",
-    "Porque la pagina no esta en español?",
-    "New games every weeks",
-    "HTML.cafe!",
-    "The initial name of the page was Stars123",
-    "37",
-    "Crossing the Dark Road",
-    "That's cheating!",
-    "Getting better every day!",
-    "Reminder: Do your work!",
-    "Have fun while it lasts",
-    "Rule 34 is now unblocked!",
-    "Estaba en el suelo rodeado por los Teletubbies pero estos eran los teletubbies.exe tenían los ojos blancos y además estaban empapados en un líquido blanco",
-    "Hi",
-    "Apps used to be called Pages",
-    "Orale Huey!",
-    "Player one, get ready!",
-    "You win!",
-    "Cinco Noches con Alfredo",
-    "Can't divide by zero!",
-    "How to get a negative zero on a calculator?",
-    "Well done",
-    "Let's go!",
-    "Game, not over!",
-    "SYS 64738",
-    "0 ads!",
-    "Skibidi my friend!",
-    "Carrot!",
-    "¿No te das cuenta de que soy tu voz?",
-    "Not on Google Docs!",
-    "bzxcvbnmtywuioqfsjdfiojediogjioerkjiogkioerjfiodkjpoweiopwjnvfnbdcoejiodjfihhesj!",
-    "Bienvenido a Enlaces123",
-    "man man man dela dela man man man dela dela man man man dela vem vem vem",
-    "Shikanoko Nokonoko Koshitantan",
-    "No tengo dinero",
-    "You have no limit, you are the only one that decides it.",
-    "This copy of Links123 V3 is genuine.",
-    "Fun fact: Your chromebook is likely being monitored 24/7",
-    "You found the secret message",
-    "I know where you live",
-    "AGE RATING -0",
-    "No more Links123 Portal!",
-    "Ñ",
-    "...",
-    "Your text here!",
-    "Thank you for using Links123!",
-    "Free time!",
-    "GET OUT!",
-    "0 virus!",
-    "supermegaultraestrellasworld2",
-    "Have a nice day!",
-    "It looks a lot like Art Class, doesn't it?",
-    "An arcade game famous for its brutal difficulty, 8-Bit always hated its players. Now that it's missing one of its guns, it's angrier than ever before.",
-    "1000 lines of code!",
-    "Maybe.",
-    "Probably.",
-    "EMBESTIDA CARAJO!",
-    "relaxingmusic.mp3",
-    "The only thing left of Links123 V1 is in Lo mejor del Chavo del 8",
-    "Nos van a odiar los de GoGuardian",
-    "I've played these games before!",
-    "Never in HTML.cafe",
-    "Noob vs Pro vs Hacker",
-    "?????????????????????????????????????",
-    "Dinero.net",
-    "Also try Barney's Website!",
-    "100% real no fake",
-    "Links123V3.exe",
-    "Give me my dinero 🥺🥺🥺🥺🥺🥺🥺🥺🥺🥺",
-    "Enter the password",
-    "If the page is called Links123, where are the links?",
-    "0 virus!",
-    "Never give up when you think it's all over",
-    "One more day",
-    "Your potential is infinite, dare to explore it",
-    "Exploration and discovery lead us to new things.",
-    "Defiant Statement: You will not defeat Links123!!",
-    "I Love Choco Cake",
-    "With Yum Foods and In Cool Kitchen",
-    "Maybe we will develop a chip to have on computers and give to people to buy… maybe if we get funded.",
-    "We are like Team Xecuter, in a way, but for schools, and we do not go against the law, but we do go against the school, soooooo. ",
-    "La batalla ya ha empezado, en mundo muy cuadrado",
-    "Talk about low budget games! No fun or hacks? I like piracy better!",
-    "Hello, if you are an administrator and you are truly reading this, I can give a wager, and I can be bribed, but not with money",
-    "You know what they say… if you don’t get it the first time, try and try again!!!",
-    "Okay look, we got this because when we finish everything, what are we supposed to do, stare at a wall or a window, hmmm?",
-    "3/21/25, we unveil the secrets of our new project.",
-    "V4 when???",
-    "BMW M3 GTR",
-    "Go watch Arcane season 2",
-    "Go watch Ranma ½",
-    "Go watch the Dog Man movie",
-    "Watch Cyberpunk: Edgerunners",
-    "Mañana",
-    "Links123 64 Edition",
-    "1+0=5",
-    "Comienza el fornai oh oh oh oh oh Intento ganar cada partida pero esto no es casualidad oh oh oh oh oh Recojo una escopeta táctica o una smg proligera oh oh oh oh oh",
-    "Why are you looking at me?",
-    "Have fun?",
-    "Chattyice no sabe español",
-    "Que tan fuerte es Steve de minecraft?",
-    "Para entender la historia de Five Nights at Freddy's...",
-    "Shadow el Jeshejojo",
-    "Monk ass hoe",
-    "Meme Pene",
-    "69",
-    "Mosquito Chino",
-    "Es hora de recordar buenos y viejos momentos que pasamos jugando en free fire pues con el tiempo ya no es igual",
-    "LA MIGRA 🗣🗣",
-    "Pito chino",
-    "Don't forget to do your work!",
-    "Stars in the sky",
-    "e e e e e e e e e e e e e e e e e ",
-    "Sonic says: You can't change your past but you can still ruin your future",
-    "I don't remember when I started doing this",
-    "Before this page was a google docs",
-    "Lego Mario time!",
-    "Should I work on the page or on my work?",
-    "Fuera de mi cerro",
-    "Dinero de chocolate",
-    "Links123 is 2.99 now!",
-    "Why so much stew?",
-    "Next update tomorrow, the day after tomorrow, in a week, in a month, in a year or never",
-    "This page receives more updates than Links123 V1",
-    "Empezé a jugar el juego de Among Us pensé que iba a ganar, pero me mataron el juego es muy entretenido pero me mata siempre el asesino",
-    "ME VA A GANAR UN NIÑO 🗣🗣🔥🔥",
-    "Dónde dice esa mamada? Pinche viejo baboso, deje de desinformar a la gente alv, para la próxima verifique su fuente hdspm y no esté desinformando a la gente, pendejo, ya no esté diciendo esas jaladas por favor",
-    "Quieres tener al bebeton en tu celular?🔥🔥",
-    "Que buena onda",
-    "Better than Links123 V2",
-    "I am Steve",
-    "Who else spends 40 hours a day on games?",
-    "Why is my username 20 characters long?",
-    "Valistes Verga shrek",
-    "LEBROOOOON",
-    "How big",
-    "Lips123 💋",
-    "Caca popo",
-    "I am baldi you're in my school",
-    "Fnaf is homo",
-    "Tu mama",
-    "Pi pi pi pi pi pi pi",
-    "Wow! More Games! And a Search Bar? Such Intuition!",
-    "They say we can’t have nice things, but here we are",
-    "The more beef the better sound gay, but you all wanna sleep together; ok.",
-    "We’ve got so much school credit",
-    "Now porting to iOS for Monroe iPads!",
-    "Now Porting as a Windows OS .iso!",
-    "Now Porting to Linux!",
-    "Ported onto a Nintendo Switch!",
-    "What did we do wrong, set the school free?",
-    "Running on AA Batteries!",
-    "Go Watch Invincible Season 3 on Amazon Prime!",
-    "The amount of games we have is MASSIVE",
-    "Low gamer fade",
-    "1 10v3 133t 5p34k",
-    "Code by Chattyice",
-    "Games By Multiple Humans",
-    "I would love to thank Lebron James for being Lebron James",
-    "Created by RMS123",
-    "Akpo also collaborated!",
-    "I dare you to continue refreshing until you find a normal message",
-    "Fun! New Games!",
-    "You can get Third Graders to do anything for Pokemon Cards!",
-    "Here for you when Kanye goes on a rant",
-    "His Name is Ye.",
-    "Lexar Chips! Buy Now!!!",
-    "It seems you have met a terrible, terrible demise.",
-    "This website has an error! Please reload.",
-    "Dreiton",
-    "Haggstrom",
-    "Subwoofer Lullaby",
-    "Moog City 2",
-    "Marmur Forever!",
-    "Sweden",
-    "Mice on Venus",
-    "Living Mice",
-    "Rubedo",
-    "Aria Math",
-    "Time moves fast... Doesn't it?",
-    "There is a lot of variety of texts here!",
-    "Your third favorite teacher, Mr Marmur.",
-    "Thanks to Chattyice234 on Github for the ChattyWebsite code! (the code I used to create the page)",
-    "Pan con queso",
-    "Queso con pan",
-    "Jamon con queso",
-    "Nada",
-    "jeje",
-    "Buenas",
-    "Pan con leche",
-    "Confle con leche",
-    "Pendejos",
-    "Bad boys",
-    "rizz",
-    "Monkey",
-    "Pokemon ",
-    "Its that rizz",
-    "hahaa",
-    "Nothing its here",
-    "Homeless",
-    "Live and Learn",
-    "Why always when I'm going to put new splash texts, I can't even get 10 new ones out of my head?",
-    "Yo era seguidor de La grasa en el grupo horneaban unos momos una tarde, sin avisar, me dieron ban ¡todo por fantasmón!",
-    "Mortal Kumbia",
-    "The first game I put on the first version of Links123 was New Super Mario Bros. - Mario Vs Luigi. Why is it here? It can't be because the chromebook has a managed Wi-Fi network.",
-    "If you get caught, don't blame me, it's not my fault that you decided to wear this during class.",
-    "Anything new? probably soon",
-    "n**** n**** n****",
-    "Ruins",
-    "Another Medium",
-    "It's Raining Somewhere Else",
-    "Snowdin Town",
-    "Waterfall",
-    "Reunited",
-    "His Theme",
-    "Temmie Village",
-    "sans.",
-    "Bonetrousle",
-    "Spear of Justice",
-    "Spider Dance",
-    "CORE",
-    "Finale",
-    "ASGORE",
-    "Hopes and Dreams",
-    "SAVE the World",
-    "Battle Against a True Hero",
-    "Megalovania",
-    "Stronger Monsters",
-    "Snowdy",
-    "Once Upon A Time",
-    "¿No tienes nada MEJOR que hacer?",
-    "Don't you have anything BETTER to do?",
-    "Also try Rubber!",
-    "If I had to change the name of the page, I would put...",
-    "Why do some updates come out quickly and others don't?",
-    "Easter eggs?",
-    "Download on the App Store",
-    "Get it on Google Play",
-    "Get in from Microsoft",
-    "Available at Amazon Appstore",
-    "Who's playing?",
-    "Is this Links 123 V3 or a edit version of ChattyWebsite?",
-    "What do you think is missing from my site?",
-    "This is better than making links to HTML.cafe",
-    "You don't need your chromebook now",
-    "The page almost became a Google Site!",
-    "How many splash texts have I deleted? A LOT",
-    "TURN. AROUND.",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "Now putting names of soundtracks?",
-    "Meow",
-    "You again?",
-    "20 new games!",
-    "I do the updates on a Chromebook! (not the school one)",
-    "0 new apps!",
-    "UNO!",
-    "Spelunker - Stage 01 Theme (Remix) or Cat Mario Stage 2",
-    "Swamp of Love Menu Theme",
-    "Bizarre Circus Menu Theme",
-    "Retropolis Menu Theme",
-    "Mecha Menu Theme",
-    "Royale Menu Theme",
-    "Starr Park Menu Theme",
-    "Summer Of Monsters Menu Theme",
-    "Brawl-o-ween 2020 Menu Theme",
-    "The Goldarm Gang Menu Theme",
-    "Stunt Show Menu Theme",
-    "Brawlidays 2019 Menu Theme",
-    "Brawl Stars Menu Theme",
-    "Pirates Menu Theme",
-    "Oddities Shop Menu Theme",
-    "Ranger Ranch Menu Theme",
-    "Dark Brawlidays Menu Theme",
-    "Candy Land Menu Theme",
-    "K-Pop Menu Theme",
-    "Lancer",
-    "Rude Buster",
-    "THE WORLD REVOLVING",
-    "Attack of the Killer Queen",
-    "Chapter 6 es muy dificil, Mr. Marmur",
-    "Swamp of Love Menu 2 Theme",
-    "Cyberbrawl Menu Theme",
-    "Angels vs Demons | Demons Menu Theme",
-    "Warrior's Jorney Menu Theme",
-    "Enchanted Woods Menu Theme",
-    "Mystery At The Hub Menu Theme",
-    "Deep Sea Menu Theme",
-    "Brawl-o-ween Menu Theme",
-    "Brawl Arcade Menu Theme",
-    "Footbrawl Menu Theme",
-    "Brawlidays Menu Theme",
-    "Rock Band Menu Theme",
-    "Brawlywood Menu Theme",
-    "Debí comer mas pollo adentro en mi carro, Eso son los videos que a ustedes le gustan",
-    "I am Iron Man",
-    "Error!",
-    "Hello",
-    "ctrl + shift + w",
-    "Dame MI DINERO",
-    "S** Game",
-    "Algebra malo",
-    "Juegos bueno",
-    "😨😨😨😨😨😨😈😨😨😨😨",
-    "WHAT",
-    "Change your skin color",
-    "No... *blushes*",
-    "🥵🥵🥵🥵🥵🥵🥵",
-    "123",
-    "Lights, Camera, Action!",
-    "Rogues Gallery",
-    "Don't make a permanant decision because of your temporary feelings - Me",
-    "Comfort Zone",
-    "Sunshine Cassette",
-    "Prime Time",
-    "Tabloid Jargon",
-    "Blossom Haze",
-    "Wildstyle Pistolero",
-    "Skyway Octane",
-    "Built to Rule",
-    "Steel Cortex",
-    "Ruby Delusions",
-    "Havoc Prognosis",
-    "Hi-Spec Robo Go!",
-    "Egg Reverie",
-    "Glimmering Gift",
-    "Double Take",
-    "Encerio? Me vale vrg",
-    "Rubber Games is like Links123 but purple",
-    "Real",
-    "Quiero dinero",
-    
-      ];
-      var randomIndex = Math.floor(Math.random() * phrases.length);
-      var randomPhrase = phrases[randomIndex];
-      var phraseElement = document.getElementById("randomPhrase");
-      phraseElement.textContent = randomPhrase;
-    });
-    
-    function search_button() {
-	let input = document.getElementById('searchBar').value
-	input=input.toLowerCase();
-	let x = document.getElementsByClassName('button');
-	
-	for (i = 0; i < x.length; i++) {
-		if (!x[i].innerHTML.toLowerCase().includes(input)) {
-			x[i].style.display="none";
+       }, 700);
+     };
+        
+     // Search Bar
+     function search_button() {
+	 let input = document.getElementById('searchBar').value
+	 input=input.toLowerCase();
+	 let x = document.getElementsByClassName('button');
+	 for (i = 0; i < x.length; i++) {
+     if (!x[i].innerHTML.toLowerCase().includes(input)) {
+     x[i].style.display="none";
 		}
-		else {
-			x[i].style.display="inline";				
-		}
-	}
-} 
+     else {
+	 x[i].style.display="inline";				
+      }
+       }
+     }    
+     
+     // Open Update Log
+     function openUpdateLog() {
+     document.getElementById("updatelog").style.display = "block";
+     document.getElementById("blur-updatelog").style.display = "block";
+     }
+      
+     // Close Update Log
+     function closeUpdateLog() {
+     document.getElementById("updatelog").style.display = "none";
+     document.getElementById("blur-updatelog").style.display = "none";
+     document.getElementById("button-ul").onclick = function() {
+     openUpdateLog();
+       };
+     }
+                              
+     // Open Settings
+     function openSettings() {
+     document.getElementById("settings").style.display = "block";
+     document.getElementById("blur-settings").style.display = "block";
+     }
+      
+     // Close Settings
+     function closeSettings() {
+     document.getElementById("settings").style.display = "none";
+     document.getElementById("blur-settings").style.display = "none";
+     document.getElementById("button-s").onclick = function() {
+     openSettings();
+       };
+     }
+     
+     // Change Tab Name
+     function changeTabName() {
+     var newTitle = document.getElementById('tabName').value;
+     document.title = newTitle;
+     }
+     
+     // Google Cloak
+     document.getElementById("Google").onclick = function() {
+     document.title = "Google";
+     document.querySelector('link[rel="icon"]').href = "https://www.google.com/favicon.ico";
+     }; 
                              
-    function openLeftMenu() {
-          document.getElementById("menu").style.display = "none";
-          document.getElementById("button-s").innerHTML = "Settings";
-          document.getElementById("button-s").onclick = function() {
-            closeLeftMenu();
-          };
+     // Links123 Cloak
+     document.getElementById("Links123").onclick = function() {
+     document.title = "Links123";
+     document.querySelector('link[rel="icon"]').href = "https://i.ibb.co/n8NkW22k/L.png";
+     };
+                             
+     // Google Classroom Cloak
+     document.getElementById("Google Classroom").onclick = function() {
+     document.title = "Home";
+     document.querySelector('link[rel="icon"]').href = "https://ssl.gstatic.com/classroom/favicon.png";
+     };
+                              
+     // Google Drive Cloak
+     document.getElementById("Google Drive").onclick = function() {
+     document.title = "My Drive - Google Drive";
+     document.querySelector('link[rel="icon"]').href = "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";
+     }; 
+                              
+     // Gmail Cloak
+     document.getElementById("Gmail").onclick = function() {
+     document.title = "Inbox (2103)";
+     document.querySelector('link[rel="icon"]').href = "https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico";
+     }; 
+                              
+     // Custom Favicon
+     function changeTabIcon() {
+     const faviconUrl = document.getElementById("tabIcon").value;
+     if (faviconUrl) {
+     document.querySelector("link[rel='icon']").href = faviconUrl;
+       }
+     };
+                              
+     // Open in about:blank
+     document.getElementById("aboutBlank").onclick = function() {
+     alert("Attention: Once you enter about:blank, you won't be able to refresh the page to return to the main menu or choose another game/app.");
+     var win = window.open('');
+     win.document.open();
+     win.document.write(document.documentElement.outerHTML);
+     win.document.title = "about:blank";
+     win.document.close();
+     window.parent.window.location.replace('https://classroom.google.com/')
+     };
+      
+     // Download Links123 Offline
+     function download() {
+     fetch('https://raw.githubusercontent.com/RicardoMarioSonic123/Links123-V3/refs/heads/main/index.html')
+     .then(response => response.text())  // Fetch as text
+     .then(data => {
+     const blob = new Blob([data], { type: 'text/html' });
+     const link = document.createElement('a');
+     link.href = URL.createObjectURL(blob);
+     link.download = 'Links123 Offline';
+     document.body.appendChild(link);
+     link.click();
+     document.body.removeChild(link);
+       })
+     }
+                     
+     // Random Phrases
+     document.addEventListener("DOMContentLoaded", function() {
+     var phrases = [
+     "Welcome to Links123, the perfect site that collects games and apps from other sites, Links123 has the best games and apps to keep you entertained at school or home! So relax and enjoy the collection of games and apps created by others.",
+     "Made by RicardoMarioSonic123!",
+     "zzz",
+     "-0",
+     "ERROR CODE: S3KN2IL1",
+     "GYAAAAAAAAAAAAAT",
+     "Are you sure you're ready for what's next?",
+     "Donde estan mis monedas?",
+     "Everything is connected in ways you don’t expect.",
+     "-0+0-0(-0)+dinero=?",
+     "DINEROOOOOOOOO!",                                                                     
+     "Quiero dinero",
+     "我不是中國人！",
+     "Muy dificil",
+     "NOOOOOOOOOOOOOO",
+     "STOP WATCHING ME",
+     "You can’t escape me",
+     "💵💵💵",
+     "Dame dinero",
+     "Gay Mosquito",
+     "No.",
+     "Do you actually read this?",
+     "Tab cloak!",
+     "Shut up!",
+     "What?",
+     "about:blank!",
+     "Games!",
+     ":v",
+     "I am not a robot",
+     "Each update takes me 17 hours!",
+     "Links123 V3!",
+     "Have you read all the splash texts?",
+     "It’s just a little message. Nothing to see here… or is there?",
+     "That's nothing Skibidi!",
+     "mmmmmmmmmmmmmmmmmmmmmmmmmmmm",
+     "What is the least played game?",
+     "You will never see me speak English!",
+     "Why is it called Links123?",
+     "Meme of the day!",
+     "Why not?",
+     "99% bug free!",
+     "Dame mi dinero y mi respeto",
+     "Harder Daddy 🤤🤤🤤🤤🤤🤤",
+     "East is up",
+     "Todo tu culpa",
+     "Otro dia",
+     "100 hours of Shreksophone",
+     "Dame mi dinero",
+     "Yes, I use Google Translate", 
+     "No puntos extras",
+     "+0",
+     "Probablemente",
+     "Have you discovered everything? Probably not.",
+     "I see you",
+     "Have a great day!",
+     "Mind: Okay, we need to come up with an original name for the page. Don't just put 123 in the name we're thinking of for the links page. We can put- Me: Links123, I like that name. Mind: Kill yourself.",
+     "This is only the beginning, isn’t it?",
+     "It always seems impossible until it's done.",
+     "!!!WARNING SOMEONE IS BEHIND YOU!!!",
+     "Mario Cake 63!",
+     "Apps!",
+     "Te vendo dinero",
+     "Fun fact: While I was looking for game sites since no one wanted to give me one, in the search bar I put games html and found Amaze-Games and that's where I found HTML.cafe",
+     "Mikulo",
+     "I'M SORRY BRAWL STARS I NEED TO WORK ON LINKS123",
+     "STOP!",
+     "Donde esta mi dinero?",
+     "No DINERO for you!",
+     "No dinero. Just monedas made out of chicken",
+     "Well...",
+     "For educational uses",
+     "Quiero monedas de Luigi",
+     "Eres negro",
+     "Dinero de Zimbawe 100 trillion dollars = 40 us cents",
+     ":3",
+     "maliciouslaugh.mp3",
+     "If you get this message, you are lucky",
+     "Firma este papel y tu culo será para mi",
+     "UwU",
+     "Yo me la paso pensando en chamba",
+     "Nyah~",
+     "Loading...",
+     "Donde esta the meme of the day?",
+     "Tu dinero es de telemundo",
+     "There is no better day than today!",
+     "Don't be afraid to fail, be afraid not to try",
+     "There are more games than apps",
+     "New apps every 10 months",
+     "Ocho",
+     "Hoy les voy a contar la historia de un jugador que jugaba pvp y siempre fue el peor",
+     "More than 300 games!",
+     "Where are you now?",
+     "Our last year!",
+     "Porque la pagina no esta en español?",
+     "New games every weeks",
+     "HTML.cafe!",
+     "The initial name of the page was Stars123",
+     "37",
+     "10, 9, 8, 7, 6, 5, 4, 3, 2, 1...",
+     "That's cheating!",
+     "Getting better every day!",
+     "Reminder: Do your work!",
+     "Have fun while it lasts",
+     "Rule 34 is now unblocked!",
+     "Estaba en el suelo rodeado por los Teletubbies pero estos eran los teletubbies.exe tenían los ojos blancos y además estaban empapados en un líquido blanco",
+     "Hi",
+     "Apps used to be called Pages",
+     "Orale Huey!",
+     "Player one, get ready!",
+     "You win!",
+     "Cinco Noches con Alfredo",
+     "Can't divide by zero!",
+     "How to get a negative zero on a calculator?",
+     "Well done",
+     "Let's go!",
+     "Game, not over!",
+     "SYS 64738",
+     "0 ads!",
+     "Skibidi my friend!",
+     "Carrot!",
+     "¿No te das cuenta de que soy tu voz?",
+     "Not on Google Docs!",
+     "bzxcvbnmtywuioqfsjdfiojediogjioerkjiogkioerjfiodkjpoweiopwjnvfnbdcoejiodjfihhesj!",
+     "Bienvenido a Enlaces123",
+     "man man man dela dela man man man dela dela man man man dela vem vem vem",
+     "Shikanoko Nokonoko Koshitantan",
+     "No tengo dinero",
+     "You have no limit, you are the only one that decides it.",
+     "This copy of Links123 V3 is genuine.",
+     "Fun fact: Your chromebook is likely being monitored 24/7",
+     "You found the secret message",
+     "I know where you live",
+     "AGE RATING -0",
+     "No more Links123 Portal!",
+     "Ñ",
+     "...",
+     "Your splash text here!",
+     "Thank you for using Links123!",
+     "Free time!",
+     "GET OUT 🗣🗣🗣🗣",
+     "0 virus!",
+     "supermegaultraestrellasworld2",
+     "Have a nice day!",
+     "It looks a lot like Art Class, doesn't it?",
+     "An arcade game famous for its brutal difficulty, 8-Bit always hated its players. Now that it's missing one of its guns, it's angrier than ever before.",
+     "1000 lines of code!",
+     "Maybe.",
+     "Probably.",
+     "EMBESTIDA CARAJO!",
+     "relaxingmusic.mp3",
+     "Shhhh...",
+     "Nos van a odiar los de GoGuardian",
+     "I've played these games before!",
+     "Never in HTML.cafe",
+     "Noob vs Pro vs Hacker",
+     "?????????????????????????????????????",
+     "Dinero.net",
+     "Also try Barney's Website!",
+     "100% real no fake",
+     "Links123V3.exe",
+     "Give me my dinero 🥺🥺🥺🥺🥺🥺🥺🥺🥺🥺",
+     "Enter the password",
+     "If the page is called Links123, where are the links?",
+     "0 virus!",
+     "Never give up when you think it's all over",
+     "One more day",
+     "Your potential is infinite, dare to explore it.",
+     "Exploration and discovery lead us to new things.",
+     "Defiant Statement: You will not defeat Links123!!",
+     "I Love Choco Cake",
+     "With Yum Foods and In Cool Kitchen",
+     "Maybe we will develop a chip to have on computers and give to people to buy… maybe if we get funded.",
+     "We are like Team Xecuter, in a way, but for schools, and we do not go against the law, but we do go against the school, soooooo. ",
+     "La batalla ya ha empezado, en mundo muy cuadrado",
+     "Talk about low budget games! No fun or hacks? I like piracy better!",
+     "Hello, if you are an administrator and you are truly reading this, I can give a wager, and I can be bribed, but not with money",
+     "You know what they say… if you don’t get it the first time, try and try again!!!",
+     "Okay look, we got this because when we finish everything, what are we supposed to do, stare at a wall or a window, hmmm?",
+     "3/21/25, we unveil the secrets of our new project.",
+     "V4 when???",
+     "BMW M3 GTR",
+     "Go watch Arcane season 2",
+     "Go watch Ranma ½",
+     "Go watch the Dog Man movie",
+     "Watch Cyberpunk: Edgerunners",
+     "Mañana",
+     "Links123 64 Edition",
+     "1+0=5",
+     "Comienza el fornai oh oh oh oh oh Intento ganar cada partida pero esto no es casualidad oh oh oh oh oh Recojo una escopeta táctica o una smg proligera oh oh oh oh oh",
+     "Why are you looking at me?",
+     "Have fun?",
+     "Chattyice no sabe español",
+     "Que tan fuerte es Steve de minecraft?",
+     "Para entender la historia de Five Nights at Freddy's...",
+     "Shadow el Jeshejojo",
+     "Monk ass hoe",
+     "Meme Pene",
+     "69",
+     "Mosquito Chino",
+     "Es hora de recordar buenos y viejos momentos que pasamos jugando en free fire pues con el tiempo ya no es igual",
+     "LA MIGRA 🗣🗣",
+     "Pito chino",
+     "Don't forget to do your work!",
+     "Stars in the sky",
+     "e e e e e e e e e e e e e e e e e ",
+     "Sonic says: You can't change your past but you can still ruin your future",
+     "I don't remember when I started doing this",
+     "Before this page was a google docs",
+     "Lego Mario time!",
+     "Should I work on the page or on my work?",
+     "Fuera de mi cerro",
+     "Dinero de chocolate",
+     "Links123 is 2.99 now!",
+     "Why so much stew?",
+     "Next update tomorrow, the day after tomorrow, in a week, in a month, in a year or never",
+     "This page receives more updates than Links123 V1",
+     "Empezé a jugar el juego de Among Us pensé que iba a ganar, pero me mataron el juego es muy entretenido pero me mata siempre el asesino",
+     "ME VA A GANAR UN NIÑO 🗣🗣🔥🔥",
+     "Dónde dice esa mamada? Pinche viejo baboso, deje de desinformar a la gente alv, para la próxima verifique su fuente hdspm y no esté desinformando a la gente, pendejo, ya no esté diciendo esas jaladas por favor",
+     "Quieres tener al bebeton en tu celular?🔥🔥",
+     "Que buena onda",
+     "Better than Links123 V2",
+     "I am Steve",
+     "Who else spends 40 hours a day on games?",
+     "Why is my username 20 characters long?",
+     "Valistes Verga shrek",
+     "LEBROOOOON",
+     "How big",
+     "Lips123 💋",
+     "Caca popo",
+     "I am baldi you're in my school",
+     "Fnaf is homo",
+     "Tu mama",
+     "Pi pi pi pi pi pi pi",
+     "Wow! More Games! And a Search Bar? Such Intuition!",
+     "They say we can’t have nice things, but here we are",
+     "The more beef the better sound gay, but you all wanna sleep together; ok.",
+     "We’ve got so much school credit",
+     "Now porting to iOS for Monroe iPads!",
+     "Now Porting as a Windows OS .iso!",
+     "Now Porting to Linux!",
+     "Ported onto a Nintendo Switch!",
+     "What did we do wrong, set the school free?",
+     "Running on AA Batteries!",
+     "Go Watch Invincible Season 3 on Amazon Prime!",
+     "The amount of games we have is MASSIVE",
+     "Low gamer fade",
+     "1 10v3 133t 5p34k",
+     "Are you human?",
+     "Games By Multiple Humans",
+     "I would love to thank Lebron James for being Lebron James",
+     "cientoveintitres!",
+     "Akpo also collaborated!",
+     "I dare you to continue refreshing until you find a normal message",
+     "Fun! New Games!",
+     "You can get Third Graders to do anything for Pokemon Cards!",
+     "Here for you when Kanye goes on a rant",
+     "His Name is Ye.",
+     "Lexar Chips! Buy Now!!!",
+     "It seems you have met a terrible, terrible demise.",
+     "This website has an error! Please reload.",
+     "WE LOVE YOU Mr. Marmur",
+     "🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥",
+     "Settings!",
+     "uno, dos, tres!",
+     "Marmur Forever!",
+     ":D",
+     ":b",
+     ":3",
+     "XD",
+     "Time moves fast... Doesn't it?",
+     "There is a lot of variety of splash texts here!",
+     "Your third favorite teacher, Mr Marmur.",
+     "Credits to @Chattyice234 on github for the ChattyWebsite code that I used as a template to make mine!",
+     "Pan con queso",
+     "Queso con pan",
+     "Jamon con queso",
+     "Nada",
+     "jeje",
+     "Buenas",
+     "Pan con leche",
+     "Confle con leche",
+     "Pendejos",
+     "Bad boys",
+     "rizz",
+     "Monkey",
+     "Pokemon ",
+     "Its that rizz",
+     "hahaa",
+     "Nothing its here",
+     "Homeless",
+     "tomorrow",
+     "Why always when I'm going to put new splash texts, I can't even get 10 new ones out of my head?",
+     "Yo era seguidor de La grasa en el grupo horneaban unos momos una tarde, sin avisar, me dieron ban ¡todo por fantasmón!",
+     "Mortal Kumbia",
+     "The first game I put on the first version of Links123 was New Super Mario Bros. - Mario Vs Luigi. Why is it here? It can't be because the chromebook has a managed Wi-Fi network.",
+     "If you get caught, don't blame me, it's not my fault that you decided to wear this during class.",
+     "Anything new? probably soon",
+     "n**** n**** n****",
+     "Mama huevo",
+     "Vete a la vrg",
+     "Hola",
+     "Links123!",
+     "2+2=4",
+     "Who am I? You sure you want to know? if somebody told you I was just your average ordinary guy, not a care in the world... somebody lied.",
+     "Credits to all the original creators of the games and apps used on the page.",
+     ":)",
+     "sans.",
+     "Freedom!",
+     "Pe causa",
+     "Woahh is this a splash text?",
+     "Links123 >>>>>>>>>> Rubber >>> British ChattyWebsite > ChattyWebsite",
+     "Hi, I'm Apple.",
+     "Stop playing and go do your work!",
+     "Cual tarea?",
+     "Cual proyecto?",
+     "Tu ere pobre, tu no tiene aifon",
+     "The Final Boss",
+     "Carajo!",
+     "Oh no!",
+     "WHYYYYYYYYYYYY WEREN'T YOU AT MY CLAAAAAAAAAASS?!?!?!?!",
+     "¿No tienes nada MEJOR que hacer?",
+     "Don't you have anything BETTER to do?",
+     "Also try Rubber!",
+     "If I had to change the name of the page, I would put...",
+     "Why do some updates come out quickly and others don't?",
+     "Easter eggs?",
+     "Download on the App Store",
+     "Get it on Google Play",
+     "Get in from Microsoft",
+     "Available at Amazon Appstore",
+     "Who's playing?",
+     "Is this Links 123 V3 or a edit version of ChattyWebsite?",
+     "What do you think is missing from my site?",
+     "This is better than making links to HTML.cafe",
+     "You don't need your chromebook now",
+     "The page almost became a Google Site!",
+     "How many splash texts have I deleted? A LOT",
+     "TURN. AROUND.",
+     "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+     "Now putting names of soundtracks?",
+     "Meow",
+     "You again?",
+     "20 new games!",
+     "Fun fact: you're on a webpage right now",
+     "0 new apps!",
+     "UNO!",
+     "Yeah, I stole like 10 splashes from Chattyice.",
+     "Swamp of Love Menu Theme",
+     "Bizarre Circus Menu Theme",
+     "Retropolis Menu Theme",
+     "Mecha Menu Theme",
+     "Royale Menu Theme",
+     "Starr Park Menu Theme",
+     "Summer Of Monsters Menu Theme",
+     "Brawl-o-ween 2020 Menu Theme",
+     "The Goldarm Gang Menu Theme",
+     "Stunt Show Menu Theme",
+     "Brawlidays 2019 Menu Theme",
+     "Brawl Stars Menu Theme",
+     "Pirates Menu Theme",
+     "Oddities Shop Menu Theme",
+     "Ranger Ranch Menu Theme",
+     "Dark Brawlidays Menu Theme",
+     "Candy Land Menu Theme",
+     "K-Pop Menu Theme",
+     "The Robot Factory Menu Theme",
+     "Starr Toon Menu Theme",
+     "Cursed Pirates Menu Theme",
+     "Tara's Bazaar Menu Theme",
+     "Brawlidays 2018 Menu Theme",
+     "Swamp of Love Menu 2 Theme",
+     "Cyberbrawl Menu Theme",
+     "Angels vs Demons | Demons Menu Theme",
+     "Warrior's Jorney Menu Theme",
+     "Enchanted Woods Menu Theme",
+     "Mystery At The Hub Menu Theme",
+     "Deep Sea Menu Theme",
+     "Brawl-o-ween Menu Theme",
+     "Brawl Arcade Menu Theme",
+     "Footbrawl Menu Theme",
+     "Brawlidays Menu Theme",
+     "Rock Band Menu Theme",
+     "Brawlywood Menu Theme",
+     "Debí comer mas pollo adentro en mi carro, Eso son los videos que a ustedes le gustan",
+     "Super Mario 4 Jugadores",
+     "Error!",
+     "Hello",
+     "ctrl + shift + w",
+     "Dame MI DINERO",
+     "S** Game",
+     "Algebra malo",
+     "Juegos bueno",
+     "😨😨😨😨😨😨😈😨😨😨😨",
+     "WHAT",
+     "Change your skin color",
+     "No... *blushes*",
+     "🥵🥵🥵🥵🥵🥵🥵",
+     "123",
+     "Chapter 6 es muy dificil, Mr. Marmur",
+     "No running in the halls!",
+     "Don't make a permanant decision because of your temporary feelings",
+     "No drinking drinks in the halls!",
+     "No looking in other people's lockers in the halls!",
+     "99 seconds detention for you! Your parents will hear about this one!",
+     "Encerio? Me vale vrg",
+     "Rubber Games is like Links123 but purple",
+     "Real",
+     "Quiero dinero",
+     "Splash text!",
+     "Like and subscribe",
+     "If you get this message, you're black",
+     "2016 was 9 years ago",
+     "2017 was 8 years ago",
+     "2018 was 7 years ago",
+     "2019 was 6 years ago",
+     "2020 was 5 years ago",
+     "Links123 V3 >>>>>>>>>> Links123 V2.4 >>> Links123 V2 > Links123 V1 (Google Doc)",
+     "Ugh... it's you. I'm joking! Welcome back!",
+     "Donde esta mi hamburgesa🗣🔥🔥",
+     "Sonadow",
+     "Pedo",
+     "My site is amazing!",
+     "Restricted",
+     "This website has been blocked by your administrator.",
+     "Living in the swamp of love (Swamp of love), I fell down from above (From above), I was blind now I can see (I can see), This is where I wanna be, And it is time for me to be (To be), Living in sweet ecstasy (Ecstasy), And it's time for me to be free!",
+     "Error 404 Not Found",
+     "Ay mi gatito miau miau",
+     "There are so many games, that you only play one or two",
+     "En caso que no los vea, buenos días, buenas tardes y buenas noches",
+     "In case i don't see you, good afternoon, good evening and good night",
+     "Te doy 2 centavos",
+     "Pepito69",
+     "Open box before eating pizza",
+     "The amount of dinero fills you with DETERMINATION",
+     "Wake up! dinero!",
+     "Welcome to Brawl Talk!",
+     "Con fernanfloo voy viajando",
+     "Guerra de peruanos, guerra de peruanos, te cagaste causa, te cagaste causa",
+     { type: "image", src: 'https://i.ibb.co/4g9LmJXq/5249-thumbsdownpirate-1.png' },
+     ];
+     var randomIndex = Math.floor(Math.random() * phrases.length);
+     var randomPhrase = phrases[randomIndex];
+     var phraseElement = document.getElementById("randomPhrase");
+     phraseElement.textContent = randomPhrase;
+     if (randomPhrase.type === "image") {
+     phraseElement.innerHTML = `<img src="${randomPhrase.src}" alt="Splash Image" style="max-width: 100%;">`;
+     }
+     function changeText() {
+     const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+     if (typeof randomPhrase === "string") {
+     phraseElement.textContent = randomPhrase;
+     } else if (randomPhrase.type === "image") {
+     phraseElement.innerHTML = `<img src="${randomPhrase.src}" alt="Splash Image" style="max-width: 100%;">`;
         }
-
-        function closeLeftMenu() {
-          document.getElementById("menu").style.display = "block";
-          document.getElementById("button-s").innerHTML = "Settings"
-          document.getElementById("button-s").onclick = function() {
-            openLeftMenu();
-          };
-        }
+     }
+     phraseElement.addEventListener('click', changeText);
+     });
   </script>
-    </html>
+</html>

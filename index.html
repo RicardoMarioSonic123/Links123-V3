@@ -4,8 +4,8 @@
   <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="description" content="Welcome to Links123, the perfect site that collects games and apps from other sites, Links123 has the best games and apps to keep you entertained at school or home! So relax and enjoy the collection of games and apps created by others.">
-     <meta name="keywords" content="Unblocked Games and Apps">
+     <meta name="description" content="Welcome to Links123, the perfect site that collects games and apps from other websites! Links123 has the best games to keep you entertained at school or at home! So relax and enjoy the collection of games and apps the site compiles every week.">
+     <meta name="keywords" content="Unblocked Games">
      <title>Links123</title>
      <link rel="icon" type="image/png" href="https://i.ibb.co/n8NkW22k/L.png">
    <style>
@@ -31,6 +31,7 @@
      }
     
      h1 {
+     margin: 0;
      font-size: 50px;
      font-family: Tahoma, sans-serif;
      cursor: default;
@@ -41,7 +42,7 @@
      font-family: Tahoma, sans-serif;
      cursor: default;
      }
-    
+     
      h4 {
      margin: 0;
      position: absolute;
@@ -53,17 +54,6 @@
      font-family: Tahoma, sans-serif;
      cursor: wait;
      }
-        
-     h6 {
-     bottom: 0%; 
-     left: 0%;
-     width: 100%;
-     height: 0px;
-     position: absolute;
-     font-size: 20px;
-     font-family: Tahoma, sans-serif;
-     cursor: default;
-     }
     
      #searchBar {
      font-family: Tahoma, sans-serif;
@@ -74,9 +64,18 @@
      border: 0;
      font-weight: 552;
      text-align: center;
-     background-color: #111111;
+     background-color: #111;
      color: #fff;
+     transition: transform 0.2s;
      }    
+     
+     #searchBar:hover {
+     outline: solid 2.5px #fff;
+     }
+     
+     #searchBar:focus { 
+     outline: solid 2.5px #335fff; 
+     }
     
      #settings {
      overflow: auto;
@@ -115,9 +114,18 @@
      text-align: center;
      background-color: #1a2023;
      color: #fff;
+     transition: transform 0.2s;
+     }    
+     
+     .settings-i:hover {
+     outline: solid 2.5px #fff;
      }
      
-     #updatelog {
+     .settings-i:focus { 
+     outline: solid 2.5px #335fff; 
+     }
+     
+     #changelog {
      overflow: auto;
      position: absolute;
 	 left: 50%;
@@ -129,7 +137,7 @@
      border-radius: 10px;
      }
      
-     #blur-updatelog {
+     #blur-changelog {
      position: absolute;
      top: 0;
      left: 0;
@@ -155,43 +163,46 @@
      border: none;
      border-radius: 6px;
      cursor: pointer;
-     transition: background-color 0.3s, transform 0.2s;
+     transition: background-color 0.3s, transform 0.3s;
      }
     
      .button:hover {
      background-color: #284ccc;
+     transform: scale(1.1);
      }
     
      .button:active {
      background-color: #1e3999;
+     transform: scale(0.95);
      }
      
-     #button-ul {
-     position: absolute;
-     top: 0%;
+     #button-cl {
+     bottom: 0%; 
      left: 50%;
-     transform: translate(-50%, 50%);
+     position: absolute;
+     transform: translate(-50%, -85%);
      font-size: 20px;
      font-weight: 552;
      font-family: Tahoma, sans-serif;
      border: none;
      border-radius: 10px;
-     color: #335fff;
+     color: #fff;
      background: transparent; 
      cursor: pointer;
-     transition: background-color 0.3s, color 0.3s, transform 0.2s;
+     transition: background-color 0.4s, color 0.4s;
      }
      
-     #button-ul:hover {
+     #button-cl:hover {
      background-color: #335fff;
      color: #1a2023;
      }
     
-     #button-ul:active {
+     #button-cl:active {
      background-color: #284ccc;
      }
      
      .button-h {
+     margin-top: 20px ;
      margin-left: 5px;
      margin-right: 5px;
      padding: 9px 25px;
@@ -203,22 +214,24 @@
      border: none;
      border-radius: 6px;
      cursor: pointer;
-     transition: background-color 0.3s, transform 0.2s;
+     transition: background-color 0.3s, transform 0.3s;
      }
      
      .button-h:hover {
      background-color: #284ccc;
+     transform: scale(1.08);
      }
     
      .button-h:active {
      background-color: #1e3999;
+     transform: scale(0.95);
      }
      
      .button-c {
      position: absolute;
      top: 0%;
      right: 0%;
-     padding: 9px 25px;
+     padding: 5px 10px;
      font-size: 18px;
      font-weight: 552;
      font-family: Tahoma, sans-serif;
@@ -227,7 +240,7 @@
      border: none;
      border-radius: 10px;
      cursor: pointer;
-     transition: background-color 0.3s, transform 0.2s;
+     transition: background-color 0.3s;
      }
      
      .button-c:hover {
@@ -253,7 +266,7 @@
      color: #fff;
      background: transparent; 
      cursor: pointer;
-     transition: background-color 0.3s, color 0.3s, transform 0.2s;
+     transition: background-color 0.4s, color 0.4s;
      }
     
      #button-s:hover {
@@ -276,21 +289,23 @@
      border: none;
      border-radius: 6px;
      cursor: pointer;
-     width: 37.5%;
+     width: 24.7%;
      height: 40px;
      margin-top: 20px;
-     transition: background-color 0.3s, transform 0.2s;
+     transition: background-color 0.3s, transform 0.3s;
      }
      
      .button-st:hover {
      background-color: #284ccc;
+     transform: scale(1.05);
      }
     
      .button-st:active {
      background-color: #1e3999;
+     transform: scale(0.95);
      }
     
-     .button-si {
+     .button-sc {
      margin-left: 5px;
      margin-right: 5px;
      font-size: 15px;
@@ -304,14 +319,15 @@
      width: 15%;
      height: 40px;
      margin-top: 20px;
-     transition: background-color 0.3s, transform 0.2s;
+     transition: background-color 0.3s, transform 0.3s;
      }
      
-     .button-si:hover {
+     .button-sc:hover {
      background-color: #284ccc;
+     transform: scale(1.05);
      }
     
-     .button-si:active {
+     .button-sc:active {
      background-color: #1e3999;
      }
      
@@ -330,7 +346,7 @@
      color: #fff;
      background: transparent; 
      cursor: pointer;
-     transition: background-color 0.3s, color 0.3s, transform 0.2s;
+     transition: background-color 0.4s, color 0.4s;
      }
     
      #button-g:hover {
@@ -361,15 +377,17 @@
      background-color: #fff;
      padding: 7px 8px;
      border-radius: 10px;  
-     transition: background-color 0.3s, transform 0.2s;
+     transition: background-color 0.3s, transform 0.3s;
      }
     
      .favicon img:hover {
      background-color: #cccccc;
+     transform: scale(1.05);
      }
     
      .favicon img:active {
      background-color: #999999;
+     transform: scale(0.95);
      }
     
      #home {
@@ -394,19 +412,22 @@
      }
     
      #randomPhrase {
-     margin-bottom: 43px;
+     margin-top: 36px;
+     margin-bottom: 27px;
      font-weight: bold;
      font-size: 18px;
      font-family: Tahoma, sans-serif;
      cursor: pointer;
-     transition: color 0.3s, transform 0.2s;
+     transition: color 0.4s, transform 0.3s;
      }
      
      #randomPhrase:hover {
-     color: #335fff;
+     transform: scale(1.1);
+     color: #335fff
      }
     
      #randomPhrase:active {
+     transform: scale(0.95);
      color: #284ccc;
      }
      
@@ -418,47 +439,48 @@
      
      <!-- Main Menu -->
      <body>
-     <button id="button-ul" onclick="openUpdateLog()" title="Click here to view the update log">▶Click here to view the update log◀</button>
-     <h6>Version 3.2.0</h6>
+     <button id="button-cl" onclick="openChangelog()" title="Click here to view the Changelog">Version 3.2.1</button>
      <button id="button-g" onclick="location.href='https://github.com/RicardoMarioSonic123/Links123-V3'" title="Visit Github Repository">GitHub</button>
      <button id="button-s" onclick="openSettings()" title="Open Settings">Settings</button>
      <div id="home">
      <h1>Welcome to <span>Links123</span></h1>
-     <div id="randomPhrase">Welcome back!</div>
+     <div id="randomPhrase" title="Click here to change">Welcome back!</div>
      <button id="games" class="button-h">Games</button>
      <button id="apps" class="button-h">Apps</button>
      </div>
       
      <!-- Changelogs --> 
-     <div id="blur-updatelog" class= "hide">
-     <div id="updatelog" class= "hide">
-     <button class="button-c" onclick="closeUpdateLog()" title="Close Update log">Close</button>
-     <div class="header">
-     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; color: #335fff; margin-bottom: 0px;">Update 3.2.0</h3>
-     </div>
-     <h2>20 new games, some games that wouldn't load have been replaced, more features have been added to the settings and the interface has been improved, a Changelog has been created to record the changes made with each new update, you can now generate a new random message by clicking on the message and an image can appear in the messages.</h2>
+     <div id="blur-changelog" class= "hide">
+     <div id="changelog" class= "hide">
+     <button class="button-c" onclick="closeChangelog()" title="Close Changelog">×</button>
+     <h3 style="font-size: 36px; font-family: Tahoma, sans-serif; margin-bottom: 0px; cursor: default;">Version 3.2.1 Changelog 3/23/25</h3>
+     <div class="header"></div>
+     <h2>20 new games, hover animations, the close button has been redesigned, Added blob: cloak, docs and slides tab cloak. Now each tab cloak is saved, so it remains intact whether you refresh or close the tab.</h2>
      </div>
      </div>  
        
      <!-- Settings -->
      <div id="blur-settings" class= "hide">
      <div id="settings" class= "hide">
-     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px;">Settings</h3>
-     <button class="button-c" onclick="closeSettings()" title="Close Settings">Close</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; cursor: default;">Settings</h3>
+     <button class="button-c" onclick="closeSettings()" title="Close Settings">×</button>
      <button class="button-st" id="aboutBlank" title="Open in about:blank">about:blank</button>
+     <button class="button-st" onclick="createBlobUrl()" title="Open in blob:">blob:</button>
      <button class="button-st" onclick="download()" title="Download Links123 Offline">Offline</button>
      <br>
      <input type="text" id="tabName" placeholder="Enter new tab name" class="settings-i">
-     <button class="button-si" onclick="changeTabName()" title="Save changes">Save</button>
+     <button class="button-sc" onclick="changeTabName()" title="Save changes">Save</button>
      <br>
      <input type="text" id="tabIcon" placeholder="Enter new tab icon" class="settings-i">     
-     <button class="button-si" onclick="changeTabIcon()" title="Save changes">Save</button>
+     <button class="button-sc" onclick="changeTabIcon()" title="Save changes">Save</button>
      <br>
      <br>
      <button id="Links123" class="favicon"><img src="https://i.ibb.co/n8NkW22k/L.png" alt="Links123" title="Links123"></button>
      <button id="Google" class="favicon"><img src="https://www.google.com/favicon.ico" alt="Google" title="Google"></button>
      <button id="Google Drive" class="favicon"><img src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png" alt="Google Drive" title="Google Drive"></button>
-     <button id="Google Classroom" class="favicon"><img src="https://ssl.gstatic.com/classroom/favicon.png" alt="Google Classroom" title="Google Classroom"></button>
+     <button id="Google Docs" class="favicon"><img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_document_x64.png" alt="" title=""></button>
+     <button id="Google Slides" class="favicon"><img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_presentation_x64.png" alt="" title=""></button>
+     <button id="Google Classroom" class="favicon"><img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Google Classroom" title="Google Classroom"></button>
      <button id="Gmail" class="favicon"><img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail" title="Gmail"></button>
      </div>
      </div>
@@ -474,7 +496,7 @@
      { name: "Subway Surfers Monaco", url: "https://roblox-unblock.github.io/r8/subway-surfers-monaco/" },
      { name: "Retro Ball", url: "https://gaming-escape.github.io/public/assets/games/retro-bowl/" },
      { name: "Sonic 4: Episode 1", url: "https://wamwoowam.co.uk/sonic4/" },
-     { name: "EaglercraftX 1.8", url: "https://html.cafe/x2bb30cec" },
+     { name: "EaglercraftX 1.8.8", url: "https://html.cafe/x2bb30cec" },
      { name: "Flappy Bird", url: "https://roblox-unblock.github.io/r8/flappy-bird-origin/" },
      { name: "Sonic Robo Blast 2", url: "https://vinmannie.github.io/srb2web/" },
      { name: "Super Mario 64", url: "https://html.cafe/xe25ca14a" },
@@ -527,7 +549,7 @@
      { name: "Duck Life", url: "https://roblox-unblock.github.io/r/duck-life/" },
      { name: "Super Mario Bros", url: "https://playmario.github.io/HTML5_Client/" },
      { name: "Unfair Undyne", url: "https://doodle-pile.gitlab.io/unfair-undyne/v0.99/" },
-     { name: "FNAF All Stars", url:"https://www.autistici.org/burnedprojects/fnaf_allstars/" },
+     { name: "Icy Purple Head", url:"https://roblox-unblock.github.io/r5/icy-purple-head-3/" },
      { name: "Cat Mario", url: "https://www.jezng.com/open-syobon-action.js/" },
      { name: "Cut the Rope", url: "https://roblox-unblock.github.io/r88/cut-the-rope/" },
      { name: "Cut the Rope Time Travel", url: "https://roblox-unblock.github.io/r88/cut-the-rope-time-travel/" },
@@ -891,6 +913,26 @@
      { name: "Parkour Block 3D", url: "https://roblox-unblock.github.io/r/parkour-block-3d/" },
      { name: "Pop It Master", url: "https://roblox-unblock.github.io/r6/pop-it-master/" },
      { name: "Wizard Mike", url: "https://roblox-unblock.github.io/r3/wizard-mike/" },
+     { name: "Tricks", url: "https://roblox-unblock.github.io/r3/tricks/" },
+     { name: "Tank Trouble 2", url: "https://roblox-unblock.github.io/r8/tank-trouble-2/" },
+     { name: "Talking Red", url: "https://burnedpopcorn.github.io/Talking-Red/" },
+     { name: "Super Mario Kart Remake", url: "https://burnedpopcorn.github.io/SM-Kart-ZX-Web-Port/index.html" },
+     { name: "Happy Friday!", url: "https://burnedpopcorn.github.io/Happy-Friday/" },
+     { name: "EaglercraftX 1.12.2", url: "https://gr4ys0n.github.io/public/assets/games/minecraft-1.12/" },
+     { name: "Angry Birds Chrome", url: "https://gr4ys0n.github.io/public/assets/games/angry-birds/" },
+     { name: "Super Hexbee Merger", url: "https://roblox-unblock.github.io/r3/super-hexbee-merger/" },
+     { name: "Marble Dash", url: "https://roblox-unblock.github.io/r5/marble-dash/" },
+     { name: "Wizard Mike", url: "https://roblox-unblock.github.io/r3/wizard-mike/" },
+     { name: "Bomb It 7", url: "https://roblox-unblock.github.io/r2/bomb-it-7/" },
+     { name: "Stickman Fighter Mega Brawl", url: "https://roblox-unblock.github.io/r3/stickman-fighter-mega-brawl/" },
+     { name: "Rally Champion", url: "https://roblox-unblock.github.io/r6/rally-champion/#topvaz" },
+     { name: "Drunken Duel", url: "https://roblox-unblock.github.io/r/drunken-duel/" },
+     { name: "Burger Bounty", url: "https://roblox-unblock.github.io/r2/burger-bounty/" },
+     { name: "Stickman Climb 2", url: "https://roblox-unblock.github.io/r6/stickman-climb-2/" },
+     { name: "Bearsus", url: "https://roblox-unblock.github.io/r2/bearsus/" },
+     { name: "Cricket World Cup", url: "https://roblox-unblock.github.io/r4/cricket-world-cup/" },
+     { name: "Ping Pong", url: "https://roblox-unblock.github.io/r6/ping-pong-html5/#topvaz" },
+     { name: "Stickman Fighter Epic Battle 2", url: "https://roblox-unblock.github.io/r6/stickman-fighter-epic-battle-2/" },
      
      ];
      var container = document.createElement("div");
@@ -937,7 +979,7 @@
      { name: "Interstellar", url: "https://study.republik.ec/" },
      { name: "List of Exploits", url: "https://cocalc.com/github/3kh0/ext-remover/blob/main/README.md" },
      { name: "History Flooder", url: "https://spritzerland.github.io/chbook/" },
-     { name: "Rubber", url: "https://chattyice234.github.io/Rubber/" },
+     { name: "Rubber Games", url: "https://chattyice234.github.io/Rubber/" },
      { name: "ExtPrint3r", url: "https://extprint3r.github.io/" },
      { name: "EmulatorJS", url: "https://obsidianig.com/EmulatorJS-main/" },
     
@@ -981,18 +1023,18 @@
        }
      }    
      
-     // Open Update Log
-     function openUpdateLog() {
-     document.getElementById("updatelog").style.display = "block";
-     document.getElementById("blur-updatelog").style.display = "block";
+     // Open Changelog
+     function openChangelog() {
+     document.getElementById("changelog").style.display = "block";
+     document.getElementById("blur-changelog").style.display = "block";
      }
       
-     // Close Update Log
-     function closeUpdateLog() {
-     document.getElementById("updatelog").style.display = "none";
-     document.getElementById("blur-updatelog").style.display = "none";
-     document.getElementById("button-ul").onclick = function() {
-     openUpdateLog();
+     // Close Changelog
+     function closeChangelog() {
+     document.getElementById("changelog").style.display = "none";
+     document.getElementById("blur-changelog").style.display = "none";
+     document.getElementById("button-cl").onclick = function() {
+     openChangelog();
        };
      }
                               
@@ -1011,48 +1053,107 @@
        };
      }
      
-     // Change Tab Name
+     // Save tab name to localStorage
      function changeTabName() {
-     var newTitle = document.getElementById('tabName').value;
-     document.title = newTitle;
+     var tabName = document.getElementById("tabName").value;
+     document.title = tabName;
+     localStorage.setItem("tabName", tabName);
+     }
+
+     // Save tab icon to localStorage
+     function changeTabIcon() {
+     var tabIcon = document.getElementById("tabIcon").value;
+     changeTabFavicon(tabIcon);
+     localStorage.setItem("tabIcon", tabIcon);
+     }
+                              
+     // Change tab favicon
+     function changeTabFavicon(iconUrl) {
+     var link = document.querySelector("link[rel~='icon']");
+     if (!link) {
+     link = document.createElement('link');
+     link.rel = 'icon';
+     document.getElementsByTagName('head')[0].appendChild(link);
+     }
+     link.href = iconUrl;
+     localStorage.setItem("tabIcon", iconUrl);
+     }
+
+     // Load tab name and icon from localStorage
+     window.onload = function() {
+     var savedTabName = localStorage.getItem("tabName");
+     var savedTabIcon = localStorage.getItem("tabIcon");
+     if (savedTabName) {
+     document.title = savedTabName;
+     }
+     if (savedTabIcon) {
+     changeTabFavicon(savedTabIcon);
+        }
      }
      
-     // Google Cloak
-     document.getElementById("Google").onclick = function() {
-     document.title = "Google";
-     document.querySelector('link[rel="icon"]').href = "https://www.google.com/favicon.ico";
-     }; 
-                             
-     // Links123 Cloak
+     // Sample tab changes with localStorage
      document.getElementById("Links123").onclick = function() {
-     document.title = "Links123";
-     document.querySelector('link[rel="icon"]').href = "https://i.ibb.co/n8NkW22k/L.png";
-     };
-                             
-     // Google Classroom Cloak
-     document.getElementById("Google Classroom").onclick = function() {
-     document.title = "Home";
-     document.querySelector('link[rel="icon"]').href = "https://ssl.gstatic.com/classroom/favicon.png";
-     };
+     var tabTitle = "Links123";
+     var tabIcon = "https://i.ibb.co/n8NkW22k/L.png";
+     document.title = tabTitle;
+     changeTabFavicon(tabIcon);
+     localStorage.setItem("tabName", tabTitle);
+     localStorage.setItem("tabIcon", tabIcon);
+     };                         
                               
-     // Google Drive Cloak
+     document.getElementById("Google").onclick = function() {
+     var tabTitle = "Google";
+     var tabIcon = "https://www.google.com/favicon.ico";
+     document.title = tabTitle;
+     changeTabFavicon(tabIcon);
+     localStorage.setItem("tabName", tabTitle);
+     localStorage.setItem("tabIcon", tabIcon);
+     };
+                            
      document.getElementById("Google Drive").onclick = function() {
-     document.title = "My Drive - Google Drive";
-     document.querySelector('link[rel="icon"]').href = "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";
-     }; 
+     var tabTitle = "My Drive - Google Drive";
+     var tabIcon = "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";
+     document.title = tabTitle;
+     changeTabFavicon(tabIcon);
+     localStorage.setItem("tabName", tabTitle);
+     localStorage.setItem("tabIcon", tabIcon);
+     };
+
                               
-     // Gmail Cloak
+     document.getElementById("Google Docs").onclick = function() {
+     var tabTitle = "Untitled document - Google Docs";
+     var tabIcon = "https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_document_x64.png";
+     document.title = tabTitle;
+     changeTabFavicon(tabIcon);
+     localStorage.setItem("tabName", tabTitle);
+     localStorage.setItem("tabIcon", tabIcon);
+     };
+      
+     document.getElementById("Google Slides").onclick = function() {
+     var tabTitle = "Untitled presentation - Google Slides";
+     var tabIcon = "https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_presentation_x64.png";
+     document.title = tabTitle;
+     changeTabFavicon(tabIcon);
+     localStorage.setItem("tabName", tabTitle);
+     localStorage.setItem("tabIcon", tabIcon);
+     };
+
+     document.getElementById("Google Classroom").onclick = function() {
+     var tabTitle = "Home";
+     var tabIcon = "https://ssl.gstatic.com/classroom/favicon.png";
+     document.title = tabTitle;
+     changeTabFavicon(tabIcon);
+     localStorage.setItem("tabName", tabTitle);
+     localStorage.setItem("tabIcon", tabIcon);
+     };
+                              
      document.getElementById("Gmail").onclick = function() {
-     document.title = "Inbox (2103)";
-     document.querySelector('link[rel="icon"]').href = "https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico";
-     }; 
-                              
-     // Custom Favicon
-     function changeTabIcon() {
-     const faviconUrl = document.getElementById("tabIcon").value;
-     if (faviconUrl) {
-     document.querySelector("link[rel='icon']").href = faviconUrl;
-       }
+     var tabTitle = "Inbox (2103)";
+     var tabIcon = "https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico";
+     document.title = tabTitle;
+     changeTabFavicon(tabIcon);
+     localStorage.setItem("tabName", tabTitle);
+     localStorage.setItem("tabIcon", tabIcon);
      };
                               
      // Open in about:blank
@@ -1065,6 +1166,19 @@
      win.document.close();
      window.parent.window.location.replace('https://classroom.google.com/')
      };
+                              
+     function createBlobUrl() {
+     var outerHTML = document.documentElement.outerHTML;
+     var blob = new Blob([outerHTML], {
+     type: 'text/html'
+     });
+     var blobUrl = URL.createObjectURL(blob);
+     var newTab = window.open();
+     newTab.document.write('<!DOCTYPE html><html><head><title>Page Content</title></head><body></body></html>');
+     newTab.document.close();
+     newTab.location.href = blobUrl;
+     }
+
       
      // Download Links123 Offline
      function download() {
@@ -1084,7 +1198,7 @@
      // Random Phrases
      document.addEventListener("DOMContentLoaded", function() {
      var phrases = [
-     "Welcome to Links123, the perfect site that collects games and apps from other sites, Links123 has the best games and apps to keep you entertained at school or home! So relax and enjoy the collection of games and apps created by others.",
+     "Welcome to Links123, the perfect site that collects games and apps from other websites! Links123 has the best games to keep you entertained at school or at home! So relax and enjoy the collection of games and apps the site compiles every week.",
      "Made by RicardoMarioSonic123!",
      "zzz",
      "-0",
@@ -1099,14 +1213,13 @@
      "我不是中國人！",
      "Muy dificil",
      "NOOOOOOOOOOOOOO",
-     "STOP WATCHING ME",
+     "666",
      "You can’t escape me",
      "💵💵💵",
      "Dame dinero",
      "Gay Mosquito",
      "No.",
      "Do you actually read this?",
-     "Tab cloak!",
      "Shut up!",
      "What?",
      "about:blank!",
@@ -1262,7 +1375,6 @@
      "Hello, if you are an administrator and you are truly reading this, I can give a wager, and I can be bribed, but not with money",
      "You know what they say… if you don’t get it the first time, try and try again!!!",
      "Okay look, we got this because when we finish everything, what are we supposed to do, stare at a wall or a window, hmmm?",
-     "3/21/25, we unveil the secrets of our new project.",
      "V4 when???",
      "BMW M3 GTR",
      "Go watch Arcane season 2",
@@ -1424,7 +1536,7 @@
      "How many splash texts have I deleted? A LOT",
      "TURN. AROUND.",
      "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-     "Now putting names of soundtracks?",
+     "Miau",
      "Meow",
      "You again?",
      "20 new games!",
@@ -1523,6 +1635,42 @@
      "Welcome to Brawl Talk!",
      "Con fernanfloo voy viajando",
      "Guerra de peruanos, guerra de peruanos, te cagaste causa, te cagaste causa",
+     "Congratulations! You found all 7 notebooks! Now all you need to do is... Find a way out before I catch you! Hahahaaaaaa!",
+     "Congratulations! You found all 7 notebooks! Now all you need to do is... GET OUT WHILE YOU STILL CAN!!! Hahahaaaaaa!",
+     "Now it's time for everybody's favorite subject...	MATH!",
+     "3.1415926535897932384626433...",
+     "Jarvis, link that.",
+     "Fortnite When?",
+     "Minecraft Java When?",
+     "GTA V When?",
+     "Our days are not over",
+     "Think Mark, THINK",
+     "Home of luigi’s gertha",
+     "We are the giver of links, you receive the links like good boys.",
+     "Me: I put something new on my website. Chattyice: I steal it and put it on my website.",
+     "Curiosity never truly ends.",
+     "I’m closer than you think",
+     "Things aren’t always as they seem, but you’ll figure it out.",
+     "Can you keep a secret?",
+     "We meet again… or is this the first time?",
+     "Click if you dare.",
+     "I wonder what you’ll find here.",
+     "Sometimes the unknown is the best part.",
+     "What are you waiting for?",
+     "I’m here to distract you",
+     "Come back soon!",
+     "You're next",
+     "Behind you",
+     "I’m always here if you need me",
+     "Yo me encontré con una escuadra Y les dije pa' tomarnos unas jarras Vamo' a caballo, en cuatro patas Y borracho amanecimo' en la mañana Yo me encontré con una escuadra Y les dije pa' tomarnos unas jarras Vamo' a caballo, en cuatro patas Y luego los invito a todos Vámonos de fiesta a factory Pero lleva, lleva mucho botiquín Porque mucha gente cae ahí Ponte ahora tu mejor skin Ven, vámonos de fiesta a factory Pero llévate mucho botiquín Porque mucha gente cae ahí Ponte ahora tu mejor skin...",
+     "How did I find out about ChattyWebsite? I don't know, I saw it on HTML.cafe around October or earlier. Although I think I saw Barney's website first.",
+     "Porque no hablo inglés? No se.",
+     "Before you start playing games, this site was made possible by ChattyWebsite.",
+     { type: "image", src: 'https://i.ibb.co/qhGJxQY/Screenshot-2025-03-23-7-04-36-PM-1.png' },
+     { type: "image", src: 'https://i.ibb.co/MyXs7wDp/Screenshot-2025-03-21-11-25-50-PM-1.png' },
+     { type: "image", src: 'https://i.ibb.co/hxyqfqZ0/IMG-20250206-210844-703-1.png' },
+     { type: "image", src: 'https://i.ibb.co/K8CdvJz/IMG-20250209-193704-343-1.png' },
+     { type: "image", src: 'https://i.ibb.co/nN5ZqLJQ/Screenshot-20231119-185555-Snapchat-1.png' },
      { type: "image", src: 'https://i.ibb.co/4g9LmJXq/5249-thumbsdownpirate-1.png' },
      ];
      var randomIndex = Math.floor(Math.random() * phrases.length);

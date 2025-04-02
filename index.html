@@ -17,11 +17,7 @@
      color: #fff;
      }
      
-     .hide {
-     display: none;
-     }
-     
-     .frame-container {
+     #game-frame-container {
      display: none;
      position: absolute;
      top: 50%;
@@ -33,7 +29,7 @@
      z-index: 20;
      }
      
-     .frame-container2 {
+     #app-frame-container {
      display: none;
      position: absolute;
      top: 50%;
@@ -66,8 +62,8 @@
      font-family: Tahoma, sans-serif;
      cursor: default;
      }
-    
-     #searchBar2 {
+     
+     #searchBar-g {
      font-family: Tahoma, sans-serif;
      font-size: 15px;
 	 padding: 15px;
@@ -81,15 +77,15 @@
      transition: transform 0.2s;
      }    
      
-     #searchBar2:hover {
+     #searchBar-g:hover {
      outline: solid 2.5px #fff;
      }
      
-     #searchBar2:focus { 
+     #searchBar-g:focus { 
      outline: solid 2.5px #335fff; 
      }
      
-     #searchBar {
+     #searchBar-a {
      font-family: Tahoma, sans-serif;
      font-size: 15px;
 	 padding: 15px;
@@ -103,23 +99,12 @@
      transition: transform 0.2s;
      }    
      
-     #searchBar:hover {
+     #searchBar-a:hover {
      outline: solid 2.5px #fff;
      }
      
-     #searchBar:focus { 
+     #searchBar-a:focus { 
      outline: solid 2.5px #335fff; 
-     }
-    
-     #games {
-     overflow: auto;
-     position: absolute;
-	 left: 50%;
-	 top: 50%;
-	 transform: translate(-50%, -50%);
-     background-color: #1a2023;
-     height: 100%;
-     width: 100%;
      }
      
      #settings {
@@ -547,44 +532,43 @@
      }
    </style> 
        
-     <body>
      <!-- Main Menu -->
      <div id="home">
-     <button id="button-cl" onclick="openChangelog()" title="Click here to view the Changelog">Version Pepelover</button>
-     <button id="button-g" onclick="location.href='https://github.com/RicardoMarioSonic123/Links123-V3'" title="Visit Github Repository">Phub</button>
-     <button id="button-s" onclick="openSettings()" title="Open Settings">Change at will</button>
+     <button id="button-cl" onclick="openChangelog()" title="Click here to view the Changelog">Version 3.3.0</button>
+     <button id="button-g" onclick="location.href='https://github.com/RicardoMarioSonic123/Links123-V3'" title="Visit Github Repository">GitHub</button>
+     <button id="button-s" onclick="openSettings()" title="Open Settings">Settings</button>
      <div id="center">
      <h1>Welcome to <span>Links123</span></h1>
      <div id="randomPhrase" title="Click here to change">Welcome back!</div>
-     <button onclick="openGames()" class="button-h">Blue Pill</button>
-     <button onclick="openApps()" class="button-h">Other Blue Pill</button>
+     <button onclick="openGames()" class="button-h">Games</button>
+     <button onclick="openApps()" class="button-h">Apps</button>
      </div>
      </div>
      
-     <!-- Frame container -->  
-     <div class="frame-container">
-     <button id="button-cg" title="Back">×</button>
+     <!-- Game frame container -->  
+     <div id="game-frame-container">
+     <button id="button-cg" title="Close Game">×</button>
      <object id="game-frame" type="text/html" data="" style="width: 100%; height: 100%;"></object>
      </div>
        
-     <!-- Frame container 2 -->  
-     <div class="frame-container2">
-     <button id="button-ca" title="Back">×</button>
+     <!-- App frame container -->  
+     <div id="app-frame-container">
+     <button id="button-ca" title="Close App">×</button>
      <object id="app-frame" type="text/html" data="" style="width: 100%; height: 100%;"></object>
      </div>
       
      <!-- Games -->   
-     <div id="games" class= "hide">
+     <div id="games" style="display: none">
      <button onclick="closeGames()" class="button-c" title="Back">×</button>
-     <h3 style="cursor: default; font-size: 80px; font-family: Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 5px;">Games</h3> <input id="searchBar" onkeyup="search_button()" type="text" name="search" placeholder="Search Games">
+     <h3 style="cursor: default; font-size: 80px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: 5px;">Games</h3> <input id="searchBar-g" onkeyup="search_button_g()" type="text" name="search" placeholder="Search Games">
      <br>
-     <button onclick="openGame('https://roblox-unblock.github.io/r8/subway-surfers-monaco/')" class="button">Rule 34</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r8/subway-surfers-monaco/')" class="button">Subway Surfers Monaco</button>
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/retro-bowl/')" class="button">Retro Ball</button>
      <button onclick="openGame('https://wamwoowam.co.uk/sonic4/')" class="button">Sonic 4: Episode 1</button>
      <button onclick="openGame('https://html.cafe/x2bb30cec')" class="button">EaglercraftX 1.8.8</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r8/flappy-bird-origin/')" class="button">Flappy Bird</button>
      <button onclick="openGame('https://vinmannie.github.io/srb2web/')" class="button">Sonic Robo Blast 2</button>
-     <button onclick="openGame('https://html.cafe/xe25ca14a')" class="button">OnlyFans</button>
+     <button onclick="openGame('https://html.cafe/xe25ca14a')" class="button">Super Mario 64</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r/eggy-car/')" class="button">Eggy Car</button>
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/burnout-extreme-drift-2/index.html')" class="button">Burnout Extreme Drift 2</button>
      <button onclick="openGame('https://obsidianig.com/games/edgesurf/')" class="button">Edge Surf</button>
@@ -648,7 +632,7 @@
      <button onclick="openGame('https://superpi2.github.io/SuperMarioBrosS-v0.2.0/')" class="button">Super Mario Bros S</button>
      <button onclick="openGame('https://masonicgit.github.io/pacman/')" class="button">PacMan</button>
      <button onclick="openGame('https://macek.github.io/google_pacman/?tab=readme-ov-file')" class="button">PacMan Google</button>
-     <button onclick="openGame('https://html.cafe/xa4301809')" class="button">Basket Random</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r8/basket-random/')" class="button">Basket Random</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r/2048/')" class="button">2048</button>
      <button onclick="openGame('https://html.cafe/x33bca0fb')" class="button">Monkey Mart</button>
      <button onclick="openGame('https://html.cafe/x90ef8e33')" class="button">Running T-Rex</button>
@@ -660,9 +644,9 @@
      <button onclick="openGame('https://snesfx.github.io/baldi-html5/')" class="button">Baldi's Basics</button>
      <button onclick="openGame('https://snesfx.github.io/Kindergarten-Web/')" class="button">Kindergarten</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r7/idle-breakout/')" class="button">Idle Breakout</button>
-     <button onclick="openGame('https://obsidianig.com/games/fnaf2/fnaf2')" class="button">FNAF 2</button>
-     <button onclick="openGame('https://obsidianig.com/games/fnaf3/fnaf3')" class="button">FNAF 3</button>
-     <button onclick="openGame('https://obsidianig.com/games/fnaf4/fnaf4')" class="button">FNAF 4</button>
+     <button onclick="openGame('https://obsidianig.com/games/fnaf2/fnaf2.html')" class="button">FNAF 2</button>
+     <button onclick="openGame('https://obsidianig.com/games/fnaf3/fnaf3.html')" class="button">FNAF 3</button>
+     <button onclick="openGame('https://obsidianig.com/games/fnaf4/fnaf4.html')" class="button">FNAF 4</button>
      <button onclick="openGame('https://windows96.net/')" class="button">Windows 96</button>
      <button onclick="openGame('https://jcw87.github.io/c2-sans-fight/')" class="button">Bad Time Simulator</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r8/temple-run-2/')" class="button">Temple Run 2</button>
@@ -931,26 +915,26 @@
      <button onclick="openGame('https://obsidianig.com/games/papashotdoggeria/')" class="button">Papa's Hot Doggeria</button>
      <button onclick="openGame('https://obsidianig.com/games/papasburgeria/')" class="button">Papa's Burgeria</button>
      <button onclick="openGame('https://obsidianig.com/games/papaspizzaria/')" class="button">Papa's Pizzaria</button>
-     <button onclick="openGame('https://obsidianig.com/games/gunmayhem2/gunmayhem2')" class="button">Gun Mayhem 2</button>
-     <button onclick="openGame('https://obsidianig.com/games/gunmayhem/gunmayhem')" class="button">Gun Mayhem</button>
+     <button onclick="openGame('https://obsidianig.com/games/gunmayhem2/gunmayhem2.html')" class="button">Gun Mayhem 2</button>
+     <button onclick="openGame('https://obsidianig.com/games/gunmayhem/gunmayhem.html')" class="button">Gun Mayhem</button>
      <button onclick="openGame('https://obsidianig.com/games/wolfenstein3d/wolfenstein3d/')" class="button">Wolfenstein 3D</button>
      <button onclick="openGame('https://diekmann.github.io/wasm-fizzbuzz/doom/')" class="button">DOOM</button>
-     <button onclick="openGame('https://obsidianig.com/games/bloonstd/bloonstd')" class="button">Bloons TD</button>
-     <button onclick="openGame('https://obsidianig.com/games/btd2/')" class="button">Bloons TD 2</button>
-     <button onclick="openGame('https://obsidianig.com/games/btd3/')" class="button">Bloons TD 3</button>
-     <button onclick="openGame('https://obsidianig.com/games/btd4/')" class="button">Bloons TD 4</button>
+     <button onclick="openGame('https://obsidianig.com/games/bloonstd/bloonstd.html')" class="button">Bloons TD</button>
+     <button onclick="openGame('https://obsidianig.com/games/btd2/index.html')" class="button">Bloons TD 2</button>
+     <button onclick="openGame('https://obsidianig.com/games/btd3/index.html')" class="button">Bloons TD 3</button>
+     <button onclick="openGame('https://obsidianig.com/games/btd4/index.html')" class="button">Bloons TD 4</button>
      <button onclick="openGame('https://obsidianig.com/games/learntofly/learntofly.html')" class="button">Learn to fly</button>
      <button onclick="openGame('https://obsidianig.com/games/learntofly2/learntofly2.html')" class="button">Learn to fly 2</button>
      <button onclick="openGame('https://obsidianig.com/games/learntofly3/learntofly3.html')" class="button">Learn to fly 3</button>
-     <button onclick="openGame('https://obsidianig.com/games/portalflash/portalflash')" class="button">Portal Flash</button>
+     <button onclick="openGame('https://obsidianig.com/games/portalflash/portalflash.html')" class="button">Portal Flash</button>
      <button onclick="openGame('https://obsidianig.com/games/run3plus/')" class="button">Run 3 Plus</button>
      <button onclick="openGame('https://obsidianig.com/games/run2/')" class="button">Run 2</button>
      <button onclick="openGame('https://obsidianig.com/games/run/')" class="button">Run</button>
-     <button onclick="openGame('https://obsidianig.com/games/supersmashflash/supersmashflash')" class="button">Super Smash Flash</button>
-     <button onclick="openGame('https://obsidianig.com/games/theimpossiblequiz2/theimpossiblequiz2')" class="button">The Impossible Quiz 2</button>
+     <button onclick="openGame('https://obsidianig.com/games/supersmashflash/supersmashflash.html')" class="button">Super Smash Flash</button>
+     <button onclick="openGame('https://obsidianig.com/games/theimpossiblequiz2/theimpossiblequiz2.html')" class="button">The Impossible Quiz 2</button>
      <button onclick="openGame('https://obsidianig.com/games/tetris/')" class="button">Tetris</button>
-     <button onclick="openGame('https://obsidianig.com/games/raftwars/raftwars')" class="button">Raft Wars</button>
-     <button onclick="openGame('https://obsidianig.com/games/raftwars2/raftwars2')" class="button">Raft Wars 2</button>
+     <button onclick="openGame('https://obsidianig.com/games/raftwars/raftwars.html')" class="button">Raft Wars</button>
+     <button onclick="openGame('https://obsidianig.com/games/raftwars2/raftwars2.html')" class="button">Raft Wars 2</button>
      <button onclick="openGame('https://obsidianig.com/games/riddleschool/riddleschool.html')" class="button">Riddle School</button>
      <button onclick="openGame('https://obsidianig.com/games/riddleschool2/riddleschool2.html')" class="button">Riddle School 2</button>
      <button onclick="openGame('https://obsidianig.com/games/riddleschool3/riddleschool3.html')" class="button">Riddle School 3</button>
@@ -961,9 +945,9 @@
      <button onclick="openGame('https://obsidianig.com/games/ducklife3/ducklife3.html')" class="button">Duck Life 3 Evolution</button>
      <button onclick="openGame('https://obsidianig.com/games/ducklife4/ducklife4.html')" class="button">Duck Life 4</button>
      <button onclick="openGame('https://obsidianig.com/games/ducklife5/')" class="button">Duck Life 5</button>
-     <button onclick="openGame('https://obsidianig.com/games/picosschool/picosschool')" class="button">Pico's School</button>
-     <button onclick="openGame('https://obsidianig.com/games/diggy/diggy')" class="button">Diggy</button>
-     <button onclick="openGame('https://obsidianig.com/games/alienhominid/alienhominid')" class="button">Alien Hominid</button>
+     <button onclick="openGame('https://obsidianig.com/games/picosschool/picosschool.html')" class="button">Pico's School</button>
+     <button onclick="openGame('https://obsidianig.com/games/diggy/diggy.html')" class="button">Diggy</button>
+     <button onclick="openGame('https://obsidianig.com/games/alienhominid/alienhominid.html')" class="button">Alien Hominid</button>
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/tightrope-theatre/')" class="button">Tightrope Theatre</button>
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/double-panda/')" class="button">Double Panda</button>
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/jacksmith/')" class="button">JackSmith</button>
@@ -1007,7 +991,7 @@
      <button onclick="openGame('https://roblox-unblock.github.io/r8/google-snake/')" class="button">Google Snake</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r3/super-hexbee-merger/')" class="button">Super Hexbee Merger</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r5/marble-dash/')" class="button">Marble Dash</button>
-     <button onclick="openGame('https://roblox-unblock.github.io/r3/wizard-mike/')" class="button">Wizard Mike</button>
+     <button onclick="openGame('https://obsidianig.com/games/gunmayhemredux/gunmayhemredux.html')" class="button">Gun Mayhem Redux</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r2/bomb-it-7/')" class="button">Bomb It 7</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r3/stickman-fighter-mega-brawl/')" class="button">Stickman Fighter Mega Brawl</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r6/rally-champion/#topvaz')" class="button">Rally Champion</button>
@@ -1015,20 +999,20 @@
      <button onclick="openGame('https://roblox-unblock.github.io/r2/burger-bounty/')" class="button">Burger Bounty</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r6/stickman-climb-2/')" class="button">Stickman Climb 2</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r2/bearsus/')" class="button">Bearsus</button>
-     <button onclick="openGame('https://roblox-unblock.github.io/r4/cricket-world-cup/')" class="button">Cricket World Cup</button>
-     <button onclick="openGame('https://roblox-unblock.github.io/r6/ping-pong-html5/#topvaz')" class="button">Ping Pong</button>
-     <button onclick="openGame('https://roblox-unblock.github.io/r6/stickman-fighter-epic-battle-2/')" class="button">Stickman Fighter Epic Battle 2</button>
+     <button onclick="openGame('https://obsidianig.com/games/sortthecourt/index.html')" class="button">Sort the Court</button>
+     <button onclick="openGame('https://obsidianig.com/games/swordsandsandals/index.html')" class="button">Swords and Sandals</button>
+     <button onclick="openGame('https://obsidianig.com/games/swordsandsandals2/index.html')" class="button">Swords and Sandals 2</button>
      </div>
-       
-     <div id="apps" class= "hide">
+        
+     <!-- Apps -->   
+     <div id="apps" style="display: none">
      <button onclick="closeApps()" class="button-c" title="Back">×</button>
-     <h3 style="cursor: default; font-size: 80px; font-family: Tahoma, sans-serif; color: white; margin: 0; margin-bottom: 15px;">Apps</h3> <input id="searchBar2" onkeyup="search_button2()" type="text" name="search" placeholder="Search Apps">
+     <h3 style="cursor: default; font-size: 80px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: 15px;">Apps</h3> <input id="searchBar-a" onkeyup="search_button_a()" type="text" name="search" placeholder="Search Apps">
      <br>
      <button onclick="openApp('https://html.cafe/gallery')" class="button2">HTML.Cafe Gallery</button> 
      <button onclick="openApp('https://ruffle.rs/demo/')" class="button2">Ruffle Player</button> 
      <button onclick="openApp('https://binbashbanana.github.io/webretro/')" class="button2">WebRetro</button> 
      <button onclick="openApp('https://html.cafe/x715d6947')" class="button2">Barney's Website</button> 
-     <button onclick="openApp('https://html.cafe/x733d2e3d')" class="button2">Lo mejor del Chavo del 8</button> 
      <button onclick="openApp('https://appetize.io/embed/xc1w6f1krd589zhp22a0mgftyw?autoplay=false&debug=true&device=pixel4&embed=true&launchUrl=exp%3A%2F%2Fexp.host%2F%40snack%2Fsdk.46.0.0-ghV0%21Qgb8N&scale=65&screenOnly=false&xDocMsg=true&xdocMsg=true&params=%7B&osVersion=11.0&deviceColor=black')" class="button2">Appetize.io Android Phone</button> 
      <button onclick="openApp('https://html.cafe/xc79bd761')" class="button2">Chatroom</button> 
      <button onclick="openApp('https://html.cafe/xfcef538d')" class="button2">Extension Deleter</button> 
@@ -1041,26 +1025,27 @@
      <button onclick="openApp('https://chattyice234.github.io/Rubber/')" class="button2">Rubber Games</button> 
      <button onclick="openApp('https://extprint3r.github.io/')" class="button2">ExtPrint3r</button> 
      <button onclick="openApp('https://obsidianig.com/EmulatorJS-main/')" class="button2">EmulatorJS</button> 
+     <button onclick="openApp('https://html.cafe/x34452a0c')" class="button2">Paint</button> 
      </div>
      
      <!-- Changelogs --> 
-     <div id="blur-changelog" class= "hide">
-     <div id="changelog" class= "hide">
+     <div id="blur-changelog" style="display: none;">
+     <div id="changelog" style="display: none;">
      <button class="button-c" onclick="closeChangelog()" title="Close Changelog">×</button>
-     <h3 style="font-size: 36px; font-family: Tahoma, sans-serif; margin-bottom: 0px; cursor: default;">Version 3.3.0 Changelog 3/30/25</h3>
+     <h3 style="font-size: 36px; font-family: Tahoma, sans-serif; margin-bottom: 0px; cursor: default;">Version 3.3.0 Changelog 4/01/25</h3>
      <div class="header"></div>
-     <h2>0 games?!?!!?, back button added in games and apps</h2>
+     <h2>0 games?!?!!?, added back button in games and apps, replaced broken links in some games.</h2>
      </div>
-     </div>  
+     </div>
        
      <!-- Settings -->
-     <div id="blur-settings" class= "hide">
-     <div id="settings" class= "hide">
+     <div id="blur-settings" style="display: none">
+     <div id="settings" style="display: none">
      <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; cursor: default;">Settings</h3>
      <button class="button-c" onclick="closeSettings()" title="Close Settings">×</button>
      <button class="button-st" id="aboutBlank" title="Open in about:blank">about:blank</button>
      <button class="button-st" onclick="createBlobUrl()" title="Open in blob:">blob:</button>
-     <button class="button-st" onclick="download()" title="Download Links123 Offline">Offline</button>
+     <button class="button-st" onclick="download()" title="Download Links123 Offline">Download Offline</button>
      <br>
      <input type="text" id="tabName" placeholder="Enter new tab name" class="settings-i">
      <button class="button-sc" onclick="changeTabName()" title="Save changes">Save</button>
@@ -1078,12 +1063,11 @@
      <button id="Gmail" class="favicon"><img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail" title="Gmail"></button>
      </div>
      </div>
-     </body>
        
    <script>
      // Open Game
      function openGame(url) {
-     var frameContainer = document.querySelector('.frame-container');
+     var frameContainer = document.getElementById('game-frame-container');
      var frame = document.getElementById('game-frame');
      frameContainer.style.display = 'block';
      frame.data = url;
@@ -1095,13 +1079,13 @@
      document.getElementById('game-frame').data = '';
      document.getElementById('games').style.display = "block";
      setTimeout(function() {
-     document.querySelector('.frame-container').style.display = 'none'; 
+     document.getElementById('game-frame-container').style.display = 'none'; 
      }, 1);
      });
      
      // Open App
      function openApp(url) {
-     var frameContainer = document.querySelector('.frame-container2');
+     var frameContainer = document.getElementById('app-frame-container');
      var frame = document.getElementById('app-frame');
      frameContainer.style.display = 'block';
      frame.data = url;
@@ -1113,7 +1097,7 @@
      document.getElementById('app-frame').data = '';
      document.getElementById('apps').style.display = "block";
      setTimeout(function() {
-     document.querySelector('.frame-container2').style.display = 'none'; 
+     document.getElementById('app-frame-container').style.display = 'none'; 
      }, 1);
      });
      
@@ -1141,9 +1125,9 @@
      document.getElementById("home").style.display = "block";
      }
         
-     // Search Bar
-     function search_button() {
-	 let input = document.getElementById('searchBar').value
+     // Search Bar for Games
+     function search_button_g() {
+	 let input = document.getElementById('searchBar-g').value
 	 input=input.toLowerCase();
 	 let x = document.getElementsByClassName('button');
 	 for (i = 0; i < x.length; i++) {
@@ -1156,9 +1140,9 @@
        }
      }    
                               
-     // Search Bar 2
-     function search_button2() {
-	 let input = document.getElementById('searchBar2').value
+     // Search Bar for Apps
+     function search_button_a() {
+	 let input = document.getElementById('searchBar-a').value
 	 input=input.toLowerCase();
 	 let x = document.getElementsByClassName('button2');
 	 for (i = 0; i < x.length; i++) {
@@ -1714,7 +1698,7 @@
      "Warrior's Jorney Menu Theme",
      "Enchanted Woods Menu Theme",
      "Mystery At The Hub Menu Theme",
-     "Deep Sea Menu Theme",
+     "Deep Sea Brawl Menu Theme",
      "Brawl-o-ween Menu Theme",
      "Brawl Arcade Menu Theme",
      "Footbrawl Menu Theme",
@@ -1811,13 +1795,23 @@
      "Finally! The back button!",
      "Don't be like me.",
      "A Familiar Room",
-     "Comforting Memories",
-     "Is there a reason to keep doing this?",
-     "I'm not sad, I'm...",
-     "What I do isn't because I was asked to or because I wanted to. It's because...",
-     { type: "image", src: 'https://i.ibb.co/tMr2B3YG/Screenshot-20250315-143202-Tik-Tok-1.png' },
-     { type: "image", src: 'https://i.ibb.co/2162Jchp/Snapchat-1787381721-1.png' },
-     { type: "image", src: 'https://i.ibb.co/v4vfFJ58/Screenshot-20250309-210003-Instagram-1.png' },
+     "Y la novia wey?",
+     "OnlyFans is now unblocked!",
+     "Pepelover",
+     "Blue Pill",
+     "Other Blue Pill",
+     "I am not a therapist!",
+     "I'm not Chinese!",
+     "CECIL!!! I NEED YOU CECIL",
+     "WHERE IS OMNI MAN?? WHERE IS HE",
+     "Are you sure?",
+     "Oeoahah",
+     "Back and even better than ever before!",
+     "Chromebooks DOWN!",
+     "Computers DOWN!",
+     "Probably not coded by ChatGPT",
+     "No, I'm not adding Fortnite to this site, stay mad",
+     "Chicken Jockey",
      { type: "image", src: 'https://i.ibb.co/qhGJxQY/Screenshot-2025-03-23-7-04-36-PM-1.png' },
      { type: "image", src: 'https://i.ibb.co/MyXs7wDp/Screenshot-2025-03-21-11-25-50-PM-1.png' },
      { type: "image", src: 'https://i.ibb.co/hxyqfqZ0/IMG-20250206-210844-703-1.png' },

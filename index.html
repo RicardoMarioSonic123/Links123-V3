@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Credits to @Chattyice234 on github for the ChattyWebsite code that I used as a template to make mine! -->
 <html>
   <head>
      <meta charset="UTF-8">
@@ -11,12 +10,203 @@
    <style>
      body {
      font-family: sans-serif;
-     background-color: #1a2023;
+     background-color: #1a1c23;
      margin: 0;
      text-align: center;
      color: #fff;
      }
      
+     .white-mode {
+     background-color: #fff;
+     color: #000;
+     }
+     
+     ::-webkit-scrollbar {
+     width: 0px;
+     overflow: hidden;
+     }
+     
+     span {
+     color: #335fff;
+     }
+    
+     h1 {
+     margin: 0;
+     font-size: 50px;
+     font-family: Tahoma, sans-serif;
+     cursor: default;
+     }
+     
+     h2 {
+     font-size: 20px;
+     font-family: Tahoma, sans-serif;
+     cursor: default;
+     }
+     
+     h4 {
+     bottom: 0%; 
+     left: 50%;
+     position: absolute;
+     transform: translate(-50%, 40%);
+     font-size: 20px;
+     font-weight: 552;
+     font-family: Tahoma, sans-serif;
+     border: none;
+     border-radius: 10px;
+     color: #fff;
+     background: transparent; 
+     cursor: default;
+     }
+     
+     .header {
+     border-bottom: 5px solid #fff;
+     padding-bottom: 20px;
+     }
+     
+     #randomPhrase {
+     margin-top: 36px;
+     margin-bottom: 27px;
+     font-weight: bold;
+     font-size: 18px;
+     font-family: Tahoma, sans-serif;
+     cursor: pointer;
+     transition: color 0.4s, transform 0.3s;
+     }
+     
+     #randomPhrase:hover {
+     transform: scale(1.1);
+     color: #335fff
+     }
+    
+     #randomPhrase:active {
+     transform: scale(0.95);
+     color: #284ccc;
+     }
+     
+     #navbar {
+     overflow: hidden;
+     position: sticky;
+     top: 0;
+     background-color: #101117;
+     z-index: 10;
+     }
+     
+     #navbar button {
+     margin-top: 5px;
+     margin-bottom: 5px;
+     margin-left: 5px;
+     margin-right: 5px;
+     padding: 10px 20px;
+     font-size: 18px;
+     font-weight: 552;
+     font-family: Tahoma, sans-serif;
+     background: none;
+     color: #fff;
+     border: 2px solid #fff;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s, transform 0.3s
+     }
+     
+     #navbar button:hover{
+     background-color: #335fff;
+     }
+     
+     #navbar button:active{
+     background-color: #284ccc;
+     }
+     
+     #sidenav {
+     height: 100%;
+     width: 260px;
+     position: fixed;
+     z-index: 1;
+     top: 0;
+     left: 0;
+     background-color: #101117;
+     overflow-x: hidden;
+     padding-top: 20px;
+     }
+     
+     #sidenav button {
+     width: 100%;
+     height: 50px;
+     margin-top: 10px;
+     padding: 10px 25px;
+     font-size: 18px;
+     font-weight: 552;
+     font-family: Tahoma, sans-serif;
+     background: none;
+     color: #fff;
+     border: 2px solid #fff;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s, transform 0.3s
+     }
+
+     #sidenav button:hover{
+     background-color: #335fff;
+     }
+     
+     #sidenav button:active{
+     background-color: #284ccc;
+     }
+     
+     .dropbtn {
+     padding: 12px 20px;
+     font-size: 18px;
+     font-weight: 552;
+     font-family: Tahoma, sans-serif;
+     background-color: #101117;
+     color: #fff;
+     border: 2px solid #fff;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s, transform 0.3s
+     }
+
+     .dropbtn:hover, .dropbtn:focus {
+     background-color: #335fff;
+     }
+
+     .dropdown {
+     position: relative;
+     display: inline-block;
+     }
+
+     .dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: #101117;
+     min-width: 200px;
+     overflow: hidden;
+     z-index: 1;
+     }
+
+     .dropdown-content button {
+     width: 100%;
+     height: 50px;
+     margin-top: -1px;
+     margin-bottom: -1px;
+     font-size: 18px;
+     font-weight: 552;
+     font-family: Tahoma, sans-serif;
+     background-color: #101117;
+     color: #fff;
+     border: 2px solid #fff;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s, transform 0.3s
+     }
+
+     .dropdown button:hover {
+     background-color: #335fff;
+     }
+
+     .show {
+     display: block;
+     }
+
      #game-frame-container {
      display: none;
      position: absolute;
@@ -40,45 +230,24 @@
      height: 100%;
      z-index: 20;
      }
-    
-     ::-webkit-scrollbar {
-     width: 0px;
-     overflow: hidden;
-     }
-     
-     span {
-     color: #335fff;
-     }
-    
-     h1 {
-     margin: 0;
-     font-size: 50px;
-     font-family: Tahoma, sans-serif;
-     cursor: default;
-     }
-     
-     h2 {
-     font-size: 20px;
-     font-family: Tahoma, sans-serif;
-     cursor: default;
-     }
      
      #searchBar-g {
      font-family: Tahoma, sans-serif;
      font-size: 15px;
 	 padding: 15px;
-     width: 50%;
+     width: 40%;
 	 border-radius: 6px;
      border: 0;
      font-weight: 552;
      text-align: center;
-     background-color: #111;
+     background-color: #101117;
+     outline: 2.5px solid #fff;
      color: #fff;
      transition: transform 0.2s;
      }    
      
      #searchBar-g:hover {
-     outline: solid 2.5px #fff;
+     outline: solid 2.5px #335fff; 
      }
      
      #searchBar-g:focus { 
@@ -94,68 +263,45 @@
      border: 0;
      font-weight: 552;
      text-align: center;
-     background-color: #111;
+     background-color: #101117;
+     outline: 2.5px solid #fff;
      color: #fff;
      transition: transform 0.2s;
      }    
      
      #searchBar-a:hover {
-     outline: solid 2.5px #fff;
+     outline: solid 2.5px #335fff; 
      }
      
      #searchBar-a:focus { 
      outline: solid 2.5px #335fff; 
      }
      
-     #settings {
-     overflow: auto;
-     position: absolute;
-	 left: 50%;
-	 top: 50%;
-	 transform: translate(-50%, -50%);
-     background-color: #111111;
-     height: 70%;
-     width: 70%;
-     border-radius: 10px;
-     }
-     
-     #blur-settings {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background-color: rgba(0, 0, 0, 0.1);
-     backdrop-filter: blur(2px);
-     z-index: 1000;
-     justify-content: center;
-     align-items: center;
-     }
-     
      .settings-i {
      margin-right: 5px;
      font-family: Tahoma, sans-serif;
      font-size: 15px;
-	 width: 60%;
-     height: 40px;
+	 width: 50%;
+     height: 45px;
 	 border-radius: 6px;
      border: 0;
      font-weight: 552;
      text-align: center;
-     background-color: #1a2023;
+     background-color: #101117;
+     outline: solid 2.5px #fff;
      color: #fff;
      transition: transform 0.2s;
      }    
      
      .settings-i:hover {
-     outline: solid 2.5px #fff;
+     outline: solid 2.5px #335fff; 
      }
      
      .settings-i:focus { 
      outline: solid 2.5px #335fff; 
      }
      
-     #changelog {
+     #credits {
      overflow: auto;
      position: absolute;
 	 left: 50%;
@@ -167,7 +313,7 @@
      border-radius: 10px;
      }
      
-     #blur-changelog {
+     #blur-background {
      position: absolute;
      top: 0;
      left: 0;
@@ -175,16 +321,42 @@
      height: 100%;
      background-color: rgba(0, 0, 0, 0.1);
      backdrop-filter: blur(2px);
-     z-index: 1000;
+     z-index: 20;
      justify-content: center;
      align-items: center;
      }
+         
+     .button-h {
+     margin-left: 5px;
+     margin-right: 5px;
+     font-size: 17px;
+     font-weight: 552;
+     font-family: Tahoma, sans-serif;
+     background-color: #335fff;
+     color: #fff;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+     padding: 9px 20px;
+     margin-top: 20px;
+     transition: background-color 0.3s, transform 0.3s;
+     }
+     
+     .button-h:hover {
+     background-color: #284ccc;
+     transform: scale(1.05);
+     }
     
+     .button-h:active {
+     background-color: #1e3999;
+     transform: scale(0.95);
+     }
+     
      .button {
      margin-top: 20px;
      margin-left: 5px;
      margin-right: 5px;
-     padding: 9px 25px;
+     padding: 9px 20px;
      font-size: 18px;
      font-weight: 552;
      font-family: Tahoma, sans-serif;
@@ -210,7 +382,7 @@
      margin-top: 20px;
      margin-left: 5px;
      margin-right: 5px;
-     padding: 9px 25px;
+     padding: 9px 20px;
      font-size: 18px;
      font-weight: 552;
      font-family: Tahoma, sans-serif;
@@ -232,58 +404,7 @@
      transform: scale(0.95);
      }
      
-     #button-cl {
-     bottom: 0%; 
-     left: 50%;
-     position: absolute;
-     transform: translate(-50%, -85%);
-     font-size: 20px;
-     font-weight: 552;
-     font-family: Tahoma, sans-serif;
-     border: none;
-     border-radius: 10px;
-     color: #fff;
-     background: transparent; 
-     cursor: pointer;
-     transition: background-color 0.4s, color 0.4s;
-     }
-     
-     #button-cl:hover {
-     background-color: #335fff;
-     color: #1a2023;
-     }
-    
-     #button-cl:active {
-     background-color: #284ccc;
-     }
-     
-     .button-h {
-     margin-top: 20px ;
-     margin-left: 5px;
-     margin-right: 5px;
-     padding: 9px 25px;
-     font-size: 18px;
-     font-weight: 552;
-     font-family: Tahoma, sans-serif;
-     background-color: #335fff;
-     color: #fff;
-     border: none;
-     border-radius: 6px;
-     cursor: pointer;
-     transition: background-color 0.3s, transform 0.3s;
-     }
-     
-     .button-h:hover {
-     background-color: #284ccc;
-     transform: scale(1.08);
-     }
-    
-     .button-h:active {
-     background-color: #1e3999;
-     transform: scale(0.95);
-     }
-     
-     .button-c {
+     .button-x {
      position: absolute;
      top: 0%;
      right: 0%;
@@ -299,12 +420,12 @@
      transition: background-color 0.3s;
      }
      
-     .button-c:hover {
-     background-color: #284ccc;
+     .button-x:hover {
+     background-color: #FF0000;
      }
     
-     .button-c:active {
-     background-color: #1e3999;
+     .button-x:active {
+     background-color: #cc0000;
      }
      
      #button-cg {
@@ -325,11 +446,11 @@
      }
      
      #button-cg:hover {
-     background-color: #284ccc;
+     background-color: #FF0000;
      }
     
      #button-cg:active {
-     background-color: #1e3999;
+     background-color: #cc0000;
      }
      
      #button-ca {
@@ -350,41 +471,33 @@
      }
      
      #button-ca:hover {
-     background-color: #284ccc;
+     background-color: #FF0000;
      }
     
      #button-ca:active {
-     background-color: #1e3999;
+     background-color: #cc0000;
      }
      
-     #button-s {
+     #button-c {
      bottom: 0%; 
      text-decoration: underline 2px;
-     right: 0%;
-     width: 150px;
-     height: 70px;
+     right: 3%;
      position: absolute;
      font-size: 18px;
      font-weight: 552;
      font-family: Tahoma, sans-serif;
      border: none;
      border-radius: 10px;
-     color: #fff;
      background: transparent; 
      cursor: pointer;
      transition: background-color 0.4s, color 0.4s;
      }
     
-     #button-s:hover {
-     background-color: #335fff;
-     color: #1a2023;
-     }
-    
-     #button-s:active {
-     background-color: #284ccc;
+     #button-c:hover {
+     color: #335fff;
      }
      
-     .button-st {
+     .button-s {
      margin-left: 5px;
      margin-right: 5px;
      font-size: 15px;
@@ -395,20 +508,19 @@
      border: none;
      border-radius: 6px;
      cursor: pointer;
-     width: 24.7%;
+     width: 28%;
      height: 40px;
      margin-top: 20px;
      transition: background-color 0.3s, transform 0.3s;
      }
      
-     .button-st:hover {
+     .button-s:hover {
      background-color: #284ccc;
      transform: scale(1.05);
      }
     
-     .button-st:active {
+     .button-s:active {
      background-color: #1e3999;
-     transform: scale(0.95);
      }
     
      .button-sc {
@@ -422,8 +534,7 @@
      border: none;
      border-radius: 6px;
      cursor: pointer;
-     width: 15%;
-     height: 40px;
+     padding: 15px 15px;
      margin-top: 20px;
      transition: background-color 0.3s, transform 0.3s;
      }
@@ -440,28 +551,20 @@
      #button-g {
      bottom: 0%; 
      text-decoration: underline 2px;
-     left: 0%;
-     width: 150px;
-     height: 70px;
+     left: 3%;
      position: absolute;
      font-size: 18px;
      font-weight: 552;
      font-family: Tahoma, sans-serif;
      border: none;
      border-radius: 10px;
-     color: #fff;
      background: transparent; 
      cursor: pointer;
      transition: background-color 0.4s, color 0.4s;
      }
     
      #button-g:hover {
-     background-color: #335fff;
-     color: #1a2023;
-     }
-    
-     #button-g:active {
-     background-color: #284ccc;
+     color: #335fff;
      }
     
      .favicon {
@@ -480,19 +583,18 @@
      width: 30px;
      height: 30px;
      outline: none;
-     background-color: #fff;
+     background: none;
      padding: 7px 8px;
+     border: 2px solid #fff;
      border-radius: 10px;  
      transition: background-color 0.3s, transform 0.3s;
      }
     
      .favicon img:hover {
-     background-color: #cccccc;
      transform: scale(1.05);
      }
     
      .favicon img:active {
-     background-color: #999999;
      transform: scale(0.95);
      }
     
@@ -505,44 +607,25 @@
      justify-content: center;
      text-align: center;
      }
-    
-     #randomPhrase {
-     margin-top: 36px;
-     margin-bottom: 27px;
-     font-weight: bold;
-     font-size: 18px;
-     font-family: Tahoma, sans-serif;
-     cursor: pointer;
-     transition: color 0.4s, transform 0.3s;
-     }
-     
-     #randomPhrase:hover {
-     transform: scale(1.1);
-     color: #335fff
-     }
-    
-     #randomPhrase:active {
-     transform: scale(0.95);
-     color: #284ccc;
-     }
-     
-     .header {
-     border-bottom: 5px solid #fff;
-     padding-bottom: 20px;
-     }
    </style> 
        
      <!-- Main Menu -->
+     <div id="navbar"> 
+     <button onclick="openHome()">Home</button>
+     <button onclick="openGames()">Games</button>
+     <button onclick="openApps()">Apps</button> 
+     <button onclick="openSettings()">Settings</button>
+     <button onclick="openChangelog()">Changelog</button>
+     </div>
      <div id="home">
-     <button id="button-cl" onclick="openChangelog()" title="Click here to view the Changelog">Version 3.3.02</button>
-     <button id="button-g" onclick="location.href='https://github.com/RicardoMarioSonic123/Links123-V3'" title="Visit Github Repository">GitHub</button>
-     <button id="button-s" onclick="openSettings()" title="Open Settings">Settings</button>
      <div id="center">
      <h1>Welcome to <span>Links123</span></h1>
      <div id="randomPhrase" title="Click here to change">Welcome back!</div>
-     <button onclick="openGames()" class="button-h">Games</button>
-     <button onclick="openApps()" class="button-h">Apps</button>
+     <button class="button-h" onclick="download()">Download Links123 Offline</button>
      </div>
+     <h4>Version 3.4.0</h4>
+     <h3 id="button-g" onclick="location.href='https://github.com/RicardoMarioSonic123/Links123-V3'" title="Visit Github Repository">GitHub</h3>
+     <h3 id="button-c" onclick="openCredits()">Credits</h3>
      </div>
      
      <!-- Game frame container -->  
@@ -559,11 +642,20 @@
       
      <!-- Games -->   
      <div id="games" style="display: none">
-     <button onclick="closeGames()" class="button-c" title="Back">×</button>
-     <h3 style="cursor: default; font-size: 80px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: 5px;">Games</h3> <input id="searchBar-g" onkeyup="search_button_g()" type="text" name="search" placeholder="Search Games">
+     <h3 style="cursor: default; font-size: 80px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: 7px;">Games</h3>
+     <input id="searchBar-g" onkeyup="search_button_g()" type="text" name="search" placeholder="Search Games">
+     <div class="dropdown">
+     <button onclick="myFunction()" class="dropbtn">All Games</button>
+     <div id="myDropdown" class="dropdown-content">
+     <button onclick="showAllGames()">All Games</button>
+     <button onclick="showPopularGames()">Popular Games</button>
+     <button onclick="showNewGames()">New Games</button>
+     </div>
+     </div>
      <br>
+     <div id="all-games">
      <button onclick="openGame('https://roblox-unblock.github.io/r8/subway-surfers-monaco/')" class="button">Subway Surfers Monaco</button>
-     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/retro-bowl/')" class="button">Retro Bowl</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/retro-bowl/')" class="button">Retro Ball</button>
      <button onclick="openGame('https://wamwoowam.co.uk/sonic4/')" class="button">Sonic 4: Episode 1</button>
      <button onclick="openGame('https://html.cafe/x2bb30cec')" class="button">EaglercraftX 1.8.8</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r8/flappy-bird-origin/')" class="button">Flappy Bird</button>
@@ -610,10 +702,10 @@
      <button onclick="openGame('https://vinmannie.github.io/SonicManiaWeb/RSDKv5.html')" class="button">Sonic Mania Plus</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r88/cut-the-rope-holiday/')" class="button">Cut the Rope Holiday Gift</button>
      <button onclick="openGame('https://ubg77.github.io/fix/fnaf1/')" class="button">FNAF</button>
-     <button onclick="openGame('https://rb44a.github.io/RedBall_V1/')" class="button">RedBall V1</button>
+     <button onclick="openGame('https://rb44a.github.io/RedBall_V1/')" class="button">Red Ball 4 vol. 1</button>
      <button onclick="openGame('https://mountain658.github.io/g/tombofthemask/index.html')" class="button">Tomb of the Mask</button>
-     <button onclick="openGame('https://rb44a.github.io/RedBall_V2/')" class="button">RedBall V2</button>
-     <button onclick="openGame('https://rb44a.github.io/RedBall_V3/')" class="button">RedBall V3</button>
+     <button onclick="openGame('https://rb44a.github.io/RedBall_V2/')" class="button">Red Ball 4 vol. 2</button>
+     <button onclick="openGame('https://rb44a.github.io/RedBall_V3/')" class="button">Red Ball 4 vol. 3</button>
      <button onclick="openGame('https://grubbyplaya.github.io/Sonic-Worlds-Next-WASM/Sonic%20Worlds%20Next.html')" class="button">Sonic Worlds Next</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r/duck-life/')" class="button">Duck Life</button>
      <button onclick="openGame('https://playmario.github.io/HTML5_Client/')" class="button">Super Mario Bros</button>
@@ -653,7 +745,7 @@
      <button onclick="openGame('https://roblox-unblock.github.io/r2/brain-test-tricky-puzzles/')" class="button">Brain Test</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r/curve-ball-3d/')" class="button">Curve Ball 3D</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r2/stack')" class="button">Stack</button>
-     <button onclick="openGame('https://elucidation.github.io/ClickerJs/')" class="button">Clicker</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/csgo-clicker/')" class="button">CSGOClicker</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r7/minesweeper/')" class="button">Minesweeper</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r/archery-world-tour/')" class="button">Archery World Tour</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r/crossy-road/')" class="button">Crossy Road</button>
@@ -690,7 +782,7 @@
      <button onclick="openGame('https://vinmannie.github.io/WorldsHardestGame/')" class="button">The World's Hardest Game</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r/top-speed-racing-3d/')" class="button">Top Speed Racing 3D</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r8/deepest-sword/')" class="button">Deepest Sword</button>
-     <button onclick="openGame('https://roblox-unblock.github.io/r88/friday-night-funkin/')" class="button">FNF</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r88/friday-night-funkin/')" class="button">Friday Night Funkin</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r7/jetpack-joyride/')" class="button">Jetpack Joyride</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r/hover-racer/')" class="button">Hover Racing</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r3/tag/')" class="button">Tag</button>
@@ -723,7 +815,7 @@
      <button onclick="openGame('https://roblox-unblock.github.io/r4/crazy-cars/')" class="button">Crazy Cars</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r7/adventure-drivers/')" class="button">Adventure Drivers</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r/awesome-tanks-2/')" class="button">Awesome Tanks 2</button>
-     <button onclick="openGame('https://html.cafe/x63aefeaa')" class="button">Guess The Number Game</button>
+     <button onclick="openGame('https://coolubg2.github.io/coolubg-list/the-final-earth-2/')" class="button">The Final Earth 2</button>
      <button onclick="openGame('https://html.cafe/x3d7ef5a3')" class="button">Obby Robby Only Up</button>
      <button onclick="openGame('https://x8bitrain.github.io/webXash/')" class="button">Half-Life 1</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r3/superbattle-2/')" class="button">GoBattle2</button>
@@ -1002,21 +1094,97 @@
      <button onclick="openGame('https://obsidianig.com/games/sortthecourt/index.html')" class="button">Sort the Court</button>
      <button onclick="openGame('https://obsidianig.com/games/swordsandsandals/index.html')" class="button">Swords and Sandals</button>
      <button onclick="openGame('https://obsidianig.com/games/swordsandsandals2/index.html')" class="button">Swords and Sandals 2</button>
-     <button onclick="openGame('https://coolubg2.github.io/coolubg-list/the-final-earth-2/')" class="button">Final Earth 2</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/angry-birds/')" class="button">Angry Birds Chrome</button>
+     <button onclick="openGame('https://obsidianig.com/games/fearassessment/index.html')" class="button">Fear Assessment</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/stickman-hook-halloween/')" class="button">Stickman Hook Haloween</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/ages-of-conflict/')" class="button">Ages of Conflict</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/gold-digger-fr-vr/')" class="button">Gold Digger</button>
+     <button onclick="openGame('https://obsidianig.com/games/redhanded/index.html')" class="button">Red Handed</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/idle-breakout/')" class="button">Idle Breakout</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/underwater/')" class="button">Subway Surfers Underwater</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/tokyo/')" class="button">Subway Surfers Tokyo</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/seoul/')" class="button">Subway Surfers Seoul</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/hawaii/')" class="button">Subway Surfers Hawaii</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/fantasy-fest/')" class="button">Subway Surfers Fantasy Fest</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/buenos-aires/')" class="button">Subway Surfers Buenos Aires</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/speed-king/')" class="button">Speed King</button>
+     <button onclick="openGame('https://obsidianig.com/games/supermeatboy/index.html')" class="button">Super Meat Boy</button>
+     <button onclick="openGame('https://obsidianig.com/games/boxingphysics2/index.html')" class="button">Boxing Physics 2</button>
+     <button onclick="openGame('https://obsidianig.com/games/dreader/index.html')" class="button">Dreader</button>
+     <button onclick="openGame('https://obsidianig.com/games/evolution/index.html')" class="button">Evolution</button>
+     <button onclick="openGame('https://obsidianig.com/games/littlechef/index.html')" class="button">Little Chef</button>
+     <button onclick="openGame('https://obsidianig.com/games/plantdaddy/index.html')" class="button">Plant Daddy</button>
+     </div>
      
+     <div id="popular-games" style="display: none">
+     <button onclick="openGame('https://html.cafe/x2bb30cec')" class="button">EaglercraftX 1.8.8</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/minecraft-1.12/')" class="button">EaglercraftX 1.12.2</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r8/basket-random/')" class="button">Basket Random</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/geometry-dash/' )" class="button">Geometry Dash Lite</button>
+     <button onclick="openGame('https://skyleite.github.io/Kart-Public-WASM/')" class="button">Sonic Robo Blast 2 Kart</button>
+     <button onclick="openGame('https://vinmannie.github.io/srb2web/')" class="button">Sonic Robo Blast 2</button>
+     <button onclick="openGame('https://wamwoowam.co.uk/sonic4/')" class="button">Sonic 4: Episode 1</button>
+     <button onclick="openGame('https://html.cafe/xe25ca14a')" class="button">Super Mario 64</button>
+     <button onclick="openGame('https://stenunblocked.github.io/1v1-lol/index.html')" class="button">1v1.LOL</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r8/subway-surfers-san-francisco/')" class="button">Subway Surfers San Francisco</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r8/cluster-rush/')" class="button">Cluster Rush</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r8/sketchbook-04/')" class="button">Sketchbook 0.4</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/snow-rider-3d/index.html')" class="button">Snow Rider 3D</button>
+     <button onclick="openGame('https://obsidianig.com/games/fnaf2/fnaf2.html')" class="button">FNAF 2</button>
+     <button onclick="openGame('https://obsidianig.com/games/fnaf3/fnaf3.html')" class="button">FNAF 3</button>
+     <button onclick="openGame('https://irv77.github.io/hd_fnaf/ucn/')" class="button">FNAF UCN</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r88/friday-night-funkin/')" class="button">Friday Night Funkin</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r7/jetpack-joyride/')" class="button">Jetpack Joyride</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/ovo/')" class="button">OvO</button>
+     <button onclick="openGame('https://vinmannie.github.io/SonicManiaWeb/RSDKv5.html')" class="button">Sonic Mania Plus</button>
+     <button onclick="openGame('https://vinmannie.github.io/sonic3air/sonic3air_web.html')" class="button">Sonic 3 AIR</button>
+     <button onclick="openGame('https://jcw87.github.io/c2-sans-fight/')" class="button">Bad Time Simulator</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r8/a-dance-of-fire-and-ice/')" class="button">A Dance of Fire And Ice</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/angry-birds/')" class="button">Angry Birds Chrome</button>
+     <button onclick="openGame('https://snesfx.github.io/baldi-html5/')" class="button">Baldi's Basics</button>
+     <button onclick="openGame('https://ad-freegames.github.io/flash/game/bloxorz.html')" class="button">Bloxorz</button>
+     <button onclick="openGame('https://ubg365.github.io/drive-mad/play.html')" class="button">Drive Mad</button>
+     <button onclick="openGame('https://ubg44.github.io/TunnelRush/')" class="button">Tunnel Rush</button>
+     <button onclick="openGame('https://html.cafe/x33bca0fb')" class="button">Monkey Mart</button>
+     </div>
+     
+     <div id="new-games" style="display: none">
+     <button onclick="openGame('https://coolubg2.github.io/coolubg-list/the-final-earth-2/')" class="button">The Final Earth 2</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/csgo-clicker/')" class="button">CSGOClicker</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/angry-birds/')" class="button">Angry Birds Chrome</button>
+     <button onclick="openGame('https://obsidianig.com/games/fearassessment/index.html')" class="button">Fear Assessment</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/stickman-hook-halloween/')" class="button">Stickman Hook Haloween</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/ages-of-conflict/')" class="button">Ages of Conflict</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/gold-digger-fr-vr/')" class="button">Gold Digger</button>
+     <button onclick="openGame('https://obsidianig.com/games/redhanded/index.html')" class="button">Red Handed</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/idle-breakout/')" class="button">Idle Breakout</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/underwater/')" class="button">Subway Surfers Underwater</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/tokyo/')" class="button">Subway Surfers Tokyo</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/seoul/')" class="button">Subway Surfers Seoul</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/hawaii/')" class="button">Subway Surfers Hawaii</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/fantasy-fest/')" class="button">Subway Surfers Fantasy Fest</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/buenos-aires/')" class="button">Subway Surfers Buenos Aires</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/speed-king/')" class="button">Speed King</button>
+     <button onclick="openGame('https://obsidianig.com/games/supermeatboy/index.html')" class="button">Super Meat Boy</button>
+     <button onclick="openGame('https://obsidianig.com/games/boxingphysics2/index.html')" class="button">Boxing Physics 2</button>
+     <button onclick="openGame('https://obsidianig.com/games/dreader/index.html')" class="button">Dreader</button>
+     <button onclick="openGame('https://obsidianig.com/games/evolution/index.html')" class="button">Evolution</button>
+     <button onclick="openGame('https://obsidianig.com/games/littlechef/index.html')" class="button">Little Chef</button>
+     <button onclick="openGame('https://obsidianig.com/games/plantdaddy/index.html')" class="button">Plant Daddy</button>    
+     </div>
      </div>
         
      <!-- Apps -->   
      <div id="apps" style="display: none">
-     <button onclick="closeApps()" class="button-c" title="Back">×</button>
-     <h3 style="cursor: default; font-size: 80px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: 15px;">Apps</h3> <input id="searchBar-a" onkeyup="search_button_a()" type="text" name="search" placeholder="Search Apps">
+     <h3 style="cursor: default; font-size: 80px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: 22px;">Apps</h3>
+     <input id="searchBar-a" onkeyup="search_button_a()" type="text" name="search" placeholder="Search Apps">  
      <br>
      <button onclick="openApp('https://html.cafe/gallery')" class="button2">HTML.Cafe Gallery</button> 
      <button onclick="openApp('https://ruffle.rs/demo/')" class="button2">Ruffle Player</button> 
      <button onclick="openApp('https://binbashbanana.github.io/webretro/')" class="button2">WebRetro</button> 
      <button onclick="openApp('https://html.cafe/x715d6947')" class="button2">Barney's Website</button> 
      <button onclick="openApp('https://appetize.io/embed/xc1w6f1krd589zhp22a0mgftyw?autoplay=false&debug=true&device=pixel4&embed=true&launchUrl=exp%3A%2F%2Fexp.host%2F%40snack%2Fsdk.46.0.0-ghV0%21Qgb8N&scale=65&screenOnly=false&xDocMsg=true&xdocMsg=true&params=%7B&osVersion=11.0&deviceColor=black')" class="button2">Appetize.io Android Phone</button> 
-     <button onclick="openApp('https://html.cafe/xc79bd761')" class="button2">Chatroom</button> 
+     <button onclick="openApp('https://html.cafe/x5890288a')" class="button2">Chatroom123</button> 
      <button onclick="openApp('https://html.cafe/xfcef538d')" class="button2">Extension Deleter</button> 
      <button onclick="openApp('https://html.cafe/x40ceaed5')" class="button2">Dingus Proxy</button> 
      <button onclick="openApp('https://blobby-boi.github.io/Blobwifi/')" class="button2">Blobwifi</button> 
@@ -1024,36 +1192,34 @@
      <button onclick="openApp('https://study.republik.ec/')" class="button2">Interstellar</button> 
      <button onclick="openApp('https://cocalc.com/github/3kh0/ext-remover/blob/main/README.md')" class="button2">List of Exploits</button> 
      <button onclick="openApp('https://spritzerland.github.io/chbook/')" class="button2">History Flooder</button> 
-     <button onclick="openApp('https://chattyice234.github.io/Rubber/')" class="button2">Rubber Games</button> 
+     <button onclick="openApp('https://chattyice234.github.io/british-cw/')" class="button2">ChattyWebsite</button> 
      <button onclick="openApp('https://extprint3r.github.io/')" class="button2">ExtPrint3r</button> 
      <button onclick="openApp('https://obsidianig.com/EmulatorJS-main/')" class="button2">EmulatorJS</button> 
      <button onclick="openApp('https://html.cafe/x34452a0c')" class="button2">Paint</button> 
      </div>
      
-     <!-- Changelogs --> 
-     <div id="blur-changelog" style="display: none;">
-     <div id="changelog" style="display: none;">
-     <button class="button-c" onclick="closeChangelog()" title="Close Changelog">×</button>
-     <h3 style="font-size: 36px; font-family: Tahoma, sans-serif; margin-bottom: 0px; cursor: default;">Version 3.3.02 Changelog 4/15/25</h3>
-     <div class="header"></div>
-     <h2>Added 1 Game (Final Earth 2), and fixed up spelling issues.</h2>
-     </div>
+     <!-- Settings -->
+     <div id="settings" style="display: none">
+     <div id="sidenav"> 
+     <br>
+     <br>
+     <br>
+     <h3 style="color: #fff; cursor: default; font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: 15px;">Settings</h3>
+     <button onclick="showTabCloaking()">Tab Cloaking</button>
+     <button onclick="showThemes()">Themes</button>
      </div>
        
-     <!-- Settings -->
-     <div id="blur-settings" style="display: none">
-     <div id="settings" style="display: none">
-     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; cursor: default;">Settings</h3>
-     <button class="button-c" onclick="closeSettings()" title="Close Settings">×</button>
-     <button class="button-st" id="aboutBlank" title="Open in about:blank">about:blank</button>
-     <button class="button-st" onclick="createBlobUrl()" title="Open in blob:">blob:</button>
-     <button class="button-st" onclick="download()" title="Download Links123 Offline">Download Offline</button>
+     <div id="tab-cloaking" style="margin-left: 260px">
+     <h3 style="font-size: 80px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -17px; cursor: default;">Tab cloaking</h3>
+     <br>
+     <button class="button-s" id="aboutBlank">Open in about:blank</button>
+     <button class="button-s" onclick="createBlobUrl()">Open in blob:</button>
      <br>
      <input type="text" id="tabName" placeholder="Enter new tab name" class="settings-i">
-     <button class="button-sc" onclick="changeTabName()" title="Save changes">Save</button>
+     <button class="button-sc" onclick="changeTabName()">Apply</button>
      <br>
      <input type="text" id="tabIcon" placeholder="Enter new tab icon" class="settings-i">     
-     <button class="button-sc" onclick="changeTabIcon()" title="Save changes">Save</button>
+     <button class="button-sc" onclick="changeTabIcon()">Apply</button>
      <br>
      <br>
      <button id="Links123" class="favicon"><img src="https://i.ibb.co/n8NkW22k/L.png" alt="Links123" title="Links123"></button>
@@ -1063,7 +1229,48 @@
      <button id="Google Slides" class="favicon"><img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_presentation_x64.png" alt="" title=""></button>
      <button id="Google Classroom" class="favicon"><img src="https://cdn.worldvectorlogo.com/logos/google-classroom.svg" alt="Google Classroom" title="Google Classroom"></button>
      <button id="Gmail" class="favicon"><img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail" title="Gmail"></button>
+     </div>  
+       
+     <div id="themes" style="margin-left: 260px; display: none">
+     <h3 style="font-size: 80px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -10px; cursor: default;">Themes</h3>
+     <button class="button-s" onclick="darkMode()">Dark Theme</button>
+     <button class="button-s" onclick="whiteMode()">White Theme</button>
+     </div>  
+     </div>  
+       
+     <!-- Changelogs --> 
+     <div id="changelog" style="display: none;">
+     <h3 style="font-size: 36px; font-family: Tahoma, sans-serif; margin-bottom: 0px; cursor: default;">Version 3.4.0 Changelog 4/19/25</h3>
+     <div class="header"></div>
+     <h2>
+     <li>22 new games</li>
+     <br>
+     <li>A navigation bar has been added</li>
+     <br>
+     <li>New interface in settings</li>
+     <br>
+     <li>Added Themes in settings (More will be added in upcoming updates.)</li>
+     <br>
+     <li>Credits button added</li>
+     <br>
+     <li>Categories were added to the games section (More will be added in upcoming updates.)</li>
+     </h2>
      </div>
+       
+     <!-- Credits -->
+     <div id="blur-background" style="display: none">
+     <div id="credits" style="display: none">
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 20px; cursor: default; color: white">Credits</h3>
+     <button class="button-x" onclick="closeCredits()" title="Close Settings">×</button>
+     <div class="header"></div>
+     <h2>
+     <li style="color:white">Credits to all creators of the games/apps included on this site</li>
+     <br>
+     <li style="color:white">Credits to Chattyice234 on Github, for the ChattyWebsite code that I used as a template to make mine! And also for some ideas taken from Rubber Games</li>
+     <br>
+     <li style="color:white">Credits to Akpo12345 on Github, for helping me, give me games/apps and giving me suggestions for new features</li>
+     </h2>
+     </div>  
      </div>
        
    <script>
@@ -1073,17 +1280,19 @@
      var frame = document.getElementById('game-frame');
      frameContainer.style.display = 'block';
      frame.data = url;
+     document.getElementById('navbar').style.display = "none";
      document.getElementById('games').style.display = "none";
      }
                               
      // Close Game
      document.getElementById('button-cg').addEventListener('click', function() {
      document.getElementById('game-frame').data = '';
+     document.getElementById('navbar').style.display = "block";
      document.getElementById('games').style.display = "block";
      setTimeout(function() {
      document.getElementById('game-frame-container').style.display = 'none'; 
      }, 1);
-     });
+     })
      
      // Open App
      function openApp(url) {
@@ -1091,40 +1300,69 @@
      var frame = document.getElementById('app-frame');
      frameContainer.style.display = 'block';
      frame.data = url;
+     document.getElementById('navbar').style.display = "none";
      document.getElementById('apps').style.display = "none";
      }
                               
      // Close App
      document.getElementById('button-ca').addEventListener('click', function() {
      document.getElementById('app-frame').data = '';
+     document.getElementById('navbar').style.display = "block";
      document.getElementById('apps').style.display = "block";
      setTimeout(function() {
      document.getElementById('app-frame-container').style.display = 'none'; 
      }, 1);
-     });
+     })
      
-     // Games Section
-     function openGames() {
-     document.getElementById("games").style.display = "block";
-     document.getElementById("home").style.display = "none";
+     // Home
+     function openHome() {
+     document.getElementById("home").style.display = "block";
+     document.getElementById("games").style.display = "none";
+     document.getElementById("apps").style.display = "none";
+     document.getElementById("settings").style.display = "none";
+     document.getElementById("changelog").style.display = "none";
      }
      
-     // Close Games Section
-     function closeGames() {
-     document.getElementById("games").style.display = "none";
-     document.getElementById("home").style.display = "block";
+     // Games
+     function openGames() {
+     document.getElementById("home").style.display = "none";
+     document.getElementById("games").style.display = "block";
+     document.getElementById("apps").style.display = "none";
+     document.getElementById("settings").style.display = "none";
+     document.getElementById("changelog").style.display = "none";
+     }
+     
+     // All Games
+     function showAllGames() {
+     document.getElementById("all-games").style.display = "block";
+     document.getElementById("popular-games").style.display = "none";
+     document.getElementById("new-games").style.display = "none";
+     document.querySelector('.dropbtn').innerHTML = "All Games"
+     }
+     
+     // Popular Games
+     function showPopularGames() {
+     document.getElementById("all-games").style.display = "none";
+     document.getElementById("popular-games").style.display = "block";
+     document.getElementById("new-games").style.display = "none";
+     document.querySelector('.dropbtn').innerHTML = "Popular Games"
+     }
+     
+     // New games
+     function showNewGames() {
+     document.getElementById("all-games").style.display = "none";
+     document.getElementById("popular-games").style.display = "none";
+     document.getElementById("new-games").style.display = "block";
+     document.querySelector('.dropbtn').innerHTML = "New Games"
      }
 
-     // Apps Section
+     // Apps
      function openApps() {
-     document.getElementById("apps").style.display = "block";
      document.getElementById("home").style.display = "none";
-     }
-     
-     // Close Apps Section
-     function closeApps() {
-     document.getElementById("apps").style.display = "none";
-     document.getElementById("home").style.display = "block";
+     document.getElementById("games").style.display = "none";
+     document.getElementById("apps").style.display = "block";
+     document.getElementById("settings").style.display = "none";
+     document.getElementById("changelog").style.display = "none";
      }
         
      // Search Bar for Games
@@ -1157,28 +1395,63 @@
        }
      }    
      
-     // Open Changelog
+     function myFunction() {
+     document.getElementById("myDropdown").classList.toggle("show");
+     }
+
+     window.onclick = function(event) {
+     if (!event.target.matches('.dropbtn')) {
+     var dropdowns = document.getElementsByClassName("dropdown-content");
+     var i;
+     for (i = 0; i < dropdowns.length; i++) {
+     var openDropdown = dropdowns[i];
+     if (openDropdown.classList.contains('show')) {
+     openDropdown.classList.remove('show');
+        }
+       }
+      }
+     }
+     
+     // Changelog
      function openChangelog() {
+     document.getElementById("home").style.display = "none";
+     document.getElementById("games").style.display = "none";
+     document.getElementById("apps").style.display = "none";
+     document.getElementById("settings").style.display = "none";
      document.getElementById("changelog").style.display = "block";
-     document.getElementById("blur-changelog").style.display = "block";
+     }
+                              
+     // Settings
+     function openSettings() {
+     document.getElementById("home").style.display = "none";
+     document.getElementById("games").style.display = "none";
+     document.getElementById("apps").style.display = "none";
+     document.getElementById("settings").style.display = "block";
+     document.getElementById("changelog").style.display = "none";
+     }
+     
+     // Tab Cloaking
+     function showTabCloaking() {
+     document.getElementById("tab-cloaking").style.display = "block";
+     document.getElementById("themes").style.display = "none";
+     }
+     
+     // Themes
+     function showThemes() {
+     document.getElementById("tab-cloaking").style.display = "none";
+     document.getElementById("themes").style.display = "block";
+     }
+     
+     // Credits
+     function openCredits() {
+     document.getElementById("credits").style.display = "block";
+     document.getElementById("blur-background").style.display = "block";
      }
       
      // Close Changelog
-     function closeChangelog() {
-     document.getElementById("changelog").style.display = "none";
-     document.getElementById("blur-changelog").style.display = "none";
-     }
-                              
-     // Open Settings
-     function openSettings() {
-     document.getElementById("settings").style.display = "block";
-     document.getElementById("blur-settings").style.display = "block";
-     }
-      
-     // Close Settings
-     function closeSettings() {
-     document.getElementById("settings").style.display = "none";
-     document.getElementById("blur-settings").style.display = "none";
+     function closeCredits() {
+     document.getElementById("credits").style.display = "none";
+     document.getElementById("blur-background").style.display = "none";
      }
      
      // Save tab name to localStorage
@@ -1227,7 +1500,7 @@
      changeTabFavicon(tabIcon);
      localStorage.setItem("tabName", tabTitle);
      localStorage.setItem("tabIcon", tabIcon);
-     };                         
+     }                  
                               
      document.getElementById("Google").onclick = function() {
      var tabTitle = "Google";
@@ -1236,7 +1509,7 @@
      changeTabFavicon(tabIcon);
      localStorage.setItem("tabName", tabTitle);
      localStorage.setItem("tabIcon", tabIcon);
-     };
+     }
                             
      document.getElementById("Google Drive").onclick = function() {
      var tabTitle = "My Drive - Google Drive";
@@ -1245,9 +1518,8 @@
      changeTabFavicon(tabIcon);
      localStorage.setItem("tabName", tabTitle);
      localStorage.setItem("tabIcon", tabIcon);
-     };
-
-                              
+     }
+                  
      document.getElementById("Google Docs").onclick = function() {
      var tabTitle = "Untitled document - Google Docs";
      var tabIcon = "https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_document_x64.png";
@@ -1255,7 +1527,7 @@
      changeTabFavicon(tabIcon);
      localStorage.setItem("tabName", tabTitle);
      localStorage.setItem("tabIcon", tabIcon);
-     };
+     }
       
      document.getElementById("Google Slides").onclick = function() {
      var tabTitle = "Untitled presentation - Google Slides";
@@ -1264,7 +1536,7 @@
      changeTabFavicon(tabIcon);
      localStorage.setItem("tabName", tabTitle);
      localStorage.setItem("tabIcon", tabIcon);
-     };
+     }
 
      document.getElementById("Google Classroom").onclick = function() {
      var tabTitle = "Home";
@@ -1273,7 +1545,7 @@
      changeTabFavicon(tabIcon);
      localStorage.setItem("tabName", tabTitle);
      localStorage.setItem("tabIcon", tabIcon);
-     };
+     }
                               
      document.getElementById("Gmail").onclick = function() {
      var tabTitle = "Inbox (2103)";
@@ -1282,7 +1554,7 @@
      changeTabFavicon(tabIcon);
      localStorage.setItem("tabName", tabTitle);
      localStorage.setItem("tabIcon", tabIcon);
-     };
+     }
                               
      // Open in about:blank
      document.getElementById("aboutBlank").onclick = function() {
@@ -1292,7 +1564,7 @@
      win.document.title = "about:blank";
      win.document.close();
      window.parent.window.location.replace('https://classroom.google.com/')
-     };
+     }
       
      // Open in blob:
      function createBlobUrl() {
@@ -1321,12 +1593,22 @@
      document.body.removeChild(link);
        })
      }
+     
+     function darkMode() {
+     document.body.classList.remove('white-mode');
+     }
+     
+     function whiteMode() {
+     document.body.classList.add('white-mode');
+     }
                      
      // Random Phrases
      document.addEventListener("DOMContentLoaded", function() {
      var phrases = [
-     "Welcome to Links123, the perfect site that collects games and apps from other websites! Links123 has the best games to keep you entertained at school or at home! So relax and enjoy the collection of games and apps the site compiles every week.",
+     "Welcome to Links123, the perfect site that collects games and apps from other websites! Links123 has the best games to keep you entertained at school or at home! So relax and enjoy the collection of games and apps the site compiles every once in a while.",
      "Made by RicardoMarioSonic123!",
+     "3.4.0 > 3.3.0.2 > 3.2.1 > 3.1.9 > 3.0.7",
+     "2161 lines of code!",
      "zzz",
      "-0",
      "ERROR CODE: S3KN2IL1",
@@ -1469,7 +1751,6 @@
      "Have a nice day!",
      "It looks a lot like Art Class, doesn't it?",
      "An arcade game famous for its brutal difficulty, 8-Bit always hated its players. Now that it's missing one of its guns, it's angrier than ever before.",
-     "1000 lines of code!",
      "Maybe.",
      "Probably.",
      "EMBESTIDA CARAJO!",
@@ -1646,7 +1927,7 @@
      "WHYYYYYYYYYYYY WEREN'T YOU AT MY CLAAAAAAAAAASS?!?!?!?!",
      "¿No tienes nada MEJOR que hacer?",
      "Don't you have anything BETTER to do?",
-     "Also try Rubber!",
+     "Home",
      "If I had to change the name of the page, I would put...",
      "Why do some updates come out quickly and others don't?",
      "Easter eggs?",
@@ -1814,12 +2095,50 @@
      "Probably not coded by ChatGPT",
      "No, I'm not adding Fortnite to this site, stay mad",
      "Chicken Jockey",
+     "Steve's Lava Chicken",
+     "La-la-la-lava, ch-ch-ch-chicken Steve's Lava Chicken, yeah, it's tasty as hell Ooh, mamacita, now you're ringin' the bell Crispy and juicy, now you're havin' a snack Ooh, super spicy, it's a lava attaaaaaaack",
+     "The Nether",
+     "Flint and Steel",
+     "This is NOT a splash message",
+     "Have fun!",
+     "What if...?",
+     "Wii U Edition",
+     "Pocket Edition",
+     "Playstation 3 Edition",
+     "Xbox 360 Edition",
+     "Nintendo Switch Edition",
+     "Xbox One Edition",
+     "Playstation 4 Edition",
+     "PlayStation Vita Edition",
+     "New Nintendo 3DS Edition",
+     "Education Edition",
+     "Pi Edition",
+     "Java Edition",
+     "Bedrock Edition",
+     "Rare",
+     "Super Rare",
+     "Epic",
+     "Mythic",
+     "Legendary",
+     "Jarvis reporte de daños",
+     "Optimized for potato PC's",
+     "Ask your teacher!",
+     "& Knuckles!",
+     "An update to this page will be coming soon!",
+     "Arregla tu juego!",
+     "Arregla tu pagina!",
+     "Guys secret code -- L123",
+     "The Great Splash Stealing Wars",
+     "This adventure it's up to you.",
+     "Less than 20 apps!",
      { type: "image", src: 'https://i.ibb.co/qhGJxQY/Screenshot-2025-03-23-7-04-36-PM-1.png' },
      { type: "image", src: 'https://i.ibb.co/MyXs7wDp/Screenshot-2025-03-21-11-25-50-PM-1.png' },
      { type: "image", src: 'https://i.ibb.co/hxyqfqZ0/IMG-20250206-210844-703-1.png' },
      { type: "image", src: 'https://i.ibb.co/K8CdvJz/IMG-20250209-193704-343-1.png' },
      { type: "image", src: 'https://i.ibb.co/nN5ZqLJQ/Screenshot-20231119-185555-Snapchat-1.png' },
      { type: "image", src: 'https://i.ibb.co/4g9LmJXq/5249-thumbsdownpirate-1.png' },
+     { type: "image", src: 'https://i.ibb.co/nsSHptBK/Screenshot-20250309-210003-Instagram-1.png' },
+     { type: "image", src: 'https://i.ibb.co/x8DQs7ds/Snapchat-1351628955-1.png" alt="Snapchat-1351628955-1' },
      ];
      var randomIndex = Math.floor(Math.random() * phrases.length);
      var randomPhrase = phrases[randomIndex];

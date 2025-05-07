@@ -159,7 +159,7 @@
      background-color: #284ccc;
      }
      
-     .dropbtn {
+     .button-c {
      padding: 12px 20px;
      font-size: 18px;
      font-weight: 552;
@@ -172,16 +172,16 @@
      transition: background-color 0.3s, transform 0.3s
      }
 
-     .dropbtn:hover, .dropbtn:focus {
+     .button-c:hover, .dropbtn:focus {
      background-color: #335fff;
      }
 
-     .dropdown {
+     .categories {
      position: relative;
      display: inline-block;
      }
 
-     .dropdown-content {
+     .categories-content {
      display: none;
      position: absolute;
      background-color: #101117;
@@ -190,7 +190,7 @@
      z-index: 1;
      }
 
-     .dropdown-content button {
+     .categories-content button {
      width: 100%;
      height: 50px;
      margin-top: -1px;
@@ -206,7 +206,7 @@
      transition: background-color 0.3s, transform 0.3s
      }
 
-     .dropdown button:hover {
+     .categories button:hover {
      background-color: #335fff;
      }
 
@@ -220,7 +220,7 @@
      top: 50%;
      left: 50%;
      transform: translate(-50%, -50%);
-     background-color: #333;
+     background-color: #39405a;
      width: 100%;
      height: 100%;
      z-index: 20;
@@ -232,7 +232,19 @@
      top: 50%;
      left: 50%;
      transform: translate(-50%, -50%);
-     background-color: #333;
+     background-color: #39405a;
+     width: 100%;
+     height: 100%;
+     z-index: 20;
+     }
+     
+     #proxy-frame-container {
+     display: none;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background-color: #39405a;
      width: 100%;
      height: 100%;
      z-index: 20;
@@ -281,6 +293,29 @@
      }
      
      #searchBar-a:focus { 
+     outline: solid 2.5px #335fff; 
+     }
+     
+     #theUrl {
+     font-family: Tahoma, sans-serif;
+     font-size: 15px;
+	 padding: 15px;
+     width: 50%;
+	 border-radius: 6px;
+     border: 0;
+     font-weight: 552;
+     text-align: center;
+     background-color: #101117;
+     outline: 2.5px solid #fff;
+     color: #fff;
+     transition: transform 0.2s;
+     }    
+     
+     #theUrl:hover {
+     outline: solid 2.5px #335fff; 
+     }
+     
+     #theUrl:focus { 
      outline: solid 2.5px #335fff; 
      }
      
@@ -482,6 +517,31 @@
      }
     
      #button-ca:active {
+     background-color: #cc0000;
+     }
+     
+     #button-cc {
+     position: absolute;
+     top: 0%;
+     right: 0%;
+     padding: 3px 7px;
+     font-size: 18px;
+     font-weight: 552;
+     font-family: Tahoma, sans-serif;
+     background-color: #335fff;
+     color: #fff;
+     border-style: solid;
+     border-color: #fff;
+     border-radius: 10px;
+     cursor: pointer;
+     transition: background-color 0.3s;
+     }
+     
+     #button-cc:hover {
+     background-color: #FF0000;
+     }
+    
+     #button-cc:active {
      background-color: #cc0000;
      }
      
@@ -721,6 +781,7 @@
      <button onclick="openHome()">Home</button>
      <button onclick="openGames()">Games</button>
      <button onclick="openApps()">Apps</button> 
+     <button onclick="openProxy()">Proxy</button> 
      <button onclick="openSettings()">Settings</button>
      <button onclick="openChangelog()">Changelog</button>
      </div>
@@ -730,7 +791,7 @@
      <div id="randomPhrase" title="Click here to change">Welcome back!</div>
      <button class="button-h" onclick="download()">Download Links123 Offline</button>
      </div>
-     <h4>Version 3.4.1</h4>
+     <h4>Version 3.4.2</h4>
      <h3 id="button-g" onclick="location.href='https://github.com/RicardoMarioSonic123/Links123-V3'" title="Visit Github Repository">GitHub</h3>
      <h3 id="button-c" onclick="openCredits()">Credits</h3>
      </div>
@@ -746,14 +807,20 @@
      <button id="button-ca">×</button>
      <object id="app-frame" type="text/html" data="" style="width: 100%; height: 100%;"></object>
      </div>
+       
+     <!-- Proxy frame container -->  
+     <div id="proxy-frame-container">
+     <button id="button-cc">×</button>
+     <object id="proxy-frame" type="text/html" data="" style="width: 100%; height: 100%;"></object>
+     </div>
       
      <!-- Games -->   
      <div id="games" style="display: none">
      <h3 style="cursor: default; font-size: 80px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: 7px;">Games</h3>
      <input id="searchBar-g" onkeyup="search_button_g()" type="text" name="search" placeholder="Search Games">
-     <div class="dropdown">
-     <button onclick="myFunction()" class="dropbtn">All Games</button>
-     <div id="myDropdown" class="dropdown-content">
+     <div class="categories">
+     <button onclick="showCategories()" class="button-c">All Games</button>
+     <div id="show-categories" class="categories-content">
      <button onclick="showAllGames()">All Games</button>
      <button onclick="showPopularGames()">Popular Games</button>
      <button onclick="showNewGames()">New Games</button>
@@ -1342,27 +1409,7 @@
      </div>
      
      <div id="new-games" style="display: none">
-     <button onclick="openGame('https://obsidianig.com/games/wildfire/index.html')" class="button">Wildfire</button>
-     <button onclick="openGame('https://obsidianig.com/games/unlikely/index.html')" class="button">Unlikely</button>
-     <button onclick="openGame('https://aobsidianig.com/games/basesloaded/index.html')" class="button">Bases Loaded</button>
-     <button onclick="openGame('https://obsidianig.com/games/paperminecraft/index.html')" class="button">Paper Minecraft</button>
-     <button onclick="openGame('https://obsidianig.com/games/portaboyplus/index.html')" class="button">PortaBoy+</button>
-     <button onclick="openGame('https://obsidianig.com/games/pictureperfect/index.html')" class="button">Picture Perfect</button>
-     <button onclick="openGame('https://obsidianig.com/games/melissa/index.html')" class="button">Melissa</button>
-     <button onclick="openGame('https://html.cafe/x2bca0f8a')" class="button">1</button>
-     <button onclick="openGame('https://html.cafe/x07f85a5f')" class="button">1 on 1 Soccer</button>
-     <button onclick="openGame('https://html.cafe/xac49551a')" class="button">Nova Craft</button>
-     <button onclick="openGame('https://html.cafe/x68dc41c7')" class="button">Johnny Upgrade</button>
-     <button onclick="openGame('https://html.cafe/xc1e0a9e3')" class="button">Low Knight</button>
-     <button onclick="openGame('https://html.cafe/x8d0315a8')" class="button">Melon Playground</button>
-     <button onclick="openGame('https://html.cafe/xdf252d7c')" class="button">Ragdoll Archers</button>
-     <button onclick="openGame('https://html.cafe/xf9257001')" class="button">Sprunki</button>
-     <button onclick="openGame('https://cbgamesdev.github.io/chilibowlflash/minecrap/index.html')" class="button">Minecraft Classic</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g22/class-393/')" class="button">Traffic Rush!</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g72/class-638/')" class="button">Jumping Shell</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g22/class-351/')" class="button">Zeepkist: Crash 2D</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g72/class-580/')" class="button">Murder</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g22/class-491/')" class="button">Red Ball 4</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 20px; cursor: default; color: white">No new games</h3>
      </div>
        
      <div id="more" style="display: none">
@@ -1371,6 +1418,11 @@
      <button class="button" onclick="showMore3()">Subway Surfers</button>
      <button class="button" onclick="showMore4()">Papa's Games</button>
      <button class="button" onclick="showMore5()">FNAF</button>
+     <button class="button" onclick="showMore6()">Minecraft</button>
+     <button class="button" onclick="showMore7()">Moto X3M</button>
+     <button class="button" onclick="showMore8()">Vex</button>
+     <button class="button" onclick="showMore9()">Dadish</button>
+     <button class="button" onclick="showMore10()">Riddle School</button>
      </div>
        
      <div id="Mario" style="display: none">
@@ -1447,6 +1499,52 @@
      <button onclick="openGame('https://irv77.github.io/hd_fnaf/w/')" class="button">FNAF World</button>
      <button onclick="openGame('https://irv77.github.io/hd_fnaf/ucn/')" class="button">FNAF UCN</button>
      </div>    
+       
+     <div id="Minecraft" style="display: none">
+     <button onclick="openGame('https://html.cafe/x2bb30cec')" class="button">EaglercraftX 1.8.8</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/minecraft-1.12/')" class="button">EaglercraftX 1.12.2</button>
+     <button onclick="openGame('https://obsidianig.com/games/paperminecraft/index.html')" class="button">Paper Minecraft</button>
+     <button onclick="openGame('https://cbgamesdev.github.io/chilibowlflash/minecrap/index.html')" class="button">Minecraft Classic</button>
+     <button onclick="openGame('https://othermgwebsite.github.io/newgames/craftmine/index.html')" class="button">CraftMine</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r4/grindcraft/')" class="button">Grindcraft</button>
+     </div>    
+       
+     <div id="Moto X3M" style="display: none">
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/moto-x3m/')" class="button">Moto X3M</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r8/moto-x3m-2/')" class="button">Moto X3M 2</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/motox3m-pool/')" class="button">Moto X3M Pool Party</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/motox3m-spooky/')" class="button">Moto X3M Spooky Land</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/motox3m-winter/')" class="button">Moto X3M Winter</button>
+     </div>  
+       
+     <div id="Vex" style="display: none">
+     <button onclick="openGame('https://obsidianig.com/games/vex/')" class="button">Vex</button>
+     <button onclick="openGame('https://obsidianig.com/games/vex2/')" class="button">Vex 2</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/vex-3/index.html')" class="button">Vex 3</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/vex-4/index.html')" class="button">Vex 4</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/vex-5/index.html')" class="button">Vex 5</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/vex-6/index.html')" class="button">Vex 6</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/vex-7/index.html')" class="button">Vex 7</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/vex-8/index.html')" class="button">Vex 8</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/vex-x3m/index.html')" class="button">Vex X3M</button>
+     </div>    
+       
+     <div id="Dadish" style="display: none">
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/dadish/index.html')" class="button">Dadish</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/dadish-2/index.html')" class="button">Dadish 2</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/dadish-3/index.html')" class="button">Dadish 3</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/dadish-3d/index.html')" class="button">Dadish 3D</button>
+     </div>    
+       
+     <div id="Riddle School" style="display: none">
+     <button onclick="openGame('https://obsidianig.com/games/riddleschool/riddleschool.html')" class="button">Riddle School</button>
+     <button onclick="openGame('https://obsidianig.com/games/riddleschool2/riddleschool2.html')" class="button">Riddle School 2</button>
+     <button onclick="openGame('https://obsidianig.com/games/riddleschool3/riddleschool3.html')" class="button">Riddle School 3</button>
+     <button onclick="openGame('https://obsidianig.com/games/riddleschool4/riddleschool4.html')" class="button">Riddle School 4</button>
+     <button onclick="openGame('https://obsidianig.com/games/riddleschool5/riddleschool5.html')" class="button">Riddle School 5</button>
+     <button onclick="openGame('https://obsidianig.com/games/riddleschooltransfer/riddleschooltransfer.html')" class="button">Riddle Transfer</button>
+     <button onclick="openGame('https://obsidianig.com/games/riddleschooltransfer2/riddleschooltransfer2.html')" class="button">Riddle Transfer 2</button>
+     </div>    
      </div>
         
      <!-- Apps -->   
@@ -1469,8 +1567,21 @@
      <button onclick="openApp('https://extprint3r.github.io/')" class="button2">ExtPrint3r</button> 
      <button onclick="openApp('https://obsidianig.com/EmulatorJS-main/')" class="button2">EmulatorJS</button> 
      <button onclick="openApp('https://html.cafe/x34452a0c')" class="button2">Paint</button> 
-     <button onclick="openGame('https://windows96.net/')" class="button">Windows 96</button>
+     <button onclick="openApp('https://windows96.net/')" class="button2">Windows 96</button>
      <button onclick="openApp('https://chattyice234.github.io/cw/')" class="button2">ChattyWebsite</button> 
+     </div>
+       
+     <!-- Proxy -->  
+     <div id="proxy" style="display: none;">
+     <div id="center">
+     <h1><span>Links123</span> Proxy</h1>
+     <h3 style="margin-top: 36px; margin-bottom: 27px; font-weight: bold; font-size: 18px; font-family: Tahoma, sans-serif; cursor: pointer" >Note: Does not work with all websites, there will be some websites that will not show. When that happens you will have to refresh the page because it will stop working.</h3>
+     <br>
+     <input id="theUrl" type="text" name="search" placeholder="Enter Url">  
+     <br>
+     <br>
+     <button class="button-h" onclick="openTheUrl()">Open Url</button>
+     </div>
      </div>
      
      <!-- Settings -->
@@ -1518,21 +1629,11 @@
        
      <!-- Changelogs --> 
      <div id="changelog" style="display: none;">
-     <h3 style="font-size: 36px; font-family: Tahoma, sans-serif; cursor: default;">Version 3.4.1 Changelog 5/2/25</h3>
+     <h3 style="font-size: 36px; font-family: Tahoma, sans-serif; cursor: default;">Version 3.4.2 Changelog 5/7/25</h3>
      <h2>
-     <li>21 new games</li>
+     <li>0 new games</li>
      <br>
-     <li>Themes are now saved in localstorage</li>
-     <br>
-     <li>2 new themes</li>
-     <br>
-     <li>5 new categories (More will be added in upcoming updates.)</li>
-     <br>
-     <li>Interstellar has been removed</li>
-     <br>
-     <li>Windows 96 moved to Apps</li>
-     <br>
-     <li>More games have been added in Popular Games</li>
+     <li>Proxy added</li>
      </h2>
      </div>
        
@@ -1558,6 +1659,7 @@
      document.getElementById("home").style.display = "block";
      document.getElementById("games").style.display = "none";
      document.getElementById("apps").style.display = "none";
+     document.getElementById("proxy").style.display = "none";
      document.getElementById("settings").style.display = "none";
      document.getElementById("changelog").style.display = "none";
      }
@@ -1567,6 +1669,7 @@
      document.getElementById("home").style.display = "none";
      document.getElementById("games").style.display = "block";
      document.getElementById("apps").style.display = "none";
+     document.getElementById("proxy").style.display = "none";
      document.getElementById("settings").style.display = "none";
      document.getElementById("changelog").style.display = "none";
      }
@@ -1582,7 +1685,12 @@
      document.getElementById("Subway-Surfers").style.display = "none";
      document.getElementById("Papa's-Games").style.display = "none";
      document.getElementById("FNAF").style.display = "none";
-     document.querySelector('.dropbtn').innerHTML = "All Games"
+     document.getElementById("Minecraft").style.display = "none";
+     document.getElementById("Moto X3M").style.display = "none";
+     document.getElementById("Vex").style.display = "none";
+     document.getElementById("Dadish").style.display = "none";
+     document.getElementById("Riddle School").style.display = "none";
+     document.querySelector('.button-c').innerHTML = "All Games"
      }
      
      // Popular Games
@@ -1596,7 +1704,12 @@
      document.getElementById("Subway-Surfers").style.display = "none";
      document.getElementById("Papa's-Games").style.display = "none";
      document.getElementById("FNAF").style.display = "none";
-     document.querySelector('.dropbtn').innerHTML = "Popular Games"
+     document.getElementById("Minecraft").style.display = "none";
+     document.getElementById("Moto X3M").style.display = "none";
+     document.getElementById("Vex").style.display = "none";
+     document.getElementById("Dadish").style.display = "none";
+     document.getElementById("Riddle School").style.display = "none";
+     document.querySelector('.button-c').innerHTML = "Popular Games"
      }
      
      // New games
@@ -1610,7 +1723,12 @@
      document.getElementById("Subway-Surfers").style.display = "none";
      document.getElementById("Papa's-Games").style.display = "none";
      document.getElementById("FNAF").style.display = "none";
-     document.querySelector('.dropbtn').innerHTML = "New Games"
+     document.getElementById("Minecraft").style.display = "none";
+     document.getElementById("Moto X3M").style.display = "none";
+     document.getElementById("Vex").style.display = "none";
+     document.getElementById("Dadish").style.display = "none";
+     document.getElementById("Riddle School").style.display = "none";
+     document.querySelector('.button-c').innerHTML = "New Games"
      }
      
      // More
@@ -1624,7 +1742,12 @@
      document.getElementById("Subway-Surfers").style.display = "none";
      document.getElementById("Papa's-Games").style.display = "none";
      document.getElementById("FNAF").style.display = "none";
-     document.querySelector('.dropbtn').innerHTML = "More"
+     document.getElementById("Minecraft").style.display = "none";
+     document.getElementById("Moto X3M").style.display = "none";
+     document.getElementById("Vex").style.display = "none";
+     document.getElementById("Dadish").style.display = "none";
+     document.getElementById("Riddle School").style.display = "none";
+     document.querySelector('.button-c').innerHTML = "More"
      }
      
      // Mario
@@ -1638,7 +1761,12 @@
      document.getElementById("Subway-Surfers").style.display = "none";
      document.getElementById("Papa's-Games").style.display = "none";
      document.getElementById("FNAF").style.display = "none";
-     document.querySelector('.dropbtn').innerHTML = "Mario"
+     document.getElementById("Minecraft").style.display = "none";
+     document.getElementById("Moto X3M").style.display = "none";
+     document.getElementById("Vex").style.display = "none";
+     document.getElementById("Dadish").style.display = "none";
+     document.getElementById("Riddle School").style.display = "none";
+     document.querySelector('.button-c').innerHTML = "Mario"
      }
      
      // Sonic
@@ -1652,7 +1780,12 @@
      document.getElementById("Subway-Surfers").style.display = "none";
      document.getElementById("Papa's-Games").style.display = "none";
      document.getElementById("FNAF").style.display = "none";
-     document.querySelector('.dropbtn').innerHTML = "Sonic"
+     document.getElementById("Minecraft").style.display = "none";
+     document.getElementById("Moto X3M").style.display = "none";
+     document.getElementById("Vex").style.display = "none";
+     document.getElementById("Dadish").style.display = "none";
+     document.getElementById("Riddle School").style.display = "none";
+     document.querySelector('.button-c').innerHTML = "Sonic"
      }
      
      // Subway Surfers
@@ -1666,7 +1799,12 @@
      document.getElementById("Subway-Surfers").style.display = "block";
      document.getElementById("Papa's-Games").style.display = "none";
      document.getElementById("FNAF").style.display = "none";
-     document.querySelector('.dropbtn').innerHTML = "Subway Surfers"
+     document.getElementById("Minecraft").style.display = "none";
+     document.getElementById("Moto X3M").style.display = "none";
+     document.getElementById("Vex").style.display = "none";
+     document.getElementById("Dadish").style.display = "none";
+     document.getElementById("Riddle School").style.display = "none";
+     document.querySelector('.button-c').innerHTML = "Subway Surfers"
      }
      
      // Papa's Games
@@ -1680,7 +1818,12 @@
      document.getElementById("Subway-Surfers").style.display = "none";
      document.getElementById("Papa's-Games").style.display = "block";
      document.getElementById("FNAF").style.display = "none";
-     document.querySelector('.dropbtn').innerHTML = "Papa's Games"
+     document.getElementById("Minecraft").style.display = "none";
+     document.getElementById("Moto X3M").style.display = "none";
+     document.getElementById("Vex").style.display = "none";
+     document.getElementById("Dadish").style.display = "none";
+     document.getElementById("Riddle School").style.display = "none";
+     document.querySelector('.button-c').innerHTML = "Papa's Games"
      }
      
      // FNAF
@@ -1694,14 +1837,115 @@
      document.getElementById("Subway-Surfers").style.display = "none";
      document.getElementById("Papa's-Games").style.display = "none";
      document.getElementById("FNAF").style.display = "block";
-     document.querySelector('.dropbtn').innerHTML = "FNAF"
+     document.getElementById("Minecraft").style.display = "none";
+     document.getElementById("Moto X3M").style.display = "none";
+     document.getElementById("Vex").style.display = "none";
+     document.getElementById("Dadish").style.display = "none";
+     document.getElementById("Riddle School").style.display = "none";
+     document.querySelector('.button-c').innerHTML = "FNAF"
+     }
+     
+     // Minecraft
+     function showMore6() {
+     document.getElementById("all-games").style.display = "none";
+     document.getElementById("popular-games").style.display = "none";
+     document.getElementById("new-games").style.display = "none";
+     document.getElementById("more").style.display = "none";
+     document.getElementById("Mario").style.display = "none";
+     document.getElementById("Sonic").style.display = "none";
+     document.getElementById("Subway-Surfers").style.display = "none";
+     document.getElementById("Papa's-Games").style.display = "none";
+     document.getElementById("FNAF").style.display = "none";
+     document.getElementById("Minecraft").style.display = "block";
+     document.getElementById("Moto X3M").style.display = "none";
+     document.getElementById("Vex").style.display = "none";
+     document.getElementById("Dadish").style.display = "none";
+     document.getElementById("Riddle School").style.display = "none";
+     document.querySelector('.button-c').innerHTML = "Minecraft"
+     }
+     
+     // Moto X3M
+     function showMore7() {
+     document.getElementById("all-games").style.display = "none";
+     document.getElementById("popular-games").style.display = "none";
+     document.getElementById("new-games").style.display = "none";
+     document.getElementById("more").style.display = "none";
+     document.getElementById("Mario").style.display = "none";
+     document.getElementById("Sonic").style.display = "none";
+     document.getElementById("Subway-Surfers").style.display = "none";
+     document.getElementById("Papa's-Games").style.display = "none";
+     document.getElementById("FNAF").style.display = "none";
+     document.getElementById("Minecraft").style.display = "none";
+     document.getElementById("Moto X3M").style.display = "block";
+     document.getElementById("Vex").style.display = "none";
+     document.getElementById("Dadish").style.display = "none";
+     document.getElementById("Riddle School").style.display = "none";
+     document.querySelector('.button-c').innerHTML = "Moto X3M"
+     }
+     
+     // Vex
+     function showMore8() {
+     document.getElementById("all-games").style.display = "none";
+     document.getElementById("popular-games").style.display = "none";
+     document.getElementById("new-games").style.display = "none";
+     document.getElementById("more").style.display = "none";
+     document.getElementById("Mario").style.display = "none";
+     document.getElementById("Sonic").style.display = "none";
+     document.getElementById("Subway-Surfers").style.display = "none";
+     document.getElementById("Papa's-Games").style.display = "none";
+     document.getElementById("FNAF").style.display = "none";
+     document.getElementById("Minecraft").style.display = "none";
+     document.getElementById("Moto X3M").style.display = "none";
+     document.getElementById("Vex").style.display = "block";
+     document.getElementById("Dadish").style.display = "none";
+     document.getElementById("Riddle School").style.display = "none";
+     document.querySelector('.button-c').innerHTML = "Vex"
+     }
+     
+     // Dadish
+     function showMore9() {
+     document.getElementById("all-games").style.display = "none";
+     document.getElementById("popular-games").style.display = "none";
+     document.getElementById("new-games").style.display = "none";
+     document.getElementById("more").style.display = "none";
+     document.getElementById("Mario").style.display = "none";
+     document.getElementById("Sonic").style.display = "none";
+     document.getElementById("Subway-Surfers").style.display = "none";
+     document.getElementById("Papa's-Games").style.display = "none";
+     document.getElementById("FNAF").style.display = "none";
+     document.getElementById("Minecraft").style.display = "none";
+     document.getElementById("Moto X3M").style.display = "none";
+     document.getElementById("Vex").style.display = "none";
+     document.getElementById("Dadish").style.display = "block";
+     document.getElementById("Riddle School").style.display = "none";
+     document.querySelector('.button-c').innerHTML = "Dadish"
      }
 
+     // Riddle School
+     function showMore10() {
+     document.getElementById("all-games").style.display = "none";
+     document.getElementById("popular-games").style.display = "none";
+     document.getElementById("new-games").style.display = "none";
+     document.getElementById("more").style.display = "none";
+     document.getElementById("Mario").style.display = "none";
+     document.getElementById("Sonic").style.display = "none";
+     document.getElementById("Subway-Surfers").style.display = "none";
+     document.getElementById("Papa's-Games").style.display = "none";
+     document.getElementById("FNAF").style.display = "none";
+     document.getElementById("Minecraft").style.display = "none";
+     document.getElementById("Moto X3M").style.display = "none";
+     document.getElementById("Vex").style.display = "none";
+     document.getElementById("Dadish").style.display = "none";
+     document.getElementById("Riddle School").style.display = "block";
+     document.querySelector('.button-c').innerHTML = "Riddle School"
+     }
+     
      // Apps
      function openApps() {
      document.getElementById("home").style.display = "none";
      document.getElementById("games").style.display = "none";
      document.getElementById("apps").style.display = "block";
+     document.getElementById("proxy").style.display = "none";
      document.getElementById("settings").style.display = "none";
      document.getElementById("changelog").style.display = "none";
      }
@@ -1736,30 +1980,31 @@
        }
      }    
      
-     function myFunction() {
-     document.getElementById("myDropdown").classList.toggle("show");
+     function showCategories() {
+     document.getElementById("show-categories").classList.toggle("show");
      }
 
      window.onclick = function(event) {
-     if (!event.target.matches('.dropbtn')) {
-     var dropdowns = document.getElementsByClassName("dropdown-content");
+     if (!event.target.matches('.button-c')) {
+     var categories = document.getElementsByClassName("categories-content");
      var i;
-     for (i = 0; i < dropdowns.length; i++) {
-     var openDropdown = dropdowns[i];
-     if (openDropdown.classList.contains('show')) {
-     openDropdown.classList.remove('show');
+     for (i = 0; i < categories.length; i++) {
+     var showCategories = categories[i];
+     if (showCategories.classList.contains('show')) {
+     showCategories.classList.remove('show');
         }
        }
       }
      }
-     
-     // Changelog
-     function openChangelog() {
+                                       
+     // Proxy
+     function openProxy() {
      document.getElementById("home").style.display = "none";
      document.getElementById("games").style.display = "none";
      document.getElementById("apps").style.display = "none";
+     document.getElementById("proxy").style.display = "block";
      document.getElementById("settings").style.display = "none";
-     document.getElementById("changelog").style.display = "block";
+     document.getElementById("changelog").style.display = "none";
      }
                               
      // Settings
@@ -1767,6 +2012,7 @@
      document.getElementById("home").style.display = "none";
      document.getElementById("games").style.display = "none";
      document.getElementById("apps").style.display = "none";
+     document.getElementById("proxy").style.display = "none";
      document.getElementById("settings").style.display = "block";
      document.getElementById("changelog").style.display = "none";
      }
@@ -1781,6 +2027,16 @@
      function showThemes() {
      document.getElementById("tab-cloaking").style.display = "none";
      document.getElementById("themes").style.display = "block";
+     }
+                                       
+     // Changelog
+     function openChangelog() {
+     document.getElementById("home").style.display = "none";
+     document.getElementById("games").style.display = "none";
+     document.getElementById("apps").style.display = "none";
+     document.getElementById("proxy").style.display = "none";
+     document.getElementById("settings").style.display = "none";
+     document.getElementById("changelog").style.display = "block";
      }
      
      // Credits
@@ -1992,6 +2248,31 @@
      }, 1);
      })
      
+     // Open The Url
+     function openTheUrl(randomTrue) {
+     var frameContainer = document.getElementById('proxy-frame-container');
+     var frame = document.getElementById('proxy-frame');
+     frameContainer.style.display = 'block';
+     var url = document.getElementById("theUrl").value;
+     if (url.includes("http") == true) {
+     frame.data = url;
+     } else {
+     frame.data = "https://" + url;
+     }
+     document.getElementById('navbar').style.display = "none";
+     document.getElementById('proxy').style.display = "none";
+     }
+     
+     // Close Proxy Url
+     document.getElementById('button-cc').addEventListener('click', function() {
+     document.getElementById('proxy-frame').data = '';
+     document.getElementById('navbar').style.display = "block";
+     document.getElementById('proxy').style.display = "block";
+     setTimeout(function() {
+     document.getElementById('proxy-frame-container').style.display = 'none'; 
+     }, 1);
+     })
+     
      // Load tab name, icon and theme from localStorage
      window.onload = function() {
      var savedTabName = localStorage.getItem("tabName");
@@ -2019,8 +2300,8 @@
      var phrases = [
      "Welcome to Links123, the perfect site that collects games and apps from other websites! Links123 has the best games to keep you entertained at school or at home! So relax and enjoy the collection of games and apps the site compiles every once in a while.",
      "Made by RicardoMarioSonic123!",
-     "3.4.1 > 3.3.0.2 > 3.2.1 > 3.1.9 > 3.0.7",
-     "2600 lines of code!",
+     "3.4.2 > 3.3.0.2 > 3.2.1 > 3.1.9 > 3.0.7",
+     "2903 lines of code!",
      "zzz",
      "-0",
      "ERROR CODE: S3KN2IL1",
@@ -2574,6 +2855,22 @@
      "You are the player",
      "Lego Mario is not included",
      "???: Is that all the games? Me: What, you wanted more?",
+     "Before Links123: I won't give you any game links. After Links123: Could you invite me to your game links page? In return, I'll give you more game links.",
+     "Activate Links123 | Go to settings to activate Links123",
+     "So many games to choose from, where will you start? Google Classroom.",
+     "Downloading your search history...",
+     "This isn't just a website, it's a free ticket to the principal's office for Akpo",
+     "Fancy!",
+     "Changing your passwords...",
+     "Los skibidi se pusieron toilet",
+     "red",
+     "blue",
+     "yellow",
+     "Barney es un dinosaurio Que vive en nuestra mente Y cuando se hace grande Es realmente sorprendente Él le brinda su amistad A grandes y pequeños Después de la escuela Juegan todos muy contentos Barney nos enseña Muchos juegos divertidos El A-B-C y el 1-2-3 También son tus amigos Barney viene a jugar Cuando lo necesitas Él también te ayudará Si crees en fantasías",
+     "Ok, si entiendo",
+     "Links123 has many games, but sometimes we don't put games, and that can be sad",
+     "Big Sad",
+     "Tung Tung Tung Tung Sahur",
      { type: "image", src: 'https://i.ibb.co/7dkDKtCf/Screenshot-2025-04-27-7-57-24-PM-1.png' },
      { type: "image", src: 'https://i.ibb.co/qhGJxQY/Screenshot-2025-03-23-7-04-36-PM-1.png' },
      { type: "image", src: 'https://i.ibb.co/kgG6KTPf/Screenshot-2025-04-27-2-08-44-PM-1.png' },

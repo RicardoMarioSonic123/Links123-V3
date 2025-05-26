@@ -17,6 +17,10 @@
      transition: 0.3s all ease;
      }
      
+     .favicon-w {
+     background-color: #fff !important;
+     }
+     
      .white-mode {
      background-color: #fff;
      color: #000;
@@ -24,15 +28,8 @@
      
      .beta-style {
      color: #000;
+     background-color: #fec56b;
      background-image: url('https://img3.wallspic.com/crops/1/9/2/8/2/128291/128291-pc_game-sky-explosion-minecraft-sunlight-1920x1080.jpg');
-     background-size: cover;
-     background-attachment: fixed;
-     background-position: center;
-     }
-     
-     .V2-style {
-     color: #000;
-     background-image: url('https://wallpapers-clan.com/wp-content/uploads/2024/05/minecraft-world-scenery-desktop-wallpaper-preview.jpg');
      background-size: cover;
      background-attachment: fixed;
      background-position: center;
@@ -52,6 +49,51 @@
      transform: translateY(-2px) !important;
      }
      
+     .old-input{
+     border: 1px solid #ddd !important;
+     border-radius: 6px !important;
+     box-sizing: border-box !important;
+     outline: none !important;
+     background-color: #fff !important;
+     color: #000 !important;
+     }
+     
+     .beta-button {
+     background-color: #b2522c !important;
+     transition: background-color 0.3s, border 0.25s, transform 0.3s !important;
+     }
+
+     .beta-button:hover{
+     border: 2px solid #335fff !important;
+     }
+     
+     .beta-button:focus {
+     background-color: #335fff !important;
+     }
+     
+     .beta-button2 {
+     background-color: #b2522c !important;
+     transition: background-color 0.3s, transform 0.3s !important;
+     }
+     
+     .beta-button2:hover{
+     background-color: #335fff !important;
+     }
+     
+     .beta-color {
+     background-color: #b2522c !important;
+     transition: 0.3s all ease;
+     }
+     
+     .V2-style {
+     color: #000;
+     background-color: #b9ea48;
+     background-image: url('https://wallpapers-clan.com/wp-content/uploads/2024/05/minecraft-world-scenery-desktop-wallpaper-preview.jpg');
+     background-size: cover;
+     background-attachment: fixed;
+     background-position: center;
+     }
+     
      .old-button2 {
      background-color: #007bff !important;
      color: #fff !important;
@@ -66,15 +108,6 @@
      transform: translateY(-2px) !important;
      }
      
-     .old-input{
-     border: 1px solid #ddd !important;
-     border-radius: 6px !important;
-     box-sizing: border-box !important;
-     outline: none !important;
-     background-color: #fff !important;
-     color: #000 !important;
-     }
-     
      .old-input2{
      border: 1px solid #ddd !important;
      border-radius: 6px !important;
@@ -84,6 +117,33 @@
      color: #000 !important;
      }
      
+     .V2-button {
+     background-color: #4cc3bc !important;
+     transition: background-color 0.3s, border 0.25s, transform 0.3s !important;
+     }
+
+     .V2-button:hover{
+     border: 2px solid #335fff !important;
+     }
+     
+     .V2-button:focus {
+     background-color: #335fff !important;
+     }
+     
+     .V2-button2 {
+     background-color: #4cc3bc !important;
+     transition: background-color 0.3s, transform 0.3s !important;
+     }
+     
+     .V2-button2:hover{
+     background-color: #335fff !important;
+     }
+     
+     .V2-color {
+     background-color: #4cc3bc !important;
+     transition: 0.3s all ease;
+     }
+     
      ::-webkit-scrollbar {
      width: 0px;
      overflow: hidden;
@@ -91,8 +151,15 @@
      
      span {
      color: #335fff;
+     cursor: default;
      }
     
+     span2 {
+     color: red;
+     font-family: Tahoma, sans-serif;
+     cursor: default;
+     }
+     
      h1 {
      margin: 0;
      font-size: 50px;
@@ -562,8 +629,21 @@
      justify-content: center;
      align-items: center;
      }
+     
+     #changes-container {
+     overflow: auto;
+     position: absolute;
+     left: 50%;
+     top: 60%;
+     transform: translate(-50%, -50%);
+     height: 75%;
+     width: 90%;
+     border-radius: 10px; 
+     border: 2px solid #fff; 
+     background-color: #101117
+     }
          
-     .button-h {
+     .button-u {
      margin-left: 5px;
      margin-right: 5px;
      font-size: 17px;
@@ -579,12 +659,12 @@
      transition: background-color 0.3s, transform 0.3s;
      }
      
-     .button-h:hover {
+     .button-u:hover {
      background-color: #284ccc;
      transform: scale(1.05);
      }
     
-     .button-h:active {
+     .button-u:active {
      background-color: #1e3999;
      transform: scale(0.95);
      }
@@ -642,9 +722,9 @@
      }
      
      .button-x {
-     position: absolute;
+     position: sticky;
      top: 0%;
-     right: 0%;
+     left: 100%;
      padding: 5px 10px;
      font-size: 18px;
      font-weight: 552;
@@ -665,79 +745,28 @@
      background-color: #cc0000;
      }
      
-     #button-cg {
+     .button-h {
      position: absolute;
      top: 0%;
      right: 0%;
-     padding: 3px 7px;
+     padding: 3px 9px;
      font-size: 18px;
      font-weight: 552;
      font-family: Tahoma, sans-serif;
      background-color: #335fff;
      color: #fff;
-     border-style: solid;
-     border-color: #fff;
-     border-radius: 10px;
+     border: none;
+     border-radius: 7px;
      cursor: pointer;
      transition: background-color 0.3s;
      }
      
-     #button-cg:hover {
-     background-color: #FF0000;
+     .button-h:hover {
+     background-color: #284ccc;
      }
     
-     #button-cg:active {
-     background-color: #cc0000;
-     }
-     
-     #button-ca {
-     position: absolute;
-     top: 0%;
-     right: 0%;
-     padding: 3px 7px;
-     font-size: 18px;
-     font-weight: 552;
-     font-family: Tahoma, sans-serif;
-     background-color: #335fff;
-     color: #fff;
-     border-style: solid;
-     border-color: #fff;
-     border-radius: 10px;
-     cursor: pointer;
-     transition: background-color 0.3s;
-     }
-     
-     #button-ca:hover {
-     background-color: #FF0000;
-     }
-    
-     #button-ca:active {
-     background-color: #cc0000;
-     }
-     
-     #button-cc {
-     position: absolute;
-     top: 0%;
-     right: 0%;
-     padding: 3px 7px;
-     font-size: 18px;
-     font-weight: 552;
-     font-family: Tahoma, sans-serif;
-     background-color: #335fff;
-     color: #fff;
-     border-style: solid;
-     border-color: #fff;
-     border-radius: 10px;
-     cursor: pointer;
-     transition: background-color 0.3s;
-     }
-     
-     #button-cc:hover {
-     background-color: #FF0000;
-     }
-    
-     #button-cc:active {
-     background-color: #cc0000;
+     .button-h:active {
+     background-color: #1e3999;
      }
      
      #button-c {
@@ -786,7 +815,7 @@
      transform: scale(0.95);
      }
     
-     .button-sc {
+     .button-a {
      margin-left: 5px;
      margin-right: 5px;
      font-size: 15px;
@@ -802,12 +831,12 @@
      transition: background-color 0.3s, transform 0.3s;
      }
      
-     .button-sc:hover {
+     .button-a:hover {
      background-color: #284ccc;
      transform: scale(1.05);
      }
     
-     .button-sc:active {
+     .button-a:active {
      background-color: #1e3999;
      transform: scale(0.95);
      }
@@ -881,12 +910,13 @@
      transform: scale(0.95);
      }
      
-     #button-bt {
+     #button-bs {
      margin-left: 5px;
      margin-right: 5px;
      font-size: 15px;
      font-weight: 552;
      font-family: Tahoma, sans-serif;
+     background-color: #fec56b;
      background-image: url('https://i.ibb.co/1YjXyrc8/Screenshot-2025-04-26-8-40-45-PM.png');
      color: #000;
      border: 2px solid #000;
@@ -898,20 +928,21 @@
      transition: background-color 0.3s, transform 0.3s;
      }
      
-     #button-bt:hover {
+     #button-bs:hover {
      transform: scale(1.05);
      }
     
-     #button-bt:active {
+     #button-bs:active {
      transform: scale(0.95);
      }
      
-     #button-v2t {
+     #button-v2s {
      margin-left: 5px;
      margin-right: 5px;
      font-size: 15px;
      font-weight: 552;
      font-family: Tahoma, sans-serif;
+     background-color: #b9ea48;
      background-image: url('https://i.ibb.co/JMCzS7P/Screenshot-2025-04-23-11-34-59-PM.png');
      color: #000;
      border: 2px solid #000;
@@ -923,11 +954,11 @@
      transition: background-color 0.3s, transform 0.3s;
      }
      
-     #button-v2t:hover {
+     #button-v2s:hover {
      transform: scale(1.05);
      }
     
-     #button-v2t:active {
+     #button-v2s:active {
      transform: scale(0.95);
      }
     
@@ -963,6 +994,34 @@
      transform: scale(0.95);
      border: 2px solid #284ccc;
      }
+     
+     .button-ch {
+     margin-top: 10px;
+     margin-bottom: 10px;
+     margin-left: 10px;
+     margin-right: 10px;
+     font-size: 25px;
+     font-weight: 552;
+     font-family: Tahoma, sans-serif;
+     background-color: #335fff;
+     color: #fff;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+     width: 15%;
+     height: 75px;
+     transition: background-color 0.3s, transform 0.3s;
+     }
+     
+     .button-ch:hover {
+     background-color: #284ccc;
+     transform: scale(1.05);
+     }
+    
+     .button-ch:active {
+     background-color: #1e3999;
+     transform: scale(0.95);
+     }
     
      #center {
      position: absolute;
@@ -988,9 +1047,9 @@
      <div id="center">
      <h1>Welcome to <span>Links123</span></h1>
      <div id="randomPhrase" title="Click here to change">Welcome back!</div>
-     <button class="button-h" onclick="download()">Download Links123 Offline</button>
+     <button class="button-u" onclick="download()">Download Links123 Offline</button>
      </div>
-     <h4>Version 3.4.3</h4>
+     <h4>Version 3.4.4</h4>
      <h3 id="button-git" onclick="location.href='https://github.com/RicardoMarioSonic123/Links123-V3'" title="Visit Github Repository">GitHub</h3>
      <h3 id="button-c" onclick="openCredits()">Credits</h3>
      </div>
@@ -998,28 +1057,53 @@
      <!-- Game frame container -->  
      <div id="game-frame-container">
      <br>
-     <object id="game-frame" type="text/html" data="" style="width: 80%; height: 85%; background-color: #39405a; outline: 5px solid #335fff;"></object>
+     <object id="game-frame" type="text/html" data="" style="width: 80%; height: 85%; background-color: #39405a; outline: 5px solid #335fff;"><span2>An error has occurred, please reload the page.</span2></object>
      <br>
-     <button class="button-h" onclick="openGameInFullscreen()">Fullscreen</button>
-     <button class="button-h" onclick="closeGame()">Close Game</button>
+     <button class="button-u" onclick="openGameInFullscreen()">Fullscreen</button>
+     <button class="button-u" onclick="resetGame()">Reset</button>
+     <button class="button-u" onclick="closeGame()">Close Game</button>
+     <button class="button-h" onclick="openHelp()" title="Help?">?</button>
      </div>
        
      <!-- App frame container -->  
      <div id="app-frame-container">
      <br>
-     <object id="app-frame" type="text/html" data="" style="width: 80%; height: 85%; background-color: #39405a; outline: 5px solid #335fff;"></object>
+     <object id="app-frame" type="text/html" data="" style="width: 80%; height: 85%; background-color: #39405a; outline: 5px solid #335fff;"><span2>An error has occurred, please reload the page.</span2></object>
      <br>
-     <button class="button-h" onclick="openAppInFullscreen()">Fullscreen</button>
-     <button class="button-h" onclick="closeApp()">Close App</button>
+     <button class="button-u" onclick="openAppInFullscreen()">Fullscreen</button>
+     <button class="button-u" onclick="resetApp()">Reset</button>
+     <button class="button-u" onclick="closeApp()">Close App</button>
+     <button class="button-h" onclick="openHelp()" title="Help?">?</button>
      </div>
        
      <!-- Proxy frame container -->  
      <div id="proxy-frame-container">
      <br>
-     <object id="proxy-frame" type="text/html" data="" style="width: 80%; height: 85%; background-color: #39405a; outline: 5px solid #335fff;"></object>
+     <object id="proxy-frame" type="text/html" data="" style="width: 80%; height: 85%; background-color: #39405a; outline: 5px solid #335fff;"><span2>An error has occurred, please reload the page.</span2></object>
      <br>
-     <button class="button-h" onclick="openProxyInFullscreen()">Fullscreen</button>
-     <button class="button-h" onclick="closeTheUrl()">Close Url</button>
+     <button class="button-u" onclick="openTheUrlInFullscreen()">Fullscreen</button>
+     <button class="button-u" onclick="resetTheUrl()">Reset</button>
+     <button class="button-u" onclick="closeTheUrl()">Close Url</button>
+     <button class="button-h" onclick="openHelp()" title="Help?">?</button>
+     </div>
+       
+     <!-- Help -->
+     <div id="help" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeHelp()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: 25px; cursor: default; color: white">Help</h3>
+     <h2 style="color:white">
+     Your keyboard isn't detected? Try clicking on the game or app screen or pressing Tab.
+     <br>
+     <br>
+     Panic key not detected? Click outside the game or app screen and press the panic key. If it's fullscreen, exit and follow the same steps.
+     <br>
+     <br>
+     Game or app frozen or crashed? Press the reset button.
+     </h2>
+     </div>  
+     </div>
      </div>
       
      <!-- Games -->   
@@ -1058,7 +1142,7 @@
      <button onclick="openGame('https://dddavit.github.io/subway/')" class="button">Subway Surfers Saint Petersbrug</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r/slope/')" class="button">Slope</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r/slope-3/')" class="button">Slope 3</button>
-     <button onclick="openGame('https://cookieclickerfree.github.io/')" class="button">Cookie Clicker</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/cookie-clicker/')" class="button">Cookie Clicker</button>
      <button onclick="openGame('https://ubg365.github.io/drive-mad/play.html')" class="button">Drive Mad</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r/drift-boss')" class="button">Drift Boss</button>
      <button onclick="openGame('https://ubg365.github.io/bitlife-life-simulator/play.html')" class="button">BitLife</button>
@@ -1270,7 +1354,7 @@
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/physibox/index.html')" class="button">Physibox</button>
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/water-polo-ragdoll/index.html')" class="button">Water Polo Ragdoll</button>
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/level-devil/index.html')" class="button">Level Devil</button>
-     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/armed-forces-io/index.html')" class="button">ArmedForces io</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/armed-forces-io/index.html')" class="button">ArmedForces.io</button>
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/ks-2-teams/index.html')" class="button">KS 2 Teams</button>
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/super-tunnel-rush/index.html')" class="button">Super Tunnel Rush</button>
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/unicycle-legend/index.html')" class="button">Uncycle Legend</button>
@@ -1483,7 +1567,7 @@
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/ages-of-conflict/')" class="button">Ages of Conflict</button>
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/gold-digger-fr-vr/')" class="button">Gold Digger</button>
      <button onclick="openGame('https://obsidianig.com/games/redhanded/index.html')" class="button">Red Handed</button>
-     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/idle-breakout/')" class="button">Idle Breakout</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/stickman-hook-halloween/')" class="button">Stickman Hook Haloween</button>
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/underwater/')" class="button">Subway Surfers Underwater</button>
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/tokyo/')" class="button">Subway Surfers Tokyo</button>
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/seoul/')" class="button">Subway Surfers Seoul</button>
@@ -1637,30 +1721,7 @@
      </div>
      
      <div id="new-games" style="display: none">
-     <button onclick="openGame('https://ubg77.github.io/game131022/idle-dice/')" class="button">Idle Dice</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g177/class-340/')" class="button">Archer Master 3D</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g72/class-586/')" class="button">Idle Lumber Inc</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g77/class-830/')" class="button">Parkour Race</button>
-     <button onclick="openGame('https://obsidianig.com/games/mctowerdefence2/index.html')" class="button">Minecraft Tower Defence 2</button>
-     <button onclick="openGame('https://obsidianig.com/games/quickdraw/quickdraw.html')" class="button">QuickDraw-LITE</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g177/class-345/')" class="button">Fireboy and Watergirl 2</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g177/class-344/')" class="button">Fireboy and Watergirl 3</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g177/class-343/')" class="button">Fireboy and Watergirl 4</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g177/class-342/')" class="button">Fireboy and Watergirl 5</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g177/class-341/')" class="button">Fireboy and Watergirl 6</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g74/class-249/')" class="button">Ping Pong Chaos</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g6/class-144')" class="button">Farm Battles</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g8/class-101/')" class="button">Duck Life Battle</button>
-     <button onclick="openGame('https://burnedpopcorn.github.io/Jelly-Mario-Re-Upload/')" class="button">Jelly Mario</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g4/class-196/')" class="button">Trivia Crack</button>
-     <button onclick="openGame('https://gr4ys0n.github.io/public/assets/games/karlson/')" class="button">Karlson</button>
-     <button onclick="openGame('https://gr4ys0n.github.io/public/assets/games/chicken-merge-2/')" class="button">Chicken Merge 2</button>
-     <button onclick="openGame('https://gr4ys0n.github.io/public/assets/games/undertale')" class="button">Undertale</button>
-     <button onclick="openGame('https://mountain658.github.io/crossingthepit.html')" class="button">Crossing the Pit</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g72/class-631/')" class="button">Idle Ants</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g22/class-362/')" class="button">Catpad</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g22/class-396/')" class="button">Noob Hook</button>
-     <button onclick="openGame('https://baldis-basics-online.github.io/g77/class-57/')" class="button">Final Ninja</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 20px; cursor: default">No new games</h3>
      </div>
        
      <div id="more" style="display: none">
@@ -1677,8 +1738,13 @@
      <button class="button" onclick="showMore11()">Henry Stickmin Series</button>
      <button class="button" onclick="showMore12()">Bloons TD</button>
      <button class="button" onclick="showMore13()">Duck Life</button>
-     <button class="button" onclick="showMore14()">Fireboy And Watergirl</button>
+     <button class="button" onclick="showMore14()">Fireboy and Watergirl</button>
      <button class="button" onclick="showMore15()">Google Doodle</button>
+     <button class="button" onclick="showMore16()">Pac-Man</button>
+     <button class="button" onclick="showMore17()">Blumgi</button>
+     <button class="button" onclick="showMore18()">Idle</button>
+     <button class="button" onclick="showMore19()">Stickman</button>
+     <button class="button" onclick="showMore20()">Cars</button>
      </div>
        
      <div id="Mario" style="display: none">
@@ -1717,7 +1783,7 @@
      <button onclick="openGame('https://html.cafe/xdc34c380')" class="button">Ultimate Flash Sonic</button>
      </div>
        
-     <div id="Subway Surfers" style="display: none">
+     <div id="Subway-Surfers" style="display: none">
      <button onclick="openGame('https://roblox-unblock.github.io/r8/subway-surfers-monaco/')" class="button">Subway Surfers Monaco</button>
      <button onclick="openGame('https://dddavit.github.io/subway/')" class="button">Subway Surfers Saint Petersbrug</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r8/subway-surfers-newyork/')" class="button">Subway Surfers New York</button>
@@ -1731,7 +1797,7 @@
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/buenos-aires/')" class="button">Subway Surfers Buenos Aires</button>
      </div>
        
-     <div id="Papa's Games" style="display: none">
+     <div id="Papas-Games" style="display: none">
      <button onclick="openGame('https://obsidianig.com/games/papastacomia/')" class="button">Papa's Taco Mia</button>
      <button onclick="openGame('https://obsidianig.com/games/papaspastaria/')" class="button">Papa's Pastaria</button>
      <button onclick="openGame('https://obsidianig.com/games/papasbakeria/')" class="button">Papa's Bakeria</button>
@@ -1767,7 +1833,7 @@
      <button onclick="openGame('https://obsidianig.com/games/mctowerdefence2/index.html')" class="button">Minecraft Tower Defence 2</button>
      </div>    
        
-     <div id="Moto X3M" style="display: none">
+     <div id="Moto-X3M" style="display: none">
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/moto-x3m/')" class="button">Moto X3M</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r8/moto-x3m-2/')" class="button">Moto X3M 2</button>
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/motox3m-pool/')" class="button">Moto X3M Pool Party</button>
@@ -1794,7 +1860,7 @@
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/dadish-3d/index.html')" class="button">Dadish 3D</button>
      </div>    
        
-     <div id="Riddle School" style="display: none">
+     <div id="Riddle-School" style="display: none">
      <button onclick="openGame('https://obsidianig.com/games/riddleschool/riddleschool.html')" class="button">Riddle School</button>
      <button onclick="openGame('https://obsidianig.com/games/riddleschool2/riddleschool2.html')" class="button">Riddle School 2</button>
      <button onclick="openGame('https://obsidianig.com/games/riddleschool3/riddleschool3.html')" class="button">Riddle School 3</button>
@@ -1804,7 +1870,7 @@
      <button onclick="openGame('https://obsidianig.com/games/riddleschooltransfer2/riddleschooltransfer2.html')" class="button">Riddle Transfer 2</button>
      </div>    
        
-     <div id="Henry Stickmin Series" style="display: none">
+     <div id="Henry-Stickmin-Series" style="display: none">
      <button onclick="openGame('https://mountain658.github.io/crossingthepit.html')" class="button">Crossing the Pit</button>
      <button onclick="openGame('https://mountain658.github.io/zbreakingthebank.html')" class="button">Breaking the bank</button>
      <button onclick="openGame('https://mountain658.github.io/zescapetheprison.html')" class="button">Escaping the Prison</button>
@@ -1813,14 +1879,14 @@
      <button onclick="openGame('https://sz-games.github.io/games/Flash.html?game=https://sz-games.github.io/Games6/Henry%20Stickmin%20-%20Fleeing%20the%20Complex.swf?raw=true')" class="button">Fleeing the Complex</button>
      </div> 
      
-     <div id="Bloons TD" style="display: none">
+     <div id="Bloons-TD" style="display: none">
      <button onclick="openGame('https://obsidianig.com/games/bloonstd/bloonstd.html')" class="button">Bloons TD</button>
      <button onclick="openGame('https://obsidianig.com/games/btd2/index.html')" class="button">Bloons TD 2</button>
      <button onclick="openGame('https://obsidianig.com/games/btd3/index.html')" class="button">Bloons TD 3</button>
      <button onclick="openGame('https://obsidianig.com/games/btd4/index.html')" class="button">Bloons TD 4</button>
      </div> 
      
-     <div id="Duck Life" style="display: none">
+     <div id="Duck-Life" style="display: none">
      <button onclick="openGame('https://roblox-unblock.github.io/r/duck-life/')" class="button">Duck Life</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r/duck-life-2-world-champion/')" class="button">Duck Life 2</button>
      <button onclick="openGame('https://obsidianig.com/games/ducklife3/ducklife3.html')" class="button">Duck Life 3 Evolution</button>
@@ -1829,7 +1895,7 @@
      <button onclick="openGame('https://baldis-basics-online.github.io/g8/class-101/')" class="button">Duck Life Battle</button>
      </div> 
      
-     <div id="Fireboy And Watergirl" style="display: none">
+     <div id="Fireboy-and-Watergirl" style="display: none">
      <button onclick="openGame('https://roblox-unblock.github.io/r88/fireboy-and-water-girl/')" class="button">Fireboy And Watergirl</button>
      <button onclick="openGame('https://baldis-basics-online.github.io/g177/class-345/')" class="button">Fireboy and Watergirl 2</button>
      <button onclick="openGame('https://baldis-basics-online.github.io/g177/class-344/')" class="button">Fireboy and Watergirl 3</button>
@@ -1838,7 +1904,7 @@
      <button onclick="openGame('https://baldis-basics-online.github.io/g177/class-341/')" class="button">Fireboy and Watergirl 6</button>
      </div> 
      
-     <div id="Google Doodle" style="display: none">
+     <div id="Google-Doodle" style="display: none">
      <button onclick="openGame('https://macek.github.io/google_pacman/?tab=readme-ov-file')" class="button">Pac-Man Google</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r7/google-feud/')" class="button">Google Feud</button>
      <button onclick="openGame('https://roblox-unblock.github.io/r8/google-snake/')" class="button">Google Snake</button>
@@ -1847,6 +1913,90 @@
      <button onclick="openGame('https://htmlxm.github.io/h7/dinosaur-game/')" class="button">Chrome Dino</button>
      <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/angry-birds/')" class="button">Angry Birds Chrome</button>
      </div> 
+       
+     <div id="Pac-Man" style="display: none">
+     <button onclick="openGame('https://masonicgit.github.io/pacman/')" class="button">Pac-Man</button>
+     <button onclick="openGame('https://macek.github.io/google_pacman/?tab=readme-ov-file')" class="button">Pac-Man Google</button>
+     <button onclick="openGame('https://mathgames66.github.io/games/html5/pacman3d/')" class="button">Pac-Man 3D</button>
+     <button onclick="openGame('https://mathgames66.github.io/games/html5/pacmanfps/')" class="button">Pac-Man FPS</button>
+     </div> 
+       
+     <div id="Blumgi" style="display: none">
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/blumgi-racers/')" class="button">Blumgi Racers</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/blumgi-soccer/')" class="button">Blumgi Soccer</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/blumgi-dragon/')" class="button">Blumgi Dragon</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/blumgi-bloom/')" class="button">Blumgi Bloom</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/blumgi-ball/')" class="button">Blumgi Ball</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/blumgi-castle/')" class="button">Blumgi Castle</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/blumgi-rocket/')" class="button">Blumgi Rocket</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/blumgi-slime/')" class="button">Blumgi Slime</button>
+     </div>
+       
+     <div id="Idle" style="display: none">
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/cookie-clicker/')" class="button">Cookie Clicker</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/csgo-clicker/')" class="button">CSGOClicker</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r/tiny-fishing/')" class="button">Tiny Fishing</button>
+     <button onclick="openGame('https://mountain658.github.io/g/Trimps/index.html')" class="button">Trimps</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r7/idle-breakout/')" class="button">Idle Breakout</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/idle-mining-empire/index.html')" class="button">Idle Mining Empire</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/idle-startup-tycoon/index.html')" class="button">Idle Startup Tycoon</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/idle-farming-business/index.html')" class="button">Idle Farming Business</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/idle-gang/index.html')" class="button">Idle Gang</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/idle-light-city/index.html')" class="button">Idle Light City</button>
+     <button onclick="openGame('https://ubg77.github.io/game131022/idle-dice/')" class="button">Idle Dice</button>
+     <button onclick="openGame('https://baldis-basics-online.github.io/g72/class-631/')" class="button">Idle Ants</button>
+     </div>
+       
+     <div id="Stickman" style="display: none">
+     <button onclick="openGame('https://roblox-unblock.github.io/r/stickman-hook/')" class="button">Stickman Hook</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r6/stickman-bridge-constructor/')" class="button">Stickman Bridge Constructor</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r8/stickman-golf/')" class="button">Stickman Golf</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/stickman-bike/index.html')" class="button">Stickman Bike</button>
+     <button onclick="openGame('https://obsidianig.com/games/stickmanboost/')" class="button">Stickman Boost</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r/stickman-ragdoll-crash-fun/')" class="button">Stickman Ragdoll Crash Fun</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r6/stickman-climb-2/')" class="button">Stickman Climb 2</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/stickman-hook-halloween/')" class="button">Stickman Hook Haloween</button> 
+     <button onclick="openGame('https://obsidianig.com/games/fancypantsadventure/')" class="button">Fancy Pants Adventures: World 1</button>
+     <button onclick="openGame('https://obsidianig.com/games/fancypantsadventure2/')" class="button">Fancy Pants Adventures: World 2</button>
+     <button onclick="openGame('https://obsidianig.com/games/fancypantsadventure3/')" class="button">Fancy Pants Adventure: World 3</button>
+     <button onclick="openGame('https://mountain658.github.io/crossingthepit.html')" class="button">Crossing the Pit</button>
+     <button onclick="openGame('https://mountain658.github.io/zbreakingthebank.html')" class="button">Breaking the bank</button>
+     <button onclick="openGame('https://mountain658.github.io/zescapetheprison.html')" class="button">Escaping the Prison</button>
+     <button onclick="openGame('https://mountain658.github.io/zstealingthediamond.html')" class="button">Stealing the Diamond</button>
+     <button onclick="openGame('https://sz-games.github.io/games/Flash.html?game=/games/henry-airship/infiltratingtheairshipgame.swf')" class="button">Infiltrating the Airship</button>
+     <button onclick="openGame('https://sz-games.github.io/games/Flash.html?game=https://sz-games.github.io/Games6/Henry%20Stickmin%20-%20Fleeing%20the%20Complex.swf?raw=true')" class="button">Fleeing the Complex</button> 
+     <button onclick="openGame('https://obsidianig.com/games/vex/')" class="button">Vex</button>
+     <button onclick="openGame('https://obsidianig.com/games/vex2/')" class="button">Vex 2</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/vex-3/index.html')" class="button">Vex 3</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/vex-4/index.html')" class="button">Vex 4</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/vex-5/index.html')" class="button">Vex 5</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/vex-6/index.html')" class="button">Vex 6</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/vex-7/index.html')" class="button">Vex 7</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/vex-8/index.html')" class="button">Vex 8</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/vex-x3m/index.html')" class="button">Vex X3M</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/ovo/')" class="button">OvO</button>
+     <button onclick="openGame('https://mathgames66.github.io/games/html5/ovo2/')" class="button">OvO 2</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/ovo-dimensions/index.html')" class="button">OvO Dimensions</button>
+     </div>
+       
+     <div id="Cars" style="display: none">
+     <button onclick="openGame('https://roblox-unblock.github.io/r5/noob-drive/')" class="button">Noob Drive</button>
+     <button onclick="openGame('https://ubg365.github.io/drive-mad/play.html')" class="button">Drive Mad</button>
+     <button onclick="openGame('https://ubg365.github.io/hover-racer-drive/')" class="button">Hover Racer Drive</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r77/drive-mad/')" class="button">Drive Mad</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r7/adventure-drivers/')" class="button">Adventure Drivers</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r/eggy-car/')" class="button">Eggy Car</button>
+     <button onclick="openGame('https://ubg100.github.io/games/Madalin/index.html')" class="button">Madalin Stunt Cars 2</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r4/crazy-cars/')" class="button">Crazy Cars</button>
+     <button onclick="openGame('https://skyleite.github.io/Kart-Public-WASM/')" class="button">Sonic Robo Blast 2 Kart</button>
+     <button onclick="openGame('https://burnedpopcorn.github.io/SM-Kart-ZX-Web-Port/index.html')" class="button">Super Mario Kart ZX</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/blumgi-rocket/')" class="button">Blumgi Rocket</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r3/traffic-mania/')" class="button">Traffic Mania</button>
+     <button onclick="openGame('https://baldis-basics-online.github.io/g22/class-393/')" class="button">Traffic Rush!</button>
+     <button onclick="openGame('https://gaming-escape.github.io/public/assets/games/burnout-extreme-drift-2/index.html')" class="button">Burnout Extreme Drift 2</button>
+     <button onclick="openGame('https://obsidianig.com/games/drifthunters/')" class="button">Drift Hunters</button>
+     <button onclick="openGame('https://roblox-unblock.github.io/r/drift-boss')" class="button">Drift Boss</button>
+     </div>
      </div>
         
      <!-- Apps -->   
@@ -1877,12 +2027,12 @@
      <div id="proxy" style="display: none;">
      <div id="center">
      <h1><span>Links123</span> Proxy</h1>
-     <h3 style="margin-top: 36px; margin-bottom: 27px; font-weight: bold; font-size: 18px; font-family: Tahoma, sans-serif; cursor: pointer" >Note: Does not work with all websites, there will be some websites that will not show. When that happens you will have to refresh the page because it will stop working.</h3>
+     <h3 style="margin-top: 36px; margin-bottom: 27px; font-weight: bold; font-size: 18px; font-family: Tahoma, sans-serif; cursor: default" >Note: This does not work with every website, Only some websites work. </h3>
      <br>
      <input id="theUrl" type="text" name="search" placeholder="Enter Url" autocomplete="off">  
      <br>
      <br>
-     <button class="button-h" onclick="openTheUrl()">Open Url</button>
+     <button class="button-u" onclick="openTheUrl()">Open Url</button>
      </div>
      </div>
      
@@ -1892,23 +2042,23 @@
      <br>
      <br>
      <br>
-     <h3 style="color: #fff; cursor: default; font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: 15px;">Settings</h3>
+     <h3 style="color: #fff; cursor: default; font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: 15px">Settings</h3>
      <button id="button-tc" onclick="showTabCloaking()">Tab Cloaking</button>
      <button id="button-pk" onclick="showPanicKey()">Panic Key</button>
      <button id="button-t" onclick="showThemes()">Themes</button>
      </div>
        
      <div id="tab-cloaking" style="margin-left: 230px">
-     <h3 style="font-size: 80px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -17px; cursor: default;">Tab cloaking</h3>
+     <h3 style="font-size: 80px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -17px; cursor: default">Tab cloaking</h3>
      <br>
-     <button class="button-s" id="aboutBlank">Open in about:blank</button>
+     <button class="button-s" onclick="openInAboutBlank()">Open in about:blank</button>
      <button class="button-s" onclick="createBlobUrl()">Open in blob:</button>
      <br>
      <input type="text" id="tabName" placeholder="Enter new tab name" class="settings-i" autocomplete="off">
-     <button class="button-sc" onclick="changeTabName()">Apply</button>
+     <button class="button-a" onclick="changeTabName()">Apply</button>
      <br>
      <input type="text" id="tabIcon" placeholder="Enter new tab icon" class="settings-i" autocomplete="off">     
-     <button class="button-sc" onclick="changeTabIcon()">Apply</button>
+     <button class="button-a" onclick="changeTabIcon()">Apply</button>
      <br>
      <br>
      <button id="Links123" class="favicon"><img src="https://i.ibb.co/n8NkW22k/L.png" alt="Links123" title="Links123"></button>
@@ -1921,32 +2071,420 @@
      </div>
        
      <div id="panic-key" style="margin-left: 230px; display: none">  
-     <h3 style="font-size: 80px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -17px; cursor: default;">Panic Key</h3>
-     <h3 style="margin-top: 36px; font-weight: bold; font-size: 18px; font-family: Tahoma, sans-serif; cursor: pointer" >WARNING: Panic keys trigger whenever you click that key whenever you click it,</h2>
-     <h3 style="margin-top: -15px; margin-bottom: 10px; font-weight: bold; font-size: 18px; font-family: Tahoma, sans-serif; cursor: pointer" >including typing on this page, so set it to a key you don't click often.</h2>
+     <h3 style="font-size: 80px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -17px; cursor: default">Panic Key</h3>
+     <h3 style="margin-top: 36px; font-weight: bold; font-size: 18px; font-family: Tahoma, sans-serif; cursor: default" >WARNING: Panic keys trigger whenever you click that key whenever you click it,</h2>
+     <h3 style="margin-top: -15px; margin-bottom: 10px; font-weight: bold; font-size: 18px; font-family: Tahoma, sans-serif; cursor: default" >including typing on this page, so set it to a key you don't click often.</h2>
      <input type="text" id="panickey" class="settings-i" placeholder="Enter new panic key" autocomplete="off"></input>
-     <button onclick="setPanicKey()" class="button-sc">Apply</button>
+     <button onclick="setPanicKey()" class="button-a">Apply</button>
      <br>
      <input type="text" id="panicurl" class="settings-i" placeholder="Enter new panic url" autocomplete="off"></input>
-     <button onclick="setPanicUrl()" class="button-sc">Apply</button>
+     <button onclick="setPanicUrl()" class="button-a">Apply</button>
      <br>
-     <button onclick="detectPanic()" id="panickeybtn" class="button-h">Auto-detect panic key</button>
+     <button onclick="detectPanic()" id="panickeybtn" class="button-u">Auto-detect panic key</button>
      </div> 
        
      <div id="themes" style="margin-left: 230px; display: none">
-     <h3 style="font-size: 80px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -10px; cursor: default;">Themes</h3>
+     <h3 style="font-size: 80px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -10px; cursor: default">Themes</h3>
      <button id="button-dm" onclick="darkMode()">Dark Mode</button>
      <button id="button-wm" onclick="whiteMode()">White Mode</button>
      <br>
-     <button id="button-bt" onclick="betaStyle()">Beta Style</button>
-     <button id="button-v2t" onclick="V2Style()">V2.3 Style</button>
+     <button id="button-bs" onclick="betaStyle()">Beta Style</button>
+     <button id="button-v2s" onclick="V2Style()">V2.3 Style</button>
      </div>   
      </div> 
        
-     <!-- Changelogs --> 
+     <!-- Changelog --> 
      <div id="changelog" style="display: none;">
-     <h3 style="font-size: 36px; font-family: Tahoma, sans-serif; cursor: default;">Version 3.4.3 Changelog 5/17/25</h3>
-     <h2>
+     <h3 style="position: absolute; left: 50%; top: 16%; transform: translate(-50%, -50%); margin: 0; font-size: 40px; font-family: Tahoma, sans-serif; cursor: default">Release Changelogs</h3>
+     <div id="changes-container">
+     <button onclick="change26()" class="button-ch">3.4.4</button> 
+     <button onclick="change25()" class="button-ch">3.4.3</button> 
+     <button onclick="change24()" class="button-ch">3.4.2</button> 
+     <button onclick="change23()" class="button-ch">3.4.1</button> 
+     <button onclick="change22()" class="button-ch">3.4.0</button> 
+     <button onclick="change21()" class="button-ch">3.3.0</button> 
+     <button onclick="change20()" class="button-ch">3.2.1</button> 
+     <button onclick="change19()" class="button-ch">3.2.0</button>
+     <button onclick="change18()" class="button-ch">3.1.9</button> 
+     <button onclick="change17()" class="button-ch">3.1.8</button> 
+     <button onclick="change16()" class="button-ch">3.1.7</button> 
+     <button onclick="change15()" class="button-ch">3.1.6</button> 
+     <button onclick="change14()" class="button-ch">3.1.5</button>
+     <button onclick="change13()" class="button-ch">3.1.4</button>
+     <button onclick="change12()" class="button-ch">3.1.3</button>
+     <button onclick="change11()" class="button-ch">3.1.2</button> 
+     <button onclick="change10()" class="button-ch">3.1.1</button> 
+     <button onclick="change9()" class="button-ch">3.1.0</button> 
+     <button onclick="change8()" class="button-ch">3.0.7</button>
+     <button onclick="change7()" class="button-ch">3.0.6</button> 
+     <button onclick="change6()" class="button-ch">3.0.5</button> 
+     <button onclick="change5()" class="button-ch">3.0.4</button> 
+     <button onclick="change4()" class="button-ch">3.0.3</button> 
+     <button onclick="change3()" class="button-ch">3.0.2</button> 
+     <button onclick="change2()" class="button-ch">3.0.1</button> 
+     <button onclick="change1()" class="button-ch">3.0.0</button> 
+     </div>
+     </div>
+
+     <div id="change1" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.0.0</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">12/26/2024</h3>
+     <h2 style="color:white">
+     A new interface, new games and emulators are now in the apps. I will bring improvements soon.
+     </h2>
+     </div> 
+     </div>
+     </div>
+       
+     <div id="change2" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.0.1</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">1/3/2025</h3>
+     <h2 style="color:white">
+     5 games and changes were added to the page.
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change3" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.0.2</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">1/5/2025</h3>
+     <h2 style="color:white">
+     5 new games, Some non-working apps have been changed and changes to the page.
+     </h2>
+     </div>  
+     </div>
+     </div>
+     
+     <div id="change4" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.0.3</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">1/7/2025</h3>
+     <h2 style="color:white">
+     5 new games, Some non-working games have been changed.
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change5" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.0.4</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">1/13/2025</h3>
+     <h2 style="color:white">
+     5 new games, 3 new apps. Apps that weren't working were changed.
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change6" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.0.5</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">1/15/2025</h3>
+     <h2 style="color:white">
+     20 games, changes to the page, some useless apps were removed.
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change7" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.0.6</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">1/28/2025</h3>
+     <h2 style="color:white">
+     Now if you want to see what's new in each update click on Version 3.X.X, 15 new games.
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change8" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.0.7</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">2/1/2025</h3>
+     <h2 style="color:white">
+     10 New Games and 4 New Apps.
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change9" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.1.0</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">2/3/2025</h3>
+     <h2 style="color:white">
+     Version 3.1.0 is here!
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change10" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.1.1</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">2/4/2025</h3>
+     <h2 style="color:white">
+     19 New Games, 1 New App and Now when you restart or exit you will get a warning if you want to restart or exit the tab.
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change11" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.1.2</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">2/8/2025</h3>
+     <h2 style="color:white">
+     20 new games, A search bar has been added so you can search for games or apps faster.
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change12" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.1.3</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">2/9/2025</h3>
+     <h2 style="color:white">
+     20 new games and visual improvements on the page.
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change13" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.1.4</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">2/10/2025</h3>
+     <h2 style="color:white">
+     20 new games, about:blank button added and Tab Cloak button added
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change14" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.1.5</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">2/16/2025</h3>
+     <h2 style="color:white">
+     20 new games!
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change15" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.1.6</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">2/23/2025</h3>
+     <h2 style="color:white">
+     20 new games!
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change16" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.1.7</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">2/25/2025</h3>
+     <h2 style="color:white">
+     20 new games!
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change17" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.1.8</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">3/3/2025</h3>
+     <h2 style="color:white">
+     20 new games!
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change18" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.1.9</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">3/5/2025</h3>
+     <h2 style="color:white">
+     20 new games, 3 new apps, GitHub and Settings button added.
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change19" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.2.0</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">3/16/2025</h3>
+     <h2 style="color:white">
+     20 new games, some games that wouldn't load have been replaced, more features have been added to the settings and the interface has been improved, a Changelog has been created to record the changes made with each new update, you can now generate a new random message by clicking on the message and an image can appear in the messages.
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change20" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.2.1</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">3/23/2025</h3>
+     <h2 style="color:white">
+     20 new games, hover animations, the close button has been redesigned, Added blob: cloak, docs and slides tab cloak. Now each tab cloak is saved, so it remains intact whether you refresh or close the tab.
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change21" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.3.0</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">3/30/2025</h3>
+     <h2 style="color:white">
+     0 games?!?!!?, back button added in games and apps.
+     </h2>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">4/1/2025</h3>
+     <h2 style="color:white">
+     April fools Update!
+     </h2>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">4/13/2025</h3>
+     <h2 style="color:white">
+     Added 1 Game (Final Earth 2), and fixed up spelling issues.
+     </h2>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">4/15/2025</h3>
+     <h2 style="color:white">
+     Fixing bugs!
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change22" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.4.0</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">4/19/2025</h3>
+     <h2 style="color:white">
+     <li>22 new games</li>
+     <br>
+     <li>A navigation bar has been added</li>
+     <br>
+     <li>New interface in settings</li>
+     <br>
+     <li>Added Themes in settings (More will be added in upcoming updates.)</li>
+     <br>
+     <li>Credits button added</li>
+     <br>
+     <li>Categories were added to the games section (More will be added in upcoming updates.)</li>
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change23" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.4.1</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">5/2/2025</h3>
+     <h2 style="color:white">
+     <li>21 new games</li>
+     <br>
+     <li>Themes are now saved in localstorage</li>
+     <br>
+     <li>2 new themes</li>
+     <br>
+     <li>5 new categories (More will be added in upcoming updates.)</li>
+     <br>
+     <li>Interstellar has been removed</li>
+     <br>
+     <li>Windows 96 moved to Apps</li>
+     <br>
+     <li>More games have been added in Popular Games</li>
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change24" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.4.2</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">5/7/2025</h3>
+     <h2 style="color:white">
+     <li>0 new games!</li>
+     <br>
+     <li>Proxy added</li>
+     <br>
+     <li>5 new categories (More will be added in upcoming updates.)</li>
+     <br>
+     <li>Fixed a bug that caused the games section to open when Windows 96 was closed and not the apps section.</li>
+     </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change25" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.4.3</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">5/17/2025</h3>
+     <h2 style="color:white">
      <li>Added hover animation to buttons that didn't have it.</li>
      <br>
      <li>Name changes to some buttons</li>
@@ -1969,22 +2507,60 @@
      <br>
      <li>5 new categories</li>
      </h2>
+     </div>  
+     </div>
+     </div>
+       
+     <div id="change26" style="display: none">
+     <div id="blur-background">
+     <div id="black-box">
+     <button class="button-x" onclick="closeChange()">×</button>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-bottom: -20px cursor: default; color: white">Update 3.4.4</h3>
+     <h3 style="font-size: 35px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 10px; margin-bottom: -20px cursor: default; color: white">5/26/2025</h3>
+     <h2 style="color:white">
+     <li>5 new categories</li>
+     <br>
+     <li>Added reset button</li>
+     <br>
+     <li>Added an error message when a game, app, or proxy fails</li>
+     <br>
+     <li>Added a help button</li>
+     <br>
+     <li>Now changelog stores all changelogs for each version of Links123</li>
+     <br>
+     <li>Now Beta style and V2.3 style change the color of navbar, sidebar and more</li>
+     <br>
+     <li>Added a color to the buttons and background of Beta Style and V2.3 Style when images do not load correctly</li>
+     <br>
+     <li>Added and changed the credits text</li>
+     <br>
+     <li>Proxy text changed</li>
+     <br>
+     <li>Fixed a visual bug that caused the cursor to remain pointing at the panic key warning text</li>
+     <br>
+     <li>Fixed a visual bug that incorrectly displayed the Fireboy and WaterGirl category name</li>
+     </h2>
+     </div>  
+     </div>
      </div>
        
      <!-- Credits -->
      <div id="credits" style="display: none">
      <div id="blur-background">
      <div id="black-box">
-     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; margin-top: 20px; cursor: default; color: white">Credits</h3>
      <button class="button-x" onclick="closeCredits()">×</button>
-     <h2>
-     <li style="color:white">Made by RicardoMarioSonic123</li>
+     <h3 style="font-size: 50px; font-family: Tahoma, sans-serif; margin: 0; cursor: default; color: white">Credits</h3>
+     <h2 style="color:white">
+     Made by RicardoMarioSonic123
      <br>
-     <li style="color:white">Credits to all creators of the games/apps included on this site</li>
      <br>
-     <li style="color:white">Credits to Chattyice234 on Github, for the ChattyWebsite code that I used as a template to make mine! And also for some ideas taken from Rubber Games</li>
+     <li>Credits to all creators of the games and apps included on this site</li>
      <br>
-     <li style="color:white">Credits to Akpo12345 on Github, for helping me, give me games/apps and giving me suggestions for new features</li>
+     <li>Special thanks to Chattyice234 on Github for the ChattyWebsite code I used as a template to create mine. And also for some ideas from Rubber Games.</li>
+     <br>
+     <li>Special thanks to Akpo12345 on Github for helping me, providing games and apps, and giving me suggestions for new features.</li>
+     <br>
+     Thanks to you too for using Links123
      </h2>
      </div>  
      </div>
@@ -1993,511 +2569,289 @@
    <script>     
      // Home
      function openHome() {
-     document.getElementById("home").style.display = "block";
-     document.getElementById("games").style.display = "none";
-     document.getElementById("apps").style.display = "none";
-     document.getElementById("proxy").style.display = "none";
-     document.getElementById("settings").style.display = "none";
-     document.getElementById("changelog").style.display = "none";
-     document.querySelector('#button-h').style.backgroundColor = "#335fff"
-     document.querySelector('#button-g').style.backgroundColor = "transparent"
-     document.querySelector('#button-a').style.backgroundColor = "transparent"
-     document.querySelector('#button-p').style.backgroundColor = "transparent"
-     document.querySelector('#button-s').style.backgroundColor = "transparent"
-     document.querySelector('#button-cl').style.backgroundColor = "transparent"
+     document.querySelector('#home').style.display = "block";
+     var display =  document.querySelectorAll('#games, #apps, #proxy, #settings, #changelog');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
+     document.querySelector('#button-h').style.backgroundColor = "#335fff";
+     var button =  document.querySelectorAll('#button-g, #button-a, #button-p, #button-s, #button-cl');
+     button.forEach((color) => {
+     color.style.backgroundColor = "transparent";
+     });
      }
      
      // Games
      function openGames() {
-     document.getElementById("home").style.display = "none";
-     document.getElementById("games").style.display = "block";
-     document.getElementById("apps").style.display = "none";
-     document.getElementById("proxy").style.display = "none";
-     document.getElementById("settings").style.display = "none";
-     document.getElementById("changelog").style.display = "none";
-     document.querySelector('#button-h').style.backgroundColor = "transparent"
-     document.querySelector('#button-g').style.backgroundColor = "#335fff"
-     document.querySelector('#button-a').style.backgroundColor = "transparent"
-     document.querySelector('#button-p').style.backgroundColor = "transparent"
-     document.querySelector('#button-s').style.backgroundColor = "transparent"
-     document.querySelector('#button-cl').style.backgroundColor = "transparent"
+     document.querySelector('#games').style.display = "block";
+     var display =  document.querySelectorAll('#home, #apps, #proxy, #settings, #changelog');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
+     document.querySelector('#button-g').style.backgroundColor = "#335fff";
+     var button =  document.querySelectorAll('#button-h, #button-a, #button-p, #button-s, #button-cl');
+     button.forEach((color) => {
+     color.style.backgroundColor = "transparent";
+     });
      }
      
      // All Games
      function showAllGames() {
-     document.getElementById("all-games").style.display = "block";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "none";
+     document.querySelector('#all-games').style.display = "block";
+     var display =  document.querySelectorAll('#popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "All Games"
      }
      
      // Popular Games
      function showPopularGames() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "block";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "none";
+     document.querySelector('#popular-games').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "Popular Games"
      }
      
      // New games
      function showNewGames() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "block";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "none";
+     document.querySelector('#new-games').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "New Games"
      }
      
      // More
      function showMore() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "block";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "none";
+     document.querySelector('#more').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "More"
      }
      
      // Mario
      function showMore1() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "block";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "none";
+     document.querySelector('#Mario').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "Mario"
      }
      
      // Sonic
      function showMore2() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "block";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "none";
+     document.querySelector('#Sonic').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "Sonic"
      }
      
      // Subway Surfers
      function showMore3() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "block";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "none";
+     document.querySelector('#Subway-Surfers').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "Subway Surfers"
      }
      
      // Papa's Games
      function showMore4() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "block";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "none";
+     document.querySelector('#Papas-Games').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "Papa's Games"
      }
      
      // FNAF
      function showMore5() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "block";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "none";
+     document.querySelector('#FNAF').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "FNAF"
      }
      
      // Minecraft
      function showMore6() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "block";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "none";
+     document.querySelector('#Minecraft').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "Minecraft"
      }
      
      // Moto X3M
      function showMore7() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "block";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "none";
+     document.querySelector('#Moto-X3M').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "Moto X3M"
      }
      
      // Vex
      function showMore8() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "block";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "none";
+     document.querySelector('#Vex').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "Vex"
      }
      
      // Dadish
      function showMore9() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "block";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "none";
+     document.querySelector('#Dadish').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "Dadish"
      }
 
      // Riddle School
      function showMore10() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "block";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "none";
+     document.querySelector('#Riddle-School').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "Riddle School"
      }
      
      // Henry Stickmin Series
      function showMore11() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "block";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "none";
+     document.querySelector('#Henry-Stickmin-Series').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "Henry Stickmin Series"
      }
      
      // Bloons TD
      function showMore12() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "block";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "none";
+     document.querySelector('#Bloons-TD').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "Bloons TD"
      }
      
-     // Fireboy and Watergirl
+     // Duck Life
      function showMore13() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "block";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "none";
+     document.querySelector('#Duck-Life').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "Duck Life"
      }
      
-     // Duck Life
+     // Fireboy and Watergirl
      function showMore14() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "block";
-     document.getElementById("Google Doodle").style.display = "none";
-     document.querySelector('.button-c').innerHTML = "Cut the Rope"
+     document.querySelector('#Fireboy-and-Watergirl').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
+     document.querySelector('.button-c').innerHTML = "Fireboy and Watergirl"
      }
      
      // Google Doodle
      function showMore15() {
-     document.getElementById("all-games").style.display = "none";
-     document.getElementById("popular-games").style.display = "none";
-     document.getElementById("new-games").style.display = "none";
-     document.getElementById("more").style.display = "none";
-     document.getElementById("Mario").style.display = "none";
-     document.getElementById("Sonic").style.display = "none";
-     document.getElementById("Subway Surfers").style.display = "none";
-     document.getElementById("Papa's Games").style.display = "none";
-     document.getElementById("FNAF").style.display = "none";
-     document.getElementById("Minecraft").style.display = "none";
-     document.getElementById("Moto X3M").style.display = "none";
-     document.getElementById("Vex").style.display = "none";
-     document.getElementById("Dadish").style.display = "none";
-     document.getElementById("Riddle School").style.display = "none";
-     document.getElementById("Henry Stickmin Series").style.display = "none";
-     document.getElementById("Bloons TD").style.display = "none";
-     document.getElementById("Duck Life").style.display = "none";
-     document.getElementById("Fireboy And Watergirl").style.display = "none";
-     document.getElementById("Google Doodle").style.display = "block";
+     document.querySelector('#Google-Doodle').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Pac-Man, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
      document.querySelector('.button-c').innerHTML = "Google Doodle"
      }
      
+     // Pac-Man
+     function showMore16() {
+     document.querySelector('#Pac-Man').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Blumgi, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
+     document.querySelector('.button-c').innerHTML = "Pac-Man"
+     }
+     
+     // Blumgi
+     function showMore17() {
+     document.querySelector('#Blumgi').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Idle, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
+     document.querySelector('.button-c').innerHTML = "Blumgi"
+     }
+     
+     // Idle
+     function showMore18() {
+     document.querySelector('#Idle').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Stickman, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
+     document.querySelector('.button-c').innerHTML = "Idle"
+     }
+     
+     // Stickman
+     function showMore19() {
+     document.querySelector('#Stickman').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Cars');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
+     document.querySelector('.button-c').innerHTML = "Stickman"
+     }
+     
+     // Cars
+     function showMore20() {
+     document.querySelector('#Cars').style.display = "block";
+     var display =  document.querySelectorAll('#all-games, #popular-games, #new-games, #more, #Mario, #Sonic, #Subway-Surfers, #Papas-Games, #FNAF, #Minecraft, #Moto-X3M, #Vex, #Dadish, #Riddle-School, #Henry-Stickmin-Series, #Bloons-TD, #Duck-Life, #Fireboy-and-Watergirl, #Google-Doodle, #Pac-Man, #Blumgi, #Idle, #Stickman');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
+     document.querySelector('.button-c').innerHTML = "Cars"
+     }
+
      // Apps
      function openApps() {
-     document.getElementById("home").style.display = "none";
-     document.getElementById("games").style.display = "none";
-     document.getElementById("apps").style.display = "block";
-     document.getElementById("proxy").style.display = "none";
-     document.getElementById("settings").style.display = "none";
-     document.getElementById("changelog").style.display = "none";
-     document.querySelector('#button-h').style.backgroundColor = "transparent"
-     document.querySelector('#button-g').style.backgroundColor = "transparent"
-     document.querySelector('#button-a').style.backgroundColor = "#335fff"
-     document.querySelector('#button-p').style.backgroundColor = "transparent"
-     document.querySelector('#button-s').style.backgroundColor = "transparent"
-     document.querySelector('#button-cl').style.backgroundColor = "transparent"
+     document.querySelector('#apps').style.display = "block";
+     var display =  document.querySelectorAll('#home, #games, #proxy, #settings, #changelog');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
+     document.querySelector('#button-a').style.backgroundColor = "#335fff";
+     var button =  document.querySelectorAll('#button-h, #button-g, #button-p, #button-s, #button-cl');
+     button.forEach((color) => {
+     color.style.backgroundColor = "transparent";
+     });
      }
         
      // Search Bar for Games
      function search_button_g() {
-	 let input = document.getElementById('searchBar-g').value
+	 let input = document.querySelector('#searchBar-g').value
 	 input=input.toLowerCase();
 	 let x = document.getElementsByClassName('button');
 	 for (i = 0; i < x.length; i++) {
@@ -2512,7 +2866,7 @@
                               
      // Search Bar for Apps
      function search_button_a() {
-	 let input = document.getElementById('searchBar-a').value
+	 let input = document.querySelector('#searchBar-a').value
 	 input=input.toLowerCase();
 	 let x = document.getElementsByClassName('button2');
 	 for (i = 0; i < x.length; i++) {
@@ -2526,7 +2880,7 @@
      }    
      
      function showCategories() {
-     document.getElementById("show-categories").classList.toggle("show");
+     document.querySelector('#show-categories').classList.toggle("show");
      }
 
      window.onclick = function(event) {
@@ -2544,90 +2898,219 @@
                                        
      // Proxy
      function openProxy() {
-     document.getElementById("home").style.display = "none";
-     document.getElementById("games").style.display = "none";
-     document.getElementById("apps").style.display = "none";
-     document.getElementById("proxy").style.display = "block";
-     document.getElementById("settings").style.display = "none";
-     document.getElementById("changelog").style.display = "none";
-     document.querySelector('#button-h').style.backgroundColor = "transparent"
-     document.querySelector('#button-g').style.backgroundColor = "transparent"
-     document.querySelector('#button-a').style.backgroundColor = "transparent"
-     document.querySelector('#button-p').style.backgroundColor = "#335fff"
-     document.querySelector('#button-s').style.backgroundColor = "transparent"
-     document.querySelector('#button-cl').style.backgroundColor = "transparent"
+     document.querySelector('#proxy').style.display = "block";                                  
+     var display =  document.querySelectorAll('#home, #games, #apps, #settings, #changelog');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
+     document.querySelector('#button-p').style.backgroundColor = "#335fff";
+     var button =  document.querySelectorAll('#button-h, #button-g, #button-a, #button-s, #button-cl');
+     button.forEach((color) => {
+     color.style.backgroundColor = "transparent";
+     });
      }
                               
      // Settings
      function openSettings() {
-     document.getElementById("home").style.display = "none";
-     document.getElementById("games").style.display = "none";
-     document.getElementById("apps").style.display = "none";
-     document.getElementById("proxy").style.display = "none";
-     document.getElementById("settings").style.display = "block";
-     document.getElementById("changelog").style.display = "none";
-     document.querySelector('#button-h').style.backgroundColor = "transparent"
-     document.querySelector('#button-g').style.backgroundColor = "transparent"
-     document.querySelector('#button-a').style.backgroundColor = "transparent"
-     document.querySelector('#button-p').style.backgroundColor = "transparent"
-     document.querySelector('#button-s').style.backgroundColor = "#335fff"
-     document.querySelector('#button-cl').style.backgroundColor = "transparent"
+     document.querySelector('#settings').style.display = "block";
+     var display =  document.querySelectorAll('#home, #games, #apps, #proxy, #changelog');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
+     document.querySelector('#button-s').style.backgroundColor = "#335fff";
+     var button =  document.querySelectorAll('#button-h, #button-g, #button-a, #button-p, #button-cl');
+     button.forEach((color) => {
+     color.style.backgroundColor = "transparent";
+     });
      }
      
      // Tab Cloaking
      function showTabCloaking() {
-     document.getElementById("tab-cloaking").style.display = "block";
-     document.getElementById("panic-key").style.display = "none";                                  
-     document.getElementById("themes").style.display = "none";
-     document.querySelector('#button-tc').style.backgroundColor = "#335fff"
-     document.querySelector('#button-pk').style.backgroundColor = "transparent"
-     document.querySelector('#button-t').style.backgroundColor = "transparent"
+     document.querySelector('#tab-cloaking').style.display = "block";
+     var display =  document.querySelectorAll('#panic-key, #themes');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
+     document.querySelector('#button-tc').style.backgroundColor = "#335fff";
+     var button =  document.querySelectorAll('#button-pk, #button-t');
+     button.forEach((color) => {
+     color.style.backgroundColor = "transparent";
+     });
      }
              
      // Panic Key                        
      function showPanicKey() {
-     document.getElementById("tab-cloaking").style.display = "none";                                  
-     document.getElementById("panic-key").style.display = "block";
-     document.getElementById("themes").style.display = "none";
-     document.querySelector('#button-tc').style.backgroundColor = "transparent"
-     document.querySelector('#button-pk').style.backgroundColor = "#335fff"
-     document.querySelector('#button-t').style.backgroundColor = "transparent"
+     document.querySelector('#panic-key').style.display = "block";
+     var display =  document.querySelectorAll('#tab-cloaking, #themes');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
+     document.querySelector('#button-pk').style.backgroundColor = "#335fff";
+     var button =  document.querySelectorAll('#button-tc, #button-t');
+     button.forEach((color) => {
+     color.style.backgroundColor = "transparent";
+     });
      }                                  
      
      // Themes
      function showThemes() {
-     document.getElementById("tab-cloaking").style.display = "none";
-     document.getElementById("panic-key").style.display = "none";                                  
-     document.getElementById("themes").style.display = "block";
-     document.querySelector('#button-tc').style.backgroundColor = "transparent"
-     document.querySelector('#button-pk').style.backgroundColor = "transparent"                                  
-     document.querySelector('#button-t').style.backgroundColor = "#335fff"
+     document.querySelector('#themes').style.display = "block";
+     var display =  document.querySelectorAll('#tab-cloaking, #panic-key');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
+     document.querySelector('#button-t').style.backgroundColor = "#335fff";
+     var button =  document.querySelectorAll('#button-tc, #button-pk');
+     button.forEach((color) => {
+     color.style.backgroundColor = "transparent";
+     });
      }
                                        
      // Changelog
      function openChangelog() {
-     document.getElementById("home").style.display = "none";
-     document.getElementById("games").style.display = "none";
-     document.getElementById("apps").style.display = "none";
-     document.getElementById("proxy").style.display = "none";
-     document.getElementById("settings").style.display = "none";
-     document.getElementById("changelog").style.display = "block";
-     document.querySelector('#button-h').style.backgroundColor = "transparent"
-     document.querySelector('#button-g').style.backgroundColor = "transparent"
-     document.querySelector('#button-a').style.backgroundColor = "transparent"
-     document.querySelector('#button-p').style.backgroundColor = "transparent"
-     document.querySelector('#button-s').style.backgroundColor = "transparent"
-     document.querySelector('#button-cl').style.backgroundColor = "#335fff"
+     document.querySelector('#changelog').style.display = "block";
+     var display =  document.querySelectorAll('#home, #games, #apps, #proxy, #settings');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });
+     document.querySelector('#button-cl').style.backgroundColor = "#335fff";
+     var button =  document.querySelectorAll('#button-h, #button-g, #button-a, #button-p, #button-s');
+     button.forEach((color) => {
+     color.style.backgroundColor = "transparent";
+     });
      }
+                                       
+     // Open Change
+     function change1() {
+     document.querySelector('#change1').style.display = "block";
+     }       
+                                       
+     function change2() {
+     document.querySelector('#change2').style.display = "block";
+     }          
+                                       
+     function change3() {
+     document.querySelector('#change3').style.display = "block";
+     }    
+                                       
+     function change4() {
+     document.querySelector('#change4').style.display = "block";
+     }       
+                                       
+     function change5() {
+     document.querySelector('#change5').style.display = "block";
+     }          
+                                       
+     function change6() {
+     document.querySelector('#change6').style.display = "block";
+     }       
+                                       
+     function change7() {
+     document.querySelector('#change7').style.display = "block";
+     }       
+                                       
+     function change8() {
+     document.querySelector('#change8').style.display = "block";
+     }       
+                                       
+     function change9() {
+     document.querySelector('#change9').style.display = "block";
+     }        
+                                       
+     function change10() {
+     document.querySelector('#change10').style.display = "block";
+     }    
+                                       
+     function change11() {
+     document.querySelector('#change11').style.display = "block";
+     }      
+                                       
+     function change12() {
+     document.querySelector('#change12').style.display = "block";
+     }    
+                                       
+     function change13() {
+     document.querySelector('#change13').style.display = "block";
+     }    
+                                       
+     function change14() {
+     document.querySelector('#change14').style.display = "block";
+     }      
+                                       
+     function change15() {
+     document.querySelector('#change15').style.display = "block";
+     }   
+                                       
+     function change16() {
+     document.querySelector('#change16').style.display = "block";
+     }  
+                                       
+     function change17() {
+     document.querySelector('#change17').style.display = "block";
+     }    
+                                       
+     function change18() {
+     document.querySelector('#change18').style.display = "block";
+     }       
+                                       
+     function change19() {
+     document.querySelector('#change19').style.display = "block";
+     } 
+                                       
+     function change20() {
+     document.querySelector('#change20').style.display = "block";
+     }     
+                                       
+     function change21() {
+     document.querySelector('#change21').style.display = "block";
+     }    
+                                       
+     function change22() {
+     document.querySelector('#change22').style.display = "block";
+     }    
+                                       
+     function change23() {
+     document.querySelector('#change23').style.display = "block";
+     }  
+                                       
+     function change24() {
+     document.querySelector('#change24').style.display = "block";
+     }   
+                                       
+     function change25() {
+     document.querySelector('#change25').style.display = "block";
+     }       
+                                       
+     function change26() {
+     document.querySelector('#change26').style.display = "block";
+     }     
+                                       
+     // Close Change
+     function closeChange() {
+     var display =  document.querySelectorAll('#change1, #change2, #change3, #change4, #change5, #change6, #change7, #change8, #change9, #change10, #change11, #change12, #change13, #change14, #change15, #change16, #change17, #change18, #change19, #change20, #change21, #change22, #change23, #change24, #change25, #change26');
+     display.forEach((none) => {
+     none.style.display = "none";
+     });                                
+     }
+                                       
+     // Open Help
+     function openHelp() {
+     document.querySelector('#help').style.display = "block";
+     }                                    
      
+     // Close Help
+     function closeHelp() {
+     document.querySelector('#help').style.display = "none";
+     }                                  
+                                       
      // Credits
      function openCredits() {
-     document.getElementById("credits").style.display = "block";
+     document.querySelector('#credits').style.display = "block";
      }
       
      // Close Credits
      function closeCredits() {
-     document.getElementById("credits").style.display = "none";
+     document.querySelector('#credits').style.display = "none";
      }
      
      // Download Links123 Offline
@@ -2646,11 +3129,10 @@
      }                                 
                                        
      // Open in about:blank
-     document.getElementById("aboutBlank").onclick = function() {
+     function openInAboutBlank() {
      var win = window.open('');
      win.document.open();
      win.document.write(document.documentElement.outerHTML);
-     win.document.title = "about:blank";
      win.document.close();
      window.parent.window.location.replace('https://classroom.google.com/')
      }
@@ -2666,6 +3148,7 @@
      newTab.document.write('<!DOCTYPE html><html><head><title>Page Content</title></head><body></body></html>');
      newTab.document.close();
      newTab.location.href = blobUrl;
+     window.parent.window.location.replace('https://classroom.google.com/')
      }                                
                                        
      // Save tab name to localStorage
@@ -2806,8 +3289,12 @@
      // The 4 themes you can choose from
      function darkMode() {
      document.body.classList.remove('white-mode');
+     var favicon = document.querySelectorAll('.favicon img');
+     favicon.forEach((button) => {
+     button.classList.remove('favicon-w');
+     });
      document.body.classList.remove('beta-style');
-     var oldButton = document.querySelectorAll('.button, .button2, .button-h, .button-s, .button-sc');
+     var oldButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
      oldButton.forEach((button) => {
      button.classList.remove('old-button');
      });
@@ -2815,22 +3302,50 @@
      oldInput.forEach((input) => {
      input.classList.remove('old-input');
      });
+     var betaButton = document.querySelectorAll('.button-c');
+     betaButton.forEach((button) => {
+     button.classList.remove('beta-button');
+     });
+     var betaButton2 = document.querySelectorAll('.categories-content button, favicon');
+     betaButton2.forEach((button) => {
+     button.classList.remove('beta-button2');
+     });
+     var betaColor = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
+     betaColor.forEach((color) => {
+     color.classList.remove('beta-color');
+     });
      document.body.classList.remove('V2-style');
-     var oldButton2 = document.querySelectorAll('.button, .button2, .button-h, .button-s, .button-sc');
+     var oldButton2 = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
      oldButton2.forEach((button) => {
      button.classList.remove('old-button2');
      });
      var oldInput2 = document.querySelectorAll('#searchBar-g, #searchBar-a, .settings-i, #theUrl');
      oldInput2.forEach((input2) => {
      input2.classList.remove('old-input2');
+     });
+     var v2Button = document.querySelectorAll('.button-c');
+     v2Button.forEach((button) => {
+     button.classList.remove('V2-button');
+     });
+     var v2Button2 = document.querySelectorAll('.categories-content button');
+     v2Button2.forEach((button) => {
+     button.classList.remove('V2-button2');
+     });
+     var v2Color = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
+     v2Color.forEach((color) => {
+     color.classList.remove('V2-color');
      });
      localStorage.setItem('theme', 'dark');
      }
      
      function whiteMode() {
      document.body.classList.add('white-mode');
+     var favicon = document.querySelectorAll('.favicon img');
+     favicon.forEach((button) => {
+     button.classList.remove('favicon-w');
+     });
      document.body.classList.remove('beta-style');
-     var oldButton = document.querySelectorAll('.button, .button2, .button-h, .button-s, .button-sc');
+     var oldButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
      oldButton.forEach((button) => {
      button.classList.remove('old-button');
      });
@@ -2838,8 +3353,20 @@
      oldInput.forEach((input) => {
      input.classList.remove('old-input');
      });
+     var betaButton = document.querySelectorAll('.button-c');
+     betaButton.forEach((button) => {
+     button.classList.remove('beta-button');
+     });
+     var betaButton2 = document.querySelectorAll('.categories-content button, favicon');
+     betaButton2.forEach((button) => {
+     button.classList.remove('beta-button2');
+     });
+     var betaColor = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
+     betaColor.forEach((color) => {
+     color.classList.remove('beta-color');
+     });
      document.body.classList.remove('V2-style');
-     var oldButton2 = document.querySelectorAll('.button, .button2, .button-h, .button-s, .button-sc');
+     var oldButton2 = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
      oldButton2.forEach((button) => {
      button.classList.remove('old-button2');
      });
@@ -2847,12 +3374,28 @@
      oldInput2.forEach((input2) => {
      input2.classList.remove('old-input2');
      });
+     var v2Button = document.querySelectorAll('.button-c');
+     v2Button.forEach((button) => {
+     button.classList.remove('V2-button');
+     });
+     var v2Button2 = document.querySelectorAll('.categories-content button');
+     v2Button2.forEach((button) => {
+     button.classList.remove('V2-button2');
+     });
+     var v2Color = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
+     v2Color.forEach((color) => {
+     color.classList.remove('V2-color');
+     });
      localStorage.setItem('theme', 'white');
      }
      
      function betaStyle() {
      document.body.classList.add('beta-style');
-     var oldButton = document.querySelectorAll('.button, .button2, .button-h, .button-s, .button-sc');
+     var favicon = document.querySelectorAll('.favicon img');
+     favicon.forEach((button) => {
+     button.classList.add('favicon-w');
+     });
+     var oldButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
      oldButton.forEach((button) => {
      button.classList.add('old-button');
      });
@@ -2860,9 +3403,21 @@
      oldInput.forEach((input) => {
      input.classList.add('old-input');
      });
+     var betaButton = document.querySelectorAll('.button-c');
+     betaButton.forEach((button) => {
+     button.classList.add('beta-button');
+     });
+     var betaButton2 = document.querySelectorAll('.categories-content button, favicon');
+     betaButton2.forEach((button) => {
+     button.classList.add('beta-button2');
+     });
+     var betaColor = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
+     betaColor.forEach((color) => {
+     color.classList.add('beta-color');
+     });
      document.body.classList.remove('white-mode');
      document.body.classList.remove('V2-style');
-     var oldButton2 = document.querySelectorAll('.button, .button2, .button-h, .button-s, .button-sc');
+     var oldButton2 = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
      oldButton2.forEach((button) => {
      button.classList.remove('old-button2');
      });
@@ -2870,12 +3425,28 @@
      oldInput2.forEach((input2) => {
      input2.classList.remove('old-input2');
      });
+     var v2Button = document.querySelectorAll('.button-c');
+     v2Button.forEach((button) => {
+     button.classList.remove('V2-button');
+     });
+     var v2Button2 = document.querySelectorAll('.categories-content button');
+     v2Button2.forEach((button) => {
+     button.classList.remove('V2-button2');
+     });
+     var v2Color = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
+     v2Color.forEach((color) => {
+     color.classList.remove('V2-color');
+     });
      localStorage.setItem('theme', 'beta');
      }
      
      function V2Style() {
      document.body.classList.add('V2-style');    
-     var oldButton2 = document.querySelectorAll('.button, .button2, .button-h, .button-s, .button-sc');
+     var favicon = document.querySelectorAll('.favicon img');
+     favicon.forEach((button) => {
+     button.classList.add('favicon-w');
+     });
+     var oldButton2 = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
      oldButton2.forEach((button) => {
      button.classList.add('old-button2');
      });
@@ -2883,8 +3454,20 @@
      oldInput2.forEach((input2) => {
      input2.classList.add('old-input2');
      });
+     var v2Button = document.querySelectorAll('.button-c');
+     v2Button.forEach((button) => {
+     button.classList.add('V2-button');
+     });
+     var v2Button2 = document.querySelectorAll('.categories-content button');
+     v2Button2.forEach((button) => {
+     button.classList.add('V2-button2');
+     });
+     var v2Color = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
+     v2Color.forEach((color) => {
+     color.classList.add('V2-color');
+     });
      document.body.classList.remove('beta-style');
-     var oldButton = document.querySelectorAll('.button, .button2, .button-h, .button-s, .button-sc');
+     var oldButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
      oldButton.forEach((button) => {
      button.classList.remove('old-button');
      });
@@ -2892,23 +3475,35 @@
      oldInput.forEach((input) => {
      input.classList.remove('old-input');
      });
+     var betaButton = document.querySelectorAll('.button-c');
+     betaButton.forEach((button) => {
+     button.classList.remove('beta-button');
+     });
+     var betaButton2 = document.querySelectorAll('.categories-content button, favicon');
+     betaButton2.forEach((button) => {
+     button.classList.remove('beta-button2');
+     });
+     var betaColor = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
+     betaColor.forEach((color) => {
+     color.classList.remove('beta-color');
+     });
      document.body.classList.remove('white-mode');
      localStorage.setItem('theme', 'v2');
      }
      
      // Open Game
      function openGame(url) {
-     var frameContainer = document.getElementById('game-frame-container');
-     var frame = document.getElementById('game-frame');
+     var frameContainer = document.querySelector('#game-frame-container');
+     var frame = document.querySelector('#game-frame');
      frameContainer.style.display = 'block';
      frame.data = url;
-     document.getElementById('navbar').style.display = "none";
-     document.getElementById('games').style.display = "none";
+     document.querySelector('#navbar').style.display = "none";
+     document.querySelector('#games').style.display = "none";
      }
 
      // Open Game in Fullscreen
      function openGameInFullscreen() {
-     var frame = document.getElementById("game-frame");
+     var frame = document.querySelector('#game-frame');
      if (frame.requestFullscreen) {
      frame.requestFullscreen();
      } else if (frame.webkitRequestFullscreen) { /* Safari */
@@ -2917,30 +3512,35 @@
      frame.msRequestFullscreen();
       }
      }
+     
+     // Reset Game
+     function resetGame() {
+     document.querySelector('#game-frame').data += '';
+     }
                               
      // Close Game
      function closeGame() {
-     document.getElementById('game-frame').data = '';
-     document.getElementById('navbar').style.display = "block";
-     document.getElementById('games').style.display = "block";
+     document.querySelector('#game-frame').data = '';
+     document.querySelector('#navbar').style.display = "block";
+     document.querySelector('#games').style.display = "block";
      setTimeout(function() {
-     document.getElementById('game-frame-container').style.display = 'none'; 
+     document.querySelector('#game-frame-container').style.display = 'none'; 
      }, 1);
      }
      
      // Open App
      function openApp(url) {
-     var frameContainer = document.getElementById('app-frame-container');
-     var frame = document.getElementById('app-frame');
+     var frameContainer = document.querySelector('#app-frame-container');
+     var frame = document.querySelector('#app-frame');
      frameContainer.style.display = 'block';
      frame.data = url;
-     document.getElementById('navbar').style.display = "none";
-     document.getElementById('apps').style.display = "none";
+     document.querySelector('#navbar').style.display = "none";
+     document.querySelector('#apps').style.display = "none";
      }
      
      // Open App in Fullscreen
      function openAppInFullscreen() {
-     var frame = document.getElementById("app-frame");
+     var frame = document.querySelector('#app-frame');
      if (frame.requestFullscreen) {
      frame.requestFullscreen();
      } else if (frame.webkitRequestFullscreen) { /* Safari */
@@ -2949,35 +3549,40 @@
      frame.msRequestFullscreen();
       }
      }
+     
+     // Reset App
+     function resetApp() {
+     document.querySelector('#app-frame').data += '';
+     }
                               
      // Close App
      function closeApp() {
-     document.getElementById('app-frame').data = '';
-     document.getElementById('navbar').style.display = "block";
-     document.getElementById('apps').style.display = "block";
+     document.querySelector('#app-frame').data = '';
+     document.querySelector('#navbar').style.display = "block";
+     document.querySelector('#apps').style.display = "block";
      setTimeout(function() {
-     document.getElementById('app-frame-container').style.display = 'none'; 
+     document.querySelector('#app-frame-container').style.display = 'none'; 
      }, 1);
      }
      
-     // Open The Url
+     // Open the Url
      function openTheUrl(randomTrue) {
-     var frameContainer = document.getElementById('proxy-frame-container');
-     var frame = document.getElementById('proxy-frame');
+     var frameContainer = document.querySelector('#proxy-frame-container');
+     var frame = document.querySelector('#proxy-frame');
      frameContainer.style.display = 'block';
-     var url = document.getElementById("theUrl").value;
+     var url = document.querySelector('#theUrl').value;
      if (url.includes("http") == true) {
      frame.data = url;
      } else {
      frame.data = "https://" + url;
      }
-     document.getElementById('navbar').style.display = "none";
-     document.getElementById('proxy').style.display = "none";
+     document.querySelector('#navbar').style.display = "none";
+     document.querySelector('#proxy').style.display = "none";
      }
      
-     // Open Proxy in Fullscreen
-     function openProxyInFullscreen() {
-     var frame = document.getElementById("proxy-frame");
+     // Open the Url in Fullscreen
+     function openTheUrlInFullscreen() {
+     var frame = document.querySelector('#proxy-frame');
      if (frame.requestFullscreen) {
      frame.requestFullscreen();
      } else if (frame.webkitRequestFullscreen) { /* Safari */
@@ -2987,13 +3592,18 @@
       }
      }
      
-     // Close The Url
+     // Reset the Url
+     function resetTheUrl() {
+     document.querySelector('#proxy-frame').data += '';
+     }
+
+     // Close the Url
      function closeTheUrl() {
-     document.getElementById('proxy-frame').data = '';
-     document.getElementById('navbar').style.display = "block";
-     document.getElementById('proxy').style.display = "block";
+     document.querySelector('#proxy-frame').data = '';
+     document.querySelector('#navbar').style.display = "block";
+     document.querySelector('#proxy').style.display = "block";
      setTimeout(function() {
-     document.getElementById('proxy-frame-container').style.display = 'none'; 
+     document.querySelector('#proxy-frame-container').style.display = 'none'; 
      }, 1);
      }
      
@@ -3013,7 +3623,11 @@
        }
      if (theme === 'beta') {
      document.body.classList.add('beta-style');
-     var oldButton = document.querySelectorAll('.button, .button2, .button-h, .button-s, .button-sc');
+     var favicon = document.querySelectorAll('.favicon img');
+     favicon.forEach((button) => {
+     button.classList.add('favicon-w');
+     });
+     var oldButton = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
      oldButton.forEach((button) => {
      button.classList.add('old-button');
      });
@@ -3021,16 +3635,44 @@
      oldInput.forEach((input) => {
      input.classList.add('old-input');
      });
+     var betaButton = document.querySelectorAll('.button-c');
+     betaButton.forEach((button) => {
+     button.classList.add('beta-button');
+     });
+     var betaButton2 = document.querySelectorAll('.categories-content button, favicon');
+     betaButton2.forEach((button) => {
+     button.classList.add('beta-button2');
+     });
+     var betaColor = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
+     betaColor.forEach((color) => {
+     color.classList.add('beta-color');
+     });
        }
      if (theme === 'v2') {
-     document.body.classList.add('V2-style');
-     var oldButton2 = document.querySelectorAll('.button, .button2, .button-h, .button-s, .button-sc');
+     document.body.classList.add('V2-style');    
+     var favicon = document.querySelectorAll('.favicon img');
+     favicon.forEach((button) => {
+     button.classList.add('favicon-w');
+     });
+     var oldButton2 = document.querySelectorAll('.button, .button2, .button-u, .button-s, .button-a, .button-ch, .button-h, .button-x');
      oldButton2.forEach((button) => {
      button.classList.add('old-button2');
      });
      var oldInput2 = document.querySelectorAll('#searchBar-g, #searchBar-a, .settings-i, #theUrl');
      oldInput2.forEach((input2) => {
      input2.classList.add('old-input2');
+     });
+     var v2Button = document.querySelectorAll('.button-c');
+     v2Button.forEach((button) => {
+     button.classList.add('V2-button');
+     });
+     var v2Button2 = document.querySelectorAll('.categories-content button');
+     v2Button2.forEach((button) => {
+     button.classList.add('V2-button2');
+     });
+     var v2Color = document.querySelectorAll('#navbar, #sidenav, #black-box, #changes-container');
+     v2Color.forEach((color) => {
+     color.classList.add('V2-color');
      });
        }
      if (localStorage.getItem("panickey")) document.querySelector("#panickey").value = localStorage.getItem("panickey")
@@ -3291,7 +3933,7 @@
      "I would love to thank Lebron James for being Lebron James",
      "cientoveintitres!",
      "Akpo also collaborated!",
-     "I dare you to continue refreshing until you find a normal message",
+     "I challenge you to keep clicking until you find a normal message.",
      "Fun! New Games!",
      "You can get Third Graders to do anything for Pokemon Cards!",
      "Here for you when Kanye goes on a rant",
@@ -3342,7 +3984,6 @@
      "Links123!",
      "2+2=4",
      "Who am I? You sure you want to know? if somebody told you I was just your average ordinary guy, not a care in the world... somebody lied.",
-     "Credits to all the original creators of the games and apps used on the page.",
      ":)",
      "sans.",
      "Freedom!",
@@ -3548,7 +4189,7 @@
      "Teachers gonna teach",
      "Too cool for school!",
      "Ah, another visitor!",
-     "No more tabs or refreshing the page to play a single game.",
+     "No more tabs and reloading the page to play a single game.",
      "At Links123 you will find many, MANY games",
      "Categories and themes? What's next? Soundtrack?",
      "Wonderful!",
@@ -3608,7 +4249,7 @@
      "yellow",
      "Barney es un dinosaurio Que vive en nuestra mente Y cuando se hace grande Es realmente sorprendente Él le brinda su amistad A grandes y pequeños Después de la escuela Juegan todos muy contentos Barney nos enseña Muchos juegos divertidos El A-B-C y el 1-2-3 También son tus amigos Barney viene a jugar Cuando lo necesitas Él también te ayudará Si crees en fantasías",
      "Ok, si entiendo",
-     "Links123 has many games, but sometimes we don't put games, and that can be sad",
+     "School routine: Open educational tab. Games. Teacher turns on goguardian. Close games. Teacher leaves computer. Games.",
      "Big Sad",
      "Tung Tung Tung Tung Sahur",
      "Links123 Proxy is not a proxy",
@@ -3664,6 +4305,35 @@
      "Mostly inspired by Art Class",
      "PANIC KEY! PANIC KEY! WHY IS IT NOT WORKING?",
      "Why create a button to open in fullscreen, if the games were already in fullscreen?",
+     "Quiero cagar",
+     "Xnxx soon 🥵🥵",
+     "Ms. Azmy = sand ass",
+     "Por favor amigo, ya borra la pagina!",
+     "12/26/24",
+     "lolololol",
+     "Remember to do your homework Guys🤓",
+     "2023-2024 the best year",
+     "I'll pay you 50 cents to change that ridiculous profile picture you have now!",
+     "The chicken tenders couldn't revive Mr. Marmur",
+     "Not clickbait!",
+     "doo be da bee da",
+     "!!!",
+     "If you're lonely, an ED might appear nearby.",
+     "A angry robot will randomly show up and attack you. Watch out!",
+     "Poison clouds are here and they arrive sooner than you think.",
+     "Who loves primas?",
+     "YES KIN~....Wait no...",
+     "Pagina en ascendencia!",
+     "Pagina en decadencia..",
+     "V1 > Current version",
+     "Want to play? That’s okay. Pick your game and start the day!",
+     "Melodians 탈덕안돼...아!",
+     "Why me?",
+     "To infinity and beyond!",
+     "You are mine now!",
+     "WASABI POWAAAAAAAAAAAAAA🔥🔥🔥🔥🔥🔥🔥",
+     "What do you got for me today New York?",
+     { type: "image", src: 'https://i.ibb.co/99XM8L7b/download-1.png' },
      { type: "image", src: 'https://i.ibb.co/RTXTVbmw/Teddy-Bloxpin-1.png' },
      { type: "image", src: 'https://i.ibb.co/wFhXrL5V/hq720-1.png' },
      { type: "image", src: 'https://i.ibb.co/7dkDKtCf/Screenshot-2025-04-27-7-57-24-PM-1.png' },
@@ -3680,7 +4350,7 @@
      ];
      var randomIndex = Math.floor(Math.random() * phrases.length);
      var randomPhrase = phrases[randomIndex];
-     var phraseElement = document.getElementById("randomPhrase");
+     var phraseElement = document.querySelector('#randomPhrase');
      phraseElement.textContent = randomPhrase;
      if (randomPhrase.type === "image") {
      phraseElement.innerHTML = `<img src="${randomPhrase.src}" alt="Splash Image" style="max-width: 100%;">`;
